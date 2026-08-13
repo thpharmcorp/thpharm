@@ -48,6 +48,20 @@
 4. `npm run build`가 로컬에서 통과하는가 (이 개발 환경은 npm 네트워크 접근이 막혀 있어
    빌드를 직접 돌릴 수 없습니다 — RUNBOOK.md 참고)
 
+## 배포 워크플로 (2026-08-13부터 — GitHub 연동)
+
+- GitHub `cozzyy/thpharm` ↔ Netlify(`thpharm-netlify-app`) 연동 완료. `main` 브랜치 push →
+  Netlify 자동 빌드/배포.
+- 이 개발 환경(Cowork 샌드박스)은 보안상 github.com에 직접 접속할 수 없습니다(`git push`가
+  프록시에서 403으로 막힘). 그래서 파일 수정 → `git add -A && git commit -m "..."`까지는
+  이 세션에서 처리하되, 마지막 `git push`는 사용자가 자기 컴퓨터의 cmd에서 직접 실행해야 합니다.
+  **커밋을 만들 때마다 사용자에게 `git push` 실행을 안내할 것** — 사용자가 이 방식을 선호함
+  (GitHub Desktop 등 GUI 도구 대신 cmd 사용 확정, 2026-08-13).
+- 커밋 작성자 이메일은 GitHub `cozzyy` 계정에 인증된 이메일과 일치해야 함 — 안 그러면 Netlify가
+  "Unrecognized Git contributor"로 private repo 빌드를 차단합니다(무료 플랜 제한). 저장소가
+  잠시 Public으로 전환되어 있을 수 있으니(2026-08-13, 이 문제 우회용), 다시 Private으로 돌릴
+  계획이 있는지 세션 시작 시 확인할 것.
+
 ## 알려진 제약
 
 이 코드베이스의 상당 부분은 npm 패키지 레지스트리 접근이 차단된 환경(Claude Cowork 샌드박스,
