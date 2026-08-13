@@ -1,0 +1,54 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import IrSubnav from '../../../components/IrSubnav.astro';
+import { locales, localeToFieldKey, ui, type Locale } from '../../../i18n/ui';
+
+export function getStaticPaths() {
+  return locales.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+const fk = localeToFieldKey[locale];
+const strings = ui[locale];
+
+const copy = {
+  kr: { title: '상장 전부터 쌓는 공식 아카이브', lead: 'Company Fact Sheet, IR Deck, Pipeline Snapshot, 연도별 결산·재무 공개자료, Clinical Updates, 주요 Milestones, Patent & Publication Snapshot, Presentation, 공식 공지를 하나의 아카이브로 관리합니다.' },
+  en: { title: 'An official archive we build before listing.', lead: 'We maintain a single archive of the company fact sheet, IR deck, pipeline snapshot, year-by-year disclosable financial statements, clinical updates, key milestones, patent & publication snapshot, presentations, and official notices.' },
+  'zh-cn': { title: '在上市前就开始积累的官方档案库。', lead: '我们将Company Fact Sheet、IR Deck、Pipeline Snapshot、按年度公开的财务资料、Clinical Updates、主要Milestones、Patent & Publication Snapshot、Presentation及官方公告统一纳入一个档案库进行管理。' },
+  jp: { title: '上場前から積み上げる公式アーカイブ', lead: 'Company Fact Sheet、IR Deck、Pipeline Snapshot、年度別決算・財務公開資料、Clinical Updates、主要Milestones、Patent & Publication Snapshot、Presentation、公式告知を一つのアーカイブとして管理します。' },
+} as const;
+const t = copy[locale];
+
+const docs = await getCollection('ir');
+---
+
+<BaseLayout locale={locale} title={t.title} description={t.lead}>
+  <IrSubnav locale={locale} current="ir-library" />
+  <section class="bg-white">
+    <div class="mx-auto max-w-content px-4 py-16 md:px-6 md:py-20">
+      <p class="text-xs font-bold tracking-widest text-thp-teal">IR LIBRARY</p>
+      <h1 class="mt-3 max-w-2xl text-2xl font-black tracking-tight text-thp-navy2 md:text-3xl">{t.title}</h1>
+      <p class="mt-4 max-w-2xl text-thp-ink/70">{t.lead}</p>
+
+      <div class="mt-10 divide-y divide-thp-line rounded-2xl border border-thp-line">
+        {
+          docs.map((doc) => (
+            <div class="flex flex-wrap items-center justify-between gap-3 p-5">
+              <div>
+                <p class="text-sm font-bold text-thp-navy2">{doc.data.title[fk]}</p>
+                <p class="text-xs text-thp-ink/40">{doc.data.docType} · {doc.data.fiscalYear ?? '—'}</p>
+              </div>
+              {doc.data.fileUrl ? (
+                <a href={doc.data.fileUrl} class="text-xs font-semibold text-thp-tealDeep hover:underline">
+                  {locale === 'kr' ? '다운로드' : 'Download'} ↓
+                </a>
+              ) : (
+                <span class="text-xs font-semibold text-thp-ink/30">{strings.companyDataNeeded}</span>
+              )}
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>

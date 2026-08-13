@@ -1,0 +1,257 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import HeroDark from '../../../components/HeroDark.astro';
+import { locales, localeToFieldKey, ui, type Locale } from '../../../i18n/ui';
+
+export function getStaticPaths() {
+  return locales.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const fk = localeToFieldKey[locale];
+const strings = ui[locale];
+
+const heroCopy = {
+  kr: { title: '정보가 아니라, 의미를 봅니다.', body: '매일 쏟아지는 뉴스·논문·임상결과·승인·투자 가운데 대사질환과 신약개발에 중요한 신호를 선별하고 연결합니다. 현재는 로그인 없이 누구나 볼 수 있습니다.' },
+  en: { title: "We don't just track information — we read meaning.", body: 'From the flood of daily news, papers, clinical results, approvals, and investment, we select and connect the signals that matter for metabolic disease and drug development. Currently open to everyone — no login required.' },
+  'zh-cn': { title: '我们关注的不是信息本身,而是其意义。', body: '从每日涌现的新闻、论文、临床结果、审批与投融资中,筛选并连接对代谢性疾病与新药开发真正重要的信号。目前无需登录,任何人都可以查看。' },
+  jp: { title: '情報ではなく、意味を見ます。', body: '日々あふれるニュース・論文・臨床結果・承認・投資の中から、代謝性疾患と新薬開発にとって重要なシグナルを選別し、つなげます。現在はログイン不要で、どなたでもご覧いただけます。' },
+} as const;
+const hero = heroCopy[locale];
+
+// 2026-08-13: 구 NEWSROOM(WEB-600)을 INTELLIGENCE로 통합 — kind: 'news' 포함.
+const feedItems = (
+  await getCollection(
+    'intelligence',
+    (e) => e.data.kind === 'research_radar' || e.data.kind === 'thpharm_view' || e.data.kind === 'scope_spotlight' || e.data.kind === 'news'
+  )
+).sort((a, b) => (a.data.publishedAt < b.data.publishedAt ? 1 : -1));
+
+const atlasCards = await getCollection('intelligence', (e) => e.data.kind === 'bio_ai_atlas_card');
+
+const atlasNoteCopy = {
+  kr: 'AI 모델을 역할별로 비교해서 쉽게 이해합니다. THPHARM이 이 모델들을 직접 개발한 것은 아니며, 출처·라이선스를 함께 표시합니다.',
+  en: 'Compare AI models by role, in plain terms. THPHARM did not develop these models itself — sources and licenses are shown alongside each.',
+  'zh-cn': '按角色比较AI模型,以易懂的方式呈现。THPHARM并未自行开发这些模型,来源与许可信息将一并标注。',
+  jp: 'AIモデルを役割別に比較し、わかりやすく理解できます。THPHARMがこれらのモデルを自社開発したわけではなく、出典とライセンスをあわせて表示します。',
+} as const;
+
+const scopeStages: Record<Locale, Array<{ letter: string; label: string; meaning: string }>> = {
+  kr: [
+    { letter: 'S', label: 'SCAN', meaning: '매일 쏟아지는 논문·뉴스·임상결과를 훑어봅니다' },
+    { letter: 'C', label: 'CONNECT', meaning: 'THPHARM의 파이프라인·과학과 관련 있는 신호를 연결합니다' },
+    { letter: 'O', label: 'ORGANIZE', meaning: '흩어진 정보를 질환·기술별로 정리합니다' },
+    { letter: 'P', label: 'PERSPECTIVE', meaning: '그래서 무슨 의미인지 THPHARM의 시각을 더합니다' },
+    { letter: 'E', label: 'EXPLORE', meaning: '데이터와 구조를 직접 탐색해볼 수 있게 합니다' },
+  ],
+  en: [
+    { letter: 'S', label: 'SCAN', meaning: 'We scan the daily flood of papers, news, and clinical results' },
+    { letter: 'C', label: 'CONNECT', meaning: 'We connect signals relevant to THPHARM\'s pipeline and science' },
+    { letter: 'O', label: 'ORGANIZE', meaning: 'We organize scattered information by disease and technology' },
+    { letter: 'P', label: 'PERSPECTIVE', meaning: 'We add THPHARM\'s view on what it actually means' },
+    { letter: 'E', label: 'EXPLORE', meaning: 'We let you explore the data and structures yourself' },
+  ],
+  'zh-cn': [
+    { letter: 'S', label: 'SCAN', meaning: '扫描每日涌现的论文、新闻与临床结果' },
+    { letter: 'C', label: 'CONNECT', meaning: '连接与THPHARM管线及科学相关的信号' },
+    { letter: 'O', label: 'ORGANIZE', meaning: '按疾病与技术整理分散的信息' },
+    { letter: 'P', label: 'PERSPECTIVE', meaning: '加入THPHARM对其意义的解读' },
+    { letter: 'E', label: 'EXPLORE', meaning: '让您亲自探索数据与结构' },
+  ],
+  jp: [
+    { letter: 'S', label: 'SCAN', meaning: '日々あふれる論文・ニュース・臨床結果に目を通します' },
+    { letter: 'C', label: 'CONNECT', meaning: 'THPHARMのパイプライン・サイエンスと関連する信号をつなげます' },
+    { letter: 'O', label: 'ORGANIZE', meaning: '散らばった情報を疾患・技術別に整理します' },
+    { letter: 'P', label: 'PERSPECTIVE', meaning: 'それが何を意味するか、THPHARMの視点を加えます' },
+    { letter: 'E', label: 'EXPLORE', meaning: 'データと構造を自分で探索できるようにします' },
+  ],
+};
+
+// 분류체계(카드 필터) — kind별 라벨. "신문기사/연구신호/THPHARM 관점/스포트라이트" 4종.
+const kindLabels: Record<Locale, Record<string, string>> = {
+  kr: { news: '신문기사', research_radar: '연구 신호', thpharm_view: 'THPHARM 관점', scope_spotlight: '스포트라이트' },
+  en: { news: 'News', research_radar: 'Research Signal', thpharm_view: 'THPHARM View', scope_spotlight: 'Spotlight' },
+  'zh-cn': { news: '新闻', research_radar: '研究信号', thpharm_view: 'THPHARM观点', scope_spotlight: '专题聚焦' },
+  jp: { news: 'ニュース', research_radar: '研究シグナル', thpharm_view: 'THPHARM視点', scope_spotlight: 'スポットライト' },
+};
+const kl = kindLabels[locale];
+const allLabel = { kr: '전체', en: 'ALL', 'zh-cn': '全部', jp: 'すべて' }[locale];
+const kindsPresent = Array.from(new Set(feedItems.map((it) => it.data.kind)));
+---
+
+<BaseLayout locale={locale} title={hero.title} description={hero.body}>
+  <HeroDark
+    eyebrow="INTELLIGENCE"
+    title={hero.title}
+    body={hero.body}
+    tags={['SCAN', 'CONNECT', 'ORGANIZE', 'PERSPECTIVE', 'EXPLORE']}
+  />
+
+  <section class="bg-white">
+    <div class="mx-auto max-w-content px-4 py-14 md:px-6 md:py-16">
+      <div class="grid gap-3 md:grid-cols-5">
+        {
+          scopeStages[locale].map((s) => (
+            <div class="rounded-xl border border-thp-line p-4">
+              <div class="flex items-center gap-2">
+                <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-thp-teal/10 text-xs font-black text-thp-teal">
+                  {s.letter}
+                </span>
+                <p class="text-[11px] font-bold text-thp-navy2">{s.label}</p>
+              </div>
+              <p class="mt-2 text-[11px] leading-relaxed text-thp-ink/50">{s.meaning}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="border-t border-thp-line bg-thp-mist">
+    <div class="mx-auto max-w-content px-4 py-16 md:px-6 md:py-20">
+      <p class="mb-2 text-xs font-bold tracking-widest text-thp-teal">FEED</p>
+      <p class="mb-6 max-w-lg text-sm text-thp-ink/60">
+        {locale === 'kr'
+          ? '신문기사·연구 신호·THPHARM 관점·스포트라이트를 한 곳에서 확인하고, 아래 분류로 걸러볼 수 있습니다.'
+          : locale === 'en'
+            ? 'News, research signals, THPHARM views, and spotlights in one feed — filter by category below.'
+            : locale === 'zh-cn'
+              ? '新闻、研究信号、THPHARM观点与专题聚焦汇聚于一处,可通过下方分类进行筛选。'
+              : 'ニュース・研究シグナル・THPHARM視点・スポットライトを一箇所で確認し、下記の分類で絞り込めます。'}
+      </p>
+
+      <div class="mb-8 flex flex-wrap gap-2" id="kind-filter">
+        <button type="button" data-kind="all" class="filter-btn rounded-full bg-thp-navy2 px-4 py-1.5 text-xs font-bold text-white">
+          {allLabel}
+        </button>
+        {
+          kindsPresent.map((k) => (
+            <button type="button" data-kind={k} class="filter-btn rounded-full border border-thp-line bg-white px-4 py-1.5 text-xs font-bold text-thp-ink/60">
+              {kl[k]}
+            </button>
+          ))
+        }
+      </div>
+
+      <div class="space-y-4" id="feed-list">
+        {
+          feedItems.map((item) => (
+            <a
+              href={`/${locale}/intelligence/${item.id}`}
+              data-kind={item.data.kind}
+              class="feed-card block rounded-2xl border border-thp-line bg-white p-6 transition-colors hover:border-thp-teal"
+            >
+              <div class="flex flex-wrap items-center gap-2 text-[11px] font-bold text-thp-ink/40">
+                <span class="rounded-full bg-thp-teal/10 px-2 py-0.5 text-thp-tealDeep">{kl[item.data.kind]}</span>
+                {item.data.relevance && <span class="rounded-full bg-thp-mist px-2 py-0.5">{item.data.relevance}</span>}
+                <span class="ml-auto">{item.data.publishedAt}</span>
+              </div>
+              <p class="mt-3 text-lg font-extrabold text-thp-navy2">{item.data.title[fk]}</p>
+              <p class="mt-1 text-sm text-thp-ink/60">{item.data.dek[fk]}</p>
+              {
+                item.data.tags.length > 0 && (
+                  <div class="mt-3 flex flex-wrap gap-x-2 gap-y-1">
+                    {item.data.tags.map((t) =>
+                      t.url ? (
+                        <a
+                          href={t.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="text-[11px] font-semibold text-thp-tealDeep underline decoration-thp-teal/40 underline-offset-2 hover:text-thp-teal"
+                          onclick="event.stopPropagation()"
+                        >
+                          #{t.label} ↗
+                        </a>
+                      ) : (
+                        <span class="text-[11px] font-semibold text-thp-ink/40">#{t.label}</span>
+                      )
+                    )}
+                  </div>
+                )
+              }
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="border-t border-thp-line bg-thp-navy text-white">
+    <div class="mx-auto max-w-content px-4 py-14 md:px-6 md:py-16">
+      <p class="text-xs font-bold tracking-widest text-thp-teal">BIO-AI PLAYGROUND</p>
+      <p class="mt-3 max-w-xl text-lg font-black leading-snug">
+        {locale === 'kr'
+          ? 'GLP-1 receptor를 직접 돌려보고, AI가 대사질환을 어떻게 보는지 체험하세요.'
+          : locale === 'en'
+            ? 'Rotate GLP-1 receptor yourself and see how AI looks at metabolic disease.'
+            : locale === 'zh-cn'
+              ? '亲自旋转GLP-1受体,体验AI如何看待代谢性疾病。'
+              : 'GLP-1受容体を自分の手で回転させ、AIが代謝性疾患をどう見ているか体験してください。'}
+      </p>
+      <a
+        href={`/${locale}/intelligence/playground`}
+        class="mt-6 inline-flex items-center gap-2 rounded-full bg-thp-teal px-6 py-3 text-sm font-bold text-white hover:bg-thp-tealDeep"
+      >
+        {locale === 'kr' ? 'Bio-AI Playground 열기' : 'Open Bio-AI Playground'} →
+      </a>
+    </div>
+  </section>
+
+  <section id="atlas" class="scroll-mt-20 bg-white">
+    <div class="mx-auto max-w-content px-4 py-16 md:px-6 md:py-20">
+      <p class="mb-2 text-xs font-bold tracking-widest text-thp-teal">BIO-AI ATLAS</p>
+      <p class="mb-8 max-w-lg text-sm text-thp-ink/60">{atlasNoteCopy[locale]}</p>
+      <div class="grid gap-4 md:grid-cols-2">
+        {
+          atlasCards.map((card) => (
+            <div class="rounded-2xl border border-thp-line p-6">
+              <p class="text-[11px] font-bold tracking-wider text-thp-teal">{card.data.dek[fk]}</p>
+              <p class="mt-2 text-base font-bold text-thp-navy2">{card.data.title[fk]}</p>
+              <p class="mt-3 text-sm leading-relaxed text-thp-ink/70">{card.data.body[fk]}</p>
+              <div class="mt-4 flex flex-wrap gap-2">
+                {card.data.tags.map((t) =>
+                  t.url ? (
+                    <a
+                      href={t.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="rounded-full border border-thp-teal/40 px-2.5 py-0.5 text-[10px] font-semibold text-thp-tealDeep hover:bg-thp-teal/10"
+                    >
+                      #{t.label} ↗
+                    </a>
+                  ) : (
+                    <span class="rounded-full border border-thp-line px-2.5 py-0.5 text-[10px] font-semibold text-thp-ink/50">#{t.label}</span>
+                  )
+                )}
+              </div>
+            </div>
+          ))
+        }
+      </div>
+      <p class="mt-6 text-xs text-thp-ink/40">
+        {strings.source}: AlphaFold DB (CC BY 4.0) / RoseTTAFold / Chai-1 / Boltz / RFdiffusion / ProteinMPNN — 각 공식 저장소 및 라이선스 기준.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const buttons = document.querySelectorAll<HTMLButtonElement>('#kind-filter .filter-btn');
+  const cards = document.querySelectorAll<HTMLElement>('.feed-card');
+  buttons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      buttons.forEach((b) => {
+        b.classList.remove('bg-thp-navy2', 'text-white');
+        b.classList.add('border', 'border-thp-line', 'bg-white', 'text-thp-ink/60');
+      });
+      btn.classList.add('bg-thp-navy2', 'text-white');
+      btn.classList.remove('border', 'border-thp-line', 'bg-white', 'text-thp-ink/60');
+
+      const kind = btn.dataset.kind;
+      cards.forEach((card) => {
+        (card as HTMLElement).style.display = kind === 'all' || card.dataset.kind === kind ? '' : 'none';
+      });
+    });
+  });
+</script>

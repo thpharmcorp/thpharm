@@ -1,0 +1,54 @@
+{
+  "code": "SCOPE-SPOTLIGHT",
+  "kind": "scope_spotlight",
+  "status": "company_confirm",
+  "title": {
+    "kr": "바이오프린팅의 첫 번째 큰 시장은 \"장기 출력\"보다 신약개발 의사결정일 수 있다",
+    "en": "Bioprinting's first big market may be drug development decisions, not organ printing",
+    "zh_cn": "生物打印的第一个大市场,或许不是\"打印器官\"而是新药开发决策",
+    "jp": "バイオプリンティングの最初の大きな市場は「臓器出力」より新薬開発の意思決定かもしれない"
+  },
+  "dek": {
+    "kr": "3D 인간 간 모델과 우주 바이오프린팅이 동시에 보내는 2026년의 신호",
+    "en": "What 3D human liver models and space-based bioprinting are signaling together in 2026",
+    "zh_cn": "3D人体肝脏模型与太空生物打印在2026年共同发出的信号",
+    "jp": "3D人体肝モデルと宇宙バイオプリンティングが同時に発する2026年のシグナル"
+  },
+  "relevance": "Related",
+  "body": {
+    "kr": "RESEARCH SIGNAL: 2026년 5월 Frontiers in Bioengineering and Biotechnology에 발표된 연구는 3D bioengineered human liver model을 이용해 급성·만성 약물 유발 간독성과 섬유화를 연구했다. 연구는 CYP3A4 기능과 섬유화 관련 지표, 조직 수준의 변화를 함께 다루며 2D 배양보다 사람 조직에 가까운 검증환경을 만들려는 흐름을 보여준다. INDUSTRY SIGNAL: 2026년 7월 Reuters는 Auxilium Biotechnologies가 국제우주정거장에서 사람 간·신장·연골 세포를 포함한 구조물을 3D bioprinting했다고 보도했다. 임상용 장기 제조는 아직 먼 목표지만, 미세중력 환경을 이용해 3D 조직 내 세포 분포와 제조 제어 문제에 도전하고 있다는 점이 의미 있다. 왜 중요한가: 바이오프린팅을 \"언젠가 장기를 출력하는 기술\"로만 보면 사업화 시점이 멀다. 반대로 신약개발에서 인간 관련성이 높은 독성·섬유화·약효 모델을 만드는 도구로 보면 훨씬 가까운 시장이 열린다.",
+    "en": "RESEARCH SIGNAL: A study published in Frontiers in Bioengineering and Biotechnology in May 2026 used a 3D bioengineered human liver model to study acute and chronic drug-induced hepatotoxicity and fibrosis, covering CYP3A4 function, fibrosis-related markers, and tissue-level changes — reflecting a broader move toward validation environments closer to human tissue than 2D culture. INDUSTRY SIGNAL: In July 2026, Reuters reported that Auxilium Biotechnologies 3D-bioprinted a structure including human liver, kidney, and cartilage cells aboard the International Space Station. Clinical-grade organ manufacturing remains a distant goal, but using microgravity to tackle cell-distribution and manufacturing-control challenges within 3D tissue is meaningful. Why it matters: viewing bioprinting only as 'someday, organ printing' pushes commercialization far into the future. Viewed instead as a tool for building human-relevant toxicity, fibrosis, and efficacy models for drug development, a much nearer-term market opens up.",
+    "zh_cn": "RESEARCH SIGNAL:2026年5月发表于Frontiers in Bioengineering and Biotechnology的研究,利用3D生物工程人体肝脏模型研究了急性与慢性药物诱导性肝毒性及纤维化,涵盖CYP3A4功能、纤维化相关指标及组织层面的变化,体现出相较2D培养,构建更接近人体组织的验证环境这一趋势。INDUSTRY SIGNAL:2026年7月路透社报道,Auxilium Biotechnologies在国际空间站上3D生物打印了包含人体肝、肾、软骨细胞的结构体。虽然临床级器官制造仍是遥远的目标,但利用微重力环境挑战3D组织内细胞分布与制造控制问题,具有重要意义。为何重要:若仅将生物打印视为\"未来打印器官\"的技术,商业化时点将十分遥远;反之,若将其视为在新药开发中构建高度人体相关性的毒性、纤维化、药效模型的工具,则将开启更为切近的市场。",
+    "jp": "RESEARCH SIGNAL:2026年5月にFrontiers in Bioengineering and Biotechnologyに発表された研究は、3Dバイオエンジニアリング人体肝モデルを用いて急性・慢性の薬物誘発性肝毒性と線維化を研究した。CYP3A4機能や線維化関連指標、組織レベルの変化を扱い、2D培養よりも人体組織に近い検証環境を構築しようとする流れを示している。INDUSTRY SIGNAL:2026年7月、Reutersは Auxilium Biotechnologiesが国際宇宙ステーションで人の肝・腎・軟骨細胞を含む構造体を3Dバイオプリンティングしたと報じた。臨床用臓器製造はまだ遠い目標だが、微小重力環境を利用して3D組織内の細胞分布と製造制御の課題に挑んでいる点に意義がある。重要性:バイオプリンティングを「いつか臓器を出力する技術」とだけ見れば事業化は遠い。逆に新薬開発において人体関連性の高い毒性・線維化・薬効モデルを作る道具と見れば、はるかに近い市場が開ける。"
+  },
+  "thpharmView": {
+    "kr": "바이오프린팅의 경쟁력은 프린터의 정밀도 자체보다 \"이 모델이 개발 의사결정을 얼마나 빨리, 재현성 있게, 사람에게 가깝게 바꾸는가\"에서 평가받게 될 가능성이 높다. THPHARM의 바이오프린팅 장비 기술을 별도 하드웨어 사업으로만 보이지 않게 하고, VALIDATE의 핵심 인프라로 연결한다.",
+    "en": "Bioprinting's competitiveness is likely to be judged less by printer precision itself and more by how quickly, reproducibly, and human-relevantly a model changes development decisions. THPHARM frames its bioprinting equipment technology not as a standalone hardware business, but as core infrastructure for VALIDATE.",
+    "zh_cn": "生物打印的竞争力,很可能不取决于打印机精度本身,而在于\"该模型能多快、多可重复、多贴近人体地改变开发决策\"。THPHARM不将其生物打印设备技术仅呈现为独立硬件业务,而是将其与VALIDATE的核心基础设施相连接。",
+    "jp": "バイオプリンティングの競争力は、プリンターの精度そのものよりも「このモデルが開発の意思決定をどれだけ速く、再現性高く、人に近い形で変えるか」で評価される可能性が高い。THPHARMはバイオプリンティング設備技術を単独のハードウェア事業としてではなく、VALIDATEの中核インフラとして位置づける。"
+  },
+  "whatToWatch": {
+    "kr": "사람세포 기반 재현성 / throughput과 비용 / 독성·섬유화 readout의 표준화 / 규제기관의 대체시험 수용 / Bio-AI 분석과 3D 모델의 폐루프 연계",
+    "en": "Reproducibility using human cells / throughput and cost / standardization of toxicity and fibrosis readouts / regulatory acceptance of alternative testing / closed-loop integration between Bio-AI analysis and 3D models",
+    "zh_cn": "基于人体细胞的可重复性 / 通量与成本 / 毒性、纤维化读出的标准化 / 监管机构对替代试验的接受度 / Bio-AI分析与3D模型的闭环联动",
+    "jp": "ヒト細胞ベースの再現性 / スループットとコスト / 毒性・線維化readoutの標準化 / 規制当局による代替試験の受容 / Bio-AI分析と3Dモデルの閉ループ連携"
+  },
+  "tags": [
+    { "label": "Bioprinting" },
+    { "label": "Human-relevant Models" },
+    { "label": "Liver" },
+    { "label": "Drug Safety" },
+    { "label": "Translational R&D" },
+    { "label": "Frontiers in Bioengineering", "url": "https://doi.org/10.3389/fbioe.2026.1798323" }
+  ],
+  "sourceMeta": {
+    "source_type": "Journal",
+    "source_title": "Ferret-Miñana A et al., Frontiers in Bioengineering and Biotechnology, 11 May 2026",
+    "publisher": "Frontiers in Bioengineering and Biotechnology",
+    "published_at": "2026-05-11",
+    "doi": "10.3389/fbioe.2026.1798323",
+    "last_verified": "2026-08-12",
+    "peer_review_status": "peer-reviewed"
+  },
+  "publishedAt": "2026-08-12"
+}

@@ -1,0 +1,34 @@
+---
+interface Props {
+  locale: string;
+  current: 'landing' | 'investment-highlights' | 'financial-highlights' | 'clinical-collaboration' | 'governance' | 'partnering' | 'ir-library';
+}
+const { locale, current } = Astro.props;
+
+const items = [
+  { key: 'landing', code: 'WEB-700', path: '', label: 'OVERVIEW' },
+  { key: 'investment-highlights', code: 'WEB-701', path: 'investment-highlights', label: 'INVESTMENT HIGHLIGHTS' },
+  { key: 'financial-highlights', code: 'WEB-702', path: 'financial-highlights', label: 'FINANCIAL & OPERATING' },
+  { key: 'clinical-collaboration', code: 'WEB-703', path: 'clinical-collaboration', label: 'CLINICAL COLLABORATION' },
+  { key: 'governance', code: 'WEB-704', path: 'governance', label: 'GOVERNANCE' },
+  { key: 'partnering', code: 'WEB-705', path: 'partnering', label: 'BUSINESS PARTNERING' },
+  { key: 'ir-library', code: 'WEB-706', path: 'ir-library', label: 'IR LIBRARY' },
+] as const;
+---
+
+<div class="border-b border-thp-line bg-thp-mist">
+  <nav class="mx-auto flex max-w-content gap-1 overflow-x-auto px-4 py-3 md:px-6" aria-label="IR">
+    {
+      items.map((i) => (
+        <a
+          href={`/${locale}/ir${i.path ? `/${i.path}` : ''}`}
+          class={`whitespace-nowrap rounded-full px-3 py-1.5 text-xs font-bold transition-colors ${
+            i.key === current ? 'bg-thp-navy2 text-white' : 'text-thp-ink/50 hover:text-thp-navy2'
+          }`}
+        >
+          {i.label}
+        </a>
+      ))
+    }
+  </nav>
+</div>

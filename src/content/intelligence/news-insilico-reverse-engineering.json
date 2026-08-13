@@ -1,0 +1,83 @@
+{
+  "code": "WEB-601",
+  "kind": "news",
+  "status": "published",
+  "title": {
+    "kr": "티에치팜, 기존 신약 데이터 AI로 재해석…대사질환 적응증 확대",
+    "en": "THPHARM reinterprets existing drug data with AI to expand metabolic-disease indications",
+    "zh_cn": "THPHARM运用AI重新解读现有新药数据,拓展代谢性疾病适应症",
+    "jp": "THPHARM、既存新薬データをAIで再解釈…代謝性疾患の適応症拡大へ"
+  },
+  "dek": {
+    "kr": "인실리코 메디슨과 공동으로 '역설계(Reverse Engineering)' 전략 적용, PandaOmics로 기존 자산 재분석",
+    "en": "Joint 'Reverse Engineering' strategy with Insilico Medicine reanalyzes existing assets via PandaOmics",
+    "zh_cn": "与英矽智能联合推进\"逆向工程\"战略,通过PandaOmics对现有资产进行再分析",
+    "jp": "Insilico Medicineとの共同「リバースエンジニアリング」戦略、PandaOmicsで既存資産を再分析"
+  },
+  "body": {
+    "kr": "한국경제 보도에 따르면 티에치팜이 인실리코 메디슨(Insilico Medicine)과 공동연구를 통해 '역설계(Reverse Engineering)' 전략을 적용하고 있습니다. 새로운 후보물질을 처음부터 발굴하는 대신, 이미 보유한 의약품 자산의 약리·비임상 데이터를 Bio-AI로 재분석해 새로운 적응증과 바이오마커를 찾는 접근입니다. 인실리코 메디슨의 'PandaOmics' 플랫폼을 활용해 약물 표적, 관련 문헌, 공개 유전자발현 데이터셋, 그리고 티에치팜 대사질환 후보물질의 투여 후 유전자발현 변화를 통합 분석하며, 1단계 데이터 통합에서 공개 데이터셋 16건·샘플 269건을 확보했습니다. 이 전략은 티에치팜의 글로벌 임상 3상 단계 대사질환 파이프라인에 먼저 적용된 뒤, 비임상 유효성·안전성·독성 프로파일을 이미 보유한 DDS 기반 후속 후보물질로 확대 적용됩니다. 우선 검토 대상 적응증은 심부전, 지방간질환, 비만입니다. AI가 도출한 적응증·바이오마커 후보는 세포·동물 실험으로 추가 검증하며, 재현 가능한 효능과 기전이 확인된 후보를 중심으로 후속 개발을 진행할 계획입니다.",
+    "en": "According to Hankyung (Korea Economic Daily), THPHARM is applying a 'Reverse Engineering' strategy through joint research with Insilico Medicine. Rather than discovering new drug candidates from scratch, the approach reanalyzes the pharmacological and nonclinical data of THPHARM's existing drug assets using Bio-AI to uncover new indications and biomarkers. Using Insilico Medicine's 'PandaOmics' platform, the companies integrate drug targets, related literature, public gene-expression datasets, and post-treatment gene-expression changes for THPHARM's metabolic-disease candidates; the first stage of data integration secured 16 public datasets and 269 samples. The strategy was first applied to THPHARM's metabolic-disease pipeline asset in global Phase 3, and is being expanded to DDS-based follow-on candidates that already have nonclinical efficacy, safety, and toxicity profiles. Priority indications under review are heart failure, fatty liver disease, and obesity. AI-derived indication and biomarker candidates will be further verified through cell and animal studies, with follow-on development focused on candidates showing reproducible efficacy and mechanism.",
+    "zh_cn": "据韩国经济日报报道,THPHARM正通过与英矽智能(Insilico Medicine)的联合研究推进\"逆向工程(Reverse Engineering)\"战略。该方法并非从零开始发掘新候选物质,而是利用Bio-AI对THPHARM现有药物资产的药理学与非临床数据进行再分析,以发现新的适应症与生物标志物。双方利用英矽智能的\"PandaOmics\"平台,整合药物靶点、相关文献、公开基因表达数据集,以及THPHARM代谢性疾病候选物质给药后的基因表达变化;第一阶段数据整合已获取16个公开数据集、269个样本。该战略首先应用于THPHARM处于全球3期临床阶段的代谢性疾病管线资产,随后扩展至已具备非临床有效性、安全性与毒性数据的DDS基础后续候选物质。优先审视的适应症包括心力衰竭、脂肪肝疾病与肥胖症。AI推导出的适应症与生物标志物候选将通过细胞与动物实验进一步验证,后续开发将聚焦于疗效与机制可重复的候选物质。",
+    "jp": "韓国経済新聞の報道によると、THPHARMはInsilico Medicineとの共同研究を通じて「リバースエンジニアリング(Reverse Engineering)」戦略を適用しています。新規候補物質をゼロから発掘する代わりに、既に保有する医薬品資産の薬理・非臨床データをBio-AIで再分析し、新たな適応症とバイオマーカーを見出すアプローチです。Insilico Medicineの「PandaOmics」プラットフォームを活用し、薬物標的、関連文献、公開遺伝子発現データセット、THPHARMの代謝性疾患候補物質の投与後遺伝子発現変化を統合分析しており、第1段階のデータ統合で公開データセット16件・サンプル269件を確保しました。この戦略はまずTHPHARMのグローバル臨床第3相段階にある代謝性疾患パイプライン資産に適用され、その後、非臨床の有効性・安全性・毒性プロファイルを既に保有するDDSベースの後続候補物質へと拡大適用されます。優先的に検討される適応症は心不全、脂肪肝疾患、肥満症です。AIが導出した適応症・バイオマーカー候補は細胞・動物実験でさらに検証され、再現性のある有効性と機序が確認された候補を中心に後続開発を進める計画です。"
+  },
+  "keyPoints": [
+    {
+      "kr": "인실리코 메디슨과 공동연구 — 신규 후보물질 발굴이 아닌 '기존 자산 재해석(Reverse Engineering)' 전략",
+      "en": "Joint research with Insilico Medicine — a 'Reverse Engineering' strategy reinterpreting existing assets rather than discovering new candidates",
+      "zh_cn": "与英矽智能联合研究——并非发掘新候选物质,而是\"重新解读现有资产(逆向工程)\"战略",
+      "jp": "Insilico Medicineとの共同研究 — 新規候補物質発掘ではなく「既存資産の再解釈(リバースエンジニアリング)」戦略"
+    },
+    {
+      "kr": "PandaOmics 플랫폼으로 약물 표적·문헌·공개 유전자발현 데이터·투여 후 발현변화 통합 분석 — 1단계 공개 데이터셋 16건, 샘플 269건 확보",
+      "en": "PandaOmics integrates drug targets, literature, public gene-expression data, and post-treatment expression changes — stage one secured 16 public datasets and 269 samples",
+      "zh_cn": "PandaOmics整合药物靶点、文献、公开基因表达数据及给药后表达变化——第一阶段获取16个公开数据集、269个样本",
+      "jp": "PandaOmicsで薬物標的・文献・公開遺伝子発現データ・投与後発現変化を統合分析 — 第1段階で公開データセット16件、サンプル269件を確保"
+    },
+    {
+      "kr": "글로벌 임상 3상 대사질환 자산에 우선 적용 후, 비임상 데이터를 보유한 DDS 기반 후속 후보물질로 확대",
+      "en": "Applied first to the global Phase 3 metabolic-disease asset, then expanded to DDS-based follow-on candidates with existing nonclinical data",
+      "zh_cn": "首先应用于全球3期临床代谢性疾病资产,随后扩展至具备非临床数据的DDS基础后续候选物质",
+      "jp": "グローバル臨床第3相の代謝性疾患資産に優先適用後、非臨床データを保有するDDSベースの後続候補物質へ拡大"
+    },
+    {
+      "kr": "우선 검토 적응증: 심부전·지방간질환·비만 — AI 도출 후보는 세포·동물 실험으로 추가 검증 예정",
+      "en": "Priority indications: heart failure, fatty liver disease, obesity — AI-derived candidates will be further verified through cell and animal studies",
+      "zh_cn": "优先审视适应症:心力衰竭、脂肪肝疾病、肥胖症——AI推导候选物质将通过细胞与动物实验进一步验证",
+      "jp": "優先検討適応症:心不全・脂肪肝疾患・肥満症 — AI導出候補は細胞・動物実験でさらに検証予定"
+    }
+  ],
+  "thpharmView": {
+    "kr": "이 전략은 새 물질을 처음부터 찾는 대신, 이미 확보한 비임상·임상 데이터의 가치를 AI로 한 번 더 끌어내는 접근입니다. 심부전은 이번 보도로 새롭게 확인된 검토 적응증으로, MASH·비만 중심이었던 기존 파이프라인 설명을 보강할 근거가 됩니다. 다만 AI가 제시한 적응증·바이오마커는 어디까지나 검증이 필요한 가설이며, 세포·동물 실험 결과가 나오기 전까지는 확정된 파이프라인 확장으로 서술하지 않습니다.",
+    "en": "Rather than searching for new molecules from scratch, this strategy uses AI to extract additional value from nonclinical and clinical data THPHARM already holds. Heart failure is a newly confirmed candidate indication from this report, adding to a pipeline narrative previously centered on MASH and obesity. AI-derived indications and biomarkers remain hypotheses requiring verification, however, and we do not describe them as confirmed pipeline expansions until cell- and animal-study results are available.",
+    "zh_cn": "该战略并非从零寻找新物质,而是通过AI再次挖掘THPHARM已掌握的非临床与临床数据的价值。心力衰竭是此次报道新确认的候选适应症,为此前以MASH、肥胖症为主的管线叙述提供了补充依据。但AI提出的适应症与生物标志物终究是需要验证的假设,在细胞与动物实验结果出炉前,我们不会将其描述为已确定的管线扩展。",
+    "jp": "この戦略は新物質をゼロから探す代わりに、THPHARMが既に保有する非臨床・臨床データの価値をAIでもう一度引き出すアプローチです。心不全は今回の報道で新たに確認された検討適応症であり、これまでMASH・肥満症中心だったパイプライン説明を補強する根拠となります。ただし、AIが提示した適応症・バイオマーカーはあくまで検証が必要な仮説であり、細胞・動物実験の結果が出るまでは確定したパイプライン拡大として記述しません。"
+  },
+  "newsType": "Company",
+  "region": "KR",
+  "year": 2026,
+  "tags": [
+    { "label": "Insilico Medicine", "url": "https://insilico.com" },
+    { "label": "PandaOmics", "url": "https://insilico.com/pandaomics" },
+    { "label": "Reverse Engineering" },
+    { "label": "Bio-AI" },
+    { "label": "MASH" },
+    { "label": "Obesity" },
+    { "label": "Heart Failure" },
+    { "label": "한국경제", "url": "https://www.hankyung.com/article/202608126841O" }
+  ],
+  "relatedLinks": [
+    { "label": "PIPELINE", "href": "/pipeline" },
+    { "label": "SCIENCE — REVEAL", "href": "/science/reveal" },
+    { "label": "INTELLIGENCE — AI Partner-ready", "href": "/intelligence/ai-partner-ready" }
+  ],
+  "sourceMeta": {
+    "source_type": "Media",
+    "source_title": "티에치팜, 기존 신약 데이터 AI로 재해석…대사질환 적응증 확대",
+    "publisher": "한국경제 (Hankyung)",
+    "published_at": "2026-08-13",
+    "source_url": "https://www.hankyung.com/article/202608126841O",
+    "accessed_at": "2026-08-13",
+    "last_verified": "2026-08-13"
+  },
+  "publishedAt": "2026-08-13"
+}

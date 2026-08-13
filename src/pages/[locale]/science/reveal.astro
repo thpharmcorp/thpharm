@@ -1,0 +1,236 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SciSubnav from '../../../components/SciSubnav.astro';
+import { locales, type Locale } from '../../../i18n/ui';
+
+export function getStaticPaths() {
+  return locales.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+
+const copy = {
+  kr: {
+    title: 'AI를 더 나은 신약개발 판단에 사용합니다.',
+    lead: '티에치팜은 Bio-AI를 후보물질을 자동으로 만들어내는 블랙박스로 보지 않습니다. 질환과 약물의 관계를 더 깊이 이해하고, 새로운 적응증을 탐색하며, 작용기전과 바이오마커에 대한 가설을 정교화하는 신약개발 의사결정 도구로 활용합니다.',
+    collabTitle: '글로벌 AI 협업',
+    collabBody: '글로벌 AI 신약개발 기업과의 협업은 "AI 기술을 보유했다"는 홍보보다, 티에치팜의 약물개발 데이터와 도메인 지식을 글로벌 계산·분석 역량과 연결할 수 있다는 점을 보여줍니다. 파트너명·로고·협업범위는 공개 권한을 확인한 뒤 사용합니다.',
+    roleTitle: '글로벌 AI 파트너에게 보여줄 THPHARM의 역할',
+    roleBody: 'Bio-AI 파트너에게 "우리도 AI를 한다"는 메시지를 반복하기보다, AI가 만든 가설을 실제 개발과 임상으로 연결할 수 있는 complementary execution capability를 보여줍니다. THPHARM이 자체 foundation model을 보유한 것처럼 과장하지 않습니다.',
+    tableHead: ['파트너가 가져올 수 있는 역량', 'THPHARM이 보여줄 역량', '홈페이지 표현'],
+    cta: 'Bio-AI Atlas에서 모델별 역할 비교 보기',
+  },
+  en: {
+    title: 'We use AI to make better drug development decisions.',
+    lead: 'THPHARM does not treat Bio-AI as a black box that automatically generates drug candidates. We use it as a decision-making tool — to better understand disease-drug relationships, explore new indications, and refine hypotheses about mechanism of action and biomarkers.',
+    collabTitle: 'Global AI collaboration',
+    collabBody: "Collaborating with global AI drug-discovery companies is not about claiming \"we have AI too\" — it's about connecting THPHARM's drug development data and domain knowledge with global computational and analytical capabilities. Partner names, logos, and scope are used only once disclosure rights are confirmed.",
+    roleTitle: "THPHARM's role for global AI partners",
+    roleBody: 'Rather than repeating "we do AI too" to Bio-AI partners, we show a complementary execution capability that connects AI-generated hypotheses to real development and clinical execution. We do not overstate THPHARM as having its own foundation model.',
+    tableHead: ['What the partner brings', 'What THPHARM shows', 'How it appears on the site'],
+    cta: 'Compare model roles in the Bio-AI Atlas',
+  },
+  'zh-cn': {
+    title: '将AI用于更好的新药开发决策。',
+    lead: 'THPHARM并不将Bio-AI视为自动生成候选物质的黑箱。我们将其作为新药开发决策工具,用于更深入理解疾病与药物的关系、探索新适应症,并完善作用机制与生物标志物的假设。',
+    collabTitle: '全球AI合作',
+    collabBody: '与全球AI新药开发企业的合作,重点并非宣传"我们也拥有AI技术",而是展示THPHARM的药物开发数据与领域知识能够与全球计算分析能力相连接。合作伙伴名称、标识与合作范围仅在确认披露权限后使用。',
+    roleTitle: '向全球AI合作伙伴展示的THPHARM角色',
+    roleBody: '相较于向Bio-AI合作伙伴反复传递"我们也做AI"的信息,THPHARM展示的是能将AI生成的假设与实际开发、临床执行相连接的互补性执行能力。不会夸大THPHARM拥有自主基础模型。',
+    tableHead: ['合作伙伴可带来的能力', 'THPHARM展示的能力', '官网呈现方式'],
+    cta: '在Bio-AI Atlas中比较各模型的角色',
+  },
+  jp: {
+    title: 'AIをより良い新薬開発の判断に使用します。',
+    lead: 'THPHARMはBio-AIを候補物質を自動生成するブラックボックスとは捉えません。疾患と薬物の関係をより深く理解し、新たな適応症を探索し、作用機序とバイオマーカーに関する仮説を精緻化する新薬開発の意思決定ツールとして活用します。',
+    collabTitle: 'グローバルAI協業',
+    collabBody: 'グローバルAI創薬企業との協業は、「AI技術を保有している」という広報よりも、THPHARMの薬物開発データとドメイン知識をグローバルな計算・分析能力と連携できる点を示すものです。パートナー名・ロゴ・協業範囲は公開権限を確認した上で使用します。',
+    roleTitle: 'グローバルAIパートナーに示すTHPHARMの役割',
+    roleBody: 'Bio-AIパートナーに「私たちもAIをやっている」というメッセージを繰り返すのではなく、AIが生み出した仮説を実際の開発と臨床へとつなげるcomplementary execution capabilityを示します。THPHARMが独自のfoundation modelを保有しているかのような誇張はしません。',
+    tableHead: ['パートナーが持ち込める能力', 'THPHARMが示す能力', 'ホームページでの表現'],
+    cta: 'Bio-AI Atlasでモデルごとの役割を比較する',
+  },
+} as const;
+const t = copy[locale];
+
+const capabilities = [
+  {
+    key: 'DISEASE NETWORK ANALYSIS',
+    body: {
+      kr: '질환 간 생물학적 연결관계 분석',
+      en: 'Analyzing the biological connections between diseases',
+      'zh-cn': '分析疾病之间的生物学关联',
+      jp: '疾患間の生物学的な連結関係を分析',
+    },
+  },
+  {
+    key: 'DRUG–TARGET INTELLIGENCE',
+    body: {
+      kr: '약물·표적·경로의 관계 탐색',
+      en: 'Exploring relationships between drugs, targets, and pathways',
+      'zh-cn': '探索药物、靶点与通路之间的关系',
+      jp: '薬物・標的・経路の関係を探索',
+    },
+  },
+  {
+    key: 'INDICATION EXPANSION',
+    body: {
+      kr: '새로운 적응증 가능성 탐색',
+      en: 'Exploring new indication possibilities',
+      'zh-cn': '探索新适应症的可能性',
+      jp: '新たな適応症の可能性を探索',
+    },
+  },
+  {
+    key: 'MOA & BIOMARKER',
+    body: {
+      kr: '작용기전 및 바이오마커 가설 정교화',
+      en: 'Refining mechanism-of-action and biomarker hypotheses',
+      'zh-cn': '完善作用机制与生物标志物假设',
+      jp: '作用機序およびバイオマーカー仮説の精緻化',
+    },
+  },
+] as const;
+
+const roleRows = [
+  {
+    partner: {
+      kr: 'Target / biomarker / indication hypothesis',
+      en: 'Target / biomarker / indication hypothesis',
+      'zh-cn': 'Target / biomarker / indication hypothesis',
+      jp: 'Target / biomarker / indication hypothesis',
+    },
+    thp: {
+      kr: '대사질환 맥락·개발 우선순위·실험/임상 가능성 평가',
+      en: 'Evaluating metabolic-disease context, development priority, and experimental/clinical feasibility',
+      'zh-cn': '评估代谢性疾病背景、开发优先级及实验/临床可行性',
+      jp: '代謝性疾患の文脈・開発優先順位・実験/臨床可能性の評価',
+    },
+    web: {
+      kr: 'AI hypothesis → Development decision',
+      en: 'AI hypothesis → Development decision',
+      'zh-cn': 'AI hypothesis → Development decision',
+      jp: 'AI hypothesis → Development decision',
+    },
+  },
+  {
+    partner: {
+      kr: 'Generative chemistry / molecule prioritization',
+      en: 'Generative chemistry / molecule prioritization',
+      'zh-cn': 'Generative chemistry / molecule prioritization',
+      jp: 'Generative chemistry / molecule prioritization',
+    },
+    thp: {
+      kr: '제형·복합제·drug re-engineering·개발성 검토',
+      en: 'Reviewing formulation, combination products, drug re-engineering, and developability',
+      'zh-cn': '审查剂型、复方制剂、药物再工程与可开发性',
+      jp: '製剤・複合剤・drug re-engineering・開発可能性の検討',
+    },
+    web: {
+      kr: 'Design → Formulation / Combination',
+      en: 'Design → Formulation / Combination',
+      'zh-cn': 'Design → Formulation / Combination',
+      jp: 'Design → Formulation / Combination',
+    },
+  },
+  {
+    partner: {
+      kr: 'Multi-omics / knowledge graph',
+      en: 'Multi-omics / knowledge graph',
+      'zh-cn': 'Multi-omics / knowledge graph',
+      jp: 'Multi-omics / knowledge graph',
+    },
+    thp: {
+      kr: '비임상·3D model·바이오프린팅 등 translational validation',
+      en: 'Translational validation via preclinical work, 3D models, and bioprinting',
+      'zh-cn': '通过非临床研究、3D模型与生物打印进行转化验证',
+      jp: '非臨床・3Dモデル・バイオプリンティングなどによるtranslational validation',
+    },
+    web: {
+      kr: 'Data signal → Biological validation',
+      en: 'Data signal → Biological validation',
+      'zh-cn': 'Data signal → Biological validation',
+      jp: 'Data signal → Biological validation',
+    },
+  },
+  {
+    partner: {
+      kr: 'Clinical prediction / protocol intelligence',
+      en: 'Clinical prediction / protocol intelligence',
+      'zh-cn': 'Clinical prediction / protocol intelligence',
+      jp: 'Clinical prediction / protocol intelligence',
+    },
+    thp: {
+      kr: '한국·태국·아시아 임상 실행 및 site collaboration',
+      en: 'Clinical execution and site collaboration across Korea, Thailand, and Asia',
+      'zh-cn': '在韩国、泰国及亚洲的临床执行与机构合作',
+      jp: '韓国・タイ・アジアでの臨床実行およびsite collaboration',
+    },
+    web: {
+      kr: 'Prediction → Clinical execution',
+      en: 'Prediction → Clinical execution',
+      'zh-cn': 'Prediction → Clinical execution',
+      jp: 'Prediction → Clinical execution',
+    },
+  },
+] as const;
+---
+
+<BaseLayout locale={locale} title={t.title} description={t.lead}>
+  <SciSubnav locale={locale} current="reveal" />
+  <section class="bg-white">
+    <div class="mx-auto max-w-content px-4 py-16 md:px-6 md:py-20">
+      <p class="text-xs font-bold tracking-widest text-thp-teal">R — REVEAL · BIO-AI</p>
+      <h1 class="mt-3 max-w-2xl text-3xl font-black tracking-tight text-thp-navy2 md:text-4xl">{t.title}</h1>
+      <p class="mt-4 max-w-2xl text-thp-ink/70">{t.lead}</p>
+
+      <div class="mt-10 grid gap-4 md:grid-cols-2">
+        {
+          capabilities.map((c) => (
+            <div class="rounded-2xl border border-thp-line p-6">
+              <p class="text-xs font-bold tracking-widest text-thp-teal">{c.key}</p>
+              <p class="mt-3 text-sm leading-relaxed text-thp-ink/80">{c.body[locale]}</p>
+            </div>
+          ))
+        }
+      </div>
+
+      <div class="mt-12 rounded-2xl bg-thp-mist p-6">
+        <p class="text-sm font-bold text-thp-navy2">{t.collabTitle}</p>
+        <p class="mt-2 text-sm leading-relaxed text-thp-ink/70">{t.collabBody}</p>
+      </div>
+
+      <div class="mt-10">
+        <p class="text-sm font-bold text-thp-navy2">{t.roleTitle}</p>
+        <p class="mt-2 max-w-2xl text-sm leading-relaxed text-thp-ink/70">{t.roleBody}</p>
+
+        <div class="mt-6 overflow-x-auto rounded-2xl border border-thp-line">
+          <table class="w-full min-w-[640px] text-left text-sm">
+            <thead class="bg-thp-mist text-xs font-bold text-thp-ink/50">
+              <tr>
+                {t.tableHead.map((h) => <th class="px-4 py-3">{h}</th>)}
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-thp-line">
+              {
+                roleRows.map((r) => (
+                  <tr>
+                    <td class="px-4 py-3 align-top font-mono text-xs text-thp-ink/60">{r.partner[locale]}</td>
+                    <td class="px-4 py-3 align-top text-thp-ink/80">{r.thp[locale]}</td>
+                    <td class="px-4 py-3 align-top font-mono text-xs text-thp-tealDeep">{r.web[locale]}</td>
+                  </tr>
+                ))
+              }
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <a
+        href={`/${locale}/intelligence#atlas`}
+        class="mt-10 inline-flex items-center gap-2 text-sm font-bold text-thp-tealDeep hover:underline"
+      >
+        {t.cta} →
+      </a>
+    </div>
+  </section>
+</BaseLayout>

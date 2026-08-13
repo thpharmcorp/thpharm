@@ -1,0 +1,91 @@
+---
+import { ui, type Locale } from '../i18n/ui';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const strings = ui[locale];
+const year = new Date().getFullYear();
+
+const hiddenSoundCopy: Record<Locale, string> = {
+  kr: '숨겨진 THPHARM 사운드를 발견했습니다 — 공식 테마송 자산 준비 중입니다.',
+  en: "You found THPHARM's hidden sound — the official theme song asset is being prepared.",
+  'zh-cn': '您发现了THPHARM的隐藏音效 — 官方主题曲素材正在准备中。',
+  jp: 'THPHARMの隠されたサウンドを発見しました — 公式テーマソング素材を準備中です。',
+};
+
+// APPROVED_FACTS.md 등록 완료 (2026-08-12) — 회사 제공 스크린샷(기존 홈페이지 Footer) 기준.
+const companyInfoLabels: Record<Locale, { biz: string; addr: string; tel: string; fax: string; email: string }> = {
+  kr: { biz: '사업자등록번호', addr: '주소', tel: '전화', fax: '팩스', email: '이메일' },
+  en: { biz: 'Business Registration No.', addr: 'Address', tel: 'Tel', fax: 'Fax', email: 'Email' },
+  'zh-cn': { biz: '营业执照登记号', addr: '地址', tel: '电话', fax: '传真', email: '邮箱' },
+  jp: { biz: '事業者登録番号', addr: '住所', tel: '電話', fax: 'FAX', email: 'メール' },
+};
+const cl = companyInfoLabels[locale];
+const companyLegalName = '(주)티에치팜 THPharm';
+const bizNo = '789-87-01821';
+const address = '(28160) 충청북도 청주시 흥덕구 오송읍 오송생명1로 194-25, 3층 A-06호 (청주 SB플라자)';
+const tel = '070-8657-2278';
+const fax = '070-4833-2271';
+const email = 'admin@thpharm.co.kr';
+---
+
+<footer class="border-t border-thp-line bg-thp-mist">
+  <div class="mx-auto max-w-content px-4 py-10 md:px-6">
+    <div class="grid gap-8 md:grid-cols-3">
+      <div>
+        <img src="/images/logo.png" alt={companyLegalName} class="mb-3 h-7 w-auto" />
+        <p class="text-xs leading-relaxed text-thp-ink/60">
+          {cl.biz} : {bizNo}<br />
+          {cl.addr} : {address}<br />
+          {cl.tel} : {tel} &nbsp;&nbsp; {cl.fax} : {fax}<br />
+          {cl.email} : {email}
+        </p>
+      </div>
+      <nav class="flex flex-col gap-2 text-sm text-thp-ink/80" aria-label="Footer">
+        <a href={`/${locale}`} class="hover:text-thp-navy2">{strings.footerAbout}</a>
+        <a href={`/${locale}/contact`} class="hover:text-thp-navy2">{strings.footerContact}</a>
+        <a href={`/${locale}/privacy`} class="hover:text-thp-navy2">{strings.footerPrivacy}</a>
+        <a href={`/${locale}/terms`} class="hover:text-thp-navy2">{strings.footerTerms}</a>
+        <a href={`/${locale}/sources`} class="hover:text-thp-navy2">{strings.footerSources}</a>
+      </nav>
+      <div class="flex flex-col items-start gap-3 md:items-end">
+        <div class="relative">
+          <button
+            type="button"
+            id="hidden-sound-trigger"
+            class="flex h-8 w-8 items-center justify-center rounded-full border border-thp-line text-thp-ink/40 transition-colors hover:border-thp-teal hover:text-thp-teal"
+            aria-label="THPHARM Hidden Sound"
+            aria-expanded="false"
+            aria-controls="hidden-sound-note"
+          >
+            ♪
+          </button>
+          <div
+            id="hidden-sound-note"
+            role="status"
+            class="pointer-events-none absolute bottom-11 right-0 w-56 rounded-xl border border-thp-line bg-white p-3 text-xs text-thp-ink/70 opacity-0 shadow-lg transition-opacity md:right-0"
+          >
+            {hiddenSoundCopy[locale]}
+          </div>
+        </div>
+        <p class="text-xs text-thp-ink/50">
+          {strings.footerCopyright.replace('© THPHARM', `© 2023${year > 2023 ? `–${year}` : ''} THPHARM`)}
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const trigger = document.getElementById('hidden-sound-trigger');
+  const note = document.getElementById('hidden-sound-note');
+  let open = false;
+  trigger?.addEventListener('click', () => {
+    open = !open;
+    trigger.setAttribute('aria-expanded', String(open));
+    note?.classList.toggle('opacity-0', !open);
+    note?.classList.toggle('pointer-events-none', !open);
+  });
+</script>

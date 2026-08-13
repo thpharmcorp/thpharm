@@ -1,0 +1,73 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { locales, type Locale } from '../../i18n/ui';
+
+export function getStaticPaths() {
+  return locales.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+
+const copy = {
+  kr: {
+    title: '출처 안내',
+    lead: '이 홈페이지의 모든 사실 정보는 출처와 함께 제공됩니다. 외부 뉴스·논문·통계는 물론, 티에치팜의 회사소개·기술·파이프라인·임상단계·특허·연혁도 확인 가능한 근거에 연결하며, 근거가 없는 내용은 게시하지 않습니다.',
+    points: [
+      '가능하면 규제기관, ClinicalTrials.gov 같은 공식 임상등록, peer-reviewed 학술지, 정부·국제기구 통계 등 1차 출처를 우선합니다.',
+      '회사 소개나 실적처럼 티에치팜 스스로 밝히는 사실과, 외부 논문·뉴스에 대한 티에치팜의 해석은 화면에서 서로 구분해 표시합니다.',
+      '외부 이미지의 사용권이 불명확한 경우 원본을 그대로 쓰지 않고 티에치팜이 직접 제작한 도식으로 대체합니다.',
+      '각 페이지 하단에는 출처와 최종 확인일을 표시하며, 새로운 사실이 확인되면 주기적으로 갱신합니다.',
+    ],
+  },
+  en: {
+    title: 'Sources',
+    lead: "Every factual claim on this website comes with a source. This applies to external news, papers, and statistics, as well as THPHARM's own company profile, technology, pipeline, clinical stages, patents, and history — we don't publish claims we can't back up.",
+    points: [
+      'Where possible, we prioritize primary sources: regulators, official clinical registries such as ClinicalTrials.gov, peer-reviewed journals, and government or international statistics.',
+      "Facts THPHARM states about itself are shown separately from THPHARM's interpretation of external papers or news.",
+      "When usage rights for an external image are unclear, we don't reuse it — we replace it with an original THPHARM diagram.",
+      'Every page shows its source and the date it was last verified, and we update pages as new information becomes available.',
+    ],
+  },
+  'zh-cn': {
+    title: '资料来源',
+    lead: '本网站的所有事实性内容均附有出处。不仅包括外部新闻、论文与统计数据,也包括THPHARM自身的公司介绍、技术、管线、临床阶段、专利与沿革——没有依据的内容我们不会发布。',
+    points: [
+      '我们尽可能优先采用一手来源:监管机构、ClinicalTrials.gov等官方临床注册库、经同行评审的期刊,以及政府或国际机构的统计数据。',
+      'THPHARM自身披露的事实,与THPHARM对外部论文、新闻的解读,会在页面上分开呈现。',
+      '若外部图片的使用权不明确,我们不会直接使用原图,而是以THPHARM自制的图示替代。',
+      '每个页面底部都会标注出处与最后核实日期,并随着新信息的确认持续更新。',
+    ],
+  },
+  jp: {
+    title: '出典について',
+    lead: '本サイトのすべての事実情報は出典とともに提供されます。外部のニュース・論文・統計はもちろん、THPHARM自身の会社紹介・技術・パイプライン・臨床段階・特許・沿革についても確認可能な根拠に基づいており、根拠のない内容は掲載しません。',
+    points: [
+      '可能な限り、規制当局、ClinicalTrials.govなどの公式臨床登録、査読付き学術誌、政府・国際機関の統計といった一次情報源を優先します。',
+      'THPHARM自身が明らかにする事実と、外部論文・ニュースに対するTHPHARMの見解は、画面上で区別して表示します。',
+      '外部画像の使用権が不明確な場合は原画像をそのまま使わず、THPHARMが独自に制作した図に置き換えます。',
+      '各ページ下部に出典と最終確認日を表示し、新しい事実が確認され次第、随時更新します。',
+    ],
+  },
+} as const;
+const t = copy[locale];
+---
+
+<BaseLayout locale={locale} title={t.title} description={t.lead}>
+  <section class="bg-white">
+    <div class="mx-auto max-w-content px-4 py-16 md:px-6 md:py-20">
+      <h1 class="text-2xl font-black tracking-tight text-thp-navy2 md:text-3xl">{t.title}</h1>
+      <p class="mt-4 max-w-2xl text-sm leading-relaxed text-thp-ink/70">{t.lead}</p>
+
+      <ul class="mt-8 max-w-2xl space-y-4">
+        {
+          t.points.map((p) => (
+            <li class="flex gap-3 text-sm leading-relaxed text-thp-ink/75">
+              <span class="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-thp-teal" />
+              {p}
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+</BaseLayout>

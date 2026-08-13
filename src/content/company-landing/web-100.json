@@ -1,0 +1,48 @@
+{
+  "code": "WEB-100",
+  "status": "draft",
+  "heroEyebrow": {
+    "kr": "RE-ENGINEERING METABOLIC MEDICINES",
+    "en": "RE-ENGINEERING METABOLIC MEDICINES",
+    "zh_cn": "RE-ENGINEERING METABOLIC MEDICINES",
+    "jp": "RE-ENGINEERING METABOLIC MEDICINES"
+  },
+  "heroTitle": {
+    "kr": "대사질환 치료의 새로운 가능성을 설계합니다.",
+    "en": "Designing New Possibilities in Metabolic Disease Treatment.",
+    "zh_cn": "设计代谢性疾病治疗的新可能。",
+    "jp": "代謝性疾患治療の新たな可能性を設計します。"
+  },
+  "heroSubtitle": {
+    "kr": "더 나은 약을 설계하고, 데이터로 검증하고, 임상으로 증명합니다.",
+    "en": "We design better medicines, validate them with data, and prove them in the clinic.",
+    "zh_cn": "设计更好的药物,用数据验证,并通过临床证明。",
+    "jp": "より良い薬を設計し、データで検証し、臨床で証明します。"
+  },
+  "heroBody": {
+    "kr": "티에치팜은 개량신약과 복합제 개발 경험을 기반으로 Bio-AI, GLP-1, 임상개발 및 바이오프린팅 기술을 연결하여 대사질환 치료의 새로운 가능성을 만들어가는 바이오기업입니다.",
+    "en": "THPHARM is a biopharmaceutical company that builds on its experience in improved drugs and combination products, connecting Bio-AI, GLP-1, clinical development, and bioprinting technology to create new possibilities in metabolic disease treatment.",
+    "zh_cn": "THPHARM基于改良新药与复方制剂开发经验,将Bio-AI、GLP-1、临床开发与生物打印技术相结合,致力于开创代谢性疾病治疗的新可能。",
+    "jp": "THPHARMは、改良新薬・配合剤の開発経験を基盤に、Bio-AI、GLP-1、臨床開発、そしてバイオプリンティング技術を連携させ、代謝性疾患治療の新たな可能性を切り拓くバイオ企業です。"
+  },
+  "keywordStrip": [
+    { "kr": "DRUG INNOVATION", "en": "DRUG INNOVATION", "zh_cn": "DRUG INNOVATION", "jp": "DRUG INNOVATION" },
+    { "kr": "BIO-AI", "en": "BIO-AI", "zh_cn": "BIO-AI", "jp": "BIO-AI" },
+    { "kr": "GLP-1", "en": "GLP-1", "zh_cn": "GLP-1", "jp": "GLP-1" },
+    { "kr": "CLINICAL DEVELOPMENT", "en": "CLINICAL DEVELOPMENT", "zh_cn": "CLINICAL DEVELOPMENT", "jp": "CLINICAL DEVELOPMENT" },
+    { "kr": "BIOPRINTING", "en": "BIOPRINTING", "zh_cn": "BIOPRINTING", "jp": "BIOPRINTING" }
+  ],
+  "ctaPrimary": {
+    "kr": "티에치팜 알아보기",
+    "en": "Discover THPHARM",
+    "zh_cn": "了解 THPHARM",
+    "jp": "THPHARMを知る"
+  },
+  "ctaSecondary": {
+    "kr": "파이프라인 살펴보기",
+    "en": "Explore Our Pipeline",
+    "zh_cn": "查看管线",
+    "jp": "パイプラインを見る"
+  },
+  "lastUpdated": "2026-08-12"
+}

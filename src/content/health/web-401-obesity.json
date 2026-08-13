@@ -1,0 +1,59 @@
+{
+  "code": "WEB-401",
+  "slug": "obesity",
+  "status": "draft",
+  "title": {
+    "kr": "비만 (Obesity)",
+    "en": "Obesity",
+    "zh_cn": "肥胖症",
+    "jp": "肥満症"
+  },
+  "oneMinuteSummary": {
+    "kr": "비만은 단순히 체중이 많이 나가는 상태가 아니라, 체지방이 과도하게 축적되어 여러 신체 기능에 영향을 주는 만성 대사질환입니다. 당뇨, 고혈압, MASH 등 다른 대사질환과 밀접하게 연결되어 있습니다.",
+    "en": "Obesity is not simply a matter of high body weight — it is a chronic metabolic disease in which excess body fat affects multiple body functions. It is closely connected to other metabolic conditions such as diabetes, hypertension, and MASH.",
+    "zh_cn": "肥胖症并非单纯体重过重,而是一种由于体脂过度堆积而影响多种身体机能的慢性代谢性疾病。它与糖尿病、高血压、MASH等其他代谢性疾病密切相关。",
+    "jp": "肥満症は単に体重が多いという状態ではなく、過剰な体脂肪の蓄積がさまざまな身体機能に影響を与える慢性代謝性疾患です。糖尿病、高血圧、MASHなど他の代謝性疾患と密接に関連しています。"
+  },
+  "whatHappensInBody": {
+    "kr": "에너지 섭취와 소비의 불균형이 오래 지속되면 지방조직이 과도하게 커지고, 이 과정에서 만성 염증과 인슐린 저항성이 함께 나타날 수 있습니다. 이런 변화가 반복되면서 비만은 체중의 문제를 넘어 대사 전반에 영향을 주는 질환으로 진행합니다.",
+    "en": "A sustained imbalance between energy intake and expenditure leads to excess growth of fat tissue, which can trigger chronic inflammation and insulin resistance. Over time, these changes turn obesity from a weight issue into a disease that affects metabolism more broadly.",
+    "zh_cn": "能量摄入与消耗的失衡长期持续会导致脂肪组织过度增生,并可能伴随慢性炎症与胰岛素抵抗。这些变化不断累积,使肥胖症从体重问题发展为影响整体代谢的疾病。",
+    "jp": "エネルギー摂取と消費の不均衡が長く続くと脂肪組織が過剰に増大し、その過程で慢性炎症やインスリン抵抗性が現れることがあります。こうした変化が積み重なることで、肥満症は体重だけの問題を超えて代謝全体に影響する疾患へと進行します。"
+  },
+  "riskAndScreening": {
+    "kr": "체질량지수(BMI), 허리둘레, 동반질환(당뇨·고혈압·이상지질혈증 등) 여부를 의료기관에서 함께 확인합니다. 이 페이지는 진단을 대체하지 않으며, 개인별 평가는 반드시 의료진과 상담하시기 바랍니다.",
+    "en": "Healthcare providers typically assess body mass index (BMI), waist circumference, and related conditions such as diabetes, hypertension, and dyslipidemia together. This page does not replace diagnosis — please consult a healthcare professional for individual evaluation.",
+    "zh_cn": "医疗机构通常会综合评估体重指数(BMI)、腰围以及糖尿病、高血压、血脂异常等相关合并症。本页面不能替代诊断,个人评估请务必咨询医疗专业人员。",
+    "jp": "医療機関では、体格指数(BMI)、腹囲、糖尿病・高血圧・脂質異常症などの併存疾患をあわせて確認します。本ページは診断に代わるものではなく、個別の評価は必ず医療従事者にご相談ください。"
+  },
+  "currentTreatment": {
+    "kr": "생활습관 개선(식이·운동·행동치료)이 기본이며, 필요한 경우 약물치료나 수술적 치료가 함께 고려됩니다. 치료 방법의 선택은 개인의 건강 상태에 따라 다릅니다.",
+    "en": "Lifestyle interventions (diet, exercise, behavioral therapy) form the foundation, with medication or surgical treatment considered when appropriate. The choice of treatment varies based on individual health status.",
+    "zh_cn": "生活方式干预(饮食、运动、行为疗法)是基础,必要时可考虑药物治疗或手术治疗。治疗方式的选择因个人健康状况而异。",
+    "jp": "生活習慣の改善(食事・運動・行動療法)が基本であり、必要に応じて薬物治療や外科的治療が検討されます。治療法の選択は個人の健康状態によって異なります。"
+  },
+  "treatmentChanges": {
+    "kr": "최근 GLP-1 계열 치료제의 등장으로 체중 관리의 치료 패러다임이 변화하고 있습니다. 자세한 최신 동향은 INTELLIGENCE의 THPHARM VIEW에서 다룹니다.",
+    "en": "The emergence of GLP-1-based therapies has recently been changing the treatment paradigm for weight management. See THPHARM View under INTELLIGENCE for the latest trends.",
+    "zh_cn": "近期GLP-1类治疗药物的出现正在改变体重管理的治疗范式。最新动态详见INTELLIGENCE中的THPHARM View。",
+    "jp": "近年、GLP-1系治療薬の登場により体重管理の治療パラダイムが変化しています。最新動向はINTELLIGENCEのTHPHARM Viewで扱います。"
+  },
+  "mythVsFact": [
+    {
+      "myth": {
+        "kr": "적게 먹기만 하면 누구나 살을 뺄 수 있다?",
+        "en": "Myth: Anyone can lose weight just by eating less?",
+        "zh_cn": "误区:只要少吃,任何人都能瘦下来?",
+        "jp": "誤解:食事量を減らせば誰でも痩せられる?"
+      },
+      "fact": {
+        "kr": "체중 조절은 섭취-소비 균형뿐 아니라 호르몬, 유전, 대사, 수면, 스트레스 등 여러 요인의 영향을 받습니다. 그래서 의지만으로는 조절이 어려운 경우가 많고, 필요하다면 전문가와 함께 접근하는 것이 권장됩니다.",
+        "en": "Weight regulation is influenced not only by intake-expenditure balance but also by hormones, genetics, metabolism, sleep, and stress. That's why willpower alone is often not enough, and working with a healthcare professional is recommended when needed.",
+        "zh_cn": "体重调节不仅受摄入与消耗平衡的影响,还受激素、遗传、代谢、睡眠、压力等多种因素影响。因此仅靠意志力往往难以奏效,必要时建议在专业人员的帮助下进行管理。",
+        "jp": "体重の調節は摂取と消費のバランスだけでなく、ホルモン、遺伝、代謝、睡眠、ストレスなど複数の要因の影響を受けます。そのため意志の力だけでは難しい場合が多く、必要に応じて専門家とともに取り組むことが勧められます。"
+      }
+    }
+  ],
+  "medicalReviewer": "",
+  "lastVerified": "2026-08-12"
+}

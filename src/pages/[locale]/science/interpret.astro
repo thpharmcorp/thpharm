@@ -1,0 +1,112 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SciSubnav from '../../../components/SciSubnav.astro';
+import { locales, type Locale } from '../../../i18n/ui';
+
+export function getStaticPaths() {
+  return locales.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+
+const copy = {
+  kr: {
+    title: '대사질환은 연결되어 있습니다. 치료전략도 연결되어야 합니다.',
+    lead: '비만, 당뇨, 고혈압, MASH는 독립된 질환처럼 보이지만 대사 이상이라는 공통된 생물학적 배경을 공유합니다. 티에치팜은 각각의 질환만 바라보기보다 이들의 연결관계에서 새로운 치료전략을 탐색합니다.',
+    glpTitle: 'GLP-1과 그 이후',
+    glpBody: 'GLP-1은 비만과 당뇨 치료 패러다임을 변화시키고 있습니다. 티에치팜은 GLP-1 계열 치료전략을 포함해 비만과 연관 대사질환의 미충족 수요를 분석하고 새로운 조합·적응증·개발전략을 탐색합니다. SCIENCE에서는 개발 논리를 설명하고, 개별 후보물질 정보는 PIPELINE으로 분리합니다.',
+  },
+  en: {
+    title: 'Metabolic diseases are connected. So should their treatments be.',
+    lead: 'Obesity, diabetes, hypertension, and MASH appear to be independent conditions, but they share a common biological background of metabolic dysfunction. Rather than looking at each disease in isolation, THPHARM explores new treatment strategies at the points where they connect.',
+    glpTitle: 'GLP-1 and beyond',
+    glpBody: 'GLP-1 is transforming the treatment paradigm for obesity and diabetes. THPHARM analyzes unmet needs across obesity and related metabolic disease — including GLP-1-based strategies — and explores new combinations, indications, and development strategies. SCIENCE explains the development logic; individual candidate information lives under PIPELINE.',
+  },
+  'zh-cn': {
+    title: '代谢性疾病彼此相连,治疗策略也应相互连接。',
+    lead: '肥胖症、糖尿病、高血压与MASH看似彼此独立,实则共享代谢异常这一共同的生物学背景。THPHARM并不孤立看待每种疾病,而是在其相互连接之处探索新的治疗策略。',
+    glpTitle: 'GLP-1及其后续',
+    glpBody: 'GLP-1正在改变肥胖症与糖尿病的治疗范式。THPHARM分析肥胖症及相关代谢性疾病(包括GLP-1相关策略)中尚未满足的需求,并探索新的复方、适应症与开发策略。SCIENCE负责阐述开发逻辑,具体候选物质信息则归入PIPELINE。',
+  },
+  jp: {
+    title: '代謝性疾患はつながっています。治療戦略もつながるべきです。',
+    lead: '肥満、糖尿病、高血圧、MASHは独立した疾患のように見えますが、代謝異常という共通の生物学的背景を共有しています。THPHARMはそれぞれの疾患だけを見るのではなく、その連結関係から新たな治療戦略を探索します。',
+    glpTitle: 'GLP-1、そしてその先へ',
+    glpBody: 'GLP-1は肥満と糖尿病の治療パラダイムを変化させています。THPHARMはGLP-1系治療戦略を含め、肥満と関連代謝性疾患のアンメットニーズを分析し、新たな組み合わせ・適応症・開発戦略を探索します。SCIENCEでは開発ロジックを説明し、個別候補物質の情報はPIPELINEで扱います。',
+  },
+} as const;
+const t = copy[locale];
+
+const diseaseLabels = {
+  kr: { obesity: '비만', diabetes: '당뇨', hypertension: '고혈압', mash: 'MASH', cv: '심혈관 위험' },
+  en: { obesity: 'Obesity', diabetes: 'Diabetes', hypertension: 'Hypertension', mash: 'MASH', cv: 'Cardiovascular Risk' },
+  'zh-cn': { obesity: '肥胖症', diabetes: '糖尿病', hypertension: '高血压', mash: 'MASH', cv: '心血管风险' },
+  jp: { obesity: '肥満', diabetes: '糖尿病', hypertension: '高血圧', mash: 'MASH', cv: '心血管リスク' },
+} as const;
+const dl = diseaseLabels[locale];
+---
+
+<BaseLayout locale={locale} title={t.title} description={t.lead}>
+  <SciSubnav locale={locale} current="interpret" />
+  <section class="relative overflow-hidden bg-thp-navy text-white">
+    <div class="relative mx-auto grid max-w-content items-center gap-10 px-4 py-16 md:grid-cols-[1.15fr_0.85fr] md:px-6 md:py-20">
+      <div>
+        <p class="mb-4 text-xs font-bold tracking-widest text-thp-teal">I — INTERPRET · METABOLIC SCIENCE</p>
+        <h1 class="max-w-xl text-2xl font-black leading-tight tracking-tight md:text-3xl">{t.title}</h1>
+        <p class="mt-5 max-w-lg text-sm leading-relaxed text-white/70">{t.lead}</p>
+      </div>
+      <div class="relative mx-auto aspect-square w-full max-w-[380px]">
+        <svg viewBox="0 0 320 320" class="h-full w-full" aria-hidden="true">
+          <g fill="none" stroke="rgba(255,255,255,.22)" stroke-width="1.5">
+            <line x1="160" y1="160" x2="160" y2="50"></line>
+            <line x1="160" y1="160" x2="260" y2="110"></line>
+            <line x1="160" y1="160" x2="260" y2="220"></line>
+            <line x1="160" y1="160" x2="160" y2="280"></line>
+            <line x1="160" y1="160" x2="60" y2="220"></line>
+            <line x1="160" y1="160" x2="60" y2="110"></line>
+          </g>
+          <circle cx="160" cy="160" r="30" fill="#0B2540"></circle>
+          <circle cx="160" cy="160" r="30" fill="none" stroke="#12A594" stroke-width="1.5"></circle>
+          <text x="160" y="164" text-anchor="middle" fill="#fff" font-size="9" font-weight="800">METABOLIC</text>
+          <g>
+            <circle cx="160" cy="50" r="26" fill="#0F3A52" stroke="#12A594" stroke-width="1.5"></circle>
+            <text x="160" y="54" text-anchor="middle" fill="#fff" font-size="9.5" font-weight="700">{dl.obesity}</text>
+          </g>
+          <g>
+            <circle cx="260" cy="110" r="26" fill="#0F3A52" stroke="#12A594" stroke-width="1.5"></circle>
+            <text x="260" y="114" text-anchor="middle" fill="#fff" font-size="8.5" font-weight="700">{dl.diabetes}</text>
+          </g>
+          <g>
+            <circle cx="260" cy="220" r="26" fill="#0F3A52" stroke="#12A594" stroke-width="1.5"></circle>
+            <text x="260" y="224" text-anchor="middle" fill="#fff" font-size="8" font-weight="700">{dl.hypertension}</text>
+          </g>
+          <g>
+            <circle cx="160" cy="280" r="26" fill="#0F3A52" stroke="#12A594" stroke-width="1.5"></circle>
+            <text x="160" y="284" text-anchor="middle" fill="#fff" font-size="9.5" font-weight="700">{dl.mash}</text>
+          </g>
+          <g>
+            <circle cx="60" cy="220" r="26" fill="#0F3A52" stroke="rgba(255,255,255,.4)" stroke-width="1.5"></circle>
+            <text x="60" y="224" text-anchor="middle" fill="#fff" font-size="7.5" font-weight="700">{dl.cv}</text>
+          </g>
+          <g opacity="0.5">
+            <circle cx="60" cy="110" r="18" fill="none" stroke="rgba(255,255,255,.3)" stroke-width="1"></circle>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white">
+    <div class="mx-auto max-w-content px-4 py-14 md:px-6 md:py-16">
+      <div class="rounded-2xl bg-thp-mist p-6">
+        <p class="text-sm font-bold text-thp-navy2">{t.glpTitle}</p>
+        <p class="mt-2 max-w-2xl text-sm leading-relaxed text-thp-ink/70">{t.glpBody}</p>
+      </div>
+      <a
+        href={`/${locale}/health`}
+        class="mt-8 inline-flex items-center gap-2 text-sm font-bold text-thp-tealDeep hover:underline"
+      >
+        HEALTH → {locale === 'kr' ? '일반인을 위한 대사질환 설명 보기' : 'See patient-friendly explanations'}
+      </a>
+    </div>
+  </section>
+</BaseLayout>

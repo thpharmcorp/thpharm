@@ -1,0 +1,29 @@
+{
+  "code": "WEB-505",
+  "kind": "bio_ai_atlas_card",
+  "status": "draft",
+  "title": {
+    "kr": "결합 예측 (Binding & Affinity)",
+    "en": "Binding & Affinity",
+    "zh_cn": "结合与亲和力预测",
+    "jp": "結合・親和性予測"
+  },
+  "dek": {
+    "kr": "무엇이 어디에 붙고 얼마나 잘 붙을지 탐색",
+    "en": "Exploring what binds where, and how strongly",
+    "zh_cn": "探索什么与什么结合、结合强度如何",
+    "jp": "何がどこに、どれほど強く結合するかを探索"
+  },
+  "body": {
+    "kr": "Boltz-2 등이 대표적입니다. 실시간 계산은 GPU·대기시간 부담이 있어 미리 계산된 예제 중심으로 제공하며, 실시간 결합 예측 기능은 계속 검토 중입니다.",
+    "en": "Boltz-2 is a representative model. Real-time computation involves GPU cost and latency, so we currently focus on pre-computed examples; real-time binding prediction remains under ongoing review.",
+    "zh_cn": "Boltz-2为代表性模型。由于实时计算存在GPU与延迟成本,目前以预先计算好的示例为主提供,实时结合预测功能仍在持续评估中。",
+    "jp": "Boltz-2が代表的なモデルです。リアルタイム計算はGPUと待機時間の負担があるため、現在は事前計算済みの例を中心に提供しており、リアルタイム結合予測機能は引き続き検討中です。"
+  },
+  "tags": [
+    { "label": "Bio-AI" },
+    { "label": "Boltz", "url": "https://github.com/jwohlwend/boltz" },
+    { "label": "Binding" }
+  ],
+  "publishedAt": "2026-08-12"
+}

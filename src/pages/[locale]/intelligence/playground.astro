@@ -1,0 +1,230 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { locales, ui, type Locale } from '../../../i18n/ui';
+
+export function getStaticPaths() {
+  return locales.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+const strings = ui[locale];
+
+const copy = {
+  kr: {
+    title: 'AI가 생명과학을 어떻게 보고 있을까요?',
+    lead: 'GLP-1 receptor를 비롯해 THPHARM의 개발축과 연결된 대사·심혈관 표적의 공개 구조를 직접 탐색해보세요. 공개된 예측 구조를 이해하기 쉽게 보여주는 서비스이며, 임의의 서열을 입력해 새로운 단백질을 생성하는 기능은 제공하지 않습니다.',
+    disclaimer: '예측구조와 AI 결과는 연구·교육용이며 진단·치료·의약품 효능을 의미하지 않습니다. 환자정보·유전체·개인 건강수치는 수집하지 않습니다.',
+    step1: 'STEP 1 — 무엇을 보고 싶나요?',
+    step2: '이 질환과 관련된 대표 표적 — 3D 구조를 새 탭에서 열어 직접 회전·확대해 보세요',
+    explorerTitle: 'Protein 3D Explorer',
+    viewCta: 'AlphaFold DB에서 3D 구조 보기',
+    atlasTitle: 'AI는 이걸 어떻게 알았을까요?',
+    atlasBody: '같은 생명과학 문제도 AI마다 잘하는 일이 다릅니다. 아래에서 AlphaFold/RoseTTAFold/Chai/Boltz 등을 역할별로 비교해보세요.',
+    atlasCta: 'Bio-AI Atlas 보기',
+    sourcesTitle: '공식 출처 및 라이선스',
+  },
+  en: {
+    title: 'How is AI looking at the life sciences?',
+    lead: "Explore public structures for GLP-1 receptor and other metabolic/cardiovascular targets connected to THPHARM's development axis. This service makes public predicted structures easy to explore — it does not let users input arbitrary sequences to generate new proteins.",
+    disclaimer: 'Predicted structures and AI outputs are for research and educational use only and do not constitute diagnosis, treatment, or a claim of drug efficacy. No patient data, genomic data, or personal health figures are collected.',
+    step1: 'STEP 1 — What would you like to see?',
+    step2: 'Representative targets linked to this disease — open the 3D structure in a new tab to rotate and zoom',
+    explorerTitle: 'Protein 3D Explorer',
+    viewCta: 'View 3D structure on AlphaFold DB',
+    atlasTitle: 'How did AI figure this out?',
+    atlasBody: 'Different AI models are good at different life-science problems. Compare AlphaFold/RoseTTAFold/Chai/Boltz and others by role below.',
+    atlasCta: 'See the Bio-AI Atlas',
+    sourcesTitle: 'Official sources & licenses',
+  },
+  'zh-cn': {
+    title: 'AI是如何看待生命科学的?',
+    lead: '探索GLP-1受体等与THPHARM开发方向相关的代谢/心血管靶点的公开结构。本服务以易于理解的方式呈现公开的预测结构,不提供用户输入任意序列生成新蛋白质的功能。',
+    disclaimer: '预测结构与AI结果仅供研究与教育用途,不构成诊断、治疗或药效声明。不收集患者信息、基因组数据或个人健康数值。',
+    step1: 'STEP 1 — 您想看什么?',
+    step2: '与该疾病相关的代表性靶点——在新标签页中打开3D结构,亲自旋转、缩放查看',
+    explorerTitle: 'Protein 3D Explorer',
+    viewCta: '在AlphaFold DB中查看3D结构',
+    atlasTitle: 'AI是如何得知这些的?',
+    atlasBody: '同样的生命科学问题,不同AI擅长的方面也不同。请在下方按角色比较AlphaFold/RoseTTAFold/Chai/Boltz等模型。',
+    atlasCta: '查看Bio-AI Atlas',
+    sourcesTitle: '官方来源与许可',
+  },
+  jp: {
+    title: 'AIは生命科学をどのように見ているのでしょうか?',
+    lead: 'GLP-1受容体をはじめ、THPHARMの開発軸とつながる代謝・心血管標的の公開構造を直接探索してみてください。公開されている予測構造をわかりやすく紹介するサービスであり、ユーザーが任意の配列を入力して新たなタンパク質を生成する機能は提供しません。',
+    disclaimer: '予測構造とAI結果は研究・教育用であり、診断・治療・医薬品の効能を意味しません。患者情報・ゲノム・個人の健康数値は収集しません。',
+    step1: 'STEP 1 — 何を見たいですか?',
+    step2: 'この疾患に関連する代表的な標的 — 3D構造を新しいタブで開き、回転・拡大してご覧ください',
+    explorerTitle: 'Protein 3D Explorer',
+    viewCta: 'AlphaFold DBで3D構造を見る',
+    atlasTitle: 'AIはこれをどうやって知ったのでしょうか?',
+    atlasBody: '同じ生命科学の問題でも、AIごとに得意なことが異なります。以下でAlphaFold/RoseTTAFold/Chai/Boltzなどを役割別に比較してみてください。',
+    atlasCta: 'Bio-AI Atlasを見る',
+    sourcesTitle: '公式出典とライセンス',
+  },
+} as const;
+const t = copy[locale];
+
+// STEP 2 — 대표 표적: THP-001/THP-004 개발축과 직접 연결되는 GLP1R/GIPR/GCGR + SGLT2 + AGTR1
+// UniProt accession은 WebSearch로 개별 확인 (2026-08-12): GLP1R=P43220, GIPR=P48546, GCGR=P47871,
+// SLC5A2(SGLT2)=P31639, AGTR1=P30556. AlphaFold DB 엔트리 URL은 uniprot accession 기준으로 고정된다.
+const diseases = [
+  {
+    key: 'obesity',
+    label: { kr: '비만', en: 'Obesity', 'zh-cn': '肥胖症', jp: '肥満' },
+    targets: ['GLP1R', 'GIPR'],
+  },
+  {
+    key: 'diabetes',
+    label: { kr: '당뇨', en: 'Diabetes', 'zh-cn': '糖尿病', jp: '糖尿病' },
+    targets: ['GLP1R', 'GCGR', 'SLC5A2'],
+  },
+  {
+    key: 'hypertension',
+    label: { kr: '고혈압', en: 'Hypertension', 'zh-cn': '高血压', jp: '高血圧' },
+    targets: ['AGTR1'],
+  },
+  {
+    key: 'mash',
+    label: { kr: 'MASH', en: 'MASH', 'zh-cn': 'MASH', jp: 'MASH' },
+    targets: ['GLP1R', 'GCGR'],
+  },
+] as const;
+
+const targetInfo: Record<string, { uniprot: string; name: Record<string, string> }> = {
+  GLP1R: {
+    uniprot: 'P43220',
+    name: {
+      kr: 'GLP-1 수용체 — 식후 혈당·식욕 조절에 관여하는 수용체',
+      en: 'GLP-1 receptor — involved in post-meal blood glucose and appetite regulation',
+      'zh-cn': 'GLP-1受体 — 参与餐后血糖与食欲调节',
+      jp: 'GLP-1受容体 — 食後の血糖・食欲調節に関与',
+    },
+  },
+  GIPR: {
+    uniprot: 'P48546',
+    name: {
+      kr: 'GIP 수용체 — GLP-1과 함께 작용하는 인크레틴 수용체',
+      en: 'GIP receptor — an incretin receptor that works alongside GLP-1',
+      'zh-cn': 'GIP受体 — 与GLP-1共同作用的肠促胰素受体',
+      jp: 'GIP受容体 — GLP-1と共に作用するインクレチン受容体',
+    },
+  },
+  GCGR: {
+    uniprot: 'P47871',
+    name: {
+      kr: '글루카곤 수용체 — 공복 시 혈당 유지에 관여',
+      en: 'Glucagon receptor — involved in maintaining blood glucose during fasting',
+      'zh-cn': '胰高血糖素受体 — 参与空腹时血糖维持',
+      jp: 'グルカゴン受容体 — 空腹時の血糖維持に関与',
+    },
+  },
+  SLC5A2: {
+    uniprot: 'P31639',
+    name: {
+      kr: 'SGLT2 — 신장에서 포도당 재흡수를 담당하는 수송체',
+      en: 'SGLT2 — a transporter responsible for glucose reabsorption in the kidney',
+      'zh-cn': 'SGLT2 — 负责肾脏葡萄糖重吸收的转运体',
+      jp: 'SGLT2 — 腎臓でのブドウ糖再吸収を担うトランスポーター',
+    },
+  },
+  AGTR1: {
+    uniprot: 'P30556',
+    name: {
+      kr: '안지오텐신 II 수용체(AT1) — 혈압 조절의 핵심 수용체',
+      en: 'Angiotensin II receptor type 1 (AT1) — a key receptor in blood pressure regulation',
+      'zh-cn': '血管紧张素II受体1型(AT1) — 血压调节的关键受体',
+      jp: 'アンジオテンシンII受容体(AT1) — 血圧調節の中核受容体',
+    },
+  },
+};
+---
+
+<BaseLayout locale={locale} title={t.title} description={t.lead}>
+  <section class="relative overflow-hidden bg-thp-navy text-white">
+    <div class="relative mx-auto max-w-content px-4 py-16 md:px-6 md:py-20">
+      <p class="mb-4 text-xs font-bold tracking-widest text-thp-teal">BIO-AI PLAYGROUND</p>
+      <h1 class="max-w-2xl text-2xl font-black leading-tight md:text-3xl">{t.title}</h1>
+      <p class="mt-5 max-w-xl text-sm leading-relaxed text-white/70">{t.lead}</p>
+      <p class="mt-6 max-w-xl rounded-xl border border-white/15 bg-white/5 p-4 text-xs leading-relaxed text-white/50">
+        {t.disclaimer}
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-white">
+    <div class="mx-auto max-w-content px-4 py-14 md:px-6 md:py-16">
+      <p class="text-xs font-bold tracking-widest text-thp-teal">{t.explorerTitle}</p>
+      <p class="mt-2 mb-8 text-sm font-bold text-thp-navy2">{t.step1}</p>
+
+      <div class="space-y-10">
+        {
+          diseases.map((dis) => (
+            <div>
+              <p class="mb-3 inline-block rounded-full bg-thp-navy2 px-4 py-1.5 text-xs font-bold text-white">
+                {dis.label[locale]}
+              </p>
+              <p class="mb-4 text-xs text-thp-ink/40">{t.step2}</p>
+              <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+                {dis.targets.map((key) => {
+                  const info = targetInfo[key];
+                  return (
+                    <a
+                      href={`https://alphafold.ebi.ac.uk/entry/${info.uniprot}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="rounded-2xl border border-thp-line p-5 transition-all hover:-translate-y-1 hover:border-thp-teal hover:shadow-lg hover:shadow-thp-navy/5"
+                    >
+                      <p class="text-base font-extrabold text-thp-navy2">{key}</p>
+                      <p class="mt-2 text-xs leading-relaxed text-thp-ink/60">{info.name[locale]}</p>
+                      <p class="mt-3 text-[11px] font-mono text-thp-ink/30">UniProt {info.uniprot}</p>
+                      <p class="mt-3 text-xs font-semibold text-thp-tealDeep">{t.viewCta} ↗</p>
+                    </a>
+                  );
+                })}
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="border-t border-thp-line bg-thp-mist">
+    <div class="mx-auto max-w-content px-4 py-14 md:px-6 md:py-16">
+      <p class="text-sm font-bold text-thp-navy2">{t.atlasTitle}</p>
+      <p class="mt-2 max-w-xl text-sm leading-relaxed text-thp-ink/70">{t.atlasBody}</p>
+      <a href={`/${locale}/intelligence#atlas`} class="mt-4 inline-flex items-center gap-2 text-sm font-bold text-thp-tealDeep hover:underline">
+        {t.atlasCta} →
+      </a>
+    </div>
+  </section>
+
+  <section class="bg-white">
+    <div class="mx-auto max-w-content px-4 py-10 md:px-6">
+      <p class="mb-3 text-xs font-bold tracking-widest text-thp-ink/40">{t.sourcesTitle}</p>
+      <ul class="space-y-1.5 text-xs text-thp-ink/50">
+        <li>
+          <a href="https://alphafold.ebi.ac.uk/" target="_blank" rel="noopener noreferrer" class="hover:text-thp-tealDeep hover:underline">
+            AlphaFold Protein Structure Database — CC BY 4.0, academic &amp; commercial use ↗
+          </a>
+        </li>
+        <li>
+          <a href="https://alphafold.ebi.ac.uk/faq" target="_blank" rel="noopener noreferrer" class="hover:text-thp-tealDeep hover:underline">
+            AlphaFold DB FAQ — licence and attribution ↗
+          </a>
+        </li>
+        <li>
+          <a href="https://molstar.org/" target="_blank" rel="noopener noreferrer" class="hover:text-thp-tealDeep hover:underline">
+            Mol* — open-source molecular visualization ↗
+          </a>
+        </li>
+      </ul>
+      <p class="mt-6 text-[11px] text-thp-ink/30">
+        Structure Type: AI Prediction (AlphaFold) · {strings.lastUpdated}: 2026-08-12 ·
+        {locale === 'kr'
+          ? ' 실시간 계산은 수행하지 않으며 AlphaFold DB의 공개 예측 구조 페이지로 연결됩니다.'
+          : ' No real-time computation is performed — links go directly to public predicted-structure pages on AlphaFold DB.'}
+      </p>
+    </div>
+  </section>
+</BaseLayout>

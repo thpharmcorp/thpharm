@@ -1,0 +1,59 @@
+{
+  "code": "WEB-403",
+  "slug": "hypertension",
+  "status": "draft",
+  "title": {
+    "kr": "고혈압 (Hypertension)",
+    "en": "Hypertension",
+    "zh_cn": "高血压",
+    "jp": "高血圧"
+  },
+  "oneMinuteSummary": {
+    "kr": "고혈압은 혈관 벽에 가해지는 압력이 만성적으로 높은 상태입니다. 대부분 뚜렷한 증상이 없어 '침묵의 살인자'로 불리지만, 방치하면 심혈관질환·신장질환의 주요 위험요인이 됩니다. 비만·당뇨와 함께 발생하는 경우가 많습니다.",
+    "en": "Hypertension is a chronic elevation of the pressure exerted on blood vessel walls. It is often called a 'silent' condition because it usually has no clear symptoms, yet if left unmanaged it becomes a major risk factor for cardiovascular and kidney disease. It frequently occurs together with obesity and diabetes.",
+    "zh_cn": "高血压是血管壁承受的压力长期偏高的状态。由于通常没有明显症状,常被称为'沉默的杀手',但若放任不管,将成为心血管疾病与肾脏疾病的主要风险因素。常与肥胖症、糖尿病同时发生。",
+    "jp": "高血圧は血管壁にかかる圧力が慢性的に高い状態です。多くの場合明確な症状がないため『沈黙の病』と呼ばれますが、放置すると心血管疾患・腎疾患の主要な危険因子となります。肥満・糖尿病と併発することが多くあります。"
+  },
+  "whatHappensInBody": {
+    "kr": "심장이 혈액을 내보낼 때(수축기)와 쉴 때(이완기)의 혈관 내 압력을 각각 수축기·이완기 혈압으로 측정합니다. 혈관의 탄력성 저하, 나트륨 과다 섭취, 신장의 체액 조절 이상, 호르몬 시스템(레닌-안지오텐신-알도스테론계) 등이 복합적으로 작용해 혈압이 상승할 수 있습니다.",
+    "en": "Blood pressure is measured as systolic pressure (when the heart contracts and pumps blood) and diastolic pressure (when the heart rests between beats). Reduced blood vessel elasticity, excess sodium intake, impaired fluid regulation by the kidneys, and hormonal systems such as the renin-angiotensin-aldosterone system can act together to raise blood pressure.",
+    "zh_cn": "心脏收缩射血时(收缩压)与舒张休息时(舒张压)血管内的压力分别称为收缩压与舒张压。血管弹性下降、钠摄入过多、肾脏体液调节异常,以及肾素-血管紧张素-醛固酮系统等激素系统的共同作用可能导致血压升高。",
+    "jp": "心臓が血液を送り出すとき(収縮期)と休むとき(拡張期)の血管内圧力を、それぞれ収縮期血圧・拡張期血圧として測定します。血管の弾力性低下、ナトリウムの過剰摂取、腎臓の体液調節異常、レニン-アンジオテンシン-アルドステロン系などのホルモン系が複合的に作用し血圧が上昇することがあります。"
+  },
+  "riskAndScreening": {
+    "kr": "가정 및 의료기관에서의 반복 혈압 측정을 통해 확인합니다. 가족력, 비만, 고령, 나트륨 과다 섭취, 흡연, 스트레스 등이 위험요인으로 알려져 있습니다. 이 페이지는 진단을 대체하지 않으며, 개인별 평가는 반드시 의료진과 상담하시기 바랍니다.",
+    "en": "Hypertension is confirmed through repeated blood pressure measurements at home and in clinical settings. Known risk factors include family history, obesity, older age, excess sodium intake, smoking, and stress. This page does not replace diagnosis — please consult a healthcare professional for individual evaluation.",
+    "zh_cn": "通过在家中及医疗机构反复测量血压进行确认。家族史、肥胖、高龄、钠摄入过多、吸烟、压力等已知为风险因素。本页面不能替代诊断,个人评估请务必咨询医疗专业人员。",
+    "jp": "家庭および医療機関での反復した血圧測定により確認します。家族歴、肥満、高齢、ナトリウムの過剰摂取、喫煙、ストレスなどが危険因子として知られています。本ページは診断に代わるものではなく、個別の評価は必ず医療従事者にご相談ください。"
+  },
+  "currentTreatment": {
+    "kr": "저염식·운동·금연 등 생활습관 개선이 기본이며, 필요한 경우 항고혈압제 치료가 함께 고려됩니다. 여러 동반질환이 있는 경우 복합제(single-pill combination) 전략이 활용되기도 합니다.",
+    "en": "Lifestyle improvements such as a low-sodium diet, exercise, and smoking cessation form the foundation, with antihypertensive medication considered when needed. When multiple comorbidities are present, single-pill combination strategies are sometimes used.",
+    "zh_cn": "低盐饮食、运动、戒烟等生活方式改善是基础,必要时可考虑联合抗高血压药物治疗。在合并多种疾病的情况下,也会采用复方制剂(single-pill combination)策略。",
+    "jp": "減塩食・運動・禁煙などの生活習慣改善が基本であり、必要に応じて降圧薬治療が検討されます。複数の併存疾患がある場合には、単剤配合(single-pill combination)戦略が用いられることもあります。"
+  },
+  "treatmentChanges": {
+    "kr": "여러 기전의 약물을 하나의 정제로 결합한 복합제 전략과, 대사질환을 동반한 환자를 위한 통합 관리 접근이 확대되고 있습니다. 자세한 최신 동향은 INTELLIGENCE의 THPHARM VIEW에서 다룹니다.",
+    "en": "Combination-product strategies that combine multiple mechanisms in a single pill, along with integrated management approaches for patients with concurrent metabolic disease, are expanding. See THPHARM View under INTELLIGENCE for the latest trends.",
+    "zh_cn": "将多种作用机制结合于单一片剂的复方制剂策略,以及针对合并代谢性疾病患者的综合管理方式正在扩大应用。最新动态详见INTELLIGENCE中的THPHARM View。",
+    "jp": "複数の作用機序を一つの錠剤にまとめた配合剤戦略や、代謝性疾患を併存する患者のための統合的管理アプローチが拡大しています。最新動向はINTELLIGENCEのTHPHARM Viewで扱います。"
+  },
+  "mythVsFact": [
+    {
+      "myth": {
+        "kr": "고혈압은 증상이 없으면 괜찮다?",
+        "en": "Myth: Hypertension is fine as long as there are no symptoms?",
+        "zh_cn": "误区:高血压只要没有症状就没关系?",
+        "jp": "誤解:高血圧は症状がなければ大丈夫?"
+      },
+      "fact": {
+        "kr": "고혈압은 증상이 거의 없이 진행되지만 장기간 방치하면 심장·뇌·신장·혈관에 손상을 축적시킬 수 있습니다. 증상 유무와 관계없이 정기적인 혈압 측정과 관리가 권장됩니다.",
+        "en": "Hypertension typically progresses with few or no symptoms, but if left unmanaged over a long period it can accumulate damage to the heart, brain, kidneys, and blood vessels. Regular blood pressure monitoring and management are recommended regardless of symptoms.",
+        "zh_cn": "高血压通常在几乎无症状的情况下进展,但若长期放任不管,可能对心脏、大脑、肾脏及血管造成累积性损伤。无论是否有症状,均建议定期测量血压并加以管理。",
+        "jp": "高血圧はほとんど症状がないまま進行しますが、長期間放置すると心臓・脳・腎臓・血管に損傷が蓄積する可能性があります。症状の有無にかかわらず、定期的な血圧測定と管理が推奨されます。"
+      }
+    }
+  ],
+  "medicalReviewer": "",
+  "lastVerified": "2026-08-12"
+}

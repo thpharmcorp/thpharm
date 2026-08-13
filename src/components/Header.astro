@@ -1,0 +1,126 @@
+---
+import { locales, localeLabel, nav, ui, type Locale } from '../i18n/ui';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const strings = ui[locale];
+
+// 현재 경로에서 언어 세그먼트를 제거한 "페이지 경로"를 구해, 언어 전환 시 같은 페이지로 이동시킨다.
+// 예: /kr/pipeline/thp-001 -> pipeline/thp-001
+const segments = Astro.url.pathname.split('/').filter(Boolean);
+const pageRest = segments.slice(1).join('/');
+// 현재 대메뉴 활성 표시: /kr/pipeline/thp-001 -> "pipeline". 루트(/kr)는 COMPANY(path: '')로 매칭.
+const currentTopSegment = segments[1] ?? '';
+
+function isActive(itemPath: string) {
+  if (itemPath === '') return currentTopSegment === '';
+  return currentTopSegment === itemPath;
+}
+---
+
+<header class="sticky top-0 z-40 border-b border-thp-line bg-white/95 backdrop-blur">
+  <div class="mx-auto flex max-w-content items-center justify-between gap-4 px-4 py-3 md:px-6">
+    <a href={`/${locale}`} class="flex items-center gap-2">
+      <img src="/images/logo.png" alt="THPharm" class="h-8 w-auto" />
+    </a>
+
+    <nav class="hidden items-center gap-6 text-sm font-medium text-thp-ink md:flex" aria-label="Main">
+      {
+        nav.map((item) => (
+          <a
+            href={`/${locale}/${item.path}`.replace(/\/+$/, '') || `/${locale}`}
+            aria-current={isActive(item.path) ? 'page' : undefined}
+            class={`whitespace-nowrap border-b-2 pb-0.5 transition-colors ${
+              isActive(item.path)
+                ? 'border-thp-teal font-bold text-thp-navy2'
+                : 'border-transparent hover:border-thp-teal/40 hover:text-thp-teal'
+            }`}
+          >
+            {item.label}
+          </a>
+        ))
+      }
+    </nav>
+
+    <div class="hidden items-center gap-3 text-xs font-semibold md:flex">
+      <a
+        href={`/${locale}/pt`}
+        class="rounded border border-thp-navy px-3 py-1.5 text-thp-navy2 hover:bg-thp-navy hover:text-white"
+      >
+        {strings.ptMode}
+      </a>
+      <span
+        class="cursor-not-allowed rounded border border-thp-line px-3 py-1.5 text-thp-ink/40"
+        title={strings.loginComingSoon}
+      >
+        {strings.login}
+      </span>
+      <div class="flex items-center gap-1 border-l border-thp-line pl-3" aria-label="Language">
+        {
+          locales.map((l) => (
+            <a
+              href={`/${l}/${pageRest}`.replace(/\/+$/, '') || `/${l}`}
+              class={`rounded px-1.5 py-0.5 ${l === locale ? 'bg-thp-navy text-white' : 'text-thp-ink/70 hover:text-thp-navy2'}`}
+              aria-current={l === locale ? 'true' : undefined}
+            >
+              {localeLabel[l]}
+            </a>
+          ))
+        }
+      </div>
+    </div>
+
+    <button
+      id="mobile-nav-toggle"
+      type="button"
+      class="rounded border border-thp-line p-2 md:hidden"
+      aria-expanded="false"
+      aria-controls="mobile-nav"
+      aria-label="메뉴 열기"
+    >
+      <span class="block h-0.5 w-5 bg-thp-ink mb-1"></span>
+      <span class="block h-0.5 w-5 bg-thp-ink mb-1"></span>
+      <span class="block h-0.5 w-5 bg-thp-ink"></span>
+    </button>
+  </div>
+
+  <div id="mobile-nav" class="hidden border-t border-thp-line bg-white md:hidden">
+    <nav class="flex flex-col gap-1 px-4 py-3 text-sm font-medium" aria-label="Mobile">
+      {
+        nav.map((item) => (
+          <a
+            href={`/${locale}/${item.path}`.replace(/\/+$/, '') || `/${locale}`}
+            aria-current={isActive(item.path) ? 'page' : undefined}
+            class={`rounded px-2 py-2 ${isActive(item.path) ? 'bg-thp-navy2 font-bold text-white' : 'hover:bg-thp-mist'}`}
+          >
+            {item.label}
+          </a>
+        ))
+      }
+      <div class="mt-2 flex items-center gap-2 border-t border-thp-line pt-3">
+        {
+          locales.map((l) => (
+            <a
+              href={`/${l}/${pageRest}`.replace(/\/+$/, '') || `/${l}`}
+              class={`rounded px-2 py-1 text-xs font-semibold ${l === locale ? 'bg-thp-navy text-white' : 'border border-thp-line text-thp-ink/70'}`}
+            >
+              {localeLabel[l]}
+            </a>
+          ))
+        }
+      </div>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById('mobile-nav-toggle');
+  const menu = document.getElementById('mobile-nav');
+  toggle?.addEventListener('click', () => {
+    const isOpen = menu?.classList.toggle('hidden') === false;
+    toggle.setAttribute('aria-expanded', String(isOpen));
+  });
+</script>

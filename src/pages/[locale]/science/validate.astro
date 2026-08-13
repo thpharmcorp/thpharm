@@ -1,0 +1,73 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SciSubnav from '../../../components/SciSubnav.astro';
+import { locales, ui, type Locale } from '../../../i18n/ui';
+
+export function getStaticPaths() {
+  return locales.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+const strings = ui[locale];
+
+const copy = {
+  kr: {
+    title: '더 나은 모델이 더 나은 개발 판단을 만듭니다.',
+    lead: '신약개발 과정에서 중요한 것은 후보물질을 만드는 것뿐 아니라 그 가능성을 얼마나 정교하게 검증할 수 있느냐입니다. 티에치팜은 바이오프린팅 장비 및 관련 기술역량을 보유하고 있으며, 이를 세포·조직 기반 연구와 약물평가 기술로 확장할 수 있는 연구 플랫폼으로 발전시키고 있습니다.',
+    flowLabel: '대표 플로우',
+    flow: ['Cells', '3D Tissue Model', 'Drug Exposure', 'Biological Response', 'Development Decision'],
+    confirmNote: '확인 필요: 바이오프린팅이 실제 장비 판매사업인지, 내부 연구도구인지, 약물평가 플랫폼인지에 따라 표현이 달라집니다. 최종 홈페이지에서는 현재 기술수준·제품명·사업모델을 회사 자료로 확인한 후 문구를 확정합니다.',
+  },
+  en: {
+    title: 'Better models make better development decisions.',
+    lead: "What matters in drug development is not only generating candidates, but how rigorously their potential can be validated. THPHARM holds bioprinting equipment and related technology capabilities, and is developing them into a research platform extensible to cell- and tissue-based research and drug evaluation.",
+    flowLabel: 'Representative flow',
+    flow: ['Cells', '3D Tissue Model', 'Drug Exposure', 'Biological Response', 'Development Decision'],
+    confirmNote: 'To confirm: how this is framed depends on whether bioprinting is an equipment sales business, an internal research tool, or a drug-evaluation platform. The final copy will be set once current technology level, product names, and business model are confirmed against company material.',
+  },
+  'zh-cn': {
+    title: '更好的模型带来更好的开发判断。',
+    lead: '新药开发过程中重要的不仅是生成候选物质,更在于能多精细地验证其可能性。THPHARM拥有生物打印设备及相关技术能力,并正将其发展为可扩展至细胞/组织研究与药物评价技术的研究平台。',
+    flowLabel: '代表性流程',
+    flow: ['Cells', '3D Tissue Model', 'Drug Exposure', 'Biological Response', 'Development Decision'],
+    confirmNote: '待确认:根据生物打印究竟是设备销售业务、内部研究工具,还是药物评价平台,表述方式将有所不同。最终官网文案将在核实当前技术水平、产品名称与商业模式后确定。',
+  },
+  jp: {
+    title: 'より良いモデルが、より良い開発判断をつくります。',
+    lead: '新薬開発において重要なのは候補物質を生み出すことだけでなく、その可能性をどれほど精緻に検証できるかです。THPHARMはバイオプリンティング設備および関連技術能力を保有しており、これを細胞・組織ベースの研究と薬物評価技術へと拡張可能な研究プラットフォームへと発展させています。',
+    flowLabel: '代表的なフロー',
+    flow: ['Cells', '3D Tissue Model', 'Drug Exposure', 'Biological Response', 'Development Decision'],
+    confirmNote: '確認事項:バイオプリンティングが実際の機器販売事業なのか、社内研究ツールなのか、薬物評価プラットフォームなのかによって表現が変わります。最終的なホームページでは現在の技術水準・製品名・事業モデルを会社資料で確認の上、文言を確定します。',
+  },
+} as const;
+const t = copy[locale];
+---
+
+<BaseLayout locale={locale} title={t.title} description={t.lead}>
+  <SciSubnav locale={locale} current="validate" />
+  <section class="bg-white">
+    <div class="mx-auto max-w-content px-4 py-16 md:px-6 md:py-20">
+      <p class="text-xs font-bold tracking-widest text-thp-teal">V — VALIDATE · TRANSLATIONAL TECHNOLOGY</p>
+      <h1 class="mt-3 max-w-2xl text-3xl font-black tracking-tight text-thp-navy2 md:text-4xl">{t.title}</h1>
+      <p class="mt-4 max-w-2xl text-thp-ink/70">{t.lead}</p>
+
+      <div class="mt-10">
+        <p class="text-xs font-bold tracking-widest text-thp-ink/50">{t.flowLabel}</p>
+        <div class="mt-4 flex flex-wrap items-center gap-2">
+          {
+            t.flow.map((step, i) => (
+              <>
+                <span class="rounded-full border border-thp-line px-4 py-2 text-xs font-bold text-thp-navy2">{step}</span>
+                {i < t.flow.length - 1 && <span class="text-thp-ink/30">→</span>}
+              </>
+            ))
+          }
+        </div>
+      </div>
+
+      <div class="mt-10 rounded-2xl border border-dashed border-thp-line bg-thp-mist p-6">
+        <p class="text-xs font-bold text-thp-ink/40">{strings.companyDataNeeded}</p>
+        <p class="mt-2 text-sm leading-relaxed text-thp-ink/70">{t.confirmNote}</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,30 @@
+{
+  "code": "WEB-505",
+  "kind": "bio_ai_atlas_card",
+  "status": "draft",
+  "title": {
+    "kr": "단백질 설계 (Protein Design)",
+    "en": "Protein Design",
+    "zh_cn": "蛋白质设计",
+    "jp": "タンパク質設計"
+  },
+  "dek": {
+    "kr": "원하는 형태·기능을 목표로 새로운 단백질 설계를 돕는 AI",
+    "en": "AI that helps design new proteins toward a target shape or function",
+    "zh_cn": "帮助设计具有目标形态或功能的新型蛋白质的AI",
+    "jp": "目的の形状・機能を目指して新しいタンパク質の設計を支援するAI"
+  },
+  "body": {
+    "kr": "RFdiffusion · ProteinMPNN 등이 대표적입니다. THPHARM 홈페이지에서는 사용자가 임의로 새 단백질을 생성하는 기능은 제공하지 않으며, Noise → Backbone → Sequence → Validation의 교육용 사전계산 데모 형태로만 소개합니다.",
+    "en": "RFdiffusion and ProteinMPNN are representative models. THPHARM's site does not let users generate arbitrary new proteins; we present only an educational, pre-computed Noise → Backbone → Sequence → Validation demo.",
+    "zh_cn": "RFdiffusion与ProteinMPNN为代表性模型。THPHARM网站不提供用户自由生成新蛋白质的功能,仅以教育用途的预计算演示(Noise → Backbone → Sequence → Validation)形式介绍。",
+    "jp": "RFdiffusionやProteinMPNNが代表的なモデルです。THPHARMのサイトではユーザーが任意に新規タンパク質を生成する機能は提供せず、教育目的の事前計算済みデモ(Noise → Backbone → Sequence → Validation)としてのみ紹介します。"
+  },
+  "tags": [
+    { "label": "Bio-AI" },
+    { "label": "RFdiffusion", "url": "https://github.com/RosettaCommons/RFdiffusion" },
+    { "label": "Protein Design" },
+    { "label": "ProteinMPNN", "url": "https://github.com/dauparas/ProteinMPNN" }
+  ],
+  "publishedAt": "2026-08-12"
+}

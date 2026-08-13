@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>THPHARM — Design Preview (V1)</title>
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: '#0B1220',
+          navy: '#0A1E33',
+          navy2: '#0E2A47',
+          teal: '#12A594',
+          tealDeep: '#0B7A6E',
+          amber: '#D98E2B',
+          mist: '#F5F7F9',
+          line: '#E4E9EE',
+        },
+        fontFamily: {
+          sans: ['Pretendard Variable', 'Pretendard', '-apple-system', 'sans-serif'],
+        },
+      },
+    },
+  };
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Pretendard Variable', 'Pretendard', sans-serif; }
+  .headline { font-weight: 800; letter-spacing: -0.02em; }
+  .headline-black { font-weight: 900; letter-spacing: -0.02em; }
+  .fade-up { opacity: 0; transform: translateY(16px); animation: fadeUp .8s ease forwards; }
+  .fade-up.d1 { animation-delay: .08s; }
+  .fade-up.d2 { animation-delay: .18s; }
+  .fade-up.d3 { animation-delay: .28s; }
+  @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+  .card-hover { transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+  .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px -20px rgba(10,30,51,.25); border-color: #12A594; }
+  .noise-line { stroke: rgba(255,255,255,.14); }
+</style>
+</head>
+<body class="bg-white text-ink antialiased">
+
+<div class="bg-amber/10 border-b border-amber/30 text-center text-xs py-2 text-ink/70">
+  이 페이지는 디자인 방향 확인용 정적 미리보기입니다 — 실제 콘텐츠·수치는 회사 확인 후 교체됩니다.
+</div>
+
+<header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-line">
+  <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+    <div class="font-semibold tracking-tight text-navy2 text-lg">THPHARM</div>
+    <nav class="hidden md:flex items-center gap-8 text-[13px] font-medium text-ink/70">
+      <a href="#" class="hover:text-navy2">COMPANY</a>
+      <a href="#" class="hover:text-navy2">SCIENCE</a>
+      <a href="#" class="hover:text-navy2">PIPELINE</a>
+      <a href="#" class="hover:text-navy2">HEALTH</a>
+      <a href="#" class="hover:text-navy2">INTELLIGENCE</a>
+      <a href="#" class="hover:text-navy2">NEWSROOM</a>
+      <a href="#" class="hover:text-navy2">IR & PARTNERING</a>
+    </nav>
+    <div class="flex items-center gap-3 text-[12px] font-semibold">
+      <span class="hidden sm:inline-block border border-navy2 text-navy2 rounded-full px-3 py-1.5">PT MODE</span>
+      <span class="flex items-center gap-1 text-ink/40">
+        <span class="text-navy2">KR</span><span>/</span><span>EN</span><span>/</span><span>简</span><span>/</span><span>JP</span>
+      </span>
+    </div>
+  </div>
+</header>
+
+<section class="relative overflow-hidden bg-navy text-white">
+  <svg class="absolute inset-0 w-full h-full opacity-40" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice">
+    <g class="noise-line" fill="none" stroke-width="1">
+      <circle cx="180" cy="140" r="3" fill="rgba(18,165,148,.6)" stroke="none"/>
+      <circle cx="360" cy="90" r="2.5" fill="rgba(255,255,255,.5)" stroke="none"/>
+      <circle cx="620" cy="200" r="3" fill="rgba(18,165,148,.6)" stroke="none"/>
+      <circle cx="860" cy="120" r="2.5" fill="rgba(255,255,255,.5)" stroke="none"/>
+      <circle cx="1020" cy="260" r="3" fill="rgba(18,165,148,.6)" stroke="none"/>
+      <circle cx="250" cy="420" r="2.5" fill="rgba(255,255,255,.4)" stroke="none"/>
+      <circle cx="520" cy="480" r="3" fill="rgba(18,165,148,.5)" stroke="none"/>
+      <circle cx="780" cy="440" r="2.5" fill="rgba(255,255,255,.4)" stroke="none"/>
+      <circle cx="1000" cy="520" r="3" fill="rgba(18,165,148,.5)" stroke="none"/>
+      <path d="M180,140 L360,90 L620,200 L860,120 L1020,260"/>
+      <path d="M250,420 L520,480 L780,440 L1000,520"/>
+      <path d="M360,90 L520,480 M620,200 L780,440 M860,120 L1000,520"/>
+    </g>
+  </svg>
+  <div class="relative max-w-6xl mx-auto px-6 pt-24 pb-28 md:pt-32 md:pb-36">
+    <p class="fade-up text-teal text-xs font-semibold tracking-[0.2em] mb-6">RE-ENGINEERING METABOLIC MEDICINES</p>
+    <h1 class="fade-up d1 headline-black text-[2.6rem] leading-[1.12] md:text-6xl md:leading-[1.08] max-w-3xl">
+      대사질환 치료의 새로운 가능성을 <span class="text-teal">설계합니다.</span>
+    </h1>
+    <p class="fade-up d2 mt-6 text-lg text-white/70 max-w-xl leading-relaxed">
+      더 나은 약을 설계하고, 데이터로 검증하고, 임상으로 증명합니다. 티에치팜은 개량신약과 복합제 개발 경험을 기반으로
+      Bio-AI, GLP-1, 임상개발 및 바이오프린팅 기술을 연결합니다.
+    </p>
+    <div class="fade-up d3 mt-10 flex flex-wrap gap-4">
+      <a href="#" class="bg-teal hover:bg-tealDeep transition-colors text-white font-semibold text-sm px-6 py-3.5 rounded-full">
+        티에치팜 알아보기
+      </a>
+      <a href="#" class="border border-white/30 hover:border-white/60 transition-colors text-white font-semibold text-sm px-6 py-3.5 rounded-full">
+        파이프라인 살펴보기
+      </a>
+    </div>
+    <div class="fade-up d3 mt-14 flex flex-wrap gap-x-8 gap-y-3 text-[11px] font-semibold tracking-wider text-white/40">
+      <span>DRUG INNOVATION</span><span>BIO-AI</span><span>GLP-1</span><span>CLINICAL DEVELOPMENT</span><span>BIOPRINTING</span>
+    </div>
+  </div>
+</section>
+
+<section class="bg-white border-b border-line">
+  <div class="max-w-6xl mx-auto px-6 py-16 md:py-20">
+    <p class="text-xs font-semibold tracking-widest text-teal mb-3">KEY FOCUS</p>
+    <h2 class="headline text-2xl md:text-3xl text-navy2 max-w-lg mb-10">대사질환은 하나씩 오지 않습니다.</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="card-hover border border-line rounded-2xl p-6">
+        <p class="text-2xl mb-3">◐</p>
+        <p class="font-semibold text-navy2 text-sm">Obesity</p>
+        <p class="text-xs text-ink/50 mt-1">비만</p>
+      </div>
+      <div class="card-hover border border-line rounded-2xl p-6">
+        <p class="text-2xl mb-3">◑</p>
+        <p class="font-semibold text-navy2 text-sm">Diabetes</p>
+        <p class="text-xs text-ink/50 mt-1">당뇨</p>
+      </div>
+      <div class="card-hover border border-line rounded-2xl p-6">
+        <p class="text-2xl mb-3">◒</p>
+        <p class="font-semibold text-navy2 text-sm">Hypertension</p>
+        <p class="text-xs text-ink/50 mt-1">고혈압</p>
+      </div>
+      <div class="card-hover border border-line rounded-2xl p-6">
+        <p class="text-2xl mb-3">◓</p>
+        <p class="font-semibold text-navy2 text-sm">MASH</p>
+        <p class="text-xs text-ink/50 mt-1">대사이상 지방간염</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-mist">
+  <div class="max-w-6xl mx-auto px-6 py-16 md:py-20">
+    <p class="text-xs font-semibold tracking-widest text-teal mb-3">WHY THPHARM</p>
+    <h2 class="headline text-2xl md:text-3xl text-navy2 max-w-xl mb-10">하나의 회사, 연결된 개발 역량</h2>
+    <div class="grid md:grid-cols-3 gap-5">
+      <div class="card-hover bg-white border border-line rounded-2xl p-7">
+        <p class="text-[11px] font-bold tracking-wider text-teal mb-3">DRUG INNOVATION</p>
+        <p class="text-sm leading-relaxed text-ink/75">검증된 의약품을 다시 설계해 환자와 시장이 필요로 하는 새로운 치료가치를 만듭니다.</p>
+        <p class="text-[11px] text-ink/40 mt-4">개량신약 · 복합제 · 제형 · 적응증 확장</p>
+      </div>
+      <div class="card-hover bg-white border border-line rounded-2xl p-7">
+        <p class="text-[11px] font-bold tracking-wider text-teal mb-3">BIO-AI</p>
+        <p class="text-sm leading-relaxed text-ink/75">글로벌 AI 신약개발 기업과 협업 가능한 수준의 데이터 활용역량으로 연구개발 의사결정을 고도화합니다.</p>
+        <p class="text-[11px] text-ink/40 mt-4">질환 네트워크 · MoA · Biomarker · Data</p>
+      </div>
+      <div class="card-hover bg-white border border-line rounded-2xl p-7">
+        <p class="text-[11px] font-bold tracking-wider text-teal mb-3">CLINICAL EXECUTION</p>
+        <p class="text-sm leading-relaxed text-ink/75">아이디어를 임상으로 가져가는 실행역량, 글로벌 임상 3상 경험을 핵심 자산으로 제시합니다.</p>
+        <p class="text-[11px] text-ink/40 mt-4">Global Clinical · Phase 3 · Regulatory</p>
+      </div>
+      <div class="card-hover bg-white border border-line rounded-2xl p-7">
+        <p class="text-[11px] font-bold tracking-wider text-teal mb-3">NEXT METABOLIC</p>
+        <p class="text-sm leading-relaxed text-ink/75">GLP-1을 포함한 비만·당뇨·MASH 등 차세대 대사질환 파이프라인을 구축합니다.</p>
+        <p class="text-[11px] text-ink/40 mt-4">GLP-1 · Obesity · Diabetes · MASH</p>
+      </div>
+      <div class="card-hover bg-white border border-line rounded-2xl p-7 md:col-span-2">
+        <p class="text-[11px] font-bold tracking-wider text-teal mb-3">ADVANCED RESEARCH</p>
+        <p class="text-sm leading-relaxed text-ink/75">바이오프린팅 장비·기술을 향후 세포·조직 기반 연구 및 약물평가 플랫폼으로 확장 가능한 기술자산으로 제시합니다.</p>
+        <p class="text-[11px] text-ink/40 mt-4">Bioprinting · Biofabrication · Research Platform</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-navy2 text-white">
+  <div class="max-w-6xl mx-auto px-6 py-14 md:py-16">
+    <p class="text-[11px] font-semibold tracking-widest text-white/50 mb-6">THPHARM DEVELOPMENT ENGINE</p>
+    <div class="flex flex-wrap items-center gap-x-3 gap-y-3 text-sm md:text-base font-medium">
+      <span>Drug Re-engineering</span>
+      <span class="text-teal">→</span>
+      <span>Bio-AI & Data</span>
+      <span class="text-teal">→</span>
+      <span>Preclinical / Bioprinting</span>
+      <span class="text-teal">→</span>
+      <span>Clinical Development</span>
+      <span class="text-teal">→</span>
+      <span class="text-teal">Global Therapeutics</span>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-white border-t border-line">
+  <div class="max-w-6xl mx-auto px-6 py-10 grid md:grid-cols-3 gap-8 text-sm">
+    <div>
+      <p class="font-semibold text-navy2 mb-2">THPHARM</p>
+      <p class="text-xs text-ink/50 leading-relaxed">[회사 자료 확인 필요] — 법인명 · 대표자 · 사업자등록번호 · 주소 · 대표 이메일/전화</p>
+    </div>
+    <div class="flex flex-col gap-2 text-ink/70">
+      <a href="#" class="hover:text-navy2">서비스 소개</a>
+      <a href="#" class="hover:text-navy2">문의</a>
+      <a href="#" class="hover:text-navy2">개인정보처리방침</a>
+      <a href="#" class="hover:text-navy2">출처 및 편집정책</a>
+    </div>
+    <div class="md:text-right text-xs text-ink/40 flex flex-col justify-end gap-2">
+      <span>♪ Hidden Sound</span>
+      <span>© 2026 THPHARM Corp. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

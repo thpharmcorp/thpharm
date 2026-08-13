@@ -1,0 +1,30 @@
+{
+  "code": "WEB-505",
+  "kind": "bio_ai_atlas_card",
+  "status": "draft",
+  "title": {
+    "kr": "표적/신약 발굴 (Target & Drug Discovery)",
+    "en": "Target & Drug Discovery",
+    "zh_cn": "靶点与新药发现",
+    "jp": "標的・創薬探索"
+  },
+  "dek": {
+    "kr": "질환 데이터에서 표적을 찾고 후보물질 설계로 연결",
+    "en": "Finding targets from disease data and connecting them to candidate design",
+    "zh_cn": "从疾病数据中寻找靶点,并与候选物设计相连接",
+    "jp": "疾患データから標的を見出し、候補物質設計へとつなげる"
+  },
+  "body": {
+    "kr": "Insilico Medicine 계열의 PandaOmics·Chemistry42 등이 대표적입니다. THPHARM은 이러한 AI 신약개발 플랫폼을 자체 보유했다고 과장하지 않으며, 대사질환 도메인·제형/복합제·임상 실행역량이 글로벌 AI 파트너에게 complementary value로 연결될 수 있음을 설명하는 데 초점을 둡니다.",
+    "en": "Insilico Medicine's PandaOmics and Chemistry42 are representative examples. THPHARM does not claim to own such AI drug-discovery platforms itself, and focuses instead on explaining how its metabolic-disease domain expertise, formulation/combination capability, and clinical execution can offer complementary value to global AI partners.",
+    "zh_cn": "英矽智能(Insilico Medicine)旗下的PandaOmics、Chemistry42为代表性平台。THPHARM并不夸大自身拥有此类AI新药研发平台,而是着重说明其代谢性疾病领域专长、剂型/复方能力与临床执行能力,可为全球AI合作伙伴提供互补价值。",
+    "jp": "Insilico Medicine系列のPandaOmics・Chemistry42などが代表例です。THPHARMはこうしたAI創薬プラットフォームを自社で保有しているかのように誇張せず、代謝性疾患領域の専門性・剤形/配合剤能力・臨床実行力がグローバルAIパートナーにとって補完的価値となり得る点の説明に重点を置きます。"
+  },
+  "tags": [
+    { "label": "Bio-AI" },
+    { "label": "Insilico Medicine", "url": "https://insilico.com" },
+    { "label": "Target Discovery" },
+    { "label": "PandaOmics", "url": "https://insilico.com/pandaomics" }
+  ],
+  "publishedAt": "2026-08-12"
+}

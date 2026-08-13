@@ -1,0 +1,32 @@
+---
+interface Props {
+  locale: string;
+  current: 'about' | 'vision' | 'people' | 'evolution' | 'contact';
+}
+const { locale, current } = Astro.props;
+
+const items = [
+  { key: 'about', code: 'WEB-101', path: 'about', label: 'ABOUT' },
+  { key: 'vision', code: 'WEB-102', path: 'vision', label: 'VISION & CAPABILITIES' },
+  { key: 'people', code: 'WEB-103', path: 'people', label: 'PEOPLE & EXPERTISE' },
+  { key: 'evolution', code: 'WEB-104', path: 'evolution', label: 'OUR EVOLUTION' },
+  { key: 'contact', code: 'WEB-105', path: 'contact', label: 'CONTACT' },
+] as const;
+---
+
+<div class="border-b border-thp-line bg-thp-mist">
+  <nav class="mx-auto flex max-w-content gap-1 overflow-x-auto px-4 py-3 md:px-6" aria-label="Company">
+    {
+      items.map((i) => (
+        <a
+          href={`/${locale}/${i.path}`}
+          class={`whitespace-nowrap rounded-full px-3 py-1.5 text-xs font-bold transition-colors ${
+            i.key === current ? 'bg-thp-navy2 text-white' : 'text-thp-ink/50 hover:text-thp-navy2'
+          }`}
+        >
+          {i.label}
+        </a>
+      ))
+    }
+  </nav>
+</div>

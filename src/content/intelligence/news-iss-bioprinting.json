@@ -1,0 +1,43 @@
+{
+  "code": "WEB-601",
+  "kind": "news",
+  "status": "company_confirm",
+  "title": {
+    "kr": "국제우주정거장에서 사람 간·신장·연골 세포 3D 바이오프린팅",
+    "en": "Human liver, kidney, and cartilage cells 3D bioprinted on the ISS",
+    "zh_cn": "国际空间站完成人体肝、肾、软骨细胞3D生物打印",
+    "jp": "国際宇宙ステーションで人の肝臓・腎臓・軟骨細胞を3Dバイオプリンティング"
+  },
+  "dek": {
+    "kr": "임상용 장기 제조는 아직 먼 목표지만, 미세중력 조직 제조 연구가 진전 중",
+    "en": "Clinical-grade organ manufacturing remains distant, but microgravity tissue-fabrication research advances",
+    "zh_cn": "临床级器官制造仍是遥远目标,但微重力组织制造研究正在推进",
+    "jp": "臨床用臓器製造は依然遠い目標だが、微小重力下の組織製造研究は進展中"
+  },
+  "body": {
+    "kr": "Reuters에 따르면 Auxilium Biotechnologies가 국제우주정거장에서 사람 간·신장·연골 세포를 포함한 구조물을 3D 바이오프린팅했습니다. 임상용 장기 제조는 아직 먼 목표지만, 미세중력 환경에서의 조직 제조 연구가 진전되고 있습니다.",
+    "en": "According to Reuters, Auxilium Biotechnologies 3D-bioprinted structures containing human liver, kidney, and cartilage cells aboard the ISS. Clinical-grade organ manufacturing remains a distant goal, but tissue-fabrication research under microgravity is advancing.",
+    "zh_cn": "据路透社报道,Auxilium Biotechnologies在国际空间站完成了包含人体肝、肾、软骨细胞的3D生物打印结构体。临床级器官制造仍是遥远目标,但微重力环境下的组织制造研究正在推进。",
+    "jp": "ロイターによると、Auxilium Biotechnologiesは国際宇宙ステーションで人の肝臓・腎臓・軟骨細胞を含む構造物を3Dバイオプリンティングしました。臨床用臓器製造はまだ遠い目標ですが、微小重力環境下での組織製造研究が進んでいます。"
+  },
+  "newsType": "Industry",
+  "region": "Global",
+  "year": 2026,
+  "tags": [
+    { "label": "Bioprinting" },
+    { "label": "Translational R&D" },
+    { "label": "Auxilium Biotechnologies" }
+  ],
+  "relatedLinks": [
+    { "label": "INTELLIGENCE — Bioprinting Spotlight", "href": "/intelligence/scope-spotlight-bioprinting" },
+    { "label": "SCIENCE — VALIDATE", "href": "/science/validate" }
+  ],
+  "sourceMeta": {
+    "source_type": "Media",
+    "source_title": "Reuters — ISS bioprinting report",
+    "publisher": "Reuters",
+    "published_at": "2026-07-09",
+    "last_verified": "2026-08-12"
+  },
+  "publishedAt": "2026-07-09"
+}

@@ -1,0 +1,37 @@
+{
+  "code": "WEB-500",
+  "kind": "thpharm_view",
+  "status": "draft",
+  "title": {
+    "kr": "China Bio-AI Watch — 중국 대사질환·AI 신약개발 생태계를 추적합니다",
+    "en": "China Bio-AI Watch — tracking China's metabolic-disease and AI drug-discovery ecosystem",
+    "zh_cn": "China Bio-AI Watch — 追踪中国代谢性疾病与AI新药研发生态",
+    "jp": "China Bio-AI Watch — 中国の代謝性疾患・AI創薬エコシステムを追跡"
+  },
+  "dek": {
+    "kr": "NMPA·ChiCTR·중국 Bio-AI 기업의 최신 동향을 简体中文로 정리합니다",
+    "en": "The latest from NMPA, ChiCTR, and China's Bio-AI companies, curated in Simplified Chinese",
+    "zh_cn": "整理NMPA、ChiCTR及中国Bio-AI企业的最新动态(简体中文)",
+    "jp": "NMPA・ChiCTR・中国Bio-AI企業の最新動向を簡体字中国語で整理"
+  },
+  "relevance": "Related",
+  "body": {
+    "kr": "중국은 GLP-1·비만·대사질환 신약개발과 AI 신약탐색이 동시에 빠르게 성장하는 시장입니다. THPHARM은 NMPA(국가약품감독관리국)의 승인·가이드라인, ChiCTR(중국임상시험등록센터)의 임상 등록 현황, 그리고 중국 Bio-AI 기업의 공개 발표를 정기적으로 추적해 简体中文 콘텐츠로 정리합니다. SNS(Baidu·WeChat 搜一搜·Weibo·Bilibili·Zhihu) 자체는 근거로 사용하지 않고, 공식 자료로 역추적해 검증합니다.",
+    "en": "China is a fast-growing market for both metabolic-disease drug development (GLP-1, obesity) and AI-driven drug discovery. THPHARM regularly tracks NMPA approvals and guidelines, ChiCTR clinical trial registrations, and public announcements from China's Bio-AI companies, and curates them into Simplified Chinese content. Social platforms (Baidu, WeChat Search, Weibo, Bilibili, Zhihu) are used only for discovery, never as evidence — every item is traced back to an official source before publication.",
+    "zh_cn": "中国是代谢性疾病新药研发(GLP-1、肥胖症)与AI驱动新药发现同时快速增长的市场。THPHARM定期追踪NMPA(国家药品监督管理局)的审批与指南、ChiCTR(中国临床试验注册中心)的临床注册情况,以及中国Bio-AI企业的公开发布,并整理为简体中文内容。百度、微信搜一搜、微博、哔哩哔哩、知乎等社交平台仅用于线索发现,不作为依据本身——每条信息在发布前都会追溯至官方来源进行核实。",
+    "jp": "中国はGLP-1・肥満症を含む代謝性疾患の新薬開発と、AIを活用した創薬探索の両方が急速に成長している市場です。THPHARMはNMPA(国家薬品監督管理局)の承認・ガイドライン、ChiCTR(中国臨床試験登録センター)の臨床登録状況、そして中国のBio-AI企業の公開発表を定期的に追跡し、簡体字中国語コンテンツとして整理します。Baidu・WeChat検索・Weibo・Bilibili・Zhihuなどのソーシャルプラットフォームは手がかりの発見のみに用い、根拠そのものとしては使用しません——公開前に必ず公式情報源まで遡って検証します。"
+  },
+  "thpharmView": {
+    "kr": "번역이 아니라 접점입니다. 简体中文 콘텐츠는 다국어 편의 기능이 아니라, 중국 연구자·파트너·투자자가 영어 전환 없이 THPHARM의 검증·제형·임상 실행역량을 이해할 수 있게 하는 실용적 접점으로 운영합니다.",
+    "en": "Not translation — a bridge. Simplified Chinese content is not a multilingual convenience feature; it exists so Chinese researchers, partners, and investors can understand THPHARM's validation, formulation, and clinical execution capabilities without switching to English.",
+    "zh_cn": "这不是翻译,而是接点。简体中文内容并非多语言便利功能,而是为了让中国的研究者、合作伙伴与投资者无需切换至英文,即可理解THPHARM在验证、剂型与临床执行方面的能力。",
+    "jp": "翻訳ではなく接点です。簡体字中国語コンテンツは多言語対応の利便性機能ではなく、中国の研究者・パートナー・投資家が英語に切り替えることなくTHPHARMの検証力・製剤力・臨床実行力を理解できるようにするための実用的な接点として運用します。"
+  },
+  "tags": [
+    { "label": "China" },
+    { "label": "Bio-AI" },
+    { "label": "NMPA", "url": "https://english.nmpa.gov.cn/" },
+    { "label": "ChiCTR", "url": "https://www.chictr.org.cn/indexEN.html" }
+  ],
+  "publishedAt": "2026-08-12"
+}

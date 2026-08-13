@@ -1,0 +1,76 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { locales, type Locale } from '../../i18n/ui';
+
+export function getStaticPaths() {
+  return locales.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+
+const copy = {
+  kr: {
+    title: '이용약관',
+    notice: '2026년 8월 12일부터 적용됩니다. 약관이 개정되면 이 페이지에 반영합니다.',
+    sections: [
+      { h: '목적', b: '이 약관은 THPHARM 웹사이트가 제공하는 정보 서비스 이용과 관련한 기본 사항을 정합니다.' },
+      { h: '정보의 성격', b: 'HEALTH·INTELLIGENCE 영역의 콘텐츠는 일반 정보 제공 목적이며 의학적 진단·처방을 대체하지 않습니다. 개인별 건강 판단은 반드시 의료진과 상담하세요.' },
+      { h: '콘텐츠 이용', b: '이 사이트의 텍스트·이미지·데이터는 출처 표기 없이 무단 복제·재배포할 수 없습니다.' },
+      { h: '면책', b: '외부 링크·인용된 자료의 정확성은 원 출처에 있으며, THPHARM은 정기적으로 검증하되 실시간 정확성을 보증하지 않습니다.' },
+      { h: '변경', b: '이 약관은 사전 고지 후 개정될 수 있습니다.' },
+    ],
+  },
+  en: {
+    title: 'Terms of Use',
+    notice: 'Effective August 12, 2026. Any updates to these terms will be reflected on this page.',
+    sections: [
+      { h: 'Purpose', b: 'These terms govern use of the information services provided on the THPHARM website.' },
+      { h: 'Nature of content', b: 'Content in HEALTH and INTELLIGENCE is provided for general information only and does not replace medical diagnosis or treatment. Please consult a healthcare professional for individual assessment.' },
+      { h: 'Use of content', b: 'Text, images, and data on this site may not be copied or redistributed without attribution.' },
+      { h: 'Disclaimer', b: 'Accuracy of external links and cited material rests with the original source. THPHARM verifies content periodically but does not guarantee real-time accuracy.' },
+      { h: 'Changes', b: 'These terms may be revised with prior notice.' },
+    ],
+  },
+  'zh-cn': {
+    title: '使用条款',
+    notice: '自2026年8月12日起适用。条款如有修订,将在本页面更新。',
+    sections: [
+      { h: '目的', b: '本条款规范THPHARM网站所提供信息服务的使用相关基本事项。' },
+      { h: '内容性质', b: 'HEALTH与INTELLIGENCE板块内容仅供一般信息参考,不能替代医学诊断或治疗。个人健康判断请务必咨询医疗专业人员。' },
+      { h: '内容使用', b: '本网站的文本、图像及数据未经署名出处不得擅自复制或再传播。' },
+      { h: '免责声明', b: '外部链接及引用资料的准确性由原始来源负责。THPHARM会定期核实,但不保证实时准确性。' },
+      { h: '变更', b: '本条款可能在事前告知后进行修订。' },
+    ],
+  },
+  jp: {
+    title: '利用規約',
+    notice: '2026年8月12日から適用されます。規約が改定された場合はこのページに反映します。',
+    sections: [
+      { h: '目的', b: '本規約は、THPHARMウェブサイトが提供する情報サービスの利用に関する基本事項を定めます。' },
+      { h: 'コンテンツの性質', b: 'HEALTH・INTELLIGENCE領域のコンテンツは一般的な情報提供を目的としており、医学的診断・処方に代わるものではありません。個別の健康判断は必ず医療従事者にご相談ください。' },
+      { h: 'コンテンツの利用', b: '本サイトのテキスト・画像・データは、出典表記なしに無断複製・再配布することはできません。' },
+      { h: '免責事項', b: '外部リンク・引用資料の正確性は元の出典に帰属します。THPHARMは定期的に検証しますが、リアルタイムの正確性を保証するものではありません。' },
+      { h: '変更', b: '本規約は事前告知の上、改定される場合があります。' },
+    ],
+  },
+} as const;
+const t = copy[locale];
+---
+
+<BaseLayout locale={locale} title={t.title} description={t.notice}>
+  <section class="bg-white">
+    <div class="mx-auto max-w-content px-4 py-16 md:px-6 md:py-20">
+      <h1 class="text-2xl font-black tracking-tight text-thp-navy2 md:text-3xl">{t.title}</h1>
+      <p class="mt-4 text-sm text-thp-ink/50">{t.notice}</p>
+      <div class="mt-8 space-y-6">
+        {
+          t.sections.map((s) => (
+            <div>
+              <p class="text-sm font-bold text-thp-navy2">{s.h}</p>
+              <p class="mt-2 text-sm leading-relaxed text-thp-ink/70">{s.b}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>

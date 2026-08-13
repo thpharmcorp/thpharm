@@ -1,0 +1,89 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SciSubnav from '../../../components/SciSubnav.astro';
+import { locales, type Locale } from '../../../i18n/ui';
+
+export function getStaticPaths() {
+  return locales.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+
+const copy = {
+  kr: {
+    title: '과학은 환자에게 닿을 때 가치가 됩니다.',
+    lead: '티에치팜은 연구 아이디어와 초기 기술을 설명하는 데 그치지 않습니다. 제형, CMC, 비임상, 규제, 임상시험 설계와 글로벌 개발까지 연결해 실제 치료제로 발전시키는 실행역량을 중요하게 생각합니다.',
+    subTitle: '글로벌 임상 3상 경험',
+    subBody: '개량신약 설계에서 다국가 임상개발까지 연결하는 실행역량',
+    flowLabel: '대표 플로우',
+  },
+  en: {
+    title: 'Science becomes value when it reaches patients.',
+    lead: 'THPHARM does not stop at explaining research ideas and early-stage technology. We place real weight on the execution capability that connects formulation, CMC, preclinical, regulatory, clinical trial design, and global development into an actual therapeutic.',
+    subTitle: 'Global Phase 3 experience',
+    subBody: 'Execution capability connecting improved-drug design to multi-country clinical development',
+    flowLabel: 'Representative flow',
+  },
+  'zh-cn': {
+    title: '科学在触及患者时才成为价值。',
+    lead: 'THPHARM不止步于阐述研究理念与早期技术。我们高度重视将剂型、CMC、非临床、法规、临床试验设计与全球开发相连接、发展为实际治疗药物的执行能力。',
+    subTitle: '全球3期临床经验',
+    subBody: '从改良新药设计到多国临床开发相连接的执行能力',
+    flowLabel: '代表性流程',
+  },
+  jp: {
+    title: '科学は患者に届いたとき価値になります。',
+    lead: 'THPHARMは研究アイデアと初期技術の説明にとどまりません。製剤、CMC、非臨床、規制、臨床試験デザインからグローバル開発まで連結し、実際の治療薬へと発展させる実行力を重視します。',
+    subTitle: 'グローバルPhase 3の経験',
+    subBody: '改良新薬設計から多国籍臨床開発までをつなぐ実行力',
+    flowLabel: '代表的なフロー',
+  },
+} as const;
+const t = copy[locale];
+const flow = ['Concept', 'Formulation', 'Preclinical', 'IND', 'Phase 1', 'Phase 3', 'Market'];
+---
+
+<BaseLayout locale={locale} title={t.title} description={t.lead}>
+  <SciSubnav locale={locale} current="execute" />
+  <section class="bg-white">
+    <div class="mx-auto max-w-content px-4 py-16 md:px-6 md:py-20">
+      <p class="text-xs font-bold tracking-widest text-thp-teal">E — EXECUTE · CLINICAL TRANSLATION</p>
+      <h1 class="mt-3 max-w-2xl text-3xl font-black tracking-tight text-thp-navy2 md:text-4xl">{t.title}</h1>
+      <p class="mt-4 max-w-2xl text-thp-ink/70">{t.lead}</p>
+
+      <div class="mt-10 rounded-2xl bg-thp-navy2 p-6 text-white">
+        <p class="text-xs font-bold tracking-widest text-thp-teal">{t.subTitle}</p>
+        <p class="mt-2 text-sm text-white/70">{t.subBody}</p>
+      </div>
+
+      <div class="mt-10">
+        <p class="text-xs font-bold tracking-widest text-thp-ink/50">{t.flowLabel}</p>
+        <div class="mt-4 flex flex-wrap items-center gap-2">
+          {
+            flow.map((step, i) => (
+              <>
+                <span class="rounded-full border border-thp-line px-4 py-2 text-xs font-bold text-thp-navy2">{step}</span>
+                {i < flow.length - 1 && <span class="text-thp-ink/30">→</span>}
+              </>
+            ))
+          }
+        </div>
+        <p class="mt-3 text-xs text-thp-ink/40">
+          {locale === 'kr'
+            ? '실제 티에치팜 프로그램의 단계와 국가는 PIPELINE에서 최신 자료 기준으로 확인할 수 있습니다.'
+            : locale === 'en'
+              ? "Actual program stages and countries are shown under PIPELINE, based on the latest available data."
+              : locale === 'zh-cn'
+                ? '实际项目的开发阶段与国家信息,可在PIPELINE中查看最新数据。'
+                : '実際のプログラムの段階と国は、PIPELINEで最新データに基づいて確認できます。'}
+        </p>
+      </div>
+
+      <a
+        href={`/${locale}/pipeline`}
+        class="mt-10 inline-flex items-center gap-2 text-sm font-bold text-thp-tealDeep hover:underline"
+      >
+        PIPELINE → {locale === 'kr' ? '실제 개발 단계 보기' : 'See actual development stages'}
+      </a>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,113 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SciSubnav from '../../../components/SciSubnav.astro';
+import { locales, type Locale } from '../../../i18n/ui';
+
+export function getStaticPaths() {
+  return locales.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+
+const copy = {
+  kr: {
+    title: '검증된 약에서 새로운 가능성을 찾습니다.',
+    lead: '새로운 치료제는 반드시 새로운 물질에서만 시작되는 것은 아닙니다. 이미 효능과 안전성이 축적된 의약품도 새로운 조합, 제형, 용법, 적응증과 만나면 환자에게 더 나은 치료 옵션이 될 수 있습니다. 티에치팜은 의약품 개발 경험을 바탕으로 기존 약물의 한계를 분석하고 새로운 치료가치를 설계합니다.',
+    cta: '이 과학이 실제 임상 프로그램으로 이어진 사례 보기',
+  },
+  en: {
+    title: 'Known medicines. New possibilities.',
+    lead: 'A new therapeutic does not have to start from a new molecule. Medicines with an already-proven efficacy and safety record can become better treatment options for patients when combined with new formulations, dosing regimens, or indications. THPHARM draws on its drug development experience to analyze the limitations of existing drugs and design new therapeutic value.',
+    cta: 'See where this science became a clinical program',
+  },
+  'zh-cn': {
+    title: '从成熟药物中寻找新的可能性。',
+    lead: '新疗法未必只能从全新物质开始。已积累充分疗效与安全性数据的药物,若结合新的复方、剂型、用法或适应症,也可能为患者带来更好的治疗选择。THPHARM基于药物开发经验,分析现有药物的局限,设计新的治疗价值。',
+    cta: '查看该科学转化为实际临床项目的案例',
+  },
+  jp: {
+    title: '実証済みの薬から新たな可能性を見つけます。',
+    lead: '新しい治療薬は必ずしも新しい物質からのみ始まるわけではありません。すでに有効性と安全性が蓄積された医薬品も、新たな配合・剤形・用法・適応症と出会えば、患者にとってより良い治療選択肢になり得ます。THPHARMは医薬品開発の経験をもとに既存薬の限界を分析し、新たな治療価値を設計します。',
+    cta: 'この科学が実際の臨床プログラムへとつながった事例を見る',
+  },
+} as const;
+const t = copy[locale];
+
+const capabilities = [
+  {
+    key: 'COMBINATION',
+    body: {
+      kr: '복합제를 통한 치료 편의성과 효과 개선',
+      en: 'Improving treatment convenience and effect through combination products',
+      'zh-cn': '通过复方制剂提升治疗便利性与效果',
+      jp: '複合剤による治療利便性と効果の改善',
+    },
+  },
+  {
+    key: 'FORMULATION',
+    body: {
+      kr: '더 적절한 제형과 전달 방식',
+      en: 'More appropriate formulation and delivery methods',
+      'zh-cn': '更合适的剂型与给药方式',
+      jp: 'より適切な剤形と送達方式',
+    },
+  },
+  {
+    key: 'REPURPOSING',
+    body: {
+      kr: '기존 약물의 새로운 적응증 가능성 탐색',
+      en: 'Exploring new indication possibilities for existing drugs',
+      'zh-cn': '探索现有药物的新适应症可能性',
+      jp: '既存薬の新たな適応症の可能性を探索',
+    },
+  },
+  {
+    key: 'PATIENT CONVENIENCE',
+    body: {
+      kr: '실제 복약환경과 치료 지속성을 고려한 제품 설계',
+      en: 'Product design that accounts for real-world dosing and treatment persistence',
+      'zh-cn': '兼顾实际服药环境与治疗持续性的产品设计',
+      jp: '実際の服薬環境と治療継続性を考慮した製品設計',
+    },
+  },
+] as const;
+
+const trackRecordNote = {
+  kr: '팀 개발이력 연결: 구성원이 이전 경력에서 대장내시경 전처치제의 복용 부담을 줄이는 개발에 참여한 사례처럼, 환자 편의성을 실제 제품으로 구현한 경험을 Drug Re-engineering의 증거로 활용합니다. 정확한 제품명·수치·역할은 검증 후 공개합니다.',
+  en: "Connecting to team track record: experiences such as a team member's prior work reducing the dosing burden of a bowel-prep product serve as evidence of Drug Re-engineering translated into real products. Exact product names, figures, and roles will be published after verification.",
+  'zh-cn': '与团队开发履历相连接:如成员曾在此前职业生涯中参与降低肠道准备药物服用负担的开发案例,这类将患者便利性转化为实际产品的经验,作为Drug Re-engineering的证据加以运用。准确的产品名称、数据与角色将在核实后公开。',
+  jp: 'チームの開発実績との連携:メンバーが以前のキャリアで大腸内視鏡前処置薬の服用負担軽減に携わった事例のように、患者利便性を実際の製品として具現化した経験をDrug Re-engineeringの証拠として活用します。正確な製品名・数値・役割は検証後に公開します。',
+} as const;
+---
+
+<BaseLayout locale={locale} title={t.title} description={t.lead}>
+  <SciSubnav locale={locale} current="design" />
+  <section class="bg-white">
+    <div class="mx-auto max-w-content px-4 py-16 md:px-6 md:py-20">
+      <p class="text-xs font-bold tracking-widest text-thp-teal">D — DESIGN · DRUG RE-ENGINEERING</p>
+      <h1 class="mt-3 max-w-2xl text-3xl font-black tracking-tight text-thp-navy2 md:text-4xl">{t.title}</h1>
+      <p class="mt-4 max-w-2xl text-thp-ink/70">{t.lead}</p>
+
+      <div class="mt-10 grid gap-4 md:grid-cols-2">
+        {
+          capabilities.map((c) => (
+            <div class="rounded-2xl border border-thp-line p-6">
+              <p class="text-xs font-bold tracking-widest text-thp-teal">{c.key}</p>
+              <p class="mt-3 text-sm leading-relaxed text-thp-ink/80">{c.body[locale]}</p>
+            </div>
+          ))
+        }
+      </div>
+
+      <div class="mt-10 rounded-2xl bg-thp-mist p-6">
+        <p class="text-sm leading-relaxed text-thp-ink/70">{trackRecordNote[locale]}</p>
+      </div>
+
+      <a
+        href={`/${locale}/pipeline/thp-001`}
+        class="mt-10 inline-flex items-center gap-2 text-sm font-bold text-thp-tealDeep hover:underline"
+      >
+        {t.cta} → THP-001
+      </a>
+    </div>
+  </section>
+</BaseLayout>

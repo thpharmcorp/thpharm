@@ -1,0 +1,93 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import IrSubnav from '../../../components/IrSubnav.astro';
+import { locales, ui, type Locale } from '../../../i18n/ui';
+
+export function getStaticPaths() {
+  return locales.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+const strings = ui[locale];
+
+const copy = {
+  kr: {
+    title: 'Quality · Speed · Patient Access · Global Collaboration',
+    lead: '임상 협력 네트워크를 비용절감이 아니라 품질·속도·환자접근·글로벌 협력의 언어로 설명합니다.',
+    patientsTitle: 'FOR PATIENTS',
+    patientsBody: '임상시험이 무엇인지 쉬운 설명, 공개 가능한 현재 연구, ClinicalTrials.gov·국가별 Registry 원문 연결을 제공합니다. 본 페이지는 의료적 판단을 제공하지 않습니다.',
+    investigatorsTitle: 'FOR INVESTIGATORS',
+    investigatorsBody: '연구영역, 공개 가능한 Study Synopsis, 향후 협력 가능 분야, Sponsor Contact를 제공합니다. 병원별 단가·계약조건은 홈페이지에 공개하지 않습니다.',
+    formTitle: 'INVESTIGATOR / SITE INTEREST — 문의 전 준비하면 좋은 정보',
+    formNote: '아래 항목을 정리해 Contact 페이지로 문의하시면 더 빠르게 검토할 수 있습니다.',
+  },
+  en: {
+    title: 'Quality · Speed · Patient Access · Global Collaboration',
+    lead: 'We describe our clinical collaboration network not in terms of cost savings, but in terms of quality, speed, patient access, and global collaboration.',
+    patientsTitle: 'FOR PATIENTS',
+    patientsBody: 'Plain-language explanations of what a clinical trial is, disclosable information on current studies, and direct links to ClinicalTrials.gov and country-specific registries. This page does not provide medical judgment.',
+    investigatorsTitle: 'FOR INVESTIGATORS',
+    investigatorsBody: 'Research areas, disclosable study synopses, potential future collaboration areas, and sponsor contact. Per-site pricing and contract terms are not disclosed on the website.',
+    formTitle: 'INVESTIGATOR / SITE INTEREST — Helpful to prepare before contacting us',
+    formNote: 'Organizing the items below before reaching out via the Contact page will help us review faster.',
+  },
+  'zh-cn': {
+    title: 'Quality · Speed · Patient Access · Global Collaboration',
+    lead: '我们以质量、速度、患者可及性与全球协作的语言,而非成本节约的语言,来描述临床协作网络。',
+    patientsTitle: 'FOR PATIENTS',
+    patientsBody: '以易懂的方式说明临床试验是什么,提供可公开的现行研究信息,并直接链接至ClinicalTrials.gov及各国注册系统。本页面不提供医疗判断。',
+    investigatorsTitle: 'FOR INVESTIGATORS',
+    investigatorsBody: '提供研究领域、可公开的Study Synopsis、未来可能的合作领域及Sponsor联系方式。各机构的单价与合同条款不在官网公开。',
+    formTitle: 'INVESTIGATOR / SITE INTEREST — 联系前建议准备的信息',
+    formNote: '在通过Contact页面联系我们之前整理以下事项,将有助于加快审核速度。',
+  },
+  jp: {
+    title: 'Quality · Speed · Patient Access · Global Collaboration',
+    lead: '臨床協力ネットワークをコスト削減ではなく、品質・スピード・患者アクセス・グローバル協力という言葉で説明します。',
+    patientsTitle: 'FOR PATIENTS',
+    patientsBody: '臨床試験とは何かの平易な説明、公開可能な現在の研究、ClinicalTrials.gov・各国Registryへの原文リンクを提供します。本ページは医療的判断を提供しません。',
+    investigatorsTitle: 'FOR INVESTIGATORS',
+    investigatorsBody: '研究領域、公開可能なStudy Synopsis、今後協力可能な分野、Sponsor Contactを提供します。施設ごとの単価・契約条件はホームページで公開しません。',
+    formTitle: 'INVESTIGATOR / SITE INTEREST — お問い合わせ前にご準備いただくと良い情報',
+    formNote: '以下の項目を整理の上Contactページからお問い合わせいただくと、より迅速に確認できます。',
+  },
+} as const;
+const t = copy[locale];
+
+const formFields = ['Institution', 'Country', 'PI', 'Specialty', 'Relevant Patient Pool', 'Prior Trial Experience', 'GCP', 'IRB/EC 예상기간', '주요 검사·장비 역량', 'Contact'];
+---
+
+<BaseLayout locale={locale} title={t.title} description={t.lead}>
+  <IrSubnav locale={locale} current="clinical-collaboration" />
+  <section class="bg-white">
+    <div class="mx-auto max-w-content px-4 py-16 md:px-6 md:py-20">
+      <p class="text-xs font-bold tracking-widest text-thp-teal">CLINICAL RESEARCH COLLABORATION</p>
+      <h1 class="mt-3 max-w-2xl text-2xl font-black tracking-tight text-thp-navy2 md:text-3xl">{t.title}</h1>
+      <p class="mt-4 max-w-2xl text-thp-ink/70">{t.lead}</p>
+
+      <div class="mt-10 grid gap-6 md:grid-cols-2">
+        <div class="rounded-2xl border border-thp-line p-6">
+          <p class="text-xs font-bold tracking-widest text-thp-teal">{t.patientsTitle}</p>
+          <p class="mt-3 text-sm leading-relaxed text-thp-ink/70">{t.patientsBody}</p>
+          <a href="https://clinicaltrials.gov/" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block text-xs font-semibold text-thp-tealDeep hover:underline">
+            ClinicalTrials.gov ↗
+          </a>
+        </div>
+        <div class="rounded-2xl border border-thp-line p-6">
+          <p class="text-xs font-bold tracking-widest text-thp-teal">{t.investigatorsTitle}</p>
+          <p class="mt-3 text-sm leading-relaxed text-thp-ink/70">{t.investigatorsBody}</p>
+          <a href={`/${locale}/contact`} class="mt-4 inline-block text-xs font-semibold text-thp-tealDeep hover:underline">
+            {strings.footerContact} →
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-10 rounded-2xl bg-thp-mist p-6">
+        <p class="text-sm font-bold text-thp-navy2">{t.formTitle}</p>
+        <p class="mt-2 text-sm text-thp-ink/70">{t.formNote}</p>
+        <div class="mt-4 flex flex-wrap gap-2">
+          {formFields.map((f) => <span class="rounded-full bg-white px-3 py-1 text-[11px] font-semibold text-thp-ink/60 shadow-sm">{f}</span>)}
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

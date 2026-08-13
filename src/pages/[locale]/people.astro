@@ -1,0 +1,96 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CompanySubnav from '../../components/CompanySubnav.astro';
+import { locales, ui, type Locale } from '../../i18n/ui';
+
+export function getStaticPaths() {
+  return locales.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+const strings = ui[locale];
+
+const copy = {
+  kr: {
+    title: '좋은 치료제는 좋은 사람들이 만듭니다.',
+    lead: '티에치팜은 의약품 연구개발, 제형, 임상, 인허가, Bio-AI, 대사질환 및 바이오프린팅 분야의 전문가들이 함께 신약개발의 중요한 의사결정을 만들어갑니다.',
+    sections: [
+      { h: 'A. 리더십', b: '대표·핵심 경영진의 실제 개발 이력을 사진과 함께 게시할 예정입니다.' },
+      { h: 'B. 개발팀', b: 'Drug Development / Formulation & CMC / Clinical / Regulatory / Bio-AI / GLP-1 & Metabolic Disease / Bioprinting 역량을 가진 핵심 개발인력을 카드 형태로 공개할 예정입니다.' },
+      { h: 'C. 임상자문위원단 — 과학에 임상의 현실을 더합니다', b: '비만·당뇨·고혈압·MASH 분야 임상 전문가의 자문을 연구개발 의사결정에 반영합니다. 실제 자문·검수에 참여한 분만 사진/소속 사용 권한 확인 후 게시합니다.' },
+      { h: 'D. 글로벌 협력 네트워크 — R&D는 회사 밖의 전문가와도 연결됩니다', b: 'Clinical Experts / Hospitals / AI Partners / CRO & Clinical Sites / Research Institutes / Global Pharmaceutical Partners를 하나의 개발 네트워크로 제시할 예정입니다.' },
+    ],
+    trackRecordTitle: 'E. 우리가 이미 만들어본 것들',
+    trackRecordLead: '티에치팜 구성원들이 이전 소속 회사·기관에서 실제 의약품의 제형·복약편의성·제품화·임상개발에 참여했던 성과입니다. 회사 연혁이 아니라 "지금 팀이 이미 무엇을 만들어본 사람들인가"를 보여주는 영역입니다.',
+    trackRecordNote: '아래 성과는 THPHARM 구성원이 이전 소속에서 참여한 것으로, THPHARM 자체의 회사 실적이 아닙니다. 제품명·수치·참여역할은 확인 후 공개합니다.',
+  },
+  en: {
+    title: 'Great medicines are built by great people.',
+    lead: 'THPHARM brings together experts in pharmaceutical R&D, formulation, clinical development, regulatory affairs, Bio-AI, metabolic disease, and bioprinting to make the critical decisions of drug development.',
+    sections: [
+      { h: 'A. Leadership', b: "The actual development track record of our CEO and core leadership will be published with photos." },
+      { h: 'B. Development team', b: 'Core development staff across Drug Development / Formulation & CMC / Clinical / Regulatory / Bio-AI / GLP-1 & Metabolic Disease / Bioprinting will be presented as cards.' },
+      { h: 'C. Clinical Advisory Board — Science meets clinical reality', b: "Clinical experts in obesity, diabetes, hypertension, and MASH inform our R&D decisions. Only advisors who have confirmed use of their photo/affiliation will be published." },
+      { h: 'D. Global collaboration network — our R&D extends beyond our walls', b: 'Clinical experts, hospitals, AI partners, CROs and clinical sites, research institutes, and global pharmaceutical partners will be presented as a single development network.' },
+    ],
+    trackRecordTitle: 'E. Before THPHARM',
+    trackRecordLead: "These are achievements from THPHARM's people in their prior roles — real contributions to drug formulation, patient convenience, commercialization, and clinical development. This is not company history, but evidence of what the current team has already built.",
+    trackRecordNote: "The achievements below were made by THPHARM team members at their prior organizations — they are not THPHARM's own corporate track record. Product names, figures, and individual roles are published only after verification.",
+  },
+  'zh-cn': {
+    title: '好的治疗药物,由好的人才创造。',
+    lead: 'THPHARM汇聚了医药研发、剂型、临床、注册审批、Bio-AI、代谢性疾病与生物打印等领域的专家,共同做出新药开发中的关键决策。',
+    sections: [
+      { h: 'A. 领导层', b: '代表及核心管理层的实际开发履历将附照片公开。' },
+      { h: 'B. 开发团队', b: '将以卡片形式公开在Drug Development / Formulation & CMC / Clinical / Regulatory / Bio-AI / GLP-1 & Metabolic Disease / Bioprinting领域具备能力的核心开发人员。' },
+      { h: 'C. 临床顾问委员会 — 为科学注入临床现实', b: '肥胖症、糖尿病、高血压、MASH领域的临床专家意见将反映至研发决策中。仅在确认照片/所属机构使用权后,公开实际参与咨询与审阅的专家。' },
+      { h: 'D. 全球合作网络 — 研发延伸至公司之外的专家', b: '计划将临床专家 / 医院 / AI合作伙伴 / CRO与临床机构 / 研究机构 / 全球制药合作伙伴呈现为一个统一的开发网络。' },
+    ],
+    trackRecordTitle: 'E. 加入THPHARM之前',
+    trackRecordLead: 'THPHARM成员在此前所属公司/机构中,曾实际参与药物剂型、服药便利性、产品化及临床开发相关成果。此部分并非公司沿革,而是展示"现有团队已经做出过什么"的证明。',
+    trackRecordNote: '以下成果为THPHARM成员在此前所属机构中取得,并非THPHARM自身的公司业绩。产品名称、数据与个人角色将在核实后公开。',
+  },
+  jp: {
+    title: '良い治療薬は、良い人々がつくります。',
+    lead: 'THPHARMは、医薬品研究開発、製剤、臨床、許認可、Bio-AI、代謝性疾患、バイオプリンティング分野の専門家が共に新薬開発の重要な意思決定を行います。',
+    sections: [
+      { h: 'A. リーダーシップ', b: '代表・コア経営陣の実際の開発経歴を写真とともに掲載予定です。' },
+      { h: 'B. 開発チーム', b: 'Drug Development / Formulation & CMC / Clinical / Regulatory / Bio-AI / GLP-1 & Metabolic Disease / Bioprintingの能力を持つコア開発人材をカード形式で公開予定です。' },
+      { h: 'C. 臨床アドバイザリーボード — 科学に臨床の現実を', b: '肥満・糖尿病・高血圧・MASH分野の臨床専門家の助言を研究開発の意思決定に反映します。実際に助言・検収に参加した方のみ、写真・所属の使用権を確認の上掲載します。' },
+      { h: 'D. グローバル協力ネットワーク — R&Dは社外の専門家ともつながっています', b: 'Clinical Experts / Hospitals / AI Partners / CRO & Clinical Sites / Research Institutes / Global Pharmaceutical Partnersを一つの開発ネットワークとして提示予定です。' },
+    ],
+    trackRecordTitle: 'E. THPHARM以前に、すでに作ってきたもの',
+    trackRecordLead: 'THPHARMのメンバーが以前の所属企業・機関で、実際の医薬品の製剤・服薬利便性・製品化・臨床開発に参加した実績です。会社沿革ではなく、「今のチームがすでに何を作った人々か」を示す領域です。',
+    trackRecordNote: '以下の実績はTHPHARMメンバーが以前の所属先で残したものであり、THPHARM自体の会社実績ではありません。製品名・数値・関与した役割は確認後に公開します。',
+  },
+} as const;
+const t = copy[locale];
+---
+
+<BaseLayout locale={locale} title={t.title} description={t.lead}>
+  <CompanySubnav locale={locale} current="people" />
+  <section class="bg-white">
+    <div class="mx-auto max-w-content px-4 py-16 md:px-6 md:py-20">
+      <p class="text-xs font-bold tracking-widest text-thp-teal">PEOPLE & EXPERTISE</p>
+      <h1 class="mt-3 max-w-2xl text-3xl font-black tracking-tight text-thp-navy2 md:text-4xl">{t.title}</h1>
+      <p class="mt-4 max-w-2xl text-thp-ink/70">{t.lead}</p>
+
+      <div class="mt-10 space-y-6">
+        {
+          t.sections.map((s) => (
+            <div class="rounded-2xl border border-thp-line p-6">
+              <p class="text-sm font-bold text-thp-navy2">{s.h}</p>
+              <p class="mt-2 text-sm leading-relaxed text-thp-ink/70">{s.b}</p>
+              <p class="mt-3 text-xs font-semibold text-thp-ink/30">{strings.companyDataNeeded}</p>
+            </div>
+          ))
+        }
+      </div>
+
+      <div class="mt-14 rounded-2xl bg-thp-mist p-6">
+        <p class="text-sm font-bold text-thp-navy2">{t.trackRecordTitle}</p>
+        <p class="mt-2 text-sm leading-relaxed text-thp-ink/70">{t.trackRecordLead}</p>
+        <p class="mt-4 text-xs text-thp-ink/50">{t.trackRecordNote}</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

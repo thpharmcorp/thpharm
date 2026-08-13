@@ -1,0 +1,74 @@
+{
+  "code": "WEB-200",
+  "status": "draft",
+  "heroTitle": {
+    "kr": "약을 다시 설계하고, 데이터로 이해하고, 임상으로 연결합니다.",
+    "en": "We redesign medicines, understand them through data, and connect them to the clinic.",
+    "zh_cn": "重新设计药物,用数据理解药物,并将其与临床相连接。",
+    "jp": "薬を再設計し、データで理解し、臨床へとつなげます。"
+  },
+  "heroBody": {
+    "kr": "티에치팜의 Science는 하나의 기술에 머물지 않습니다. 검증된 의약품을 새로운 조합과 제형으로 재설계하고, Bio-AI를 이용해 질환과 약물의 관계를 분석하며, GLP-1을 비롯한 대사질환의 생물학적 가능성을 탐색합니다. 여기에 바이오프린팅과 임상개발 역량을 연결하여 아이디어를 실제 환자에게 도달할 수 있는 치료제로 발전시키는 것이 티에치팜의 개발 방식입니다.",
+    "en": "THPHARM's science is not confined to a single technology. We redesign proven medicines into new combinations and formulations, use Bio-AI to analyze the relationship between disease and drugs, and explore the biological potential of metabolic disease including GLP-1. We connect this with bioprinting and clinical development capabilities to turn ideas into therapeutics that reach real patients.",
+    "zh_cn": "THPHARM的Science不局限于单一技术。我们将成熟药物重新设计为新的复方与剂型,运用Bio-AI分析疾病与药物之间的关系,并探索包括GLP-1在内的代谢性疾病的生物学可能性。我们将其与生物打印及临床开发能力相连接,把想法发展为能够真正到达患者手中的治疗药物。",
+    "jp": "THPHARMのScienceは一つの技術にとどまりません。実証済みの医薬品を新たな配合・剤形へと再設計し、Bio-AIを用いて疾患と薬物の関係を分析し、GLP-1をはじめとする代謝性疾患の生物学的可能性を探索します。これにバイオプリンティングと臨床開発の能力を連携させ、アイデアを実際の患者に届く治療薬へと発展させることがTHPHARMの開発方式です。"
+  },
+  "driveStages": [
+    {
+      "letter": "D",
+      "stage": "DESIGN",
+      "meaning": {
+        "kr": "검증된 약을 더 나은 치료제로 다시 설계",
+        "en": "Redesign proven medicines into better therapeutics",
+        "zh_cn": "将成熟药物重新设计为更优的治疗药物",
+        "jp": "実証済みの薬をより良い治療薬へと再設計"
+      },
+      "linkedPage": "WEB-201"
+    },
+    {
+      "letter": "R",
+      "stage": "REVEAL",
+      "meaning": {
+        "kr": "Bio-AI와 데이터에서 새로운 가능성을 발견",
+        "en": "Reveal new possibilities through Bio-AI and data",
+        "zh_cn": "通过Bio-AI与数据发现新的可能性",
+        "jp": "Bio-AIとデータから新たな可能性を発見"
+      },
+      "linkedPage": "WEB-202"
+    },
+    {
+      "letter": "I",
+      "stage": "INTERPRET",
+      "meaning": {
+        "kr": "GLP-1·비만·당뇨·MASH 등 대사질환의 생물학을 이해",
+        "en": "Interpret the biology of metabolic disease — GLP-1, obesity, diabetes, MASH",
+        "zh_cn": "解读GLP-1、肥胖症、糖尿病、MASH等代谢性疾病的生物学",
+        "jp": "GLP-1・肥満・糖尿病・MASHなど代謝性疾患の生物学を理解"
+      },
+      "linkedPage": "WEB-203"
+    },
+    {
+      "letter": "V",
+      "stage": "VALIDATE",
+      "meaning": {
+        "kr": "바이오프린팅·비임상 등 더 정교한 모델로 검증",
+        "en": "Validate with more sophisticated models — bioprinting, preclinical",
+        "zh_cn": "通过生物打印、非临床等更精细的模型进行验证",
+        "jp": "バイオプリンティング・非臨床など、より精緻なモデルで検証"
+      },
+      "linkedPage": "WEB-204"
+    },
+    {
+      "letter": "E",
+      "stage": "EXECUTE",
+      "meaning": {
+        "kr": "제형·CMC·규제·글로벌 임상으로 실제 실행",
+        "en": "Execute through formulation, CMC, regulatory, and global clinical development",
+        "zh_cn": "通过剂型、CMC、法规与全球临床开发付诸实践",
+        "jp": "剤形・CMC・規制・グローバル臨床開発として実行"
+      },
+      "linkedPage": "WEB-205"
+    }
+  ],
+  "lastUpdated": "2026-08-12"
+}

@@ -1,0 +1,71 @@
+{
+  "code": "WEB-601",
+  "kind": "news",
+  "status": "company_confirm",
+  "title": {
+    "kr": "Lilly 경구 GLP-1, 영국에서 비만·제2형 당뇨병 치료제로 승인",
+    "en": "Lilly's oral GLP-1 approved in the UK for obesity and type 2 diabetes",
+    "zh_cn": "礼来口服GLP-1药物在英国获批用于肥胖症与2型糖尿病治疗",
+    "jp": "イーライリリーの経口GLP-1、英国で肥満症・2型糖尿病治療薬として承認"
+  },
+  "dek": {
+    "kr": "복용 편의성이 GLP-1 제품 경쟁의 새 축으로 떠오르는 신호",
+    "en": "A signal that dosing convenience is emerging as a new axis of GLP-1 product competition",
+    "zh_cn": "给药便利性正成为GLP-1产品竞争新维度的信号",
+    "jp": "服薬の利便性がGLP-1製品競争の新たな軸として浮上する兆し"
+  },
+  "body": {
+    "kr": "Eli Lilly의 경구용 저분자 GLP-1 receptor agonist orforglipron(Foundayo)이 영국에서 비만·체중관리 및 제2형 당뇨병 치료제로 승인됐다고 Reuters가 보도했습니다. 복용 편의성이 제품 경쟁의 새 축으로 떠오르고 있습니다.",
+    "en": "Reuters reported that Eli Lilly's oral small-molecule GLP-1 receptor agonist, orforglipron (Foundayo), has been approved in the UK for obesity/weight management and type 2 diabetes. Dosing convenience is emerging as a new axis of product competition.",
+    "zh_cn": "据路透社报道,礼来公司口服小分子GLP-1受体激动剂orforglipron(Foundayo)已在英国获批用于肥胖症/体重管理及2型糖尿病治疗。给药便利性正成为产品竞争的新维度。",
+    "jp": "ロイターの報道によると、イーライリリーの経口低分子GLP-1受容体作動薬orforglipron(Foundayo)が、英国で肥満症・体重管理および2型糖尿病治療薬として承認されました。服薬の利便性が製品競争の新たな軸として浮上しています。"
+  },
+  "keyPoints": [
+    {
+      "kr": "경구용 저분자 GLP-1 receptor agonist — 기존 주사제 대비 복용 편의성이 핵심 차별점",
+      "en": "An oral, small-molecule GLP-1 receptor agonist — dosing convenience is the key differentiator versus existing injectables",
+      "zh_cn": "口服小分子GLP-1受体激动剂——相较现有注射剂,服药便利性是核心差异化优势",
+      "jp": "経口の低分子GLP-1受容体作動薬 — 既存の注射剤に対し、服薬の利便性が主要な差別化ポイント"
+    },
+    {
+      "kr": "비만·체중관리 및 제2형 당뇨병 두 적응증으로 영국에서 승인",
+      "en": "Approved in the UK for two indications: obesity/weight management and type 2 diabetes",
+      "zh_cn": "在英国获批用于肥胖症/体重管理及2型糖尿病两项适应症",
+      "jp": "肥満症・体重管理と2型糖尿病の2つの適応症で英国承認"
+    },
+    {
+      "kr": "아시아를 포함한 다른 지역의 승인·가격 정책은 아직 확인되지 않음",
+      "en": "Approval and pricing in other regions, including Asia, are not yet confirmed",
+      "zh_cn": "包括亚洲在内的其他地区的获批与定价政策尚未确认",
+      "jp": "アジアを含む他地域での承認・価格政策はまだ確認されていない"
+    }
+  ],
+  "thpharmView": {
+    "kr": "제형·복용경로의 경쟁이 본격화되는 신호입니다. 자세한 산업 해석은 아래 THPHARM VIEW에서 다룹니다.",
+    "en": "A signal that competition over formulation and route of administration is intensifying. See the THPHARM View below for deeper industry analysis.",
+    "zh_cn": "这是剂型与给药途径竞争全面展开的信号。更深入的产业解读请见下方THPHARM View。",
+    "jp": "製剤・投与経路の競争が本格化する兆しです。詳しい産業分析は下記THPHARM Viewで扱います。"
+  },
+  "newsType": "Industry",
+  "region": "UK",
+  "year": 2026,
+  "tags": [
+    { "label": "GLP-1" },
+    { "label": "Obesity" },
+    { "label": "Oral Drug" },
+    { "label": "Eli Lilly", "url": "https://www.lilly.com" }
+  ],
+  "relatedLinks": [
+    { "label": "THPHARM VIEW", "href": "/intelligence/web-502-oral-glp1" },
+    { "label": "SCIENCE — METABOLIC SCIENCE", "href": "/science/interpret" },
+    { "label": "HEALTH — Treatment Trends", "href": "/health/treatment-trends" }
+  ],
+  "sourceMeta": {
+    "source_type": "Media",
+    "source_title": "Reuters",
+    "publisher": "Reuters",
+    "published_at": "2026-08-10",
+    "last_verified": "2026-08-12"
+  },
+  "publishedAt": "2026-08-10"
+}

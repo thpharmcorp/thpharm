@@ -1,0 +1,92 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import HeroDark from '../../../components/HeroDark.astro';
+import { locales, localeToFieldKey, ui, type Locale } from '../../../i18n/ui';
+
+export function getStaticPaths() {
+  return locales.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const fk = localeToFieldKey[locale];
+const strings = ui[locale];
+
+const assets = await getCollection('pipeline');
+
+const heroCopy = {
+  kr: { eyebrow: 'PIPELINE', title: '아이디어를 실제 치료제로 만들어갑니다.', body: '티에치팜의 파이프라인은 개량신약과 복합제 개발 경험에서 출발해 비만·당뇨·고혈압·MASH 등 대사질환의 새로운 치료 가능성으로 확장되고 있습니다.' },
+  en: { eyebrow: 'PIPELINE', title: 'From science to medicines.', body: "THPHARM's pipeline builds on our experience in improved drugs and combination products, expanding into new treatment possibilities across obesity, diabetes, hypertension, and MASH." },
+  'zh-cn': { eyebrow: 'PIPELINE', title: '从科学到药物。', body: 'THPHARM的管线始于改良新药与复方制剂开发经验,正扩展至肥胖症、糖尿病、高血压、MASH等代谢性疾病的新治疗可能。' },
+  jp: { eyebrow: 'PIPELINE', title: 'サイエンスから治療薬へ。', body: 'THPHARMのパイプラインは改良新薬・配合剤の開発経験から出発し、肥満・糖尿病・高血圧・MASHなど代謝性疾患の新たな治療可能性へと広がっています。' },
+} as const;
+const hero = heroCopy[locale];
+
+const stageOrder = ['Discovery', 'Preclinical', 'Phase 1', 'Phase 2', 'Phase 3', 'Regulatory'];
+
+const overviewCopy: Record<Locale, { title: string; note: string }> = {
+  kr: { title: 'PIPELINE OVERVIEW', note: '각 표시는 자산의 현재 개발단계를 나타냅니다. 자산을 클릭하면 상세 정보로 이동합니다.' },
+  en: { title: 'PIPELINE OVERVIEW', note: 'Each marker shows the asset\'s current development stage. Click an asset to see full details.' },
+  'zh-cn': { title: 'PIPELINE OVERVIEW', note: '每个标记代表该资产当前所处的开发阶段。点击资产可查看详细信息。' },
+  jp: { title: 'PIPELINE OVERVIEW', note: '各マーカーは資産の現在の開発段階を示します。資産をクリックすると詳細情報に移動します。' },
+};
+const overview = overviewCopy[locale];
+---
+
+<BaseLayout locale={locale} title={hero.title} description={hero.body}>
+  <HeroDark
+    eyebrow={hero.eyebrow}
+    title={hero.title}
+    body={hero.body}
+    tags={['THP-001', 'THP-004', 'GLOBAL PHASE 3', 'GLP-1 · MASH']}
+  />
+
+  <section class="bg-white">
+    <div class="mx-auto max-w-content px-4 py-16 md:px-6 md:py-20">
+      <p class="mb-3 text-xs font-bold tracking-widest text-thp-teal">{overview.title}</p>
+      <p class="mb-8 max-w-lg text-sm text-thp-ink/50">{overview.note}</p>
+
+      <div
+        class="mb-2 hidden gap-2 px-6 md:grid"
+        style="grid-template-columns: 200px repeat(6, 1fr);"
+      >
+        <div />
+        {stageOrder.map((s) => <p class="text-center text-[10px] font-bold uppercase tracking-wide text-thp-ink/35">{s}</p>)}
+      </div>
+
+      <div class="divide-y divide-thp-line rounded-2xl border border-thp-line">
+        {
+          assets.map((a) => {
+            const idx = stageOrder.indexOf(a.data.stage);
+            const pct = idx >= 0 ? (idx / (stageOrder.length - 1)) * 100 : 0;
+            return (
+              <a
+                href={`/${locale}/pipeline/${a.id}`}
+                class="grid gap-4 p-6 transition-colors hover:bg-thp-mist md:grid-cols-[200px_1fr] md:items-center"
+              >
+                <div>
+                  <p class="text-lg font-extrabold text-thp-navy2">{a.data.assetId}</p>
+                  <p class="mt-1 text-sm text-thp-ink/60">{a.data.indication[fk]}</p>
+                  <div class="mt-2 flex items-center gap-2">
+                    <span class="rounded-full bg-thp-teal/10 px-3 py-1 text-xs font-bold text-thp-tealDeep">{a.data.stage}</span>
+                    <span class="text-xs text-thp-ink/40">{strings.lastUpdated}: {a.data.lastUpdated}</span>
+                  </div>
+                </div>
+                <div class="relative hidden h-4 md:block">
+                  <div class="absolute left-0 right-0 top-1/2 h-0.5 -translate-y-1/2 bg-thp-line" />
+                  <div class="absolute left-0 top-1/2 h-0.5 -translate-y-1/2 bg-thp-teal" style={`width:${pct}%`} />
+                  {stageOrder.map((s, i) => (
+                    <div
+                      class="absolute top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 bg-white"
+                      style={`left:${(i / (stageOrder.length - 1)) * 100}%; ${i <= idx ? 'border-color:#12A594; background:#12A594;' : 'border-color:#E2E8F0;'} ${i === idx ? 'box-shadow:0 0 0 4px rgba(18,165,148,0.18);' : ''} width:${i === idx ? '12px' : '8px'}; height:${i === idx ? '12px' : '8px'};`}
+                    />
+                  ))}
+                </div>
+              </a>
+            );
+          })
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>

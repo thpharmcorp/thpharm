@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * 셀프호스팅 폰트 (v2.1 §11 — Google Fonts CDN 대신 self-host, 中 접속성 고려)
+ * [COMPANY DATA NEEDED] 실제 .woff2 파일을 /public/fonts 에 넣고 아래 src 경로를 채우세요.
+ * 파일이 없는 동안에는 font-family 폴백(시스템 폰트)으로 정상 렌더링됩니다.
+ * 권장: Pretendard(KR/EN/JP 라틴+한글), Noto Sans SC(zh-CN) — 둘 다 OFL 라이선스, 상업 이용 가능.
+ */
+/*
+@font-face {
+  font-family: 'Pretendard';
+  src: url('/fonts/Pretendard-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Pretendard';
+  src: url('/fonts/Pretendard-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-thp-ink antialiased;
+}
+
+.skip-link {
+  @apply sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-thp-navy focus:px-4 focus:py-2 focus:text-white;
+}

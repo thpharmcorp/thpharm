@@ -1,0 +1,81 @@
+{
+  "code": "WEB-601",
+  "kind": "news",
+  "status": "published",
+  "title": {
+    "kr": "티에치팜, 중소벤처기업부 '딥테크 TIPS' 선정",
+    "en": "THPHARM selected for Korea's 'Deep Tech TIPS' program by the Ministry of SMEs and Startups",
+    "zh_cn": "THPHARM入选韩国中小风险企业部\"Deep Tech TIPS\"计划",
+    "jp": "THPHARM、中小ベンチャー企業部の「ディープテックTIPS」に選定"
+  },
+  "dek": {
+    "kr": "정부 R&D 15억 원 지원으로 Bio-AI 기반 MASH 적응증 확장 추진",
+    "en": "KRW 1.5 billion in government R&D funding to expand into a Bio-AI-driven MASH indication",
+    "zh_cn": "获得15亿韩元政府研发资助,推进基于Bio-AI的MASH适应症拓展",
+    "jp": "政府R&D支援15億ウォンでBio-AI活用のMASH適応症拡大を推進"
+  },
+  "body": {
+    "kr": "대사질환 신약개발 전문기업 티에치팜(대표 한태희)이 충북창조경제혁신센터의 추천을 받아 중소벤처기업부의 '딥테크 TIPS'에 최종 선정됐다고 한국경제가 보도했습니다. 향후 3년간 총 15억 원 규모의 정부 연구개발 지원을 받아 'Bio-AI 기반 비만 치료제의 MASH 적응증 확장 및 임상 IND 패키지 구축' 과제를 수행합니다.",
+    "en": "Hankyung (Korea Economic Daily) reported that THPHARM, a metabolic-disease drug developer led by CEO Han Tae-hee, has been selected for the Ministry of SMEs and Startups' 'Deep Tech TIPS' program, recommended by the Chungbuk Center for Creative Economy & Innovation. The company will receive about KRW 1.5 billion in government R&D funding over three years for a project expanding its Bio-AI-supported obesity candidate into a MASH indication and building its clinical IND package.",
+    "zh_cn": "据韩国经济日报报道,代谢性疾病新药开发企业THPHARM(代表韩泰熙)经忠北创造经济革新中心推荐,最终入选中小风险企业部的\"Deep Tech TIPS\"计划。公司将在未来3年获得约15亿韩元的政府研发资助,用于推进\"基于Bio-AI的肥胖症治疗候选物质MASH适应症拓展及临床IND资料包构建\"课题。",
+    "jp": "韓国経済新聞の報道によると、代謝性疾患の新薬開発を手がけるTHPHARM(代表:ハン・テヒ)が忠北創造経済革新センターの推薦を受け、中小ベンチャー企業部の「ディープテックTIPS」に最終選定されました。今後3年間、総額15億ウォン規模の政府研究開発支援を受け、「Bio-AIを活用した肥満治療候補物質のMASH適応症拡大および臨床INDパッケージ構築」課題を遂行します。"
+  },
+  "keyPoints": [
+    {
+      "kr": "중소벤처기업부 '딥테크 TIPS'에 선정 — 향후 3년간 약 15억 원 규모 정부 R&D 지원",
+      "en": "Selected for the Ministry of SMEs and Startups' 'Deep Tech TIPS' — about KRW 1.5 billion in government R&D support over three years",
+      "zh_cn": "入选中小风险企业部\"Deep Tech TIPS\"——未来3年获得约15亿韩元政府研发资助",
+      "jp": "中小ベンチャー企業部「ディープテックTIPS」に選定 — 今後3年間、約15億ウォン規模の政府研究開発支援"
+    },
+    {
+      "kr": "과제 목표: 비임상 효능 데이터를 Bio-AI와 결합해 핵심 바이오마커·약물작용기전(MoA)을 규명하고 후속 비임상 연구로 검증",
+      "en": "Project goal: combine nonclinical efficacy data with Bio-AI to identify key biomarkers and mechanism of action, then verify through follow-up nonclinical studies",
+      "zh_cn": "课题目标:将非临床疗效数据与Bio-AI结合,鉴定关键生物标志物与药物作用机制(MoA),并通过后续非临床研究加以验证",
+      "jp": "課題目標:非臨床の有効性データをBio-AIと組み合わせ、主要バイオマーカーと薬物作用機序(MoA)を解明し、後続の非臨床研究で検証する"
+    },
+    {
+      "kr": "파이프라인은 물과 함께 복용하는 경구형 비만·MASH 치료제 — 제형 최적화·CMC·규제전략을 통해 임상 1상 진입(IND) 준비 중",
+      "en": "The pipeline candidate is an oral obesity/MASH treatment taken with water — the company is preparing for Phase 1 (IND) entry through formulation optimization, CMC, and regulatory strategy",
+      "zh_cn": "该管线为需与水同服的口服肥胖症/MASH治疗药物——公司正通过剂型优化、CMC及监管策略推进临床1期(IND)申报准备",
+      "jp": "パイプラインは水とともに服用する経口の肥満症・MASH治療薬 — 製剤最適化・CMC・規制戦略を通じて臨床第1相(IND)入りの準備を進めている"
+    },
+    {
+      "kr": "글로벌 AI 기업들과 협력해 질환 네트워크 분석·약물반응 예측·바이오마커 발굴·작용기전 분석을 진행 중",
+      "en": "Collaborating with global AI companies on disease-network analysis, drug-response prediction, biomarker discovery, and mechanism-of-action analysis",
+      "zh_cn": "正与全球AI企业合作开展疾病网络分析、药物反应预测、生物标志物发现及作用机制分析",
+      "jp": "グローバルAI企業と協力し、疾患ネットワーク分析・薬物反応予測・バイオマーカー探索・作用機序分析を進めている"
+    }
+  ],
+  "thpharmView": {
+    "kr": "일반 TIPS에 이어 딥테크 TIPS 선정으로, 개량신약·환자친화형 제제 기술을 Bio-AI 기반 신약개발로 확장하는 흐름을 보여주는 사례입니다. THP-004(비만·MASH) 파이프라인의 임상 진입 준비와 직접 연결됩니다.",
+    "en": "Following an earlier general TIPS project, this Deep Tech TIPS selection reflects THPHARM's expansion from improved-drug and patient-friendly formulation technology into Bio-AI-driven drug development. It connects directly to the clinical-entry preparation for the THP-004 (obesity/MASH) pipeline.",
+    "zh_cn": "继此前的普通TIPS项目之后,此次入选Deep Tech TIPS体现了THPHARM将改良新药与患者友好型制剂技术向Bio-AI驱动新药开发扩展的趋势,并与THP-004(肥胖症/MASH)管线的临床准备工作直接相关。",
+    "jp": "一般TIPSに続くディープテックTIPS選定は、改良新薬・患者に優しい製剤技術をBio-AI主導の新薬開発へと広げるTHPHARMの流れを示す事例です。THP-004(肥満症・MASH)パイプラインの臨床入り準備に直接つながります。"
+  },
+  "newsType": "Company",
+  "region": "KR",
+  "year": 2026,
+  "tags": [
+    { "label": "Deep Tech TIPS", "url": "https://www.jointips.or.kr" },
+    { "label": "Bio-AI" },
+    { "label": "MASH" },
+    { "label": "Obesity" },
+    { "label": "IND" },
+    { "label": "한국경제", "url": "https://www.hankyung.com/article/202607278175O" }
+  ],
+  "relatedLinks": [
+    { "label": "PIPELINE — THP-004", "href": "/pipeline/thp-004" },
+    { "label": "SCIENCE — BIO-AI", "href": "/science/reveal" },
+    { "label": "HEALTH — MASH", "href": "/health/mash" }
+  ],
+  "sourceMeta": {
+    "source_type": "Media",
+    "source_title": "티에치팜, 중소벤처기업부 '딥테크 TIPS' 선정",
+    "publisher": "한국경제 (Hankyung)",
+    "published_at": "2026-07-28",
+    "source_url": "https://www.hankyung.com/article/202607278175O",
+    "accessed_at": "2026-08-13",
+    "last_verified": "2026-08-13"
+  },
+  "publishedAt": "2026-07-28"
+}

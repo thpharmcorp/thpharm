@@ -1,0 +1,59 @@
+{
+  "code": "WEB-404",
+  "slug": "mash",
+  "status": "draft",
+  "title": {
+    "kr": "MASH (대사이상 지방간염)",
+    "en": "MASH (Metabolic Dysfunction-Associated Steatohepatitis)",
+    "zh_cn": "MASH(代谢功能障碍相关脂肪性肝炎)",
+    "jp": "MASH(代謝機能障害関連脂肪肝炎)"
+  },
+  "oneMinuteSummary": {
+    "kr": "MASH(Metabolic dysfunction-Associated SteatoHepatitis)는 단순히 간에 지방이 쌓이는 것을 넘어 염증과 손상이 함께 진행되는 진행성 대사성 간질환입니다. 비만·당뇨 등 다른 대사질환과 밀접하게 연결되어 있으며, 방치하면 간섬유화·간경변으로 진행할 수 있습니다.",
+    "en": "MASH (Metabolic dysfunction-Associated SteatoHepatitis) is a progressive metabolic liver disease that goes beyond simple fat accumulation in the liver — it involves ongoing inflammation and liver cell damage. It is closely linked to other metabolic conditions such as obesity and diabetes, and if left unmanaged, can progress to liver fibrosis and cirrhosis.",
+    "zh_cn": "MASH(代谢功能障碍相关脂肪性肝炎)不仅是肝脏脂肪堆积,更是伴随炎症与肝细胞损伤持续进展的代谢性肝病。它与肥胖症、糖尿病等其他代谢性疾病密切相关,若放任不管可能进展为肝纤维化、肝硬化。",
+    "jp": "MASH(代謝機能障害関連脂肪肝炎)は単に肝臓に脂肪が蓄積するだけでなく、炎症と肝細胞の損傷が並行して進行する進行性の代謝性肝疾患です。肥満・糖尿病など他の代謝性疾患と密接に関連しており、放置すると肝線維化・肝硬変へと進行することがあります。"
+  },
+  "whatHappensInBody": {
+    "kr": "인슐린 저항성과 에너지 과잉 상태가 지속되면 간세포 안에 지방이 과도하게 축적됩니다(지방간). 여기에 염증반응과 간세포 손상이 더해지면 단순 지방간을 넘어 MASH로 진행하며, 이 상태가 오래 지속되면 간 조직에 섬유화가 생길 수 있습니다.",
+    "en": "When insulin resistance and chronic energy excess persist, fat accumulates excessively within liver cells (fatty liver). When inflammation and liver cell injury are added on top of this, simple fatty liver can progress to MASH, and prolonged disease activity can lead to fibrosis of liver tissue.",
+    "zh_cn": "若胰岛素抵抗与长期能量过剩持续存在,肝细胞内将过度堆积脂肪(脂肪肝)。在此基础上若叠加炎症反应与肝细胞损伤,单纯脂肪肝可能进展为MASH,长期持续可能导致肝组织纤维化。",
+    "jp": "インスリン抵抗性とエネルギー過剰状態が続くと、肝細胞内に脂肪が過剰に蓄積します(脂肪肝)。ここに炎症反応と肝細胞の損傷が加わると、単純脂肪肝を超えてMASHへと進行し、この状態が長く続くと肝組織に線維化が生じることがあります。"
+  },
+  "riskAndScreening": {
+    "kr": "혈액검사(간효소 수치 등), 초음파, 필요시 섬유화 정도를 평가하는 영상검사나 조직검사를 통해 의료기관에서 확인합니다. 비만, 제2형 당뇨, 이상지질혈증, 대사증후군이 주요 위험요인입니다. 이 페이지는 진단을 대체하지 않으며, 개인별 평가는 반드시 의료진과 상담하시기 바랍니다.",
+    "en": "Healthcare providers assess MASH through blood tests (such as liver enzyme levels), ultrasound, and, when needed, imaging or biopsy to evaluate the degree of fibrosis. Obesity, type 2 diabetes, dyslipidemia, and metabolic syndrome are major risk factors. This page does not replace diagnosis — please consult a healthcare professional for individual evaluation.",
+    "zh_cn": "医疗机构通常通过血液检查(如肝酶水平)、超声检查,必要时通过影像学或活检评估纤维化程度进行确认。肥胖症、2型糖尿病、血脂异常及代谢综合征是主要风险因素。本页面不能替代诊断,个人评估请务必咨询医疗专业人员。",
+    "jp": "血液検査(肝酵素値など)、超音波検査、必要に応じて線維化の程度を評価する画像検査や組織検査により医療機関で確認します。肥満、2型糖尿病、脂質異常症、メタボリックシンドロームが主な危険因子です。本ページは診断に代わるものではなく、個別の評価は必ず医療従事者にご相談ください。"
+  },
+  "currentTreatment": {
+    "kr": "체중 감량, 식이·운동 등 생활습관 개선이 치료의 기본입니다. 최근 일부 국가에서 MASH 관련 적응증으로 승인된 약물들이 등장하고 있으며, 치료 방법의 선택은 질병 진행 단계와 동반질환에 따라 다릅니다.",
+    "en": "Weight loss and lifestyle changes such as diet and exercise form the foundation of treatment. Some countries have recently approved medications with a MASH-related indication, and treatment choice depends on disease stage and comorbidities.",
+    "zh_cn": "体重减轻及饮食、运动等生活方式改善是治疗的基础。近期部分国家已批准具有MASH相关适应症的药物,治疗方式的选择取决于疾病进展阶段及合并症情况。",
+    "jp": "体重減少、食事・運動などの生活習慣改善が治療の基本です。近年、一部の国ではMASH関連の適応症で承認された薬剤が登場しており、治療法の選択は疾患の進行段階と併存疾患によって異なります。"
+  },
+  "treatmentChanges": {
+    "kr": "GLP-1 계열 치료제가 체중감량을 넘어 간 염증·섬유화에 미치는 영향에 대한 연구가 활발히 진행되고 있으며, MASH 특이적 신약도 등장하고 있습니다. 자세한 최신 동향은 INTELLIGENCE의 THPHARM VIEW 및 Research Radar에서 다룹니다.",
+    "en": "Research is actively exploring how GLP-1-based therapies affect liver inflammation and fibrosis beyond weight loss, and MASH-specific new drugs are also emerging. See THPHARM View and Research Radar under INTELLIGENCE for the latest trends.",
+    "zh_cn": "关于GLP-1类治疗药物在体重减轻之外对肝脏炎症与纤维化影响的研究正在积极开展,MASH特异性新药也不断涌现。最新动态详见INTELLIGENCE中的THPHARM View与Research Radar。",
+    "jp": "GLP-1系治療薬が体重減少を超えて肝臓の炎症・線維化に及ぼす影響について研究が活発に進められており、MASH特異的な新薬も登場しています。最新動向はINTELLIGENCEのTHPHARM ViewおよびResearch Radarで扱います。"
+  },
+  "mythVsFact": [
+    {
+      "myth": {
+        "kr": "지방간은 대수롭지 않다?",
+        "en": "Myth: Fatty liver is not a big deal?",
+        "zh_cn": "误区:脂肪肝没什么大不了?",
+        "jp": "誤解:脂肪肝は大したことがない?"
+      },
+      "fact": {
+        "kr": "단순 지방간은 대부분 심각하지 않지만, 일부는 염증과 섬유화를 동반한 MASH로 진행할 수 있고 장기간 방치 시 간경변·간부전으로 이어질 수 있습니다. 비만·당뇨가 있다면 정기적인 간 건강 확인이 권장됩니다.",
+        "en": "Simple fatty liver is usually not serious, but in some people it can progress to MASH with inflammation and fibrosis, and if left unmanaged over a long period, can lead to cirrhosis or liver failure. Regular liver health checks are recommended for those with obesity or diabetes.",
+        "zh_cn": "单纯性脂肪肝大多并不严重,但部分患者可能进展为伴有炎症与纤维化的MASH,长期放任可能导致肝硬化或肝衰竭。若合并肥胖症或糖尿病,建议定期检查肝脏健康状况。",
+        "jp": "単純性脂肪肝の多くは深刻ではありませんが、一部は炎症と線維化を伴うMASHへと進行することがあり、長期間放置すると肝硬変・肝不全につながる可能性があります。肥満や糖尿病がある場合は定期的な肝臓の健康チェックが推奨されます。"
+      }
+    }
+  ],
+  "medicalReviewer": "",
+  "lastVerified": "2026-08-12"
+}

@@ -1,0 +1,30 @@
+{
+  "code": "WEB-505",
+  "kind": "bio_ai_atlas_card",
+  "status": "draft",
+  "title": {
+    "kr": "구조 예측 (Structure Prediction)",
+    "en": "Structure Prediction",
+    "zh_cn": "结构预测",
+    "jp": "構造予測"
+  },
+  "dek": {
+    "kr": "분자와 복합체의 모양을 예측",
+    "en": "Predicting the shape of molecules and complexes",
+    "zh_cn": "预测分子与复合物的形状",
+    "jp": "分子および複合体の形を予測"
+  },
+  "body": {
+    "kr": "AlphaFold DB · RoseTTAFold All-Atom · Chai-1 · Boltz 등이 대표적입니다. THPHARM은 이 모델들을 직접 개발하지 않으며, 각 모델의 공식 데이터베이스와 라이선스를 표시해 제공합니다.",
+    "en": "Representative models include AlphaFold DB, RoseTTAFold All-Atom, Chai-1, and Boltz. THPHARM does not develop these models itself and presents them with their official database source and license clearly indicated.",
+    "zh_cn": "代表性模型包括AlphaFold DB、RoseTTAFold All-Atom、Chai-1与Boltz。THPHARM并未自行开发这些模型,而是明确标注其官方数据库来源与许可信息后提供。",
+    "jp": "代表的なモデルにはAlphaFold DB、RoseTTAFold All-Atom、Chai-1、Boltzなどがあります。THPHARMはこれらのモデルを自社開発しておらず、各モデルの公式データベースとライセンスを明示した上で紹介します。"
+  },
+  "tags": [
+    { "label": "Bio-AI" },
+    { "label": "AlphaFold", "url": "https://alphafold.ebi.ac.uk/" },
+    { "label": "Structure" },
+    { "label": "Chai-1", "url": "https://github.com/chaidiscovery/chai-lab" }
+  ],
+  "publishedAt": "2026-08-12"
+}

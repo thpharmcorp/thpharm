@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import IrSubnav from '../../../components/IrSubnav.astro';
+import { locales, ui, type Locale } from '../../../i18n/ui';
+
+export function getStaticPaths() {
+  return locales.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+const strings = ui[locale];
+
+const copy = {
+  kr: {
+    title: '협력범위를 명확히 합니다.',
+    lead: '파트너링은 "우리가 무엇이든 함께 할 수 있다"보다 협력범위를 명확히 합니다. 각 카드는 관련 Pipeline·Science·담당 Contact와 연결됩니다.',
+  },
+  en: {
+    title: 'We define the scope of collaboration clearly.',
+    lead: 'Partnering is defined by clear scope, not a claim that "we can do anything together." Each card connects to related Pipeline, Science, and contact information.',
+  },
+  'zh-cn': {
+    title: '明确合作范围。',
+    lead: '合作伙伴关系并非"我们什么都能一起做",而是明确界定合作范围。每张卡片均与相关Pipeline、Science及负责联系人相连接。',
+  },
+  jp: {
+    title: '協力範囲を明確にします。',
+    lead: 'パートナリングは「何でも一緒にできる」ではなく、協力範囲を明確にします。各カードは関連するPipeline・Science・担当Contactと連携します。',
+  },
+} as const;
+const t = copy[locale];
+
+const cards = [
+  { key: 'REGIONAL LICENSING', body: { kr: '지역별 라이선싱 협력', en: 'Regional licensing collaboration', 'zh-cn': '区域授权合作', jp: '地域別ライセンシング協力' } },
+  { key: 'CO-DEVELOPMENT', body: { kr: '공동 연구개발', en: 'Joint research and development', 'zh-cn': '共同研发', jp: '共同研究開発' } },
+  { key: 'COMMERCIAL PARTNERSHIP', body: { kr: '상업화 파트너십', en: 'Commercialization partnership', 'zh-cn': '商业化合作', jp: '事業化パートナーシップ' } },
+  { key: 'CLINICAL COLLABORATION', body: { kr: '임상 협력', en: 'Clinical collaboration', 'zh-cn': '临床合作', jp: '臨床協力' }, link: 'clinical-collaboration' },
+  { key: 'BIO-AI · DATA COLLABORATION', body: { kr: 'Bio-AI·데이터 협력', en: 'Bio-AI / data collaboration', 'zh-cn': 'Bio-AI/数据合作', jp: 'Bio-AI・データ協力' }, sciLink: 'reveal' },
+  { key: 'BIOPRINTING · RESEARCH TECHNOLOGY', body: { kr: '바이오프린팅·연구기술 협력', en: 'Bioprinting / research technology collaboration', 'zh-cn': '生物打印/研究技术合作', jp: 'バイオプリンティング・研究技術協力' }, sciLink: 'validate' },
+] as const;
+---
+
+<BaseLayout locale={locale} title={t.title} description={t.lead}>
+  <IrSubnav locale={locale} current="partnering" />
+  <section class="bg-white">
+    <div class="mx-auto max-w-content px-4 py-16 md:px-6 md:py-20">
+      <p class="text-xs font-bold tracking-widest text-thp-teal">BUSINESS PARTNERING</p>
+      <h1 class="mt-3 max-w-2xl text-2xl font-black tracking-tight text-thp-navy2 md:text-3xl">{t.title}</h1>
+      <p class="mt-4 max-w-2xl text-thp-ink/70">{t.lead}</p>
+
+      <div class="mt-10 grid gap-4 md:grid-cols-2">
+        {
+          cards.map((c) => (
+            <div class="rounded-2xl border border-thp-line p-6">
+              <p class="text-xs font-bold tracking-widest text-thp-teal">{c.key}</p>
+              <p class="mt-3 text-sm leading-relaxed text-thp-ink/70">{c.body[locale]}</p>
+              <div class="mt-4 flex flex-wrap gap-3 text-xs font-semibold text-thp-tealDeep">
+                {'link' in c && c.link && <a href={`/${locale}/ir/${c.link}`} class="hover:underline">{c.link} →</a>}
+                {'sciLink' in c && c.sciLink && <a href={`/${locale}/science/${c.sciLink}`} class="hover:underline">SCIENCE →</a>}
+                <a href={`/${locale}/contact`} class="hover:underline">{strings.footerContact} →</a>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>

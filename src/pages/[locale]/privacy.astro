@@ -1,0 +1,76 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { locales, type Locale } from '../../i18n/ui';
+
+export function getStaticPaths() {
+  return locales.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+
+const copy = {
+  kr: {
+    title: '개인정보처리방침',
+    notice: '2026년 8월 12일부터 적용됩니다. 방침이 개정되면 이 페이지에 반영합니다.',
+    sections: [
+      { h: '수집하는 개인정보', b: '문의 폼 작성 시 이름·연락처·문의내용을 수집합니다. 로그인 기능이 도입되면 이메일 등 최소한의 정보를 추가로 수집하며, 그 전까지는 별도 계정 정보를 수집하지 않습니다.' },
+      { h: '이용 목적', b: '문의 응대, 서비스 제공 및 개선, 전문 콘텐츠 이용 현황 파악을 위해서만 사용합니다.' },
+      { h: '보관 기간', b: '목적 달성 후 지체 없이 파기하며, 관계 법령에 따라 보존이 필요한 경우 해당 기간 동안 보관합니다.' },
+      { h: '분석 도구', b: 'Cloudflare Web Analytics 등 개인정보를 최소 수집하는 도구를 사용할 예정이며, 구체적 수집 항목은 도입 시 이 페이지에 갱신합니다.' },
+      { h: '문의', b: '개인정보 관련 문의는 Contact 페이지를 이용해 주세요.' },
+    ],
+  },
+  en: {
+    title: 'Privacy Policy',
+    notice: 'Effective August 12, 2026. Any updates to this policy will be reflected on this page.',
+    sections: [
+      { h: 'Information we collect', b: 'Contact forms collect name, contact details, and inquiry content. Once login is introduced, we will additionally collect minimal information such as email; until then, no account information is collected.' },
+      { h: 'Purpose of use', b: 'Used solely to respond to inquiries, provide and improve our services, and understand usage of professional content.' },
+      { h: 'Retention', b: 'Data is deleted promptly once its purpose is fulfilled, except where retention is required by law.' },
+      { h: 'Analytics', b: 'We plan to use privacy-minimizing tools such as Cloudflare Web Analytics. Specific data points will be documented here once implemented.' },
+      { h: 'Contact', b: 'For privacy-related inquiries, please use the Contact page.' },
+    ],
+  },
+  'zh-cn': {
+    title: '隐私政策',
+    notice: '自2026年8月12日起适用。政策如有修订,将在本页面更新。',
+    sections: [
+      { h: '收集的个人信息', b: '咨询表单会收集姓名、联系方式与咨询内容。引入登录功能后,将额外收集电子邮箱等最少信息;在此之前不收集账户信息。' },
+      { h: '使用目的', b: '仅用于回应咨询、提供并改善服务,以及了解专业内容使用情况。' },
+      { h: '保存期限', b: '目的达成后将及时删除,法律要求保存的情形除外。' },
+      { h: '分析工具', b: '计划使用Cloudflare Web Analytics等最小化收集个人信息的工具,具体收集项目将在实施后于本页更新。' },
+      { h: '联系方式', b: '有关隐私的咨询请通过Contact页面联系我们。' },
+    ],
+  },
+  jp: {
+    title: 'プライバシーポリシー',
+    notice: '2026年8月12日から適用されます。方針が改定された場合はこのページに反映します。',
+    sections: [
+      { h: '収集する個人情報', b: 'お問い合わせフォームでは氏名・連絡先・お問い合わせ内容を収集します。ログイン機能導入後は、メールアドレスなど最小限の情報を追加で収集します。それまではアカウント情報を収集しません。' },
+      { h: '利用目的', b: 'お問い合わせへの対応、サービスの提供・改善、専門コンテンツの利用状況把握の目的にのみ使用します。' },
+      { h: '保管期間', b: '目的達成後は遅滞なく破棄し、関係法令により保存が必要な場合はその期間保管します。' },
+      { h: '分析ツール', b: 'Cloudflare Web Analyticsなど個人情報を最小限に収集するツールの使用を予定しており、具体的な収集項目は導入時にこのページで更新します。' },
+      { h: 'お問い合わせ', b: '個人情報に関するお問い合わせはContactページをご利用ください。' },
+    ],
+  },
+} as const;
+const t = copy[locale];
+---
+
+<BaseLayout locale={locale} title={t.title} description={t.notice}>
+  <section class="bg-white">
+    <div class="mx-auto max-w-content px-4 py-16 md:px-6 md:py-20">
+      <h1 class="text-2xl font-black tracking-tight text-thp-navy2 md:text-3xl">{t.title}</h1>
+      <p class="mt-4 text-sm text-thp-ink/50">{t.notice}</p>
+      <div class="mt-8 space-y-6">
+        {
+          t.sections.map((s) => (
+            <div>
+              <p class="text-sm font-bold text-thp-navy2">{s.h}</p>
+              <p class="mt-2 text-sm leading-relaxed text-thp-ink/70">{s.b}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,62 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SciSubnav from '../../../components/SciSubnav.astro';
+import { locales, ui, type Locale } from '../../../i18n/ui';
+
+export function getStaticPaths() {
+  return locales.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+const strings = ui[locale];
+
+const copy = {
+  kr: {
+    title: '근거로 증명하고, 지식재산으로 보호합니다.',
+    lead: 'Patents / Publications / Clinical Trials / Government R&D / Scientific Collaborations / Conference Presentations를 티에치팜의 Science를 뒷받침하는 증거로 제시합니다. 숫자와 최신 업데이트일을 적극 활용하고, 정확한 수치는 회사 공식자료에서 자동 반영합니다.',
+  },
+  en: {
+    title: 'Proven by evidence. Protected by intellectual property.',
+    lead: 'Patents, publications, clinical trials, government R&D grants, scientific collaborations, and conference presentations are presented as evidence supporting THPHARM Science. Figures and last-updated dates are used actively, with exact numbers reflecting official company data.',
+  },
+  'zh-cn': {
+    title: '以证据证明,以知识产权保护。',
+    lead: '专利、论文、临床试验、政府研发项目、科研合作与学术会议报告,作为支撑THPHARM Science的证据加以呈现。积极使用具体数字与最新更新日期,准确数值将依据公司官方资料自动反映。',
+  },
+  jp: {
+    title: '根拠で証明し、知的財産で保護します。',
+    lead: 'Patents / Publications / Clinical Trials / Government R&D / Scientific Collaborations / Conference PresentationsをTHPHARM Scienceを支える根拠として提示します。数値と最新更新日を積極的に活用し、正確な数値は会社公式資料から自動反映します。',
+  },
+} as const;
+const t = copy[locale];
+
+const indicators = [
+  { key: 'PATENTS', example: { kr: 'XX Registered / Filed', en: 'XX Registered / Filed', 'zh-cn': 'XX Registered / Filed', jp: 'XX Registered / Filed' } },
+  { key: 'CLINICAL PROGRAMS', example: { kr: 'X Active / Completed', en: 'X Active / Completed', 'zh-cn': 'X Active / Completed', jp: 'X Active / Completed' } },
+  { key: 'PUBLICATIONS & PRESENTATIONS', example: { kr: 'XX', en: 'XX', 'zh-cn': 'XX', jp: 'XX' } },
+  { key: 'GLOBAL COLLABORATIONS', example: { kr: 'X', en: 'X', 'zh-cn': 'X', jp: 'X' } },
+] as const;
+---
+
+<BaseLayout locale={locale} title={t.title} description={t.lead}>
+  <SciSubnav locale={locale} current="evidence" />
+  <section class="bg-white">
+    <div class="mx-auto max-w-content px-4 py-16 md:px-6 md:py-20">
+      <p class="text-xs font-bold tracking-widest text-thp-teal">EVIDENCE & IP</p>
+      <h1 class="mt-3 max-w-2xl text-3xl font-black tracking-tight text-thp-navy2 md:text-4xl">{t.title}</h1>
+      <p class="mt-4 max-w-2xl text-thp-ink/70">{t.lead}</p>
+
+      <div class="mt-10 grid gap-4 sm:grid-cols-2 md:grid-cols-4">
+        {
+          indicators.map((ind) => (
+            <div class="rounded-2xl border border-dashed border-thp-line p-6 text-center">
+              <p class="text-xs font-bold tracking-widest text-thp-ink/50">{ind.key}</p>
+              <p class="mt-3 text-xl font-black text-thp-ink/25">{ind.example[locale]}</p>
+              <p class="mt-2 text-[11px] font-semibold text-thp-ink/30">{strings.companyDataNeeded}</p>
+            </div>
+          ))
+        }
+      </div>
+      <p class="mt-6 text-xs text-thp-ink/40">{strings.lastUpdated}: {strings.companyDataNeeded}</p>
+    </div>
+  </section>
+</BaseLayout>

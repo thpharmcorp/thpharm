@@ -1,0 +1,14 @@
+{
+  "code": "WEB-706",
+  "status": "company_confirm",
+  "title": {
+    "kr": "THPHARM Fact Sheet [회사 자료 확인 필요]",
+    "en": "THPHARM Fact Sheet [COMPANY DATA NEEDED]",
+    "zh_cn": "THPHARM Fact Sheet [待公司确认资料]",
+    "jp": "THPHARM Fact Sheet [会社資料確認待ち]"
+  },
+  "docType": "Fact Sheet",
+  "fiscalYear": "2026",
+  "fileUrl": "",
+  "publishedAt": "2026-08-12"
+}

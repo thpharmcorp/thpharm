@@ -1,0 +1,59 @@
+{
+  "code": "WEB-402",
+  "slug": "diabetes",
+  "status": "draft",
+  "title": {
+    "kr": "당뇨병 (Diabetes)",
+    "en": "Diabetes",
+    "zh_cn": "糖尿病",
+    "jp": "糖尿病"
+  },
+  "oneMinuteSummary": {
+    "kr": "당뇨병은 혈액 속 포도당(혈당) 수치가 만성적으로 높은 상태가 지속되는 대사질환입니다. 인슐린 분비나 작용에 문제가 생기면서 발생하며, 비만·고혈압·MASH 등 다른 대사질환과 같은 뿌리를 공유하는 경우가 많습니다.",
+    "en": "Diabetes is a metabolic disease marked by chronically elevated blood glucose levels, caused by problems with insulin secretion or insulin action. It often shares underlying biological roots with other metabolic conditions such as obesity, hypertension, and MASH.",
+    "zh_cn": "糖尿病是一种以血糖长期偏高为特征的代谢性疾病,由胰岛素分泌或作用异常引起。它常与肥胖症、高血压、MASH等其他代谢性疾病共享相同的生物学根源。",
+    "jp": "糖尿病は血液中のブドウ糖(血糖)値が慢性的に高い状態が続く代謝性疾患です。インスリンの分泌や作用に問題が生じることで発生し、肥満・高血圧・MASHなど他の代謝性疾患と根本を共有することが多くあります。"
+  },
+  "whatHappensInBody": {
+    "kr": "췌장에서 분비되는 인슐린은 혈액 속 포도당을 세포로 흡수시켜 에너지로 쓰게 하는 역할을 합니다. 인슐린 분비가 부족하거나(제1형) 세포가 인슐린에 정상적으로 반응하지 못하면(제2형 인슐린 저항성) 혈당이 조절되지 않고 높은 상태로 유지됩니다.",
+    "en": "Insulin, secreted by the pancreas, allows cells to absorb glucose from the blood and use it for energy. When insulin secretion is insufficient (type 1) or cells no longer respond normally to insulin (type 2, insulin resistance), blood glucose is no longer properly regulated and remains elevated.",
+    "zh_cn": "胰腺分泌的胰岛素可帮助细胞从血液中吸收葡萄糖并转化为能量。若胰岛素分泌不足(1型)或细胞对胰岛素反应异常(2型,胰岛素抵抗),血糖将无法得到正常调节并持续升高。",
+    "jp": "膵臓から分泌されるインスリンは、血液中のブドウ糖を細胞に取り込ませてエネルギーとして利用させる役割を担います。インスリン分泌が不足したり(1型)、細胞がインスリンに正常に反応しなくなったりすると(2型・インスリン抵抗性)、血糖が調節されず高い状態が続きます。"
+  },
+  "riskAndScreening": {
+    "kr": "공복혈당, 당화혈색소(HbA1c), 경구당부하검사 등을 통해 의료기관에서 확인합니다. 가족력, 비만, 고령, 임신성 당뇨 병력 등이 위험요인으로 알려져 있습니다. 이 페이지는 진단을 대체하지 않으며, 개인별 평가는 반드시 의료진과 상담하시기 바랍니다.",
+    "en": "Healthcare providers assess diabetes risk through fasting blood glucose, HbA1c, and oral glucose tolerance tests. Known risk factors include family history, obesity, older age, and a history of gestational diabetes. This page does not replace diagnosis — please consult a healthcare professional for individual evaluation.",
+    "zh_cn": "医疗机构通常通过空腹血糖、糖化血红蛋白(HbA1c)、口服葡萄糖耐量试验等进行评估。家族史、肥胖、高龄、妊娠期糖尿病病史等已知为风险因素。本页面不能替代诊断,个人评估请务必咨询医疗专业人员。",
+    "jp": "空腹時血糖値、ヘモグロビンA1c(HbA1c)、経口ブドウ糖負荷試験などにより医療機関で確認します。家族歴、肥満、高齢、妊娠糖尿病の既往などが危険因子として知られています。本ページは診断に代わるものではなく、個別の評価は必ず医療従事者にご相談ください。"
+  },
+  "currentTreatment": {
+    "kr": "식이·운동 등 생활습관 관리가 기본이며, 필요한 경우 경구혈당강하제나 인슐린 치료가 병행됩니다. 치료 방법의 선택은 당뇨병 유형과 개인의 건강 상태에 따라 다릅니다.",
+    "en": "Lifestyle management such as diet and exercise forms the foundation, with oral glucose-lowering medications or insulin therapy added when needed. Treatment choice depends on the type of diabetes and individual health status.",
+    "zh_cn": "饮食与运动等生活方式管理是基础,必要时可联合口服降糖药或胰岛素治疗。治疗方式的选择取决于糖尿病类型及个人健康状况。",
+    "jp": "食事・運動などの生活習慣管理が基本であり、必要に応じて経口血糖降下薬やインスリン治療が併用されます。治療法の選択は糖尿病のタイプと個人の健康状態によって異なります。"
+  },
+  "treatmentChanges": {
+    "kr": "최근 GLP-1 계열 및 SGLT2 억제제 등 심혈관·신장 보호 효과가 함께 보고되는 치료제들이 당뇨병 치료 패러다임을 바꾸고 있습니다. 자세한 최신 동향은 INTELLIGENCE의 THPHARM VIEW에서 다룹니다.",
+    "en": "GLP-1-based therapies and SGLT2 inhibitors, which have also reported cardiovascular and renal protective effects, are recently reshaping the diabetes treatment paradigm. See THPHARM View under INTELLIGENCE for the latest trends.",
+    "zh_cn": "近期,同时报告心血管与肾脏保护效果的GLP-1类治疗药物及SGLT2抑制剂,正在改变糖尿病治疗范式。最新动态详见INTELLIGENCE中的THPHARM View。",
+    "jp": "近年、心血管・腎保護効果も報告されているGLP-1系治療薬やSGLT2阻害薬が、糖尿病治療のパラダイムを変えつつあります。最新動向はINTELLIGENCEのTHPHARM Viewで扱います。"
+  },
+  "mythVsFact": [
+    {
+      "myth": {
+        "kr": "단 것을 많이 먹으면 당뇨병이 생긴다?",
+        "en": "Myth: Eating a lot of sugar causes diabetes?",
+        "zh_cn": "误区:糖吃多了就会得糖尿病?",
+        "jp": "誤解:甘いものをたくさん食べると糖尿病になる?"
+      },
+      "fact": {
+        "kr": "당뇨병은 유전, 체중, 활동량, 나이 등 복합적인 요인으로 발생하며 설탕 섭취 자체가 직접적인 단일 원인은 아닙니다. 다만 과도한 당 섭취로 인한 체중 증가는 제2형 당뇨병의 위험을 높일 수 있습니다.",
+        "en": "Diabetes results from a combination of factors — genetics, body weight, activity level, and age — rather than sugar intake alone as a single direct cause. That said, weight gain from excess sugar intake can raise the risk of type 2 diabetes.",
+        "zh_cn": "糖尿病由遗传、体重、活动量、年龄等多种因素综合导致,糖分摄入本身并非单一直接原因。不过,因过量摄糖导致的体重增加可能提高2型糖尿病风险。",
+        "jp": "糖尿病は遺伝、体重、活動量、年齢など複合的な要因で発生し、糖分摂取そのものが単一の直接的原因ではありません。ただし過剰な糖分摂取による体重増加は2型糖尿病のリスクを高める可能性があります。"
+      }
+    }
+  ],
+  "medicalReviewer": "",
+  "lastVerified": "2026-08-12"
+}

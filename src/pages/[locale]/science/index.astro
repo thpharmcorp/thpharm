@@ -1,0 +1,92 @@
+---
+import { getEntry } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SciSubnav from '../../../components/SciSubnav.astro';
+import { locales, localeToFieldKey, ui, type Locale } from '../../../i18n/ui';
+
+export function getStaticPaths() {
+  return locales.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const fk = localeToFieldKey[locale];
+const strings = ui[locale];
+
+const entry = await getEntry('science-landing', 'web-200');
+if (!entry) {
+  throw new Error('WEB-200 콘텐츠를 찾을 수 없습니다: src/content/science-landing/web-200.json 확인');
+}
+const d = entry.data;
+
+const stages = d.driveStages.map((s) => ({
+  letter: s.letter,
+  stage: s.stage,
+  meaning: s.meaning[fk],
+  linkedPage: s.linkedPage,
+}));
+
+const driveIntro: Record<Locale, string> = {
+  kr: 'DRIVE는 티에치팜이 하나의 약을 만들어가는 5단계입니다. 다시 설계하고, AI로 발견하고, 질환을 이해하고, 정교한 모델로 검증하고, 실제 임상으로 실행합니다.',
+  en: 'DRIVE is the five-step process THPHARM follows to develop a medicine: redesign, discover with AI, understand the disease, validate with sophisticated models, and execute through clinical development.',
+  'zh-cn': 'DRIVE是THPHARM开发一款药物所经历的五个阶段:重新设计、以AI发现、理解疾病、以精细模型验证、并通过临床开发付诸实践。',
+  jp: 'DRIVEはTHPHARMが一つの薬を作り上げる5つの段階です。再設計し、AIで発見し、疾患を理解し、精緻なモデルで検証し、実際の臨床で実行します。',
+};
+
+const slugMap: Record<string, string> = {
+  WEB201: 'design',
+  WEB202: 'reveal',
+  WEB203: 'interpret',
+  WEB204: 'validate',
+  WEB205: 'execute',
+};
+---
+
+<BaseLayout locale={locale} title={d.heroTitle[fk]} description={d.heroBody[fk]}>
+  <SciSubnav locale={locale} current="landing" />
+  <section class="relative overflow-hidden bg-thp-navy text-white">
+    <div class="relative mx-auto max-w-content px-4 py-20 md:px-6 md:py-24">
+      <p class="mb-5 text-xs font-bold tracking-[0.2em] text-thp-teal">SCIENCE</p>
+      <h1 class="max-w-2xl text-[2rem] font-black leading-[1.15] tracking-tight md:text-4xl">
+        {d.heroTitle[fk]}
+      </h1>
+      <p class="mt-6 max-w-xl text-base leading-relaxed text-white/70">{d.heroBody[fk]}</p>
+
+      <p class="mt-14 text-[11px] font-bold tracking-widest text-white/40">THPHARM SCIENCE STRATEGY — DRIVE</p>
+      <p class="mt-2 max-w-2xl text-sm leading-relaxed text-white/60">{driveIntro[locale]}</p>
+
+      <div class="mt-6 grid gap-3 sm:grid-cols-5">
+        {
+          stages.map((s, i) => (
+            <a
+              href={`/${locale}/science/${slugMap[s.linkedPage.replace('-', '')] ?? ''}`}
+              class="group relative rounded-2xl border border-white/15 bg-white/5 p-5 transition-colors hover:border-thp-teal hover:bg-white/10"
+            >
+              {i < stages.length - 1 && (
+                <span class="absolute -right-2.5 top-1/2 hidden -translate-y-1/2 text-white/20 sm:block">→</span>
+              )}
+              <div class="flex items-center gap-2.5">
+                <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-thp-teal/15 text-sm font-black text-thp-teal">
+                  {s.letter}
+                </span>
+                <p class="text-xs font-bold tracking-widest text-white">{s.stage}</p>
+              </div>
+              <p class="mt-3 text-xs leading-relaxed text-white/60">{s.meaning}</p>
+              <p class="mt-3 text-[11px] font-semibold text-thp-teal opacity-0 transition-opacity group-hover:opacity-100">
+                {strings.readMore} →
+              </p>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white">
+    <div class="mx-auto max-w-content px-4 py-14 md:px-6">
+      <a href={`/${locale}/science/evidence`} class="text-sm font-bold text-thp-tealDeep hover:underline">
+        EVIDENCE & IP →
+      </a>
+      <p class="mt-6 text-xs text-thp-ink/40">{strings.lastUpdated}: {d.lastUpdated}</p>
+    </div>
+  </section>
+</BaseLayout>

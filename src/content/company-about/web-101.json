@@ -1,0 +1,53 @@
+{
+  "code": "WEB-101",
+  "status": "draft",
+  "sectionTitle": {
+    "kr": "검증된 의약품에서 차세대 치료제로",
+    "en": "From Proven Medicines to Next-Generation Therapeutics",
+    "zh_cn": "从成熟药物迈向下一代治疗药物",
+    "jp": "実証済みの医薬品から次世代治療薬へ"
+  },
+  "lead": {
+    "kr": "티에치팜은 검증된 의약품을 더 나은 조합·제형·적응증으로 재설계하는 개량신약 역량에서 출발했습니다. 이 경험을 실제 임상개발로 확장하고, Bio-AI를 이용해 질환·약물·바이오마커 데이터를 해석하며, GLP-1을 포함한 비만·MASH 등 차세대 대사질환 영역으로 파이프라인을 넓혀가고 있습니다.",
+    "en": "THPHARM began with capabilities in improved drugs — redesigning proven medicines into better combinations, formulations, and indications. We have extended this experience into real clinical development, use Bio-AI to interpret disease, drug, and biomarker data, and are expanding our pipeline into next-generation metabolic disease areas including GLP-1, obesity, and MASH.",
+    "zh_cn": "THPHARM始于改良新药能力——将已获验证的药物重新设计为更优的复方、剂型与适应症。我们将这一经验拓展至实际临床开发,运用Bio-AI解读疾病、药物与生物标志物数据,并将管线扩展至GLP-1、肥胖症、MASH等下一代代谢性疾病领域。",
+    "jp": "THPHARMは、実証済みの医薬品をより優れた配合・剤形・適応症へと再設計する改良新薬の能力から出発しました。この経験を実際の臨床開発へと拡張し、Bio-AIを用いて疾患・薬物・バイオマーカーデータを解釈しながら、GLP-1を含む肥満・MASHなど次世代代謝性疾患領域へパイプラインを広げています。"
+  },
+  "storySteps": [
+    {
+      "label": { "kr": "RE-ENGINEER", "en": "RE-ENGINEER", "zh_cn": "RE-ENGINEER", "jp": "RE-ENGINEER" },
+      "body": {
+        "kr": "검증된 약에서 새로운 치료가치를 발견합니다.",
+        "en": "We uncover new therapeutic value in proven medicines.",
+        "zh_cn": "在成熟药物中发现新的治疗价值。",
+        "jp": "実証済みの薬から新たな治療価値を発見します。"
+      }
+    },
+    {
+      "label": { "kr": "DISCOVER WITH DATA", "en": "DISCOVER WITH DATA", "zh_cn": "DISCOVER WITH DATA", "jp": "DISCOVER WITH DATA" },
+      "body": {
+        "kr": "Bio-AI로 기전·바이오마커·적응증 가능성을 정교화합니다.",
+        "en": "We refine mechanisms, biomarkers, and indication potential with Bio-AI.",
+        "zh_cn": "运用Bio-AI精细化机制、生物标志物与适应症的可能性。",
+        "jp": "Bio-AIで作用機序・バイオマーカー・適応症の可能性を精緻化します。"
+      }
+    },
+    {
+      "label": { "kr": "EXPAND", "en": "EXPAND", "zh_cn": "EXPAND", "jp": "EXPAND" },
+      "body": {
+        "kr": "임상경험을 차세대 대사질환 치료제로 확장합니다.",
+        "en": "We extend our clinical experience into next-generation metabolic therapeutics.",
+        "zh_cn": "将临床经验扩展至下一代代谢性疾病治疗药物。",
+        "jp": "臨床経験を次世代代謝性疾患治療薬へと拡張します。"
+      }
+    }
+  ],
+  "developmentEngine": [
+    { "kr": "Drug Re-engineering", "en": "Drug Re-engineering", "zh_cn": "Drug Re-engineering", "jp": "Drug Re-engineering" },
+    { "kr": "Bio-AI & Data", "en": "Bio-AI & Data", "zh_cn": "Bio-AI & Data", "jp": "Bio-AI & Data" },
+    { "kr": "Preclinical / Bioprinting", "en": "Preclinical / Bioprinting", "zh_cn": "Preclinical / Bioprinting", "jp": "Preclinical / Bioprinting" },
+    { "kr": "Clinical Development", "en": "Clinical Development", "zh_cn": "Clinical Development", "jp": "Clinical Development" },
+    { "kr": "Global Therapeutics", "en": "Global Therapeutics", "zh_cn": "Global Therapeutics", "jp": "Global Therapeutics" }
+  ],
+  "lastUpdated": "2026-08-12"
+}

@@ -1,0 +1,132 @@
+---
+interface Props {
+  eyebrow: string;
+  title: string;
+  accent?: string; // 타이틀 중 강조할 마지막 구절(선택)
+  body: string;
+  ctaPrimaryLabel?: string;
+  ctaPrimaryHref?: string;
+  ctaSecondaryLabel?: string;
+  ctaSecondaryHref?: string;
+  tags?: string[];
+  /** 기본 비주얼(바이오 셀 이미지) 대신 다른 이미지를 쓰고 싶을 때 public/ 경로로 지정 */
+  visualImage?: string;
+  /** 기본 비주얼을 아예 끄고 싶을 때 (slot="visual"로 완전히 다른 걸 넣을 경우) */
+  hideDefaultVisual?: boolean;
+}
+const {
+  eyebrow,
+  title,
+  accent,
+  body,
+  ctaPrimaryLabel,
+  ctaPrimaryHref,
+  ctaSecondaryLabel,
+  ctaSecondaryHref,
+  tags = [],
+  visualImage = '/images/hero-cell.png',
+  hideDefaultVisual = false,
+} = Astro.props;
+
+const titleMain = accent && title.endsWith(accent) ? title.slice(0, -accent.length) : title;
+const hasVisualSlot = Astro.slots.has('visual');
+---
+
+<section class="relative overflow-hidden bg-thp-navy text-white">
+  <!-- 배경 텍스처: 은은한 분자 네트워크 라인 -->
+  <svg class="absolute inset-0 h-full w-full opacity-[0.18]" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <g fill="none" stroke="rgba(255,255,255,.16)" stroke-width="1">
+      <circle cx="180" cy="140" r="3" fill="rgba(18,165,148,.7)" stroke="none"></circle>
+      <circle cx="360" cy="90" r="2.5" fill="rgba(255,255,255,.5)" stroke="none"></circle>
+      <circle cx="620" cy="200" r="3" fill="rgba(18,165,148,.7)" stroke="none"></circle>
+      <circle cx="860" cy="120" r="2.5" fill="rgba(255,255,255,.5)" stroke="none"></circle>
+      <circle cx="1020" cy="260" r="3" fill="rgba(18,165,148,.7)" stroke="none"></circle>
+      <circle cx="250" cy="420" r="2.5" fill="rgba(255,255,255,.4)" stroke="none"></circle>
+      <circle cx="520" cy="480" r="3" fill="rgba(18,165,148,.6)" stroke="none"></circle>
+      <circle cx="780" cy="440" r="2.5" fill="rgba(255,255,255,.4)" stroke="none"></circle>
+      <circle cx="1000" cy="520" r="3" fill="rgba(18,165,148,.6)" stroke="none"></circle>
+      <path d="M180,140 L360,90 L620,200 L860,120 L1020,260"></path>
+      <path d="M250,420 L520,480 L780,440 L1000,520"></path>
+      <path d="M360,90 L520,480 M620,200 L780,440 M860,120 L1000,520"></path>
+    </g>
+  </svg>
+
+  <!-- 라디얼 글로우: 헤드라인 뒤 입체감 -->
+  <div
+    class="pointer-events-none absolute -left-24 -top-24 h-[420px] w-[420px] rounded-full opacity-30 blur-[100px]"
+    style="background: radial-gradient(circle, #12A594 0%, transparent 70%);"
+  >
+  </div>
+  <div
+    class="pointer-events-none absolute -bottom-32 -right-16 h-[380px] w-[380px] rounded-full opacity-20 blur-[110px]"
+    style="background: radial-gradient(circle, #12A594 0%, transparent 70%);"
+  >
+  </div>
+
+  <div class="relative mx-auto grid max-w-content items-center gap-10 px-4 py-20 md:grid-cols-[1.15fr_0.85fr] md:px-6 md:py-24">
+    <div>
+      <p class="mb-5 text-xs font-bold tracking-[0.2em] text-thp-teal">{eyebrow}</p>
+      <h1 class="max-w-3xl text-[2.2rem] font-black leading-[1.12] tracking-tight md:text-5xl md:leading-[1.08]">
+        {titleMain}{accent && <span class="text-thp-teal">{accent}</span>}
+      </h1>
+      <p class="mt-6 max-w-xl text-base leading-relaxed text-white/70 md:text-lg">{body}</p>
+
+      {
+        (ctaPrimaryLabel || ctaSecondaryLabel) && (
+          <div class="mt-9 flex flex-wrap gap-3">
+            {ctaPrimaryLabel && (
+              <a
+                href={ctaPrimaryHref}
+                class="rounded-full bg-thp-teal px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-thp-tealDeep"
+              >
+                {ctaPrimaryLabel}
+              </a>
+            )}
+            {ctaSecondaryLabel && (
+              <a
+                href={ctaSecondaryHref}
+                class="rounded-full border border-white/30 px-6 py-3 text-sm font-bold text-white transition-colors hover:border-white/60"
+              >
+                {ctaSecondaryLabel}
+              </a>
+            )}
+          </div>
+        )
+      }
+
+      {
+        tags.length > 0 && (
+          <div class="mt-12 flex flex-wrap gap-x-6 gap-y-2 text-[11px] font-bold tracking-wider text-white/40">
+            {tags.map((tag) => <span>{tag}</span>)}
+          </div>
+        )
+      }
+    </div>
+
+    <!-- 우측 비주얼 패널: 페이지별로 slot="visual"로 완전 교체 가능, 기본값은 바이오 셀 이미지 -->
+    <div class="relative hidden md:block">
+      {
+        hasVisualSlot ? (
+          <slot name="visual" />
+        ) : (
+          !hideDefaultVisual && (
+            <div class="relative mx-auto aspect-[4/3] w-full max-w-[420px]">
+              <div
+                class="pointer-events-none absolute inset-0 -z-10 rounded-full opacity-60 blur-[60px]"
+                style="background: radial-gradient(circle, rgba(147,51,234,.35) 0%, rgba(18,165,148,.25) 45%, transparent 75%);"
+              />
+              <img
+                src={visualImage}
+                alt=""
+                aria-hidden="true"
+                loading="lazy"
+                class="h-full w-full object-contain"
+                style="mask-image: radial-gradient(ellipse 62% 62% at 50% 50%, black 55%, transparent 100%); -webkit-mask-image: radial-gradient(ellipse 62% 62% at 50% 50%, black 55%, transparent 100%);"
+              />
+            </div>
+          )
+        )
+      }
+    </div>
+  </div>
+</section>

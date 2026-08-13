@@ -1,0 +1,99 @@
+---
+import { getEntry, getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroDark from '../../components/HeroDark.astro';
+import HealthSectionIcon from '../../components/HealthSectionIcon.astro';
+import { locales, localeToFieldKey, ui, type Locale } from '../../i18n/ui';
+
+export function getStaticPaths() {
+  return locales.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const fk = localeToFieldKey[locale];
+const strings = ui[locale];
+
+const entry = await getEntry('company-landing', 'web-100');
+if (!entry) {
+  throw new Error('WEB-100 콘텐츠를 찾을 수 없습니다: src/content/company-landing/web-100.json 확인');
+}
+const d = entry.data;
+
+const accentMap: Record<string, string> = {
+  obesity: '#12A594',
+  diabetes: '#2563EB',
+  hypertension: '#DC2626',
+  mash: '#7C3AED',
+};
+
+const keyFocusCopy: Record<Locale, { eyebrow: string; title: string }> = {
+  kr: { eyebrow: 'KEY FOCUS', title: '티에치팜이 집중하는 4대 대사질환' },
+  en: { eyebrow: 'KEY FOCUS', title: 'Four metabolic diseases we focus on' },
+  'zh-cn': { eyebrow: 'KEY FOCUS', title: 'THPHARM聚焦的四大代谢性疾病' },
+  jp: { eyebrow: 'KEY FOCUS', title: 'THPHARMが注力する4大代謝性疾患' },
+};
+const keyFocus = keyFocusCopy[locale];
+const healthTopics = await getCollection('health');
+---
+
+<BaseLayout locale={locale} title={d.heroTitle[fk]} description={d.heroBody[fk]}>
+  <HeroDark
+    eyebrow={d.heroEyebrow?.[fk] ?? ''}
+    title={d.heroTitle[fk]}
+    body={`${d.heroSubtitle?.[fk] ?? ''} ${d.heroBody[fk]}`}
+    ctaPrimaryLabel={d.ctaPrimary[fk]}
+    ctaPrimaryHref={`/${locale}/about`}
+    ctaSecondaryLabel={d.ctaSecondary[fk]}
+    ctaSecondaryHref={`/${locale}/pipeline`}
+    tags={d.keywordStrip.map((k) => k[fk])}
+  />
+
+  <section class="border-b border-thp-line bg-white">
+    <div class="mx-auto max-w-content px-4 py-16 md:px-6 md:py-20">
+      <p class="mb-3 text-xs font-bold tracking-widest text-thp-teal">{keyFocus.eyebrow}</p>
+      <h2 class="mb-10 max-w-lg text-2xl font-extrabold tracking-tight text-thp-navy2 md:text-3xl">
+        {keyFocus.title}
+      </h2>
+      <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
+        {
+          healthTopics.map((t) => {
+            const accent = accentMap[t.data.slug] ?? '#12A594';
+            return (
+              <a
+                href={`/${locale}/health/${t.data.slug}`}
+                class="group rounded-2xl border border-thp-line p-6 transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-thp-navy/5"
+              >
+                <div
+                  class="flex h-9 w-9 items-center justify-center rounded-full transition-colors"
+                  style={`background:${accent}14; color:${accent}`}
+                >
+                  <HealthSectionIcon kind="body" class="h-4 w-4" />
+                </div>
+                <p class="mt-4 text-sm font-bold text-thp-navy2 group-hover:text-thp-tealDeep">{t.data.title[fk]}</p>
+              </a>
+            );
+          })
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-thp-navy2 text-white">
+    <div class="mx-auto max-w-content px-4 py-14 md:px-6 md:py-16">
+      <p class="mb-6 text-[11px] font-bold tracking-widest text-white/50">THPHARM DEVELOPMENT ENGINE</p>
+      <div class="flex flex-wrap items-center gap-x-3 gap-y-3 text-sm font-semibold md:text-base">
+        <span>Drug Re-engineering</span>
+        <span class="text-thp-teal">→</span>
+        <span>Bio-AI & Data</span>
+        <span class="text-thp-teal">→</span>
+        <span>Preclinical / Bioprinting</span>
+        <span class="text-thp-teal">→</span>
+        <span>Clinical Development</span>
+        <span class="text-thp-teal">→</span>
+        <span class="text-thp-teal">Global Therapeutics</span>
+      </div>
+    </div>
+  </section>
+
+  <p class="mx-auto max-w-content px-4 py-6 text-xs text-thp-ink/40 md:px-6">{strings.lastUpdated}: {d.lastUpdated}</p>
+</BaseLayout>

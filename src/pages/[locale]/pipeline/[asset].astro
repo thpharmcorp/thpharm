@@ -1,0 +1,77 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { locales, localeToFieldKey, ui, type Locale } from '../../../i18n/ui';
+
+export async function getStaticPaths() {
+  const assets = await getCollection('pipeline');
+  return locales.flatMap((locale) =>
+    assets.map((a) => ({ params: { locale, asset: a.id }, props: { entry: a } }))
+  );
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const { entry } = Astro.props as { entry: Awaited<ReturnType<typeof getCollection<'pipeline'>>>[number] };
+const fk = localeToFieldKey[locale];
+const strings = ui[locale];
+const d = entry.data;
+
+const driveCaption: Record<Locale, string> = {
+  kr: '이 자산에 적용된 DRIVE 단계',
+  en: 'DRIVE stages applied to this asset',
+  'zh-cn': '本资产所应用的DRIVE阶段',
+  jp: 'この資産に適用されているDRIVE段階',
+};
+---
+
+<BaseLayout locale={locale} title={`${d.assetId} — ${d.heroTagline[fk]}`} description={d.heroTagline[fk]}>
+  <section class="bg-thp-navy text-white">
+    <div class="mx-auto max-w-content px-4 py-16 md:px-6 md:py-20">
+      <p class="mb-4 text-xs font-bold tracking-widest text-thp-teal">{d.assetId}</p>
+      <h1 class="max-w-2xl text-3xl font-black tracking-tight md:text-4xl">{d.heroTagline[fk]}</h1>
+      <p class="mt-4 text-white/70">{d.indication[fk]}</p>
+      <div class="mt-6 flex flex-wrap items-center gap-3">
+        <span class="rounded-full bg-thp-teal px-4 py-1.5 text-xs font-bold text-white">{d.stage}</span>
+      </div>
+      <div class="mt-4">
+        <p class="text-[11px] font-semibold text-white/40">{driveCaption[locale]}</p>
+        <div class="mt-2 flex flex-wrap gap-2">
+          {
+            d.driveStagesApplied.map((s) => (
+              <span class="rounded-full border border-white/25 px-3 py-1 text-xs font-bold text-white/80">{s}</span>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white">
+    <div class="mx-auto grid max-w-content gap-10 px-4 py-16 md:grid-cols-2 md:px-6 md:py-20">
+      <div>
+        <p class="text-xs font-bold tracking-widest text-thp-teal">UNMET NEED</p>
+        <p class="mt-3 text-sm leading-relaxed text-thp-ink/80">{d.unmetNeed[fk]}</p>
+      </div>
+      <div>
+        <p class="text-xs font-bold tracking-widest text-thp-teal">OUR APPROACH</p>
+        <p class="mt-3 text-sm leading-relaxed text-thp-ink/80">{d.approach[fk]}</p>
+      </div>
+      <div>
+        <p class="text-xs font-bold tracking-widest text-thp-teal">DIFFERENTIATION</p>
+        <p class="mt-3 text-sm leading-relaxed text-thp-ink/80">{d.differentiation[fk]}</p>
+      </div>
+      <div>
+        <p class="text-xs font-bold tracking-widest text-thp-teal">NEXT MILESTONE</p>
+        <p class="mt-3 text-sm leading-relaxed text-thp-ink/80">{d.nextMilestone[fk]}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-t border-thp-line bg-thp-mist">
+    <div class="mx-auto max-w-content px-4 py-8 text-xs text-thp-ink/50 md:px-6">
+      <p>
+        {strings.source}: {d.sourceMeta?.source_title} · {strings.lastUpdated}: {d.lastUpdated}
+      </p>
+    </div>
+  </section>
+</BaseLayout>

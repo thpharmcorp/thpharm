@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import IrSubnav from '../../../components/IrSubnav.astro';
+import { locales, ui, type Locale } from '../../../i18n/ui';
+
+export function getStaticPaths() {
+  return locales.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+const strings = ui[locale];
+
+const copy = {
+  kr: {
+    title: '상장기업 수준의 자료관리 습관을 지금부터 축적합니다.',
+    lead: '이사회, 회계·감사, 내부통제, 컴플라이언스, 연구윤리, 임상시험 투명성 등 상장 준비 기업에 필요한 습관을 지금부터 쌓아가고 있습니다.',
+    krxNote: 'KRX 참고: 코스닥 심사는 정량요건 외에도 성장성·계속성·경영의 투명성·안정성·투자자 보호 등을 종합적으로 고려합니다. 실제 상장 준비 시 공개범위는 주관사·회계법인·법률자문과 재확인합니다.',
+  },
+  en: {
+    title: 'We are building listed-company-grade documentation habits starting now.',
+    lead: 'We are building, starting now, the habits a listing-track company needs: Board, Audit & Accounting, Internal Control, Compliance, Research Ethics, and Clinical Trial Transparency.',
+    krxNote: 'KRX reference: KOSDAQ listing review considers not only quantitative requirements but also growth potential, business continuity, management transparency and stability, and investor protection. When listing preparation becomes concrete, disclosure scope will be re-confirmed with the lead underwriter, auditor, and legal counsel.',
+  },
+  'zh-cn': {
+    title: '从现在开始积累符合上市公司标准的资料管理习惯。',
+    lead: '我们从现在开始积累上市筹备企业所需的习惯:董事会、会计审计、内部控制、合规、研究伦理与临床试验透明度。',
+    krxNote: 'KRX参考:KOSDAQ审核除定量要求外,还综合考虑成长性、持续性、经营透明度与稳定性、投资者保护等因素。实际筹备上市时,公开范围将与主承销商、会计师事务所及法律顾问重新确认。',
+  },
+  jp: {
+    title: '上場企業水準の資料管理習慣を今から蓄積します。',
+    lead: '取締役会、会計・監査、内部統制、コンプライアンス、研究倫理、臨床試験の透明性など、上場準備企業に必要な習慣を今から積み重ねています。',
+    krxNote: 'KRX参考:コスダック審査は定量要件だけでなく、成長性・継続性・経営の透明性・安定性・投資者保護なども総合的に考慮します。実際の上場準備時には公開範囲を主幹事証券・会計法人・法律顧問と再確認します。',
+  },
+} as const;
+const t = copy[locale];
+
+const areas = ['BOARD', 'AUDIT · ACCOUNTING', 'INTERNAL CONTROL', 'COMPLIANCE', 'RESEARCH ETHICS', 'CLINICAL TRIAL TRANSPARENCY'];
+---
+
+<BaseLayout locale={locale} title={t.title} description={t.lead}>
+  <IrSubnav locale={locale} current="governance" />
+  <section class="bg-white">
+    <div class="mx-auto max-w-content px-4 py-16 md:px-6 md:py-20">
+      <p class="text-xs font-bold tracking-widest text-thp-teal">GOVERNANCE & TRANSPARENCY</p>
+      <h1 class="mt-3 max-w-2xl text-2xl font-black tracking-tight text-thp-navy2 md:text-3xl">{t.title}</h1>
+      <p class="mt-4 max-w-2xl text-thp-ink/70">{t.lead}</p>
+
+      <div class="mt-10 grid gap-3 sm:grid-cols-2 md:grid-cols-3">
+        {
+          areas.map((a) => (
+            <div class="rounded-2xl border border-dashed border-thp-line p-5 text-center">
+              <p class="text-xs font-bold tracking-widest text-thp-navy2">{a}</p>
+              <p class="mt-2 text-[11px] font-semibold text-thp-ink/30">{strings.companyDataNeeded}</p>
+            </div>
+          ))
+        }
+      </div>
+
+      <p class="mt-10 max-w-2xl text-xs leading-relaxed text-thp-ink/40">{t.krxNote}</p>
+    </div>
+  </section>
+</BaseLayout>

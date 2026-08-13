@@ -1,0 +1,51 @@
+{
+  "code": "WEB-302",
+  "assetId": "THP-001",
+  "status": "company_confirm",
+  "indication": {
+    "kr": "대사질환 복합제 (적응증 회사 확인 필요)",
+    "en": "Metabolic disease combination therapy (indication pending company confirmation)",
+    "zh_cn": "代谢性疾病复方制剂(适应症待公司确认)",
+    "jp": "代謝性疾患配合剤(適応症は会社確認待ち)"
+  },
+  "stage": "Phase 3",
+  "heroTagline": {
+    "kr": "두 질환을 하나의 치료전략으로.",
+    "en": "Two conditions. One treatment strategy.",
+    "zh_cn": "两种疾病,一种治疗策略。",
+    "jp": "二つの疾患を、一つの治療戦略へ。"
+  },
+  "unmetNeed": {
+    "kr": "[회사 자료 확인 필요] 대상 환자군의 미충족 수요를 회사 공식자료 기준으로 채워야 합니다.",
+    "en": "[COMPANY DATA NEEDED] Unmet need for the target patient population — to be filled from official company material.",
+    "zh_cn": "[待公司确认资料] 目标患者群体的未满足需求,需根据公司官方资料填写。",
+    "jp": "[会社資料確認待ち] 対象患者群の未充足ニーズは、会社公式資料に基づいて記入してください。"
+  },
+  "approach": {
+    "kr": "검증된 성분의 복합제 전략으로 치료 편의성과 효과를 함께 개선합니다. Proven Components · Combination Strategy · Patient Convenience · Clinical Execution.",
+    "en": "A combination-therapy strategy built on proven components, improving both treatment convenience and efficacy. Proven Components · Combination Strategy · Patient Convenience · Clinical Execution.",
+    "zh_cn": "基于成熟成分的复方治疗策略,同时改善治疗便利性与疗效。Proven Components · Combination Strategy · Patient Convenience · Clinical Execution.",
+    "jp": "実証済み成分による配合剤戦略で、治療の利便性と効果を同時に改善します。Proven Components · Combination Strategy · Patient Convenience · Clinical Execution."
+  },
+  "differentiation": {
+    "kr": "[회사 자료 확인 필요] 기존 치료 대비 차별점(효능/편의성/복약순응도 등)을 공식 임상자료 기준으로 채워야 합니다.",
+    "en": "[COMPANY DATA NEEDED] Differentiation versus existing treatments — to be filled from official clinical data.",
+    "zh_cn": "[待公司确认资料] 与现有治疗相比的差异化优势,需根据官方临床资料填写。",
+    "jp": "[会社資料確認待ち] 既存治療との差別化ポイントは、公式臨床資料に基づいて記入してください。"
+  },
+  "nextMilestone": {
+    "kr": "[회사 자료 확인 필요]",
+    "en": "[COMPANY DATA NEEDED]",
+    "zh_cn": "[待公司确认资料]",
+    "jp": "[会社資料確認待ち]"
+  },
+  "driveStagesApplied": ["DESIGN", "EXECUTE"],
+  "sourceMeta": {
+    "source_type": "THPHARM Official",
+    "source_title": "THPHARM 내부 자료 — 회사 확인 대기",
+    "publisher": "THPHARM",
+    "last_verified": "2026-08-12",
+    "reviewed_by": ""
+  },
+  "lastUpdated": "2026-08-12"
+}

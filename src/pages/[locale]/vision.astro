@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CompanySubnav from '../../components/CompanySubnav.astro';
+import { locales, type Locale } from '../../i18n/ui';
+
+export function getStaticPaths() {
+  return locales.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+
+const copy = {
+  kr: { title: '하나의 회사, 연결된 개발 역량', lead: '티에치팜은 개량신약·Bio-AI·GLP-1·글로벌 임상·바이오프린팅을 별도 기술로 나열하지 않고, 대사질환 신약개발이라는 하나의 흐름으로 연결합니다.' },
+  en: { title: 'One company. Connected capabilities.', lead: "THPHARM does not list improved drugs, Bio-AI, GLP-1, global clinical development, and bioprinting as separate technologies — we connect them into a single metabolic-disease drug development engine." },
+  'zh-cn': { title: '一家公司,相互连接的开发能力', lead: 'THPHARM并未将改良新药、Bio-AI、GLP-1、全球临床开发与生物打印列为彼此独立的技术,而是将其连接为一个统一的代谢性疾病新药开发引擎。' },
+  jp: { title: 'ひとつの会社、連結された開発能力', lead: 'THPHARMは改良新薬・Bio-AI・GLP-1・グローバル臨床開発・バイオプリンティングを別々の技術として並べるのではなく、代謝性疾患の新薬開発というひとつの流れへと連結します。' },
+} as const;
+const t = copy[locale];
+
+const capabilities = [
+  { key: 'DRUG INNOVATION', tags: '개량신약 · 복합제 · 제형 · 적응증 확장', body: { kr: '검증된 의약품을 다시 설계해 환자와 시장이 필요로 하는 새로운 치료가치를 만듭니다.', en: 'Redesigning proven medicines to create new therapeutic value that patients and the market need.', 'zh-cn': '将成熟药物重新设计,创造患者与市场所需的新治疗价值。', jp: '実証済みの医薬品を再設計し、患者と市場が必要とする新たな治療価値を生み出します。' } },
+  { key: 'BIO-AI', tags: '질환 네트워크 · MoA · Biomarker · Data', body: { kr: '글로벌 AI 신약개발 기업과 협업 가능한 수준의 데이터 활용역량을 바탕으로 연구개발 의사결정을 고도화합니다.', en: 'Advancing R&D decision-making with data capabilities suited to collaboration with global AI drug-discovery companies.', 'zh-cn': '以可与全球AI新药研发企业协作的数据能力,推动研发决策的高度化。', jp: 'グローバルAI創薬企業と協業可能な水準のデータ活用力で、研究開発の意思決定を高度化します。' } },
+  { key: 'CLINICAL EXECUTION', tags: 'Global Clinical · Phase 3 · Regulatory', body: { kr: '아이디어를 임상으로 가져가는 실행역량을 보유하며 글로벌 임상 3상 경험을 핵심 자산으로 제시합니다.', en: 'We hold the execution capability to take ideas into the clinic, with global Phase 3 experience as a core asset.', 'zh-cn': '具备将想法推进至临床的执行能力,并以全球3期临床经验作为核心资产。', jp: 'アイデアを臨床へと導く実行力を有し、グローバルPhase 3の経験を中核資産として提示します。' } },
+  { key: 'NEXT METABOLIC', tags: 'GLP-1 · Obesity · Diabetes · MASH', body: { kr: 'GLP-1을 포함한 비만·당뇨·MASH 등 차세대 대사질환 파이프라인을 구축합니다.', en: 'Building a next-generation metabolic disease pipeline including GLP-1, obesity, diabetes, and MASH.', 'zh-cn': '构建包括GLP-1、肥胖症、糖尿病、MASH在内的下一代代谢性疾病管线。', jp: 'GLP-1を含む肥満・糖尿病・MASHなど次世代代謝性疾患パイプラインを構築します。' } },
+  { key: 'ADVANCED RESEARCH', tags: 'Bioprinting · Biofabrication · Research Platform', body: { kr: '바이오프린팅 장비·기술을 향후 세포·조직 기반 연구 및 약물평가 플랫폼으로 확장 가능한 기술자산으로 제시합니다.', en: 'Presenting bioprinting equipment and technology as an asset extensible into future cell/tissue-based research and drug-evaluation platforms.', 'zh-cn': '将生物打印设备与技术定位为可扩展至未来细胞/组织研究与药物评价平台的技术资产。', jp: 'バイオプリンティング設備・技術を、将来の細胞・組織ベースの研究および薬物評価プラットフォームへと拡張可能な技術資産として提示します。' } },
+];
+---
+
+<BaseLayout locale={locale} title={t.title} description={t.lead}>
+  <CompanySubnav locale={locale} current="vision" />
+  <section class="bg-white">
+    <div class="mx-auto max-w-content px-4 py-16 md:px-6 md:py-20">
+      <p class="text-xs font-bold tracking-widest text-thp-teal">VISION & CAPABILITIES</p>
+      <h1 class="mt-3 max-w-2xl text-3xl font-black tracking-tight text-thp-navy2 md:text-4xl">{t.title}</h1>
+      <p class="mt-4 max-w-2xl text-thp-ink/70">{t.lead}</p>
+
+      <div class="mt-10 grid gap-4 md:grid-cols-2">
+        {
+          capabilities.map((c) => (
+            <div class="rounded-2xl border border-thp-line p-6">
+              <p class="text-xs font-bold tracking-widest text-thp-teal">{c.key}</p>
+              <p class="mt-3 text-sm leading-relaxed text-thp-ink/80">{c.body[locale]}</p>
+              <p class="mt-4 text-[11px] font-semibold text-thp-ink/40">{c.tags}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>

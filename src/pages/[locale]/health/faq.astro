@@ -1,0 +1,125 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { locales, ui, type Locale } from '../../../i18n/ui';
+
+export function getStaticPaths() {
+  return locales.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+const strings = ui[locale];
+
+const pageCopy = {
+  kr: { title: '자주 묻는 질문', lead: '검색과 실제 방문자 질문에 가까운 문장으로 구성했습니다. 답은 짧게, 더 자세한 내용은 각 질환 페이지에서 확인할 수 있습니다.' },
+  en: { title: 'Frequently Asked Questions', lead: 'Written as close as possible to real search queries and visitor questions. Answers are kept short — more detail is available on each disease page.' },
+  'zh-cn': { title: '常见问题', lead: '以贴近搜索及访客实际提问的语句撰写。答案简短,更多详情请见各疾病页面。' },
+  jp: { title: 'よくある質問', lead: '検索や実際の訪問者の質問に近い文章で構成しました。回答は短くまとめ、詳細は各疾患ページでご確認いただけます。' },
+} as const;
+const p = pageCopy[locale];
+
+const faqs = [
+  {
+    q: { kr: '비만도 질병인가요?', en: 'Is obesity actually a disease?', 'zh-cn': '肥胖症也是一种疾病吗?', jp: '肥満も病気なのですか?' },
+    a: {
+      kr: '네. 비만은 단순한 외형의 문제가 아니라 체지방 과다 축적으로 여러 신체 기능에 영향을 주는 만성 대사질환으로 분류됩니다.',
+      en: 'Yes. Obesity is classified as a chronic metabolic disease — excess body fat accumulation that affects multiple body functions — not simply a matter of appearance.',
+      'zh-cn': '是的。肥胖症并非单纯的外观问题,而是因体脂过度堆积而影响多种身体机能的慢性代谢性疾病。',
+      jp: 'はい。肥満は単なる見た目の問題ではなく、過剰な体脂肪の蓄積がさまざまな身体機能に影響を与える慢性代謝性疾患に分類されます。',
+    },
+    link: 'obesity',
+    sciencePath: false,
+  },
+  {
+    q: { kr: 'GLP-1은 무엇인가요?', en: 'What is GLP-1?', 'zh-cn': 'GLP-1是什么?', jp: 'GLP-1とは何ですか?' },
+    a: {
+      kr: 'GLP-1(Glucagon-Like Peptide-1)은 식후 혈당 조절과 식욕에 관여하는 호르몬으로, 이를 모방한 치료제가 비만·당뇨 치료 패러다임을 바꾸고 있습니다.',
+      en: 'GLP-1 (Glucagon-Like Peptide-1) is a hormone involved in post-meal blood glucose regulation and appetite. Therapies that mimic it are reshaping the treatment paradigm for obesity and diabetes.',
+      'zh-cn': 'GLP-1(胰高血糖素样肽-1)是一种参与餐后血糖调节与食欲的激素,模拟其作用的治疗药物正在改变肥胖症与糖尿病的治疗范式。',
+      jp: 'GLP-1(グルカゴン様ペプチド-1)は食後の血糖調節と食欲に関与するホルモンで、これを模倣した治療薬が肥満・糖尿病治療のパラダイムを変えつつあります。',
+    },
+    link: 'treatment-trends',
+    sciencePath: false,
+  },
+  {
+    q: { kr: '당뇨와 고혈압은 왜 같이 생기나요?', en: 'Why do diabetes and hypertension often occur together?', 'zh-cn': '为什么糖尿病和高血压常常同时出现?', jp: '糖尿病と高血圧はなぜ一緒に起こりやすいのですか?' },
+    a: {
+      kr: '두 질환 모두 인슐린 저항성, 비만, 혈관 기능 이상 등 공통된 대사 이상을 배경으로 하는 경우가 많아 함께 나타나는 경향이 있습니다.',
+      en: 'Both conditions often share underlying metabolic dysfunction — such as insulin resistance, obesity, and impaired vascular function — which tends to make them occur together.',
+      'zh-cn': '两种疾病常常以胰岛素抵抗、肥胖、血管功能异常等共同的代谢异常为背景,因此往往同时出现。',
+      jp: '両疾患ともインスリン抵抗性、肥満、血管機能異常など共通の代謝異常を背景とすることが多く、併発しやすい傾向があります。',
+    },
+    link: 'hypertension',
+    sciencePath: false,
+  },
+  {
+    q: { kr: '고혈압은 증상이 없으면 괜찮나요?', en: 'Is it fine to leave hypertension untreated if there are no symptoms?', 'zh-cn': '高血压没有症状就没关系吗?', jp: '高血圧は症状がなければ問題ないのですか?' },
+    a: {
+      kr: '아닙니다. 증상이 없어도 장기간 방치하면 심장·뇌·신장·혈관에 손상이 축적될 수 있어 정기적인 확인과 관리가 필요합니다.',
+      en: "No. Even without symptoms, leaving hypertension unmanaged over time can accumulate damage to the heart, brain, kidneys, and blood vessels, so regular monitoring and management are necessary.",
+      'zh-cn': '并非如此。即使没有症状,长期放任不管也可能对心脏、大脑、肾脏及血管造成累积性损伤,因此需要定期检查与管理。',
+      jp: 'いいえ。症状がなくても長期間放置すると心臓・脳・腎臓・血管に損傷が蓄積する可能性があるため、定期的な確認と管理が必要です。',
+    },
+    link: 'hypertension',
+    sciencePath: false,
+  },
+  {
+    q: { kr: 'MASH와 지방간은 무엇이 다른가요?', en: 'What is the difference between MASH and fatty liver?', 'zh-cn': 'MASH与脂肪肝有什么不同?', jp: 'MASHと脂肪肝は何が違うのですか?' },
+    a: {
+      kr: '단순 지방간은 간에 지방만 축적된 상태인 반면, MASH는 여기에 염증과 간세포 손상이 동반되어 섬유화·간경변으로 진행할 수 있는 진행성 질환입니다.',
+      en: 'Simple fatty liver involves only fat accumulation in the liver, whereas MASH additionally involves inflammation and liver cell damage, making it a progressive disease that can advance to fibrosis and cirrhosis.',
+      'zh-cn': '单纯性脂肪肝仅为肝脏脂肪堆积,而MASH则同时伴有炎症与肝细胞损伤,是可能进展为纤维化、肝硬化的进行性疾病。',
+      jp: '単純性脂肪肝は肝臓に脂肪のみが蓄積した状態である一方、MASHはこれに炎症と肝細胞の損傷を伴い、線維化・肝硬変へと進行しうる進行性疾患です。',
+    },
+    link: 'mash',
+    sciencePath: false,
+  },
+  {
+    q: { kr: '복합제는 왜 사용하나요?', en: 'Why are combination products used?', 'zh-cn': '为什么使用复方制剂?', jp: '配合剤はなぜ使用するのですか?' },
+    a: {
+      kr: '여러 약을 따로 복용하는 대신 하나의 정제로 결합하면 복약 편의성과 치료 지속성이 높아질 수 있습니다. 티에치팜의 개량신약·복합제 개발 경험과 직접 연결되는 주제입니다.',
+      en: 'Combining multiple medications into a single pill, rather than taking them separately, can improve dosing convenience and treatment persistence. This connects directly to THPHARM\'s experience in improved-drug and combination-product development.',
+      'zh-cn': '将多种药物结合为一片,而非分别服用,可提升服药便利性与治疗持续性。这与THPHARM在改良新药、复方制剂开发方面的经验直接相关。',
+      jp: '複数の薬を別々に服用する代わりに一つの錠剤にまとめることで、服薬の利便性と治療継続性が高まる可能性があります。THPHARMの改良新薬・配合剤開発の経験と直結するテーマです。',
+    },
+    link: 'design',
+    sciencePath: true,
+  },
+  {
+    q: { kr: '체중이 줄면 대사질환도 좋아지나요?', en: 'Does losing weight also improve metabolic disease?', 'zh-cn': '体重减轻,代谢性疾病也会好转吗?', jp: '体重が減れば代謝性疾患も改善しますか?' },
+    a: {
+      kr: '많은 경우 체중 감량은 혈당·혈압·간 건강 지표 개선과 함께 나타나지만, 개선의 폭은 개인과 질환 진행 정도에 따라 다르며 반드시 의료진과 상의해야 합니다.',
+      en: 'In many cases, weight loss is accompanied by improvements in blood glucose, blood pressure, and liver health markers, but the degree of improvement varies by individual and disease stage — always consult a healthcare professional.',
+      'zh-cn': '在许多情况下,体重减轻伴随着血糖、血压及肝脏健康指标的改善,但改善程度因个人及疾病进展阶段而异,务必与医疗人员商议。',
+      jp: '多くの場合、体重減少は血糖・血圧・肝機能指標の改善を伴いますが、改善の程度は個人と疾患の進行度によって異なり、必ず医療従事者にご相談ください。',
+    },
+    link: 'obesity',
+    sciencePath: false,
+  },
+] as const;
+---
+
+<BaseLayout locale={locale} title={p.title} description={p.lead}>
+  <section class="bg-white">
+    <div class="mx-auto max-w-content px-4 py-16 md:px-6 md:py-20">
+      <p class="text-xs font-bold tracking-widest text-thp-teal">HEALTH · FAQ</p>
+      <h1 class="mt-3 max-w-2xl text-3xl font-black tracking-tight text-thp-navy2 md:text-4xl">{p.title}</h1>
+      <p class="mt-4 max-w-2xl text-thp-ink/70">{p.lead}</p>
+
+      <div class="mt-10 space-y-4">
+        {
+          faqs.map((f) => (
+            <div class="rounded-2xl border border-thp-line p-6">
+              <p class="font-bold text-thp-navy2">{f.q[locale]}</p>
+              <p class="mt-2 text-sm leading-relaxed text-thp-ink/70">{f.a[locale]}</p>
+              <a
+                href={f.sciencePath ? `/${locale}/science/${f.link}` : `/${locale}/health/${f.link}`}
+                class="mt-3 inline-block text-xs font-semibold text-thp-tealDeep hover:underline"
+              >
+                {strings.readMore} →
+              </a>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>

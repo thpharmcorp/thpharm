@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import IrSubnav from '../../../components/IrSubnav.astro';
+import { locales, ui, type Locale } from '../../../i18n/ui';
+
+export function getStaticPaths() {
+  return locales.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+const strings = ui[locale];
+
+const copy = {
+  kr: {
+    title: '대사질환 치료제를 실제 개발·임상·사업화로 연결합니다.',
+    lead: '티에치팜은 개량신약과 복합제 개발에서 축적한 제품화 경험과 글로벌 임상 실행력을 기반으로, GLP-1·MASH·Bio-AI 등 차세대 대사질환 파이프라인으로 연구개발 영역을 확장하고 있습니다.',
+  },
+  en: {
+    title: 'We connect metabolic-disease therapeutics to real development, clinical execution, and commercialization.',
+    lead: "Building on the commercialization experience gained through improved-drug and combination-product development, and on our global clinical execution capability, THPHARM is expanding into next-generation metabolic-disease pipelines including GLP-1, MASH, and Bio-AI.",
+  },
+  'zh-cn': {
+    title: '将代谢性疾病治疗药物切实连接至开发、临床与商业化。',
+    lead: 'THPHARM基于在改良新药与复方制剂开发中积累的产品化经验及全球临床执行能力,正将研发领域扩展至GLP-1、MASH、Bio-AI等下一代代谢性疾病管线。',
+  },
+  jp: {
+    title: '代謝性疾患治療薬を実際の開発・臨床・事業化へとつなげます。',
+    lead: 'THPHARMは改良新薬・配合剤開発で培った製品化経験とグローバル臨床実行力を基盤に、GLP-1・MASH・Bio-AIなど次世代代謝性疾患パイプラインへと研究開発領域を拡大しています。',
+  },
+} as const;
+const t = copy[locale];
+
+const pillars = [
+  {
+    key: 'WHAT WE HAVE PROVEN',
+    items: {
+      kr: '매출 / 실제 제품개발 경험 / 글로벌 임상 / 특허 / 파트너십',
+      en: 'Revenue / real product development experience / global clinical trials / patents / partnerships',
+      'zh-cn': '营收 / 实际产品开发经验 / 全球临床 / 专利 / 合作伙伴关系',
+      jp: '売上 / 実際の製品開発経験 / グローバル臨床 / 特許 / パートナーシップ',
+    },
+  },
+  {
+    key: 'WHAT WE ARE BUILDING',
+    items: {
+      kr: 'GLP-1 / MASH / Bio-AI 기반 차세대 대사질환 파이프라인',
+      en: 'Next-generation metabolic-disease pipeline based on GLP-1 / MASH / Bio-AI',
+      'zh-cn': '基于GLP-1 / MASH / Bio-AI的下一代代谢性疾病管线',
+      jp: 'GLP-1 / MASH / Bio-AIに基づく次世代代謝性疾患パイプライン',
+    },
+  },
+  {
+    key: 'WHAT CHANGES VALUE NEXT',
+    items: {
+      kr: '향후 임상·사업·기술 마일스톤',
+      en: 'Upcoming clinical, business, and technology milestones',
+      'zh-cn': '未来的临床、业务与技术里程碑',
+      jp: '今後の臨床・事業・技術マイルストーン',
+    },
+  },
+] as const;
+---
+
+<BaseLayout locale={locale} title={t.title} description={t.lead}>
+  <IrSubnav locale={locale} current="investment-highlights" />
+  <section class="bg-white">
+    <div class="mx-auto max-w-content px-4 py-16 md:px-6 md:py-20">
+      <p class="text-xs font-bold tracking-widest text-thp-teal">INVESTMENT HIGHLIGHTS</p>
+      <h1 class="mt-3 max-w-2xl text-2xl font-black tracking-tight text-thp-navy2 md:text-3xl">{t.title}</h1>
+      <p class="mt-4 max-w-2xl text-thp-ink/70">{t.lead}</p>
+
+      <div class="mt-10 grid gap-4 md:grid-cols-3">
+        {
+          pillars.map((p) => (
+            <div class="rounded-2xl border border-thp-line p-6">
+              <p class="text-xs font-bold tracking-widest text-thp-teal">{p.key}</p>
+              <p class="mt-3 text-sm leading-relaxed text-thp-ink/70">{p.items[locale]}</p>
+              <p class="mt-3 text-[11px] font-semibold text-thp-ink/30">{strings.lastUpdated}: {strings.companyDataNeeded}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>

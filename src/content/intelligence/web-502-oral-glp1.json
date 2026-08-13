@@ -1,0 +1,52 @@
+{
+  "code": "WEB-502",
+  "kind": "thpharm_view",
+  "status": "company_confirm",
+  "title": {
+    "kr": "비만치료제 경쟁의 다음 전선, \"주사\"에서 \"먹는 약\"으로",
+    "en": "The next front in obesity-drug competition: from injection to pill",
+    "zh_cn": "肥胖治疗药物竞争的下一战线:从\"注射\"到\"口服\"",
+    "jp": "肥満治療薬競争の次の戦線、「注射」から「飲み薬」へ"
+  },
+  "dek": {
+    "kr": "Lilly의 경구 GLP-1이 보여주는 제품개발 경쟁축의 변화",
+    "en": "What Lilly's oral GLP-1 reveals about the shifting axis of product development competition",
+    "zh_cn": "Lilly口服GLP-1所展现的产品开发竞争轴心变化",
+    "jp": "Lillyの経口GLP-1が示す製品開発競争軸の変化"
+  },
+  "relevance": "Related",
+  "body": {
+    "kr": "WHAT HAPPENED: Eli Lilly의 경구 GLP-1 치료제 orforglipron(Foundayo)이 영국에서 비만·체중관리 및 제2형 당뇨병 치료제로 승인됐다고 Reuters가 보도했다. 경구용 저분자 GLP-1 receptor agonist라는 점과 복용 편의성이 중요한 제품 포인트다. WHY IT MATTERS: GLP-1 시장의 경쟁기준이 체중감량 효과에서 투여경로, 복용 편의성, 치료 지속성, 생산·유통, 가격과 적응증 확장까지 넓어지고 있다. 좋은 성분을 발견하는 것과 환자가 실제로 쓰기 좋은 제품을 만드는 것은 서로 다른 경쟁력이다.",
+    "en": "WHAT HAPPENED: Reuters reported that Eli Lilly's oral GLP-1 therapy orforglipron (Foundayo) has been approved in the UK for obesity/weight management and type 2 diabetes. Being an oral, small-molecule GLP-1 receptor agonist, and the resulting dosing convenience, are the key product points. WHY IT MATTERS: The competitive basis in the GLP-1 market is widening from weight-loss efficacy alone to route of administration, dosing convenience, treatment persistence, manufacturing/distribution, pricing, and indication expansion. Discovering a good active ingredient and building a product patients will actually want to use are two different competitive capabilities.",
+    "zh_cn": "WHAT HAPPENED:据路透社报道,Eli Lilly的口服GLP-1治疗药物orforglipron(Foundayo)已在英国获批用于肥胖症/体重管理及2型糖尿病治疗。作为口服小分子GLP-1受体激动剂及由此带来的服药便利性,是其重要产品卖点。WHY IT MATTERS:GLP-1市场的竞争基准正从单纯的减重效果,扩展至给药途径、服药便利性、治疗持续性、生产与流通、价格及适应症扩展等方面。发现优质成分与打造患者真正愿意使用的产品,是两种不同的竞争力。",
+    "jp": "WHAT HAPPENED:Eli Lillyの経口GLP-1治療薬orforglipron(Foundayo)が英国で肥満症・体重管理および2型糖尿病治療薬として承認されたとReutersが報じた。経口の低分子GLP-1受容体作動薬である点と服薬の利便性が重要な製品ポイントである。WHY IT MATTERS:GLP-1市場の競争基準は、減量効果だけでなく、投与経路、服薬利便性、治療継続性、生産・流通、価格、適応症拡大にまで広がりつつある。良い成分を発見することと、患者が実際に使いやすい製品を作ることは、異なる競争力である。"
+  },
+  "thpharmView": {
+    "kr": "\"혁신은 새로운 물질에서만 나오지 않는다.\" 티에치팜이 축적해온 개량신약·제형·복합제 경험은 GLP-1 시대에도 의미가 있다. 차세대 대사질환 치료제는 기전 + 제형 + 복용방법 + 조합 + 환자경험을 함께 설계하는 경쟁으로 갈 가능성이 높다.",
+    "en": "\"Innovation doesn't come only from new molecules.\" THPHARM's accumulated experience in improved drugs, formulation, and combination products remains relevant in the GLP-1 era. Next-generation metabolic-disease therapeutics are likely headed toward a competition that jointly designs mechanism, formulation, dosing, combination, and patient experience.",
+    "zh_cn": "\"创新并非只源于新物质。\"THPHARM在改良新药、剂型与复方制剂方面积累的经验,在GLP-1时代依然具有意义。下一代代谢性疾病治疗药物的竞争,很可能走向同时设计机制、剂型、给药方式、组合与患者体验的方向。",
+    "jp": "「イノベーションは新物質からだけ生まれるわけではない。」THPHARMが蓄積してきた改良新薬・製剤・配合剤の経験は、GLP-1時代にも意味を持つ。次世代代謝性疾患治療薬は、機序+製剤+服用方法+組み合わせ+患者体験を共に設計する競争へと向かう可能性が高い。"
+  },
+  "whatToWatch": {
+    "kr": "경구 GLP-1의 실제 장기 복약지속성 / 아시아 승인·가격 / 주사제와의 시장분화 / 단독제에서 병용·복합전략으로의 이동",
+    "en": "Real-world long-term persistence of oral GLP-1 / Asian approval and pricing / market segmentation versus injectables / the shift from monotherapy to combination strategies",
+    "zh_cn": "口服GLP-1的实际长期治疗持续性 / 亚洲地区获批与定价 / 与注射剂型的市场分化 / 从单一制剂向联合/复方策略的转变",
+    "jp": "経口GLP-1の実際の長期服薬継続性 / アジアでの承認・価格 / 注射剤との市場分化 / 単剤から併用・配合戦略への移行"
+  },
+  "tags": [
+    { "label": "Obesity" },
+    { "label": "GLP-1" },
+    { "label": "Oral Drug" },
+    { "label": "Global Pharma" },
+    { "label": "Eli Lilly", "url": "https://www.lilly.com" }
+  ],
+  "sourceMeta": {
+    "source_type": "Media",
+    "source_title": "Eli Lilly's oral GLP-1 orforglipron (Foundayo) approved in the UK",
+    "publisher": "Reuters",
+    "published_at": "2026-08-10",
+    "last_verified": "2026-08-12",
+    "peer_review_status": "not-applicable"
+  },
+  "publishedAt": "2026-08-12"
+}

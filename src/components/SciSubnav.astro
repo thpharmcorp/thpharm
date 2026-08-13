@@ -1,0 +1,35 @@
+---
+interface Props {
+  locale: string;
+  current: 'landing' | 'design' | 'reveal' | 'interpret' | 'validate' | 'execute' | 'evidence';
+}
+const { locale, current } = Astro.props;
+
+const items = [
+  { key: 'landing', code: 'WEB-200', path: '', letter: null, label: 'OVERVIEW' },
+  { key: 'design', code: 'WEB-201', path: 'design', letter: 'D', label: 'DRUG RE-ENGINEERING' },
+  { key: 'reveal', code: 'WEB-202', path: 'reveal', letter: 'R', label: 'BIO-AI' },
+  { key: 'interpret', code: 'WEB-203', path: 'interpret', letter: 'I', label: 'METABOLIC SCIENCE' },
+  { key: 'validate', code: 'WEB-204', path: 'validate', letter: 'V', label: 'TRANSLATIONAL TECHNOLOGY' },
+  { key: 'execute', code: 'WEB-205', path: 'execute', letter: 'E', label: 'CLINICAL TRANSLATION' },
+  { key: 'evidence', code: 'WEB-206', path: 'evidence', letter: null, label: 'EVIDENCE & IP' },
+] as const;
+---
+
+<div class="border-b border-thp-line bg-thp-mist">
+  <nav class="mx-auto flex max-w-content gap-1 overflow-x-auto px-4 py-3 md:px-6" aria-label="Science">
+    {
+      items.map((i) => (
+        <a
+          href={`/${locale}/science${i.path ? `/${i.path}` : ''}`}
+          class={`flex items-center gap-1.5 whitespace-nowrap rounded-full px-3 py-1.5 text-xs font-bold transition-colors ${
+            i.key === current ? 'bg-thp-navy2 text-white' : 'text-thp-ink/50 hover:text-thp-navy2'
+          }`}
+        >
+          {i.letter && <span class="opacity-60">{i.letter}</span>}
+          {i.label}
+        </a>
+      ))
+    }
+  </nav>
+</div>

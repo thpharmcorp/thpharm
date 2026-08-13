@@ -1,0 +1,66 @@
+{
+  "code": "WEB-601",
+  "kind": "news",
+  "status": "published",
+  "title": {
+    "kr": "충북지식경영포럼서 지역 유망 스타트업으로 티에치팜 소개",
+    "en": "THPHARM featured as a promising local startup at the Chungbuk Knowledge Management Forum",
+    "zh_cn": "THPHARM在忠北知识经营论坛上作为地区潜力初创企业亮相",
+    "jp": "忠北知識経営フォーラムで有望な地元スタートアップとしてTHPHARMを紹介"
+  },
+  "dek": {
+    "kr": "충북도, 2030년까지 창업생태계에 7072억 원 투입 계획 발표 자리에서 함께 소개",
+    "en": "Featured alongside Chungbuk's plan to invest KRW 707.2 billion in its startup ecosystem by 2030",
+    "zh_cn": "在忠北道公布2030年前投入7072亿韩元创业生态计划的场合一并亮相",
+    "jp": "忠北道が2030年までに7072億ウォンを投入するスタートアップ生態系計画を発表した場で紹介"
+  },
+  "body": {
+    "kr": "충청일보에 따르면 청주상공회의소가 11일 개최한 '제119차 충북지식경영포럼 조찬세미나'에서 신용한 충북도지사가 2030년까지 7072억 원을 투입하는 창업생태계 육성 계획을 발표했습니다. 이날 지역 유망 스타트업 소개 순서에 오송 소재 대사질환 치료제 개발기업 티에치팜이 참여해 개량신약·용도창출신약 개발 현황과 성장 비전을 소개했습니다.",
+    "en": "According to the Chungcheong Daily News, at the 119th Chungbuk Knowledge Management Forum breakfast seminar hosted by the Cheongju Chamber of Commerce on August 11, Chungbuk Governor Shin Yong-han announced a plan to invest KRW 707.2 billion in the region's startup ecosystem by 2030. At the same event, THPHARM — a metabolic-disease drug developer based in Osong — was featured among promising local startups, presenting its improved-drug and repositioned-drug development status and growth vision.",
+    "zh_cn": "据忠清日报报道,清州商工会议所于11日举办的\"第119届忠北知识经营论坛早餐研讨会\"上,忠北道知事申庸汉公布了到2030年投入7072亿韩元培育创业生态系统的计划。同场活动的地区潜力初创企业介绍环节中,总部位于五松的代谢性疾病治疗药物开发企业THPHARM亮相,介绍了其改良新药与新用途新药的开发现状与成长愿景。",
+    "jp": "忠清日報によると、清州商工会議所が11日に開催した「第119回忠北知識経営フォーラム朝食セミナー」で、申容漢(シン・ヨンハン)忠北道知事が2030年までに7072億ウォンを投入するスタートアップ生態系育成計画を発表しました。同日の地元有望スタートアップ紹介コーナーでは、五松(オソン)に拠点を置く代謝性疾患治療薬開発企業THPHARMが参加し、改良新薬・ドラッグリポジショニング新薬の開発現況と成長ビジョンを紹介しました。"
+  },
+  "keyPoints": [
+    {
+      "kr": "충청북도, 2030년까지 창업생태계에 총 7072억 원 투입 — 연평균 벤처투자 1500억 원 이상 확대 목표",
+      "en": "Chungcheongbuk-do plans to invest a total of KRW 707.2 billion in its startup ecosystem by 2030, aiming to expand annual venture investment to over KRW 150 billion",
+      "zh_cn": "忠清北道计划到2030年在创业生态系统上投入总计7072亿韩元,目标是将年均风险投资规模扩大至1500亿韩元以上",
+      "jp": "忠清北道は2030年までにスタートアップ生態系に総額7072億ウォンを投入する計画で、年平均ベンチャー投資規模を1500億ウォン以上に拡大することを目標としている"
+    },
+    {
+      "kr": "티에치팜은 이날 지역 유망 스타트업 소개 순서에 참여 — 당뇨·고혈압·비만 등 대사질환 대상 개량신약·용도창출신약 개발 현황 소개",
+      "en": "THPHARM took part in the event's showcase of promising local startups, presenting its development of improved and repositioned drugs for metabolic diseases such as diabetes, hypertension, and obesity",
+      "zh_cn": "THPHARM参加了当日的地区潜力初创企业介绍环节,介绍了其针对糖尿病、高血压、肥胖症等代谢性疾病开发改良新药与新用途新药的现况",
+      "jp": "THPHARMは同日の地元有望スタートアップ紹介コーナーに参加し、糖尿病・高血圧・肥満症など代謝性疾患を対象とした改良新薬・ドラッグリポジショニング新薬の開発現況を紹介した"
+    }
+  ],
+  "thpharmView": {
+    "kr": "이 기사는 충청북도의 창업생태계 투자계획을 다룬 지역경제 뉴스이며, 티에치팜은 그날 소개된 여러 유망 스타트업 중 하나로 언급되었습니다. 오송 소재 대사질환 기업으로서 지역 창업생태계와의 연결성을 보여주는 사례로 싣습니다.",
+    "en": "This article primarily covers Chungcheongbuk-do's regional startup-investment plan; THPHARM was mentioned as one of several promising startups showcased that day. We include it here as a marker of THPHARM's connection to the local Osong startup ecosystem.",
+    "zh_cn": "该报道主要围绕忠清北道的地区创业投资计划展开,THPHARM作为当日展示的多家潜力初创企业之一被提及。收录于此,以体现THPHARM与五松地区创业生态系统的联系。",
+    "jp": "本記事は主に忠清北道の地域スタートアップ投資計画を扱ったもので、THPHARMは同日紹介された複数の有望スタートアップの一社として言及されています。五松の代謝性疾患企業として、地域スタートアップ生態系とのつながりを示す事例として掲載します。"
+  },
+  "newsType": "Company",
+  "region": "KR",
+  "year": 2026,
+  "tags": [
+    { "label": "Chungbuk" },
+    { "label": "Osong" },
+    { "label": "Startup Ecosystem" },
+    { "label": "충청일보", "url": "https://www.ccdailynews.com/news/articleView.html?idxno=2433659" }
+  ],
+  "relatedLinks": [
+    { "label": "COMPANY — ABOUT", "href": "/about" },
+    { "label": "COMPANY — OUR EVOLUTION", "href": "/evolution" }
+  ],
+  "sourceMeta": {
+    "source_type": "Media",
+    "source_title": "신용한 충북지사 \"2030년까지 창업생태계에 7072억원 투입\"",
+    "publisher": "충청일보 (Chungcheong Daily News)",
+    "published_at": "2026-08-11",
+    "source_url": "https://www.ccdailynews.com/news/articleView.html?idxno=2433659",
+    "accessed_at": "2026-08-13",
+    "last_verified": "2026-08-13"
+  },
+  "publishedAt": "2026-08-11"
+}

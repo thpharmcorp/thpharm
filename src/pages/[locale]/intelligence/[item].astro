@@ -1,0 +1,142 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { locales, localeToFieldKey, ui, type Locale } from '../../../i18n/ui';
+
+export async function getStaticPaths() {
+  const items = await getCollection('intelligence', (e) => e.data.kind !== 'bio_ai_atlas_card');
+  return locales.flatMap((locale) =>
+    items.map((it) => ({ params: { locale, item: it.id }, props: { entry: it } }))
+  );
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const { entry } = Astro.props as { entry: Awaited<ReturnType<typeof getCollection<'intelligence'>>>[number] };
+const fk = localeToFieldKey[locale];
+const strings = ui[locale];
+const d = entry.data;
+
+const kindLabels: Record<Locale, Record<string, string>> = {
+  kr: { news: '신문기사', research_radar: '연구 신호', thpharm_view: 'THPHARM 관점', scope_spotlight: '스포트라이트' },
+  en: { news: 'News', research_radar: 'Research Signal', thpharm_view: 'THPHARM View', scope_spotlight: 'Spotlight' },
+  'zh-cn': { news: '新闻', research_radar: '研究信号', thpharm_view: 'THPHARM观点', scope_spotlight: '专题聚焦' },
+  jp: { news: 'ニュース', research_radar: '研究シグナル', thpharm_view: 'THPHARM視点', scope_spotlight: 'スポットライト' },
+};
+
+const sectionLabels = {
+  kr: { keyPoints: 'KEY POINTS', view: 'THPHARM VIEW', watch: 'WHAT TO WATCH', related: 'RELATED', back: '← INTELLIGENCE로', viewOriginal: '원문 보기' },
+  en: { keyPoints: 'KEY POINTS', view: 'THPHARM VIEW', watch: 'WHAT TO WATCH', related: 'RELATED', back: '← Back to Intelligence', viewOriginal: 'View original' },
+  'zh-cn': { keyPoints: 'KEY POINTS', view: 'THPHARM VIEW', watch: 'WHAT TO WATCH', related: 'RELATED', back: '← 返回Intelligence', viewOriginal: '查看原文' },
+  jp: { keyPoints: 'KEY POINTS', view: 'THPHARM VIEW', watch: 'WHAT TO WATCH', related: 'RELATED', back: '← Intelligenceへ戻る', viewOriginal: '原文を見る' },
+} as const;
+const s = sectionLabels[locale];
+const sourceHref = d.sourceMeta?.source_url ?? (d.sourceMeta?.doi ? `https://doi.org/${d.sourceMeta.doi}` : undefined);
+---
+
+<BaseLayout locale={locale} title={d.title[fk]} description={d.dek[fk]}>
+  <section class="bg-white">
+    <div class="mx-auto max-w-content px-4 py-14 md:px-6 md:py-16">
+      <a href={`/${locale}/intelligence`} class="text-xs font-semibold text-thp-ink/40 hover:text-thp-tealDeep">{s.back}</a>
+
+      <div class="mt-4 flex flex-wrap items-center gap-2 text-[11px] font-bold text-thp-ink/40">
+        <span class="rounded-full bg-thp-teal/10 px-2 py-0.5 text-thp-tealDeep">{kindLabels[locale][d.kind]}</span>
+        {d.relevance && <span class="rounded-full bg-thp-mist px-2 py-0.5">{d.relevance}</span>}
+        <span class="ml-auto">{d.publishedAt}</span>
+      </div>
+
+      <h1 class="mt-4 max-w-2xl text-3xl font-black tracking-tight text-thp-navy2 md:text-4xl">{d.title[fk]}</h1>
+      <p class="mt-3 max-w-2xl text-lg text-thp-ink/60">{d.dek[fk]}</p>
+
+      {
+        d.tags.length > 0 && (
+          <div class="mt-4 flex flex-wrap gap-x-3 gap-y-1">
+            {d.tags.map((t) =>
+              t.url ? (
+                <a
+                  href={t.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-xs font-semibold text-thp-tealDeep underline decoration-thp-teal/40 underline-offset-2 hover:text-thp-teal"
+                >
+                  #{t.label} ↗
+                </a>
+              ) : (
+                <span class="text-xs font-semibold text-thp-ink/40">#{t.label}</span>
+              )
+            )}
+          </div>
+        )
+      }
+
+      <p class="mt-8 max-w-2xl text-base leading-relaxed text-thp-ink/80">{d.body[fk]}</p>
+
+      {
+        d.keyPoints.length > 0 && (
+          <div class="mt-8 max-w-2xl">
+            <p class="text-xs font-bold tracking-widest text-thp-ink/40">{s.keyPoints}</p>
+            <ul class="mt-3 space-y-2">
+              {d.keyPoints.map((kp) => (
+                <li class="flex gap-2 text-sm leading-relaxed text-thp-ink/75">
+                  <span class="text-thp-teal">•</span>
+                  <span>{kp[fk]}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )
+      }
+
+      {
+        d.thpharmView && (
+          <div class="mt-8 max-w-2xl rounded-2xl border-l-4 border-thp-teal bg-thp-mist p-6">
+            <p class="text-xs font-bold tracking-widest text-thp-teal">{s.view}</p>
+            <p class="mt-2 text-sm leading-relaxed text-thp-ink/80">{d.thpharmView[fk]}</p>
+          </div>
+        )
+      }
+
+      {
+        d.whatToWatch && (
+          <div class="mt-6 max-w-2xl">
+            <p class="text-xs font-bold tracking-widest text-thp-ink/40">{s.watch}</p>
+            <p class="mt-2 text-sm text-thp-ink/60">{d.whatToWatch[fk]}</p>
+          </div>
+        )
+      }
+
+      {
+        d.relatedLinks.length > 0 && (
+          <div class="mt-8 max-w-2xl">
+            <p class="mb-3 text-xs font-bold tracking-widest text-thp-ink/40">{s.related}</p>
+            <div class="flex flex-wrap gap-3">
+              {d.relatedLinks.map((r) => (
+                <a href={`/${locale}${r.href}`} class="rounded-full border border-thp-line px-4 py-1.5 text-xs font-bold text-thp-navy2 hover:border-thp-teal hover:text-thp-tealDeep">
+                  {r.label}
+                </a>
+              ))}
+            </div>
+          </div>
+        )
+      }
+
+      {
+        d.sourceMeta && (
+          <p class="mt-10 max-w-2xl border-t border-thp-line pt-6 text-xs text-thp-ink/40">
+            {strings.source}: {d.sourceMeta.source_title}
+            {d.sourceMeta.publisher && ` (${d.sourceMeta.publisher})`}
+            {d.sourceMeta.doi && ` · DOI: ${d.sourceMeta.doi}`}
+            {sourceHref && (
+              <>
+                {' · '}
+                <a href={sourceHref} target="_blank" rel="noopener noreferrer" class="underline hover:text-thp-tealDeep">
+                  {s.viewOriginal} ↗
+                </a>
+              </>
+            )}
+            {' · '}{strings.lastUpdated}: {d.sourceMeta.last_verified}
+          </p>
+        )
+      }
+    </div>
+  </section>
+</BaseLayout>

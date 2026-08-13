@@ -1,0 +1,38 @@
+{
+  "code": "WEB-500",
+  "kind": "thpharm_view",
+  "status": "draft",
+  "title": {
+    "kr": "AI Signal에서 임상 실행까지 — 글로벌 AI 신약개발 파트너에게",
+    "en": "From AI Signal to Clinical Execution — for global AI drug-discovery partners",
+    "zh_cn": "从AI信号到临床执行 — 致全球AI新药研发合作伙伴",
+    "jp": "AIシグナルから臨床実行へ — グローバルAI創薬パートナーの皆様へ"
+  },
+  "dek": {
+    "kr": "AI가 찾아낸 가설을, 실제 환자에게 도달하는 치료제로",
+    "en": "Turning AI-discovered hypotheses into therapeutics that reach patients",
+    "zh_cn": "将AI发现的假设,转化为真正惠及患者的治疗药物",
+    "jp": "AIが見出した仮説を、実際に患者に届く治療薬へ"
+  },
+  "relevance": "Direct",
+  "body": {
+    "kr": "AlphaFold, Insilico Medicine의 PandaOmics·Chemistry42처럼 뛰어난 AI 신약탐색 플랫폼도 예측·가설 단계에서 실제 치료제로 이어지려면 제형/복합제 설계, 비임상·바이오프린팅 기반 검증, 그리고 글로벌 임상 실행이라는 별도의 역량이 필요합니다. THPHARM은 이 세 가지를 이미 실행해 본 팀입니다. 개량신약·복합제 개발 경험, 대사질환 도메인 지식, 그리고 글로벌 Phase 3까지 이끈 임상 실행력이 THPHARM이 AI 파트너에게 제공하는 complementary value입니다.",
+    "en": "Even outstanding AI drug-discovery platforms — AlphaFold, or Insilico Medicine's PandaOmics and Chemistry42 — need a separate set of capabilities to turn a predicted hypothesis into an actual therapeutic: formulation/combination design, preclinical and bioprinting-based validation, and global clinical execution. THPHARM is a team that has already done all three. Our experience in improved drugs and combination products, our metabolic-disease domain knowledge, and our track record of clinical execution through global Phase 3 are the complementary value we offer AI partners.",
+    "zh_cn": "即便是AlphaFold、英矽智能(Insilico Medicine)的PandaOmics与Chemistry42这类出色的AI新药探索平台,若要从预测与假设阶段走向真正的治疗药物,仍需要另一套能力:剂型/复方设计、基于非临床与生物打印的验证,以及全球临床执行。THPHARM正是已经实践过这三项能力的团队。我们在改良新药与复方制剂开发方面的经验、代谢性疾病领域的专业知识,以及推进至全球3期临床的实际执行力,正是我们能为AI合作伙伴提供的互补价值。",
+    "jp": "AlphaFoldやInsilico MedicineのPandaOmics・Chemistry42のような優れたAI創薬探索プラットフォームであっても、予測・仮説の段階から実際の治療薬へとつなげるには、剤形/配合剤設計、非臨床およびバイオプリンティングに基づく検証、そしてグローバル臨床実行という別の能力が必要です。THPHARMはこの三つをすでに実践してきたチームです。改良新薬・配合剤開発の経験、代謝性疾患領域のドメイン知識、そしてグローバルPhase 3まで導いた臨床実行力こそが、THPHARMがAIパートナーに提供するcomplementary valueです。"
+  },
+  "thpharmView": {
+    "kr": "THPHARM은 자체 foundation model을 보유했다고 말하지 않습니다. 대신 AI가 만든 가설을 사람에게 더 가깝게, 더 빠르게 검증하는 팀이 되고자 합니다.",
+    "en": "THPHARM does not claim to own a foundation model of its own. Instead, we aim to be the team that validates AI-generated hypotheses faster and closer to real human biology.",
+    "zh_cn": "THPHARM并不宣称自身拥有基础模型(foundation model)。相反,我们希望成为能够更贴近人体、更快速验证AI所生成假设的团队。",
+    "jp": "THPHARMは自社が基盤モデル(foundation model)を保有していると主張しません。代わりに、AIが生み出した仮説を、より人体に近く、より速く検証できるチームを目指します。"
+  },
+  "tags": [
+    { "label": "Bio-AI" },
+    { "label": "AI Partnership" },
+    { "label": "Clinical Execution" },
+    { "label": "AlphaFold", "url": "https://alphafold.ebi.ac.uk/" },
+    { "label": "Insilico Medicine", "url": "https://insilico.com" }
+  ],
+  "publishedAt": "2026-08-12"
+}

@@ -1,0 +1,52 @@
+{
+  "code": "WEB-501",
+  "kind": "research_radar",
+  "status": "company_confirm",
+  "title": {
+    "kr": "GLP-1의 간 보호 효과, 체중감량만으로 설명되지 않는다",
+    "en": "GLP-1's liver-protective effect isn't explained by weight loss alone",
+    "zh_cn": "GLP-1的肝脏保护作用无法仅用体重减轻来解释",
+    "jp": "GLP-1の肝保護作用は体重減少だけでは説明できない"
+  },
+  "dek": {
+    "kr": "세마글루타이드가 간에 직접 작용하는 새로운 경로가 제시됐다",
+    "en": "A new pathway suggests semaglutide acts directly on the liver",
+    "zh_cn": "研究提出司美格鲁肽直接作用于肝脏的新通路",
+    "jp": "セマグルチドが肝臓に直接作用する新たな経路が示された"
+  },
+  "relevance": "Direct",
+  "body": {
+    "kr": "연구는 MASH 모델에서 세마글루타이드의 간 보호효과가 단순 체중감량의 2차 효과만이 아니라 간 미세혈관 내피세포(LSEC)의 GLP-1 receptor 신호와 연결될 가능성을 제시했다. 특히 간 염증·섬유화와 관련된 미세환경을 세포 수준에서 설명하려는 점이 핵심이다. 왜 중요한가: GLP-1 경쟁이 '몇 % 더 감량하는가'를 넘어 장기별 작용기전, 반응 환자군, 바이오마커로 확장될 수 있음을 시사한다. 사람에서의 재현성과 임상 바이오마커 연결은 추가 검증이 필요하다.",
+    "en": "The study suggests that semaglutide's hepatoprotective effect in a MASH model is not merely a secondary effect of weight loss, but may be linked to GLP-1 receptor signaling in liver sinusoidal endothelial cells (LSECs). The key contribution is explaining the microenvironment related to liver inflammation and fibrosis at the cellular level. Why it matters: GLP-1 competition may extend beyond 'how much more weight loss' to organ-specific mechanisms, responder subgroups, and biomarkers. Reproducibility in humans and clinical biomarker validation are still needed.",
+    "zh_cn": "该研究提出,司美格鲁肽在MASH模型中的肝脏保护作用可能不仅是体重减轻的二次效应,还可能与肝窦内皮细胞(LSEC)中的GLP-1受体信号相关。其核心贡献在于从细胞层面解释与肝脏炎症和纤维化相关的微环境。重要性:GLP-1领域的竞争可能从\"多减重百分之几\"扩展到器官特异性机制、应答患者亚群与生物标志物。人体可重复性与临床生物标志物验证仍待进一步确认。",
+    "jp": "本研究は、MASHモデルにおけるセマグルチドの肝保護効果が単なる体重減少の二次的効果ではなく、肝類洞内皮細胞(LSEC)におけるGLP-1受容体シグナルと関連している可能性を示した。肝の炎症・線維化に関わる微小環境を細胞レベルで説明しようとした点が核心である。重要性:GLP-1領域の競争は「何%多く減量できるか」を超え、臓器別の作用機序、反応患者群、バイオマーカーへと広がる可能性を示唆する。ヒトでの再現性と臨床バイオマーカーとの関連づけには、さらなる検証が必要である。"
+  },
+  "thpharmView": {
+    "kr": "GLP-1의 다음 경쟁은 체중감량률만이 아니라 '어떤 환자에게, 어떤 장기에서, 어떤 기전을 통해 추가 치료가치를 만드는가'의 경쟁이 될 가능성이 있다.",
+    "en": "The next phase of GLP-1 competition may not be about weight-loss percentage alone, but about which patients, which organs, and which mechanisms deliver additional therapeutic value.",
+    "zh_cn": "GLP-1领域下一阶段的竞争可能不仅在于减重比例,而在于\"针对哪些患者、在哪些器官、通过何种机制创造额外治疗价值\"。",
+    "jp": "GLP-1の次の競争軸は、減量率だけでなく「どの患者に、どの臓器で、どのような機序で追加の治療価値を生み出すか」になる可能性がある。"
+  },
+  "whatToWatch": {
+    "kr": "Human validation / Biomarker / 다른 incretin 계열에서의 재현성 / THPHARM Bio-AI와의 연결 가능성",
+    "en": "Human validation / Biomarkers / reproducibility across other incretin classes / potential links to THPHARM's Bio-AI work",
+    "zh_cn": "人体验证 / 生物标志物 / 其他incretin类药物中的可重复性 / 与THPHARM Bio-AI结合的可能性",
+    "jp": "ヒトでの検証 / バイオマーカー / 他のインクレチン系薬剤における再現性 / THPHARMのBio-AIとの連携可能性"
+  },
+  "tags": [
+    { "label": "GLP-1" },
+    { "label": "MASH" },
+    { "label": "Mechanism" },
+    { "label": "Cell Metabolism", "url": "https://doi.org/10.1016/j.cmet.2026.03.011" }
+  ],
+  "sourceMeta": {
+    "source_type": "Journal",
+    "source_title": "Cell Metabolism 2026;38(7):1334-1353.e7",
+    "publisher": "Cell Metabolism",
+    "published_at": "2026",
+    "doi": "10.1016/j.cmet.2026.03.011",
+    "last_verified": "2026-08-12",
+    "peer_review_status": "peer-reviewed"
+  },
+  "publishedAt": "2026-08-12"
+}
