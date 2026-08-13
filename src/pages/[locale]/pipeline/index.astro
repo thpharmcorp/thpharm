@@ -51,7 +51,7 @@ const overview = overviewCopy[locale];
         style="grid-template-columns: 200px repeat(6, 1fr);"
       >
         <div />
-        {stageOrder.map((s) => <p class="text-center text-[10px] font-bold uppercase tracking-wide text-thp-ink/35">{s}</p>)}
+        {stageOrder.map((s) => <p class="text-center text-[15px] font-bold uppercase tracking-wide text-thp-ink/35">{s}</p>)}
       </div>
 
       <div class="divide-y divide-thp-line rounded-2xl border border-thp-line">
@@ -78,7 +78,7 @@ const overview = overviewCopy[locale];
                   {stageOrder.map((s, i) => (
                     <div
                       class="absolute top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 bg-white"
-                      style={`left:${(i / (stageOrder.length - 1)) * 100}%; ${i <= idx ? 'border-color:#12A594; background:#12A594;' : 'border-color:#E2E8F0;'} ${i === idx ? 'box-shadow:0 0 0 4px rgba(18,165,148,0.18);' : ''} width:${i === idx ? '12px' : '8px'}; height:${i === idx ? '12px' : '8px'};`}
+                      style={`left:${(i / (stageOrder.length - 1)) * 100}%; ${i <= idx ? 'border-color:#EE7F1A; background:#EE7F1A;' : 'border-color:#E2E8F0;'} ${i === idx ? 'box-shadow:0 0 0 4px rgba(238,127,26,0.18);' : ''} width:${i === idx ? '12px' : '8px'}; height:${i === idx ? '12px' : '8px'};`}
                     />
                   ))}
                 </div>

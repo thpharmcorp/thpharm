@@ -24,10 +24,10 @@ function isActive(itemPath: string) {
 <header class="sticky top-0 z-40 border-b border-thp-line bg-white/95 backdrop-blur">
   <div class="mx-auto flex max-w-content items-center justify-between gap-4 px-4 py-3 md:px-6">
     <a href={`/${locale}`} class="flex items-center gap-2">
-      <img src="/images/logo.png" alt="THPharm" class="h-8 w-auto" />
+      <img src="/images/logo.png" alt="THPharm" class="h-10 w-auto" />
     </a>
 
-    <nav class="hidden items-center gap-6 text-sm font-medium text-thp-ink md:flex" aria-label="Main">
+    <nav class="hidden items-center gap-4 text-sm font-medium text-thp-ink lg:flex" aria-label="Main">
       {
         nav.map((item) => (
           <a
@@ -45,7 +45,7 @@ function isActive(itemPath: string) {
       }
     </nav>
 
-    <div class="hidden items-center gap-3 text-xs font-semibold md:flex">
+    <div class="hidden items-center gap-3 text-xs font-semibold lg:flex">
       <a
         href={`/${locale}/pt`}
         class="rounded border border-thp-navy px-3 py-1.5 text-thp-navy2 hover:bg-thp-navy hover:text-white"
@@ -76,7 +76,7 @@ function isActive(itemPath: string) {
     <button
       id="mobile-nav-toggle"
       type="button"
-      class="rounded border border-thp-line p-2 md:hidden"
+      class="rounded border border-thp-line p-2 lg:hidden"
       aria-expanded="false"
       aria-controls="mobile-nav"
       aria-label="메뉴 열기"
@@ -87,7 +87,7 @@ function isActive(itemPath: string) {
     </button>
   </div>
 
-  <div id="mobile-nav" class="hidden border-t border-thp-line bg-white md:hidden">
+  <div id="mobile-nav" class="hidden border-t border-thp-line bg-white lg:hidden">
     <nav class="flex flex-col gap-1 px-4 py-3 text-sm font-medium" aria-label="Mobile">
       {
         nav.map((item) => (

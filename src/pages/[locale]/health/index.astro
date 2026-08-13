@@ -6,7 +6,7 @@ import HealthSectionIcon from '../../../components/HealthSectionIcon.astro';
 import { locales, localeToFieldKey, type Locale } from '../../../i18n/ui';
 
 const accentMap: Record<string, string> = {
-  obesity: '#12A594',
+  obesity: '#EE7F1A',
   diabetes: '#2563EB',
   hypertension: '#DC2626',
   mash: '#7C3AED',
@@ -68,7 +68,7 @@ const iconKindMap: Record<string, 'obesity' | 'diabetes' | 'hypertension' | 'mas
       <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {
           topics.map((t) => {
-            const accent = accentMap[t.data.slug] ?? '#12A594';
+            const accent = accentMap[t.data.slug] ?? '#EE7F1A';
             return (
               <a
                 href={`/${locale}/health/${t.data.slug}`}

@@ -21,12 +21,12 @@ const d = entry.data;
 // 질환별 accent 컬러 — brand teal(비만)을 기준으로 당뇨/고혈압/MASH를 구분되는 색으로 배정.
 // 실제 브랜드 컬러 가이드 확정 전까지의 근사값 (APPROVED_FACTS.md 참고).
 const accentMap: Record<string, string> = {
-  obesity: '#12A594',
+  obesity: '#EE7F1A',
   diabetes: '#2563EB',
   hypertension: '#DC2626',
   mash: '#7C3AED',
 };
-const accent = accentMap[d.slug] ?? '#12A594';
+const accent = accentMap[d.slug] ?? '#EE7F1A';
 
 const sections = [
   { key: 'body', label: { kr: '몸에서는 무슨 일이 일어날까?', en: "What's happening in the body?", 'zh-cn': '身体里发生了什么?', jp: '体の中で何が起きているのか?' }, text: d.whatHappensInBody[fk], withDiagram: true },
