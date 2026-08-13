@@ -78,6 +78,9 @@ const companyLanding = defineCollection({
     heroSubtitle: localizedOptional, // 기획안에 두 개의 메인카피 후보가 있어 보조 카피로 수용
     heroBody: localized,
     keywordStrip: z.array(localized).default([]),
+    // 2026-08-13: 히어로 아래 "실제로 뭘 가진 회사인지" 증명하는 짧은 사실 스트립.
+    // 반드시 사이트 내 다른 곳(PIPELINE/뉴스 등)에서 검증 가능한 사실만 넣는다 — SOURCE-FIRST.
+    proofPoints: z.array(localized).default([]),
     ctaPrimary: localized,
     ctaSecondary: localized,
     lastUpdated: z.string(),

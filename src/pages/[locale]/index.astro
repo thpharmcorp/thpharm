@@ -34,6 +34,13 @@ const keyFocusCopy: Record<Locale, { eyebrow: string; title: string }> = {
 };
 const keyFocus = keyFocusCopy[locale];
 const healthTopics = await getCollection('health');
+
+// 히어로 proofPoints와 1:1로 매칭되는 근거 페이지 — 각 사실을 클릭하면 바로 검증할 수 있게 연결한다.
+const proofLinks = [
+  `/${locale}/pipeline/thp-001`,
+  `/${locale}/intelligence/news-deep-tech-tips-mash`,
+  `/${locale}/about`,
+];
 ---
 
 <BaseLayout locale={locale} title={d.heroTitle[fk]} description={d.heroBody[fk]}>
@@ -47,6 +54,26 @@ const healthTopics = await getCollection('health');
     ctaSecondaryHref={`/${locale}/pipeline`}
     tags={d.keywordStrip.map((k) => k[fk])}
   />
+
+  {
+    d.proofPoints.length > 0 && (
+      <section class="border-b border-thp-line bg-thp-mist">
+        <div class="mx-auto max-w-content px-4 py-8 md:px-6">
+          <div class="grid gap-3 sm:grid-cols-3">
+            {d.proofPoints.map((p, i) => (
+              <a
+                href={proofLinks[i] ?? `/${locale}/about`}
+                class="flex items-start gap-3 rounded-xl border border-thp-line bg-white p-4 transition-colors hover:border-thp-teal"
+              >
+                <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-thp-teal" />
+                <p class="text-sm font-semibold leading-snug text-thp-navy2">{p[fk]}</p>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
 
   <section class="border-b border-thp-line bg-white">
     <div class="mx-auto max-w-content px-4 py-16 md:px-6 md:py-20">

@@ -8,22 +8,22 @@
     "jp": "RE-ENGINEERING METABOLIC MEDICINES"
   },
   "heroTitle": {
-    "kr": "대사질환 치료의 새로운 가능성을 설계합니다.",
-    "en": "Designing New Possibilities in Metabolic Disease Treatment.",
-    "zh_cn": "设计代谢性疾病治疗的新可能。",
-    "jp": "代謝性疾患治療の新たな可能性を設計します。"
+    "kr": "검증된 의약품을 재설계하는, 임상단계 대사질환 치료제 개발기업입니다.",
+    "en": "A clinical-stage metabolic disease drug developer, re-engineering proven medicines.",
+    "zh_cn": "我们是一家对成熟药物进行再设计的临床阶段代谢性疾病治疗药物开发企业。",
+    "jp": "実証済みの医薬品を再設計する、臨床段階の代謝性疾患治療薬開発企業です。"
   },
   "heroSubtitle": {
-    "kr": "더 나은 약을 설계하고, 데이터로 검증하고, 임상으로 증명합니다.",
-    "en": "We design better medicines, validate them with data, and prove them in the clinic.",
-    "zh_cn": "设计更好的药物,用数据验证,并通过临床证明。",
-    "jp": "より良い薬を設計し、データで検証し、臨床で証明します。"
+    "kr": "Bio-AI로 기존 자산을 재해석해 새로운 적응증을 찾고, 바이오프린팅으로 검증하며, 임상으로 증명합니다.",
+    "en": "We reinterpret existing assets with Bio-AI to uncover new indications, validate them with bioprinting, and prove them in the clinic.",
+    "zh_cn": "运用Bio-AI重新解读现有资产以发现新适应症,通过生物打印进行验证,并在临床中加以证明。",
+    "jp": "Bio-AIで既存資産を再解釈して新たな適応症を見出し、バイオプリンティングで検証し、臨床で証明します。"
   },
   "heroBody": {
-    "kr": "티에치팜은 개량신약과 복합제 개발 경험을 기반으로 Bio-AI, GLP-1, 임상개발 및 바이오프린팅 기술을 연결하여 대사질환 치료의 새로운 가능성을 만들어가는 바이오기업입니다.",
-    "en": "THPHARM is a biopharmaceutical company that builds on its experience in improved drugs and combination products, connecting Bio-AI, GLP-1, clinical development, and bioprinting technology to create new possibilities in metabolic disease treatment.",
-    "zh_cn": "THPHARM基于改良新药与复方制剂开发经验,将Bio-AI、GLP-1、临床开发与生物打印技术相结合,致力于开创代谢性疾病治疗的新可能。",
-    "jp": "THPHARMは、改良新薬・配合剤の開発経験を基盤に、Bio-AI、GLP-1、臨床開発、そしてバイオプリンティング技術を連携させ、代謝性疾患治療の新たな可能性を切り拓くバイオ企業です。"
+    "kr": "개량신약과 복합제 개발 경험에서 출발해, GLP-1을 포함한 대사질환 영역에서 Bio-AI·바이오프린팅·임상개발 역량을 연결하고 있습니다.",
+    "en": "Starting from experience in improved drugs and combination products, we connect Bio-AI, bioprinting, and clinical development capabilities across the GLP-1 and broader metabolic disease space.",
+    "zh_cn": "从改良新药与复方制剂开发经验出发,我们在GLP-1及更广泛的代谢性疾病领域,将Bio-AI、生物打印与临床开发能力连接起来。",
+    "jp": "改良新薬・配合剤の開発経験を出発点に、GLP-1を含む代謝性疾患領域でBio-AI・バイオプリンティング・臨床開発の能力をつなげています。"
   },
   "keywordStrip": [
     { "kr": "DRUG INNOVATION", "en": "DRUG INNOVATION", "zh_cn": "DRUG INNOVATION", "jp": "DRUG INNOVATION" },
@@ -31,6 +31,26 @@
     { "kr": "GLP-1", "en": "GLP-1", "zh_cn": "GLP-1", "jp": "GLP-1" },
     { "kr": "CLINICAL DEVELOPMENT", "en": "CLINICAL DEVELOPMENT", "zh_cn": "CLINICAL DEVELOPMENT", "jp": "CLINICAL DEVELOPMENT" },
     { "kr": "BIOPRINTING", "en": "BIOPRINTING", "zh_cn": "BIOPRINTING", "jp": "BIOPRINTING" }
+  ],
+  "proofPoints": [
+    {
+      "kr": "글로벌 임상 3상 단계 대사질환 파이프라인 보유",
+      "en": "Metabolic-disease pipeline asset in global Phase 3",
+      "zh_cn": "拥有处于全球3期临床阶段的代谢性疾病管线资产",
+      "jp": "グローバル臨床第3相段階の代謝性疾患パイプラインを保有"
+    },
+    {
+      "kr": "중소벤처기업부 '딥테크 TIPS' 선정 (2026)",
+      "en": "Selected for Korea's 'Deep Tech TIPS' program (2026)",
+      "zh_cn": "入选韩国中小风险企业部\"Deep Tech TIPS\"计划(2026年)",
+      "jp": "中小ベンチャー企業部「ディープテックTIPS」に選定(2026年)"
+    },
+    {
+      "kr": "개량신약·복합제 개발 경험을 Bio-AI 재해석으로 확장",
+      "en": "Extending improved-drug and combination-product experience through Bio-AI reinterpretation",
+      "zh_cn": "将改良新药与复方制剂开发经验拓展至Bio-AI再解读",
+      "jp": "改良新薬・配合剤の開発経験をBio-AI再解釈へと拡張"
+    }
   ],
   "ctaPrimary": {
     "kr": "티에치팜 알아보기",
