@@ -13,6 +13,7 @@
 | 로그인 관련 장애 | V1은 로그인 자체가 없으므로 해당 없음. V1.5 이후 Supabase 도입 시: 공개 페이지는 영향받지 않아야 하며, 로그인 CTA만 일시 비활성화 |
 | 이 개발 환경에서 npm install이 안 됨 | Claude Cowork 샌드박스의 네트워크 정책 때문. Team/Enterprise 조직 설정에서 네트워크 egress를 열거나, 로컬 컴퓨터에서 빌드. DEPLOYMENT.md 참고 |
 | 콘텐츠 스키마를 바꿨는데 기존 JSON이 깨짐 | `src/content/config.ts` 변경 시 해당 컬렉션의 모든 JSON 파일을 함께 갱신해야 함. 하나씩 훑어서 새 필드 추가/필드명 변경 반영 |
+| `git commit`/`git status`가 `unable to unlink '.git/index.lock' (또는 objects/**/tmp_obj_*, HEAD.lock)`: `Operation not permitted` 경고를 뱉음 | Cowork 데스크톱 브리지로 마운트된 로컬 폴더는 파일 삭제(unlink)가 막혀 있어 git이 자기 lock 파일을 못 지움. 대부분 경고일 뿐 커밋 자체는 성공하니 `git log`로 확인. 만약 `fatal: Unable to create '.../index.lock': File exists`로 완전히 막히면, 삭제 대신 `mv .git/index.lock <repo 밖 다른 폴더>`로 옮겨서 치우고 재시도 (2026-08-13 재발) |
 
 ## 보안·키 점검 (V1.5 이후 해당)
 
