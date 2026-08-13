@@ -37,34 +37,45 @@
   `[TODO_TRANSLATION]`처럼 명시적으로 표시합니다.
 - 실제 회사 자료가 없는 값은 절대 지어내지 않습니다. `[COMPANY DATA NEEDED]` /
   `[TODO_SOURCE]` / `status: "company_confirm"` / `status: "todo_source"` 로 표시합니다.
-- 디자인 톤: 다크 네이비 히어로(`HeroDark.astro`) + 티일 accent + Pretendard Bold/Black 헤드라인.
+- 디자인 톤: 다크 배경 히어로(`HeroDark.astro`) + 오렌지/옐로우 accent + Pretendard Bold/Black 헤드라인.
   세리프 폰트는 쓰지 않습니다(2026-08-12 사용자 피드백으로 확정 — 고딕/글로벌 스타트업 톤).
+  Accent 컬러는 2026-08-13 기준 실험 중 — 로고 오렌지(#EE7F1A)에서 골드 옐로우(#F5C518)로
+  히어로 컴포넌트를 임시 테스트 중이니, 최종 확정 전까지 이 파일과 실제 화면이 다를 수 있음.
 
 ## 콘텐츠 추가/수정 시 체크
 
 1. 4개 언어(kr/en/zh_cn/jp) 필드를 전부 채웠는가
 2. 사실성 콘텐츠라면 `sourceMeta`(source_type, source_title, last_verified 등)를 채웠는가
 3. 회사 확인이 필요한 값은 `status: "company_confirm"` 또는 `[COMPANY DATA NEEDED]`로 표시했는가
-4. `npm run build`가 로컬에서 통과하는가 (이 개발 환경은 npm 네트워크 접근이 막혀 있어
-   빌드를 직접 돌릴 수 없습니다 — RUNBOOK.md 참고)
+4. `npm run build`가 로컬에서 통과하는가 (Claude Cowork 클라우드 샌드박스는 npm 레지스트리 접근이
+   막혀 있어 이 환경에서는 빌드를 직접 돌릴 수 없습니다 — Netlify 빌드 로그로 확인하거나
+   사용자 로컬 컴퓨터에서 직접 빌드해 확인. RUNBOOK.md 참고)
 
-## 배포 워크플로 (2026-08-13부터 — GitHub 연동)
+## GitHub / Netlify 계정 (2026-08-13 이전 완료)
 
-- GitHub `cozzyy/thpharm` ↔ Netlify(`thpharm-netlify-app`) 연동 완료. `main` 브랜치 push →
-  Netlify 자동 빌드/배포.
-- 이 개발 환경(Cowork 샌드박스)은 보안상 github.com에 직접 접속할 수 없습니다(`git push`가
-  프록시에서 403으로 막힘). 그래서 파일 수정 → `git add -A && git commit -m "..."`까지는
-  이 세션에서 처리하되, 마지막 `git push`는 사용자가 자기 컴퓨터의 cmd에서 직접 실행해야 합니다.
-  **커밋을 만들 때마다 사용자에게 `git push` 실행을 안내할 것** — 사용자가 이 방식을 선호함
-  (GitHub Desktop 등 GUI 도구 대신 cmd 사용 확정, 2026-08-13).
-- 커밋 작성자 이메일은 GitHub `cozzyy` 계정에 인증된 이메일과 일치해야 함 — 안 그러면 Netlify가
-  "Unrecognized Git contributor"로 private repo 빌드를 차단합니다(무료 플랜 제한). 저장소가
-  잠시 Public으로 전환되어 있을 수 있으니(2026-08-13, 이 문제 우회용), 다시 Private으로 돌릴
-  계획이 있는지 세션 시작 시 확인할 것.
+- GitHub 저장소: `github.com/thpharmcorp/thpharm` (기존 `cozzyy/thpharm`에서 2026-08-13 소유권 이전.
+  커밋 히스토리 그대로 유지됨. `cozzyy`(김인형)는 Collaborator로 남아있음.)
+- Netlify 사이트: `thpharm` (`thpharm.netlify.app`, thpharmcorp 팀 계정 소유). 기존
+  `thpharm-netlify-app`(개인 계정)은 더 이상 쓰지 않음 — 자동 배포만 꺼둔 상태로 미정리 남아있음.
+- 로컬 git 커밋 이메일은 `thpharmcorp@gmail.com`(thpharmcorp GitHub 계정의 Verified/Primary
+  이메일)로 통일했습니다. **새 커밋을 만들 때 이 이메일과 다른 값이 설정되어 있으면 안 됩니다** —
+  Netlify가 "Unrecognized Git contributor"로 private repo 빌드를 막는 원인이 됩니다.
+- 저장소는 이전 이메일 불일치 문제가 해결되어 2026-08-13부로 다시 Private 전환했습니다.
+
+## 배포 워크플로 (변경 없음)
+
+- `main` 브랜치 push → Netlify 자동 빌드/배포.
+- 이 개발 환경(Cowork)은 보안상 github.com에 직접 접속할 수 없습니다(`git push`가 프록시에서
+  403으로 막힘). 그래서 파일 수정 → `git add -A && git commit -m "..."`까지는 이 세션에서
+  처리하되(로컬로 마운트된 사용자 컴퓨터 폴더에서 실행), 마지막 `git push`는 사용자가 자기
+  컴퓨터의 cmd에서 직접 실행해야 합니다. **커밋을 만들 때마다 사용자에게 `git push` 실행을
+  안내할 것** — 사용자가 이 방식을 선호함(GitHub Desktop 등 GUI 도구 대신 cmd 사용 확정,
+  2026-08-13).
+- 마운트된 폴더에서 git 명령을 실행하면 `.git/index.lock` 등 lock 파일을 git이 스스로 못 지워서
+  경고가 뜰 수 있습니다 — 대부분 무해한 경고이니 RUNBOOK.md 참고.
 
 ## 알려진 제약
 
-이 코드베이스의 상당 부분은 npm 패키지 레지스트리 접근이 차단된 환경(Claude Cowork 샌드박스,
-Team/Enterprise 조직 설정 없음)에서 작성되었습니다. 즉 `npm install`/`npm run build`가 한 번도
-실행되지 않은 상태로 커밋된 파일들이 있을 수 있습니다. 새 세션에서 작업을 이어받으면 가장 먼저
-`npm install && npm run build`를 돌려 실제 컴파일 오류가 있는지 확인하십시오.
+이 코드베이스의 상당 부분은 npm 패키지 레지스트리 접근이 차단된 환경(Claude Cowork 클라우드
+샌드박스)에서 작성되었습니다. 클라우드 샌드박스에서 `npm install`/`npm run build`를 직접 실행할
+수 없으니, 빌드 검증은 Netlify 배포 로그로 확인하거나 사용자 로컬 컴퓨터에서 진행하십시오.

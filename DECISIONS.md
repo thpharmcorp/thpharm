@@ -2,6 +2,26 @@
 
 짧게, 날짜순으로. 이유가 있는 결정만 남깁니다.
 
+## 2026-08-13 — GitHub/Netlify를 개인 계정에서 티에치팜(thpharmcorp) 계정으로 이전
+
+- 지금까지 실제 개발은 김인형(GitHub `cozzyy`)이 대표 개인 계정 인증에 의존해 진행해와서 로그인
+  때마다 대표에게 인증을 요청해야 하는 번거로움이 있었다. 회사 명의 계정(`thpharmcorp`,
+  이메일 thpharmcorp@gmail.com)을 새로 만들어 GitHub 저장소와 Netlify 사이트를 이 계정으로
+  이전했다.
+- GitHub: `cozzyy/thpharm` → `thpharmcorp/thpharm`로 Transfer ownership. 커밋 히스토리는
+  그대로 유지되고 `cozzyy`는 Collaborator로 남는다.
+- Netlify: 새 계정(`thpharmcorp` 팀)에 저장소를 새로 연결해 사이트를 만들었다(`thpharm`,
+  `thpharm.netlify.app`). 기존 개인 계정의 `thpharm-netlify-app` 사이트는 삭제하지 않고
+  자동 배포만 꺼둔 채로 남겨뒀다 — 나중에 필요하면 완전히 정리할 것.
+- 로컬 git 커밋 이메일이 `taehee.han@thpharm.co.kr`(어느 GitHub 계정에도 인증되지 않은
+  이메일)로 되어 있던 게 예전 "Unrecognized Git contributor" 문제의 근본 원인이었을 가능성이
+  높다고 보고, `thpharmcorp@gmail.com`(thpharmcorp 계정의 Verified/Primary 이메일)로
+  통일했다.
+- 이메일을 통일한 뒤 저장소를 다시 Private으로 전환했다 — Public 상태에서는
+  DECISIONS.md/APPROVED_FACTS.md 같은 내부 전략 문서도 외부에 노출되는 트레이드오프가 있었기
+  때문에, 문제의 근본 원인(이메일 불일치)을 고친 이상 굳이 Public으로 열어둘 이유가 없다고
+  판단했다.
+
 ## 2026-08-13 — v9: NEWSROOM을 INTELLIGENCE로 통합
 
 - HEALTH / INTELLIGENCE / NEWSROOM 3개 메뉴가 카드 형태가 거의 동일해 방문자가 구분하기
