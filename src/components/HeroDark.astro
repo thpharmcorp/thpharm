@@ -66,7 +66,7 @@ const hasVisualSlot = Astro.slots.has('visual');
   <div class="relative mx-auto grid max-w-content items-center gap-10 px-4 py-20 md:grid-cols-[1.15fr_0.85fr] md:px-6 md:py-24">
     <div>
       <p class="mb-5 text-xs font-bold tracking-[0.2em] text-thp-teal">{eyebrow}</p>
-      <h1 class="max-w-3xl text-[3.3rem] font-black leading-[1.12] tracking-tight md:text-5xl md:leading-[1.08]">
+      <h1 class="max-w-3xl text-[2.6rem] font-black leading-[1.15] tracking-tight md:text-4xl md:leading-[1.1]">
         {titleMain}{accent && <span class="text-thp-teal">{accent}</span>}
       </h1>
       <p class="mt-6 max-w-xl text-base leading-relaxed text-white/70 md:text-lg">{body}</p>
@@ -123,6 +123,48 @@ const hasVisualSlot = Astro.slots.has('visual');
                 class="h-full w-full object-contain"
                 style="mask-image: radial-gradient(ellipse 62% 62% at 50% 50%, black 55%, transparent 100%); -webkit-mask-image: radial-gradient(ellipse 62% 62% at 50% 50%, black 55%, transparent 100%);"
               />
+
+              <!-- 상징 배지 3종 — 세포 이미지 하나만으로 허전해 보이지 않도록, 경구형 치료제·Bio-AI·
+                   대사질환(간)을 자체 제작 아이콘으로 표현해 세포 이미지 주위에 배치한다 (2026-08-13). -->
+              <div
+                class="absolute -left-3 top-6 flex h-12 w-12 items-center justify-center rounded-full border border-white/15 bg-thp-navy/70 shadow-lg backdrop-blur-sm md:-left-5 md:top-10 md:h-14 md:w-14"
+                title="경구형 GLP-1"
+                aria-hidden="true"
+              >
+                <svg viewBox="0 0 24 24" fill="none" class="h-6 w-6 text-thp-teal">
+                  <rect x="3.5" y="9" width="17" height="6" rx="3" transform="rotate(-30 12 12)" stroke="currentColor" stroke-width="1.6" />
+                  <line x1="10.5" y1="7.7" x2="13.5" y2="16.3" stroke="currentColor" stroke-width="1.4" transform="rotate(-30 12 12)" />
+                </svg>
+              </div>
+
+              <div
+                class="absolute -left-2 bottom-8 flex h-12 w-12 items-center justify-center rounded-full border border-white/15 bg-thp-navy/70 shadow-lg backdrop-blur-sm md:-left-6 md:bottom-12 md:h-14 md:w-14"
+                title="Bio-AI"
+                aria-hidden="true"
+              >
+                <svg viewBox="0 0 24 24" fill="none" class="h-6 w-6 text-thp-teal">
+                  <circle cx="12" cy="12" r="2.2" fill="currentColor" />
+                  <circle cx="5" cy="6" r="1.5" fill="currentColor" opacity="0.65" />
+                  <circle cx="19" cy="7" r="1.5" fill="currentColor" opacity="0.65" />
+                  <circle cx="6" cy="19" r="1.5" fill="currentColor" opacity="0.65" />
+                  <path d="M12 12L5 6M12 12L19 7M12 12L6 19" stroke="currentColor" stroke-width="1.3" />
+                </svg>
+              </div>
+
+              <div
+                class="absolute -right-2 bottom-2 flex h-12 w-12 items-center justify-center rounded-full border border-white/15 bg-thp-navy/70 shadow-lg backdrop-blur-sm md:-right-4 md:bottom-6 md:h-14 md:w-14"
+                title="대사질환"
+                aria-hidden="true"
+              >
+                <svg viewBox="0 0 24 24" fill="none" class="h-6 w-6 text-thp-teal">
+                  <path
+                    d="M4.2 13.2c-.3-3.8 2.8-7.6 7.4-7.6 3.6 0 6.3 1.8 7.4 4.5.9 2.1-.3 3.8-1.9 3.8-1 0-1.6-1-2.6-1s-1.6 1.3-3 1.3-1.7-1.1-3-1.1-2.2 1.9-3.6 1.9c-.9 0-1.6-.6-1.7-1.8z"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
             </div>
           )
         )

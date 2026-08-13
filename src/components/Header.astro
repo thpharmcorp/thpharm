@@ -24,10 +24,12 @@ function isActive(itemPath: string) {
 <header class="sticky top-0 z-40 border-b border-thp-line bg-white/95 backdrop-blur">
   <div class="mx-auto flex max-w-content items-center justify-between gap-4 px-4 py-3 md:px-6">
     <a href={`/${locale}`} class="flex items-center gap-2">
-      <img src="/images/logo.png" alt="THPharm" class="h-10 w-auto" />
+      <img src="/images/logo.png" alt="THPharm" class="h-8 w-auto" />
     </a>
 
-    <nav class="hidden items-center gap-4 text-sm font-medium text-thp-ink lg:flex" aria-label="Main">
+    <!-- 헤더 내비/버튼은 "읽는 콘텐츠"가 아니라 UI 크롬이라, 전역 폰트 확대(1.5배) 스케일을 타지
+         않도록 일부러 고정 픽셀값을 쓴다 — 안 그러면 좁은 헤더 폭에서 줄바꿈이 생긴다. -->
+    <nav class="hidden items-center gap-4 text-[14px] font-medium text-thp-ink lg:flex" aria-label="Main">
       {
         nav.map((item) => (
           <a
@@ -45,15 +47,15 @@ function isActive(itemPath: string) {
       }
     </nav>
 
-    <div class="hidden items-center gap-3 text-xs font-semibold lg:flex">
+    <div class="hidden items-center gap-3 text-[12px] font-semibold lg:flex">
       <a
         href={`/${locale}/pt`}
-        class="rounded border border-thp-navy px-3 py-1.5 text-thp-navy2 hover:bg-thp-navy hover:text-white"
+        class="whitespace-nowrap rounded border border-thp-navy px-3 py-1.5 text-thp-navy2 hover:bg-thp-navy hover:text-white"
       >
         {strings.ptMode}
       </a>
       <span
-        class="cursor-not-allowed rounded border border-thp-line px-3 py-1.5 text-thp-ink/40"
+        class="cursor-not-allowed whitespace-nowrap rounded border border-thp-line px-3 py-1.5 text-thp-ink/40"
         title={strings.loginComingSoon}
       >
         {strings.login}
@@ -88,7 +90,7 @@ function isActive(itemPath: string) {
   </div>
 
   <div id="mobile-nav" class="hidden border-t border-thp-line bg-white lg:hidden">
-    <nav class="flex flex-col gap-1 px-4 py-3 text-sm font-medium" aria-label="Mobile">
+    <nav class="flex flex-col gap-1 px-4 py-3 text-[15px] font-medium" aria-label="Mobile">
       {
         nav.map((item) => (
           <a
@@ -105,7 +107,7 @@ function isActive(itemPath: string) {
           locales.map((l) => (
             <a
               href={`/${l}/${pageRest}`.replace(/\/+$/, '') || `/${l}`}
-              class={`rounded px-2 py-1 text-xs font-semibold ${l === locale ? 'bg-thp-navy text-white' : 'border border-thp-line text-thp-ink/70'}`}
+              class={`rounded px-2 py-1 text-[12px] font-semibold ${l === locale ? 'bg-thp-navy text-white' : 'border border-thp-line text-thp-ink/70'}`}
             >
               {localeLabel[l]}
             </a>

@@ -36,14 +36,14 @@ const email = 'admin@thpharm.co.kr';
     <div class="grid gap-8 md:grid-cols-3">
       <div>
         <img src="/images/logo.png" alt={companyLegalName} class="mb-3 h-7 w-auto" />
-        <p class="text-xs leading-relaxed text-thp-ink/60">
+        <p class="text-[12px] leading-relaxed text-thp-ink/60">
           {cl.biz} : {bizNo}<br />
           {cl.addr} : {address}<br />
           {cl.tel} : {tel} &nbsp;&nbsp; {cl.fax} : {fax}<br />
           {cl.email} : {email}
         </p>
       </div>
-      <nav class="flex flex-col gap-2 text-sm text-thp-ink/80" aria-label="Footer">
+      <nav class="flex flex-col gap-2 text-[14px] text-thp-ink/80" aria-label="Footer">
         <a href={`/${locale}`} class="hover:text-thp-navy2">{strings.footerAbout}</a>
         <a href={`/${locale}/contact`} class="hover:text-thp-navy2">{strings.footerContact}</a>
         <a href={`/${locale}/privacy`} class="hover:text-thp-navy2">{strings.footerPrivacy}</a>
@@ -65,12 +65,12 @@ const email = 'admin@thpharm.co.kr';
           <div
             id="hidden-sound-note"
             role="status"
-            class="pointer-events-none absolute bottom-11 right-0 w-56 rounded-xl border border-thp-line bg-white p-3 text-xs text-thp-ink/70 opacity-0 shadow-lg transition-opacity md:right-0"
+            class="pointer-events-none absolute bottom-11 right-0 w-56 rounded-xl border border-thp-line bg-white p-3 text-[12px] text-thp-ink/70 opacity-0 shadow-lg transition-opacity md:right-0"
           >
             {hiddenSoundCopy[locale]}
           </div>
         </div>
-        <p class="text-xs text-thp-ink/50">
+        <p class="text-[12px] text-thp-ink/50">
           {strings.footerCopyright.replace('© THPHARM', `© 2023${year > 2023 ? `–${year}` : ''} THPHARM`)}
         </p>
       </div>

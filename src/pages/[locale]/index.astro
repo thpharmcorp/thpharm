@@ -35,6 +35,22 @@ const keyFocusCopy: Record<Locale, { eyebrow: string; title: string }> = {
 const keyFocus = keyFocusCopy[locale];
 const healthTopics = await getCollection('health');
 
+const iconKindMap: Record<string, 'obesity' | 'diabetes' | 'hypertension' | 'mash'> = {
+  obesity: 'obesity',
+  diabetes: 'diabetes',
+  hypertension: 'hypertension',
+  mash: 'mash',
+};
+
+// 2026-08-13: 기존 "Drug Re-engineering → Bio-AI & Data → ... → Global Therapeutics" 전문용어
+// 나열이 "오바하는 느낌"이라는 피드백 — 같은 내용을 편하게 읽히는 한 문장으로 재작성.
+const devEngineCopy: Record<Locale, string> = {
+  kr: '이미 있는 약을 다시 들여다보고, AI로 새롭게 해석하고, 사람에 가깝게 검증해 임상으로 증명합니다 — 그렇게 만든 치료제를 전 세계 환자에게 전합니다.',
+  en: "We take a fresh look at medicines that already exist, reinterpret them with AI, validate them close to the human body, and prove them in the clinic — then bring what we've built to patients around the world.",
+  'zh-cn': '我们重新审视已有的药物,用AI加以新的解读,以贴近人体的方式进行验证,并在临床中加以证明——将由此打造的治疗药物带给全世界的患者。',
+  jp: 'すでにある薬を改めて見直し、AIで新たに解釈し、人に近い方法で検証して臨床で証明します——そうして生まれた治療薬を世界中の患者さんに届けます。',
+};
+
 // 히어로 아래 "실제로 뭘 하고 있는 회사인지" 보여주는 최신 신호 3건 — INTELLIGENCE에서 직접 가져온다.
 // 정적 "증명 문구" 대신 실제로 갱신되는 콘텐츠를 보여주는 편이 더 정직하다는 판단 (2026-08-13).
 const latestSignals = (
@@ -46,7 +62,7 @@ const latestSignals = (
   .sort((a, b) => (a.data.publishedAt < b.data.publishedAt ? 1 : -1))
   .slice(0, 3);
 
-const latestSignalsLabel = { kr: '최근 신호', en: 'Latest Signals', 'zh-cn': '最新动态', jp: '最新シグナル' }[locale];
+const latestSignalsLabel = { kr: '최신 동향', en: 'Latest Signals', 'zh-cn': '最新动态', jp: '最新アップデート' }[locale];
 const latestSignalsMore = { kr: 'INTELLIGENCE 전체 보기', en: 'View all in Intelligence', 'zh-cn': '查看全部 Intelligence', jp: 'INTELLIGENCEをすべて見る' }[locale];
 ---
 
@@ -90,25 +106,30 @@ const latestSignalsMore = { kr: 'INTELLIGENCE 전체 보기', en: 'View all in I
   <section class="border-b border-thp-line bg-white">
     <div class="mx-auto max-w-content px-4 py-16 md:px-6 md:py-20">
       <p class="mb-3 text-xs font-bold tracking-widest text-thp-teal">{keyFocus.eyebrow}</p>
-      <h2 class="mb-10 max-w-lg text-2xl font-extrabold tracking-tight text-thp-navy2 md:text-3xl">
+      <h2 class="mb-10 max-w-2xl whitespace-nowrap text-base font-extrabold tracking-tight text-thp-navy2 md:text-2xl">
         {keyFocus.title}
       </h2>
-      <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
+      <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {
           healthTopics.map((t) => {
             const accent = accentMap[t.data.slug] ?? '#EE7F1A';
             return (
               <a
                 href={`/${locale}/health/${t.data.slug}`}
-                class="group rounded-2xl border border-thp-line p-6 transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-thp-navy/5"
+                class="group relative flex flex-col rounded-2xl border border-thp-line p-6 transition-all hover:-translate-y-1 hover:border-transparent hover:shadow-xl"
+                style={`--tw-shadow-color:${accent}33`}
               >
-                <div
-                  class="flex h-9 w-9 items-center justify-center rounded-full transition-colors"
-                  style={`background:${accent}14; color:${accent}`}
-                >
-                  <HealthSectionIcon kind="body" class="h-4 w-4" />
+                <div class="flex items-start justify-between">
+                  <div
+                    class="flex h-14 w-14 items-center justify-center rounded-2xl transition-transform group-hover:scale-105"
+                    style={`background:${accent}16; color:${accent}`}
+                  >
+                    <HealthSectionIcon kind={iconKindMap[t.data.slug] ?? 'body'} class="h-7 w-7" />
+                  </div>
+                  <span class="text-lg text-thp-ink/20 transition-all group-hover:translate-x-1 group-hover:text-thp-tealDeep">→</span>
                 </div>
-                <p class="mt-4 text-sm font-bold text-thp-navy2 group-hover:text-thp-tealDeep">{t.data.title[fk]}</p>
+                <p class="mt-5 text-sm font-extrabold text-thp-navy2">{t.data.title[fk]}</p>
+                <p class="mt-2 line-clamp-2 text-xs leading-relaxed text-thp-ink/55">{t.data.oneMinuteSummary[fk]}</p>
               </a>
             );
           })
@@ -119,18 +140,8 @@ const latestSignalsMore = { kr: 'INTELLIGENCE 전체 보기', en: 'View all in I
 
   <section class="bg-thp-navy2 text-white">
     <div class="mx-auto max-w-content px-4 py-14 md:px-6 md:py-16">
-      <p class="mb-6 text-[16px] font-bold tracking-widest text-white/50">THPHARM DEVELOPMENT ENGINE</p>
-      <div class="flex flex-wrap items-center gap-x-3 gap-y-3 text-sm font-semibold md:text-base">
-        <span>Drug Re-engineering</span>
-        <span class="text-thp-teal">→</span>
-        <span>Bio-AI & Data</span>
-        <span class="text-thp-teal">→</span>
-        <span>Preclinical / Bioprinting</span>
-        <span class="text-thp-teal">→</span>
-        <span>Clinical Development</span>
-        <span class="text-thp-teal">→</span>
-        <span class="text-thp-teal">Global Therapeutics</span>
-      </div>
+      <p class="mb-4 text-[16px] font-bold tracking-widest text-white/50">HOW WE WORK</p>
+      <p class="max-w-2xl text-base leading-relaxed md:text-lg">{devEngineCopy[locale]}</p>
     </div>
   </section>
 
