@@ -24,30 +24,33 @@ const heroCopy = {
     title: '대사질환은 하나씩 오지 않습니다.',
     body: '비만, 당뇨, 고혈압, MASH는 서로 떨어진 질환이 아닙니다. THPHARM HEALTH는 복잡하게 연결된 대사질환과 빠르게 변화하는 치료 정보를 누구나 쉽게 이해할 수 있도록 설명합니다.',
     ctaPrimary: '연결된 질환 살펴보기',
-    ctaSecondary: 'SOURCE-FIRST 원칙',
   },
   en: {
     title: 'Metabolic diseases are connected.',
     body: 'Obesity, diabetes, hypertension, and MASH are not separate conditions. THPHARM HEALTH explains the complex connections between metabolic diseases and fast-changing treatment information in plain language.',
     ctaPrimary: 'Explore the connections',
-    ctaSecondary: 'Our SOURCE-FIRST policy',
   },
   'zh-cn': {
     title: '代谢性疾病并非孤立发生。',
     body: '肥胖症、糖尿病、高血压与MASH并非彼此独立的疾病。THPHARM HEALTH以易懂的方式说明代谢性疾病之间复杂的联系与快速变化的治疗信息。',
     ctaPrimary: '查看疾病关联',
-    ctaSecondary: 'SOURCE-FIRST 原则',
   },
   jp: {
     title: '代謝性疾患は一つずつ訪れるわけではありません。',
     body: '肥満、糖尿病、高血圧、MASHは互いに切り離された疾患ではありません。THPHARM HEALTHは複雑に絡み合う代謝性疾患と、急速に変化する治療情報を誰にでもわかりやすく説明します。',
     ctaPrimary: '疾患のつながりを見る',
-    ctaSecondary: 'SOURCE-FIRSTの方針',
   },
 } as const;
 const hero = heroCopy[locale];
 
 const topics = await getCollection('health');
+
+const iconKindMap: Record<string, 'obesity' | 'diabetes' | 'hypertension' | 'mash'> = {
+  obesity: 'obesity',
+  diabetes: 'diabetes',
+  hypertension: 'hypertension',
+  mash: 'mash',
+};
 ---
 
 <BaseLayout locale={locale} title={hero.title} description={hero.body}>
@@ -57,42 +60,35 @@ const topics = await getCollection('health');
     body={hero.body}
     ctaPrimaryLabel={hero.ctaPrimary}
     ctaPrimaryHref={`/${locale}/health#topics`}
-    ctaSecondaryLabel={hero.ctaSecondary}
-    ctaSecondaryHref={`/${locale}/sources`}
     tags={['OBESITY', 'DIABETES', 'HYPERTENSION', 'MASH']}
   />
 
   <section id="topics" class="bg-white scroll-mt-20">
     <div class="mx-auto max-w-content px-4 py-16 md:px-6 md:py-20">
-      <div class="grid gap-4 md:grid-cols-4">
+      <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {
           topics.map((t) => {
             const accent = accentMap[t.data.slug] ?? '#12A594';
             return (
               <a
                 href={`/${locale}/health/${t.data.slug}`}
-                class="group rounded-2xl border border-thp-line p-6 transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-thp-navy/5"
-                style={`--tw-shadow-color:${accent}`}
+                class="group relative flex flex-col rounded-2xl border border-thp-line p-6 transition-all hover:-translate-y-1 hover:border-transparent hover:shadow-xl"
+                style={`--tw-shadow-color:${accent}33`}
               >
-                <div
-                  class="flex h-10 w-10 items-center justify-center rounded-full transition-colors"
-                  style={`background:${accent}14; color:${accent}`}
-                >
-                  <HealthSectionIcon kind="body" class="h-5 w-5" />
+                <div class="flex items-start justify-between">
+                  <div
+                    class="flex h-14 w-14 items-center justify-center rounded-2xl transition-transform group-hover:scale-105"
+                    style={`background:${accent}16; color:${accent}`}
+                  >
+                    <HealthSectionIcon kind={iconKindMap[t.data.slug] ?? 'body'} class="h-7 w-7" />
+                  </div>
+                  <span class="text-lg text-thp-ink/20 transition-all group-hover:translate-x-1 group-hover:text-thp-tealDeep">→</span>
                 </div>
-                <p class="mt-4 text-sm font-bold text-thp-navy2">{t.data.title[fk]}</p>
-                <p class="mt-2 line-clamp-2 text-xs text-thp-ink/50">{t.data.oneMinuteSummary[fk]}</p>
-                <p class="mt-3 h-0.5 w-8 rounded-full transition-all group-hover:w-12" style={`background:${accent}`} />
+                <p class="mt-5 text-base font-extrabold text-thp-navy2">{t.data.title[fk]}</p>
+                <p class="mt-2 line-clamp-3 text-xs leading-relaxed text-thp-ink/55">{t.data.oneMinuteSummary[fk]}</p>
               </a>
             );
           })
-        }
-        {
-          topics.length < 4 && (
-            <div class="flex items-center justify-center rounded-2xl border border-dashed border-thp-line p-6 text-center text-xs text-thp-ink/30">
-              당뇨 · 고혈압 · MASH 페이지 준비 중
-            </div>
-          )
         }
       </div>
 

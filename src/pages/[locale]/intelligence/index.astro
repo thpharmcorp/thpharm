@@ -24,7 +24,12 @@ const hero = heroCopy[locale];
 const feedItems = (
   await getCollection(
     'intelligence',
-    (e) => e.data.kind === 'research_radar' || e.data.kind === 'thpharm_view' || e.data.kind === 'scope_spotlight' || e.data.kind === 'news'
+    (e) =>
+      e.data.kind === 'research_radar' ||
+      e.data.kind === 'thpharm_view' ||
+      e.data.kind === 'scope_spotlight' ||
+      e.data.kind === 'news' ||
+      e.data.kind === 'paper'
   )
 ).sort((a, b) => (a.data.publishedAt < b.data.publishedAt ? 1 : -1));
 
@@ -70,10 +75,10 @@ const scopeStages: Record<Locale, Array<{ letter: string; label: string; meaning
 
 // 분류체계(카드 필터) — kind별 라벨. "신문기사/연구신호/THPHARM 관점/스포트라이트" 4종.
 const kindLabels: Record<Locale, Record<string, string>> = {
-  kr: { news: '신문기사', research_radar: '연구 신호', thpharm_view: 'THPHARM 관점', scope_spotlight: '스포트라이트' },
-  en: { news: 'News', research_radar: 'Research Signal', thpharm_view: 'THPHARM View', scope_spotlight: 'Spotlight' },
-  'zh-cn': { news: '新闻', research_radar: '研究信号', thpharm_view: 'THPHARM观点', scope_spotlight: '专题聚焦' },
-  jp: { news: 'ニュース', research_radar: '研究シグナル', thpharm_view: 'THPHARM視点', scope_spotlight: 'スポットライト' },
+  kr: { news: '신문기사', paper: '논문', research_radar: '연구 신호', thpharm_view: 'THPHARM 관점', scope_spotlight: '스포트라이트' },
+  en: { news: 'News', paper: 'Paper', research_radar: 'Research Signal', thpharm_view: 'THPHARM View', scope_spotlight: 'Spotlight' },
+  'zh-cn': { news: '新闻', paper: '论文', research_radar: '研究信号', thpharm_view: 'THPHARM观点', scope_spotlight: '专题聚焦' },
+  jp: { news: 'ニュース', paper: '論文', research_radar: '研究シグナル', thpharm_view: 'THPHARM視点', scope_spotlight: 'スポットライト' },
 };
 const kl = kindLabels[locale];
 const allLabel = { kr: '전체', en: 'ALL', 'zh-cn': '全部', jp: 'すべて' }[locale];

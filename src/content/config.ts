@@ -77,10 +77,9 @@ const companyLanding = defineCollection({
     heroTitle: localized,
     heroSubtitle: localizedOptional, // 기획안에 두 개의 메인카피 후보가 있어 보조 카피로 수용
     heroBody: localized,
-    keywordStrip: z.array(localized).default([]),
-    // 2026-08-13: 히어로 아래 "실제로 뭘 가진 회사인지" 증명하는 짧은 사실 스트립.
-    // 반드시 사이트 내 다른 곳(PIPELINE/뉴스 등)에서 검증 가능한 사실만 넣는다 — SOURCE-FIRST.
-    proofPoints: z.array(localized).default([]),
+    // keywordStrip(흐린 태그 나열)과 정적 proofPoints는 2026-08-13 사용자 피드백으로 제거.
+    // "증거"는 이제 히어로 아래 INTELLIGENCE 최신 항목을 실시간으로 보여주는 방식으로 대체한다
+    // (index.astro에서 getCollection('intelligence')로 직접 조회, 별도 필드 불필요).
     ctaPrimary: localized,
     ctaSecondary: localized,
     lastUpdated: z.string(),
@@ -208,7 +207,8 @@ const intelligence = defineCollection({
   type: 'data',
   schema: z.object({
     code: z.string(),
-    kind: z.enum(['research_radar', 'thpharm_view', 'scope_spotlight', 'bio_ai_atlas_card', 'news']),
+    // 2026-08-13: 'paper' 추가 — 저널/프리프린트 원문을 직접 요약하는 항목 전용 (research_radar와 구분).
+    kind: z.enum(['research_radar', 'thpharm_view', 'scope_spotlight', 'bio_ai_atlas_card', 'news', 'paper']),
     status: contentStatus,
     title: localized,
     dek: localized, // 부제 — news 항목은 한 줄 요약으로 사용

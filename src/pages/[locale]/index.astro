@@ -35,12 +35,19 @@ const keyFocusCopy: Record<Locale, { eyebrow: string; title: string }> = {
 const keyFocus = keyFocusCopy[locale];
 const healthTopics = await getCollection('health');
 
-// 히어로 proofPoints와 1:1로 매칭되는 근거 페이지 — 각 사실을 클릭하면 바로 검증할 수 있게 연결한다.
-const proofLinks = [
-  `/${locale}/pipeline/thp-001`,
-  `/${locale}/intelligence/news-deep-tech-tips-mash`,
-  `/${locale}/about`,
-];
+// 히어로 아래 "실제로 뭘 하고 있는 회사인지" 보여주는 최신 신호 3건 — INTELLIGENCE에서 직접 가져온다.
+// 정적 "증명 문구" 대신 실제로 갱신되는 콘텐츠를 보여주는 편이 더 정직하다는 판단 (2026-08-13).
+const latestSignals = (
+  await getCollection(
+    'intelligence',
+    (e) => e.data.kind === 'news' || e.data.kind === 'research_radar' || e.data.kind === 'paper' || e.data.kind === 'thpharm_view'
+  )
+)
+  .sort((a, b) => (a.data.publishedAt < b.data.publishedAt ? 1 : -1))
+  .slice(0, 3);
+
+const latestSignalsLabel = { kr: '최근 신호', en: 'Latest Signals', 'zh-cn': '最新动态', jp: '最新シグナル' }[locale];
+const latestSignalsMore = { kr: 'INTELLIGENCE 전체 보기', en: 'View all in Intelligence', 'zh-cn': '查看全部 Intelligence', jp: 'INTELLIGENCEをすべて見る' }[locale];
 ---
 
 <BaseLayout locale={locale} title={d.heroTitle[fk]} description={d.heroBody[fk]}>
@@ -52,21 +59,26 @@ const proofLinks = [
     ctaPrimaryHref={`/${locale}/about`}
     ctaSecondaryLabel={d.ctaSecondary[fk]}
     ctaSecondaryHref={`/${locale}/pipeline`}
-    tags={d.keywordStrip.map((k) => k[fk])}
   />
 
   {
-    d.proofPoints.length > 0 && (
+    latestSignals.length > 0 && (
       <section class="border-b border-thp-line bg-thp-mist">
-        <div class="mx-auto max-w-content px-4 py-8 md:px-6">
+        <div class="mx-auto max-w-content px-4 py-10 md:px-6">
+          <div class="mb-5 flex items-center justify-between">
+            <p class="text-xs font-bold tracking-widest text-thp-teal">{latestSignalsLabel}</p>
+            <a href={`/${locale}/intelligence`} class="text-xs font-bold text-thp-ink/40 hover:text-thp-tealDeep">
+              {latestSignalsMore} →
+            </a>
+          </div>
           <div class="grid gap-3 sm:grid-cols-3">
-            {d.proofPoints.map((p, i) => (
+            {latestSignals.map((item) => (
               <a
-                href={proofLinks[i] ?? `/${locale}/about`}
-                class="flex items-start gap-3 rounded-xl border border-thp-line bg-white p-4 transition-colors hover:border-thp-teal"
+                href={`/${locale}/intelligence/${item.id}`}
+                class="flex flex-col rounded-xl border border-thp-line bg-white p-4 transition-colors hover:border-thp-teal"
               >
-                <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-thp-teal" />
-                <p class="text-sm font-semibold leading-snug text-thp-navy2">{p[fk]}</p>
+                <span class="text-[10px] font-bold tracking-wider text-thp-tealDeep">{item.data.publishedAt}</span>
+                <p class="mt-2 text-sm font-bold leading-snug text-thp-navy2 line-clamp-2">{item.data.title[fk]}</p>
               </a>
             ))}
           </div>
