@@ -36,15 +36,15 @@ const hasVisualSlot = Astro.slots.has('visual');
   <!-- 배경 텍스처: 은은한 분자 네트워크 라인 -->
   <svg class="absolute inset-0 h-full w-full opacity-[0.18]" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
     <g fill="none" stroke="rgba(255,255,255,.16)" stroke-width="1">
-      <circle cx="180" cy="140" r="3" fill="rgba(238,127,26,.7)" stroke="none"></circle>
+      <circle cx="180" cy="140" r="3" fill="rgba(245,197,24,.7)" stroke="none"></circle>
       <circle cx="360" cy="90" r="2.5" fill="rgba(255,255,255,.5)" stroke="none"></circle>
-      <circle cx="620" cy="200" r="3" fill="rgba(238,127,26,.7)" stroke="none"></circle>
+      <circle cx="620" cy="200" r="3" fill="rgba(245,197,24,.7)" stroke="none"></circle>
       <circle cx="860" cy="120" r="2.5" fill="rgba(255,255,255,.5)" stroke="none"></circle>
-      <circle cx="1020" cy="260" r="3" fill="rgba(238,127,26,.7)" stroke="none"></circle>
+      <circle cx="1020" cy="260" r="3" fill="rgba(245,197,24,.7)" stroke="none"></circle>
       <circle cx="250" cy="420" r="2.5" fill="rgba(255,255,255,.4)" stroke="none"></circle>
-      <circle cx="520" cy="480" r="3" fill="rgba(238,127,26,.6)" stroke="none"></circle>
+      <circle cx="520" cy="480" r="3" fill="rgba(245,197,24,.6)" stroke="none"></circle>
       <circle cx="780" cy="440" r="2.5" fill="rgba(255,255,255,.4)" stroke="none"></circle>
-      <circle cx="1000" cy="520" r="3" fill="rgba(238,127,26,.6)" stroke="none"></circle>
+      <circle cx="1000" cy="520" r="3" fill="rgba(245,197,24,.6)" stroke="none"></circle>
       <path d="M180,140 L360,90 L620,200 L860,120 L1020,260"></path>
       <path d="M250,420 L520,480 L780,440 L1000,520"></path>
       <path d="M360,90 L520,480 M620,200 L780,440 M860,120 L1000,520"></path>
@@ -54,20 +54,20 @@ const hasVisualSlot = Astro.slots.has('visual');
   <!-- 라디얼 글로우: 헤드라인 뒤 입체감 -->
   <div
     class="pointer-events-none absolute -left-24 -top-24 h-[420px] w-[420px] rounded-full opacity-30 blur-[100px]"
-    style="background: radial-gradient(circle, #EE7F1A 0%, transparent 70%);"
+    style="background: radial-gradient(circle, #F5C518 0%, transparent 70%);"
   >
   </div>
   <div
     class="pointer-events-none absolute -bottom-32 -right-16 h-[380px] w-[380px] rounded-full opacity-20 blur-[110px]"
-    style="background: radial-gradient(circle, #EE7F1A 0%, transparent 70%);"
+    style="background: radial-gradient(circle, #F5C518 0%, transparent 70%);"
   >
   </div>
 
   <div class="relative mx-auto grid max-w-content items-center gap-10 px-4 py-20 md:grid-cols-[1.15fr_0.85fr] md:px-6 md:py-24">
     <div>
-      <p class="mb-5 text-xs font-bold tracking-[0.2em] text-thp-teal">{eyebrow}</p>
+      <p class="mb-5 text-xs font-bold tracking-[0.2em] text-[#F5C518]">{eyebrow}</p>
       <h1 class="max-w-3xl text-[2.6rem] font-black leading-[1.15] tracking-tight md:text-4xl md:leading-[1.1]">
-        {titleMain}{accent && <span class="text-thp-teal">{accent}</span>}
+        {titleMain}{accent && <span class="text-[#F5C518]">{accent}</span>}
       </h1>
       <p class="mt-6 max-w-xl text-base leading-relaxed text-white/70 md:text-lg">{body}</p>
 
@@ -77,7 +77,7 @@ const hasVisualSlot = Astro.slots.has('visual');
             {ctaPrimaryLabel && (
               <a
                 href={ctaPrimaryHref}
-                class="rounded-full bg-thp-teal px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-thp-tealDeep"
+                class="rounded-full bg-[#F5C518] px-6 py-3 text-sm font-bold text-thp-navy transition-colors hover:bg-[#D4A70F]"
               >
                 {ctaPrimaryLabel}
               </a>
@@ -113,7 +113,7 @@ const hasVisualSlot = Astro.slots.has('visual');
             <div class="relative mx-auto aspect-[4/3] w-full max-w-[420px]">
               <div
                 class="pointer-events-none absolute inset-0 -z-10 rounded-full opacity-60 blur-[60px]"
-                style="background: radial-gradient(circle, rgba(238,127,26,.4) 0%, rgba(196,101,15,.22) 45%, transparent 75%);"
+                style="background: radial-gradient(circle, rgba(245,197,24,.4) 0%, rgba(212,167,15,.22) 45%, transparent 75%);"
               />
               <img
                 src={visualImage}
@@ -131,7 +131,7 @@ const hasVisualSlot = Astro.slots.has('visual');
                 title="경구형 GLP-1"
                 aria-hidden="true"
               >
-                <svg viewBox="0 0 24 24" fill="none" class="h-6 w-6 text-thp-teal">
+                <svg viewBox="0 0 24 24" fill="none" class="h-6 w-6 text-[#F5C518]">
                   <rect x="3.5" y="9" width="17" height="6" rx="3" transform="rotate(-30 12 12)" stroke="currentColor" stroke-width="1.6" />
                   <line x1="10.5" y1="7.7" x2="13.5" y2="16.3" stroke="currentColor" stroke-width="1.4" transform="rotate(-30 12 12)" />
                 </svg>
@@ -142,7 +142,7 @@ const hasVisualSlot = Astro.slots.has('visual');
                 title="Bio-AI"
                 aria-hidden="true"
               >
-                <svg viewBox="0 0 24 24" fill="none" class="h-6 w-6 text-thp-teal">
+                <svg viewBox="0 0 24 24" fill="none" class="h-6 w-6 text-[#F5C518]">
                   <circle cx="12" cy="12" r="2.2" fill="currentColor" />
                   <circle cx="5" cy="6" r="1.5" fill="currentColor" opacity="0.65" />
                   <circle cx="19" cy="7" r="1.5" fill="currentColor" opacity="0.65" />
@@ -156,7 +156,7 @@ const hasVisualSlot = Astro.slots.has('visual');
                 title="대사질환"
                 aria-hidden="true"
               >
-                <svg viewBox="0 0 24 24" fill="none" class="h-6 w-6 text-thp-teal">
+                <svg viewBox="0 0 24 24" fill="none" class="h-6 w-6 text-[#F5C518]">
                   <path
                     d="M4.2 13.2c-.3-3.8 2.8-7.6 7.4-7.6 3.6 0 6.3 1.8 7.4 4.5.9 2.1-.3 3.8-1.9 3.8-1 0-1.6-1-2.6-1s-1.6 1.3-3 1.3-1.7-1.1-3-1.1-2.2 1.9-3.6 1.9c-.9 0-1.6-.6-1.7-1.8z"
                     stroke="currentColor"
