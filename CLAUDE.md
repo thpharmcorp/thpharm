@@ -19,9 +19,9 @@
 - Bio-AI Playground는 Bio-AI Atlas 1개만 (카드형 UI, 3D 렌더링 없음). Protein 3D Explorer /
   Metabolic Target Explorer는 V1.5.
 - 콘텐츠 큐레이션은 자동 배치가 아니라 대표가 매주 직접 Claude에게 명령하는 수동 워크플로.
-- 폰트는 self-host (Google Fonts CDN 금지 — 中 접속성 고려). 현재는 시스템 폰트로 폴백 중이며
-  실제 Pretendard(Sans/고딕, Bold~Black 웨이트) .woff2 파일을 `/public/fonts`에 넣으면
-  `src/styles/global.css`의 주석 처리된 `@font-face`를 활성화합니다.
+- 폰트는 self-host (Google Fonts CDN 금지 — 中 접속성 고려). Pretendard Regular/Bold/Black
+  .woff2 파일을 `/public/fonts`에 배치하고 `src/styles/global.css`의 `@font-face`를
+  활성화 완료(2026-08-13). zh-CN용 Noto Sans SC는 아직 미배치 — 필요 시 같은 방식으로 추가.
 - 배포 호스트: 기획안 원안은 Cloudflare Pages였으나, 실사용자가 Netlify로 직접 배포하기로 결정.
   Cloudflare Pages 관련 문구가 남아 있다면 Netlify 기준으로 갱신 필요.
 

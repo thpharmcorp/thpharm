@@ -14,6 +14,7 @@
 | 이 개발 환경에서 npm install이 안 됨 | Claude Cowork 샌드박스의 네트워크 정책 때문. Team/Enterprise 조직 설정에서 네트워크 egress를 열거나, 로컬 컴퓨터에서 빌드. DEPLOYMENT.md 참고 |
 | 콘텐츠 스키마를 바꿨는데 기존 JSON이 깨짐 | `src/content/config.ts` 변경 시 해당 컬렉션의 모든 JSON 파일을 함께 갱신해야 함. 하나씩 훑어서 새 필드 추가/필드명 변경 반영 |
 | `git commit`/`git status`가 `unable to unlink '.git/index.lock' (또는 objects/**/tmp_obj_*, HEAD.lock)`: `Operation not permitted` 경고를 뱉음 | Cowork 데스크톱 브리지로 마운트된 로컬 폴더는 파일 삭제(unlink)가 막혀 있어 git이 자기 lock 파일을 못 지움. 대부분 경고일 뿐 커밋 자체는 성공하니 `git log`로 확인. 만약 `fatal: Unable to create '.../index.lock': File exists`로 완전히 막히면, 삭제 대신 `mv .git/index.lock <repo 밖 다른 폴더>`로 옮겨서 치우고 재시도 (2026-08-13 재발) |
+| 폰트/이미지 등 외부 CDN(jsdelivr, GitHub raw, unpkg 등) 정적 자산을 Claude가 직접 다운로드하려 하면 `curl: (56) CONNECT tunnel failed, response 403` | Cowork 샌드박스는 npm 레지스트리 외 임의 외부 사이트 다운로드가 막혀 있음(사용자 컴퓨터 쪽 device_bash도 네트워크 접근 없음 — 마찬가지). 우회 불가. 사용자에게 정확한 다운로드 URL과 저장 위치(`/public/fonts` 등)를 안내해 사용자 브라우저로 직접 받아 넣게 한 뒤, `device_list_dir`로 배치 확인하고 이어서 코드(예: `global.css`의 `@font-face`)를 활성화 (2026-08-13, Pretendard 폰트 배치 시) |
 
 ## 보안·키 점검 (V1.5 이후 해당)
 

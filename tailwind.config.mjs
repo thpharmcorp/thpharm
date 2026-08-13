@@ -40,7 +40,7 @@ export default {
       },
       fontFamily: {
         // 셀프호스팅 원칙(v2.1 §11): Google Fonts CDN 대신 로컬 폰트 파일 사용.
-        // 실제 .woff2 파일은 build 전 /public/fonts 에 넣어야 함 — 지금은 시스템 폰트로 폴백.
+        // Pretendard Regular/Bold/Black .woff2 /public/fonts에 배치 완료(2026-08-13, global.css 참고).
         sans: [
           'Pretendard',
           '-apple-system',
