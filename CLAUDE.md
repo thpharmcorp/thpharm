@@ -58,9 +58,14 @@
 - Netlify 사이트: `thpharm` (`thpharm.netlify.app`, thpharmcorp 팀 계정 소유). 기존
   `thpharm-netlify-app`(개인 계정)은 더 이상 쓰지 않음 — 자동 배포만 꺼둔 상태로 미정리 남아있음.
 - 로컬 git 커밋 이메일은 `thpharmcorp@gmail.com`(thpharmcorp GitHub 계정의 Verified/Primary
-  이메일)로 통일했습니다. **새 커밋을 만들 때 이 이메일과 다른 값이 설정되어 있으면 안 됩니다** —
-  Netlify가 "Unrecognized Git contributor"로 private repo 빌드를 막는 원인이 됩니다.
-- 저장소는 이전 이메일 불일치 문제가 해결되어 2026-08-13부로 다시 Private 전환했습니다.
+  이메일)로 통일했습니다.
+- 저장소는 **Public 상태를 유지**합니다(2026-08-13 확인). 이메일을 thpharmcorp로 맞춘 뒤 Private
+  전환을 시도했지만, Netlify 무료 플랜은 private repo에서 "컨트리뷰터 1명"만 허용하는데
+  `cozzyy`가 여전히 Collaborator로 남아 push 이력에 등장하는 한 email 일치 여부와 무관하게
+  "Unrecognized Git contributor"로 빌드가 막혔습니다(Netlify의 Git Contributor 연결 기능에도
+  cozzyy를 추가로 연결하는 옵션은 없었음). Netlify Pro로 업그레이드하거나 cozzyy를
+  Collaborator에서 제거하기 전까지는 Public 유지가 현실적인 선택입니다 — Private 재검토 시
+  RUNBOOK.md의 관련 항목 참고.
 
 ## 배포 워크플로 (변경 없음)
 

@@ -17,10 +17,13 @@
   이메일)로 되어 있던 게 예전 "Unrecognized Git contributor" 문제의 근본 원인이었을 가능성이
   높다고 보고, `thpharmcorp@gmail.com`(thpharmcorp 계정의 Verified/Primary 이메일)로
   통일했다.
-- 이메일을 통일한 뒤 저장소를 다시 Private으로 전환했다 — Public 상태에서는
-  DECISIONS.md/APPROVED_FACTS.md 같은 내부 전략 문서도 외부에 노출되는 트레이드오프가 있었기
-  때문에, 문제의 근본 원인(이메일 불일치)을 고친 이상 굳이 Public으로 열어둘 이유가 없다고
-  판단했다.
+- 이메일을 통일한 뒤 저장소를 Private으로 전환해봤으나, Netlify 무료 플랜은 private repo에서
+  "컨트리뷰터 1명"만 인식하는데 `cozzyy`가 여전히 Collaborator로 남아 push 이력에 등장하는 한
+  이메일 일치 여부와 무관하게 "Unrecognized Git contributor"로 빌드가 계속 막혔다. Netlify Pro
+  업그레이드나 cozzyy를 Collaborator에서 제거하는 것 둘 다 이번엔 하지 않기로 하고, 저장소를
+  다시 Public으로 되돌리는 쪽을 택했다(2026-08-13) — Public 상태에서는 DECISIONS.md/
+  APPROVED_FACTS.md 같은 내부 전략 문서도 외부에 노출되는 트레이드오프가 있으므로, Private
+  재검토 필요성이 다시 생기면 RUNBOOK.md를 참고할 것.
 
 ## 2026-08-13 — v9: NEWSROOM을 INTELLIGENCE로 통합
 
