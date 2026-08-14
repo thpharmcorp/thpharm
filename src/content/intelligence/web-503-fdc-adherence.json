@@ -1,0 +1,55 @@
+{
+  "code": "WEB-503",
+  "kind": "paper",
+  "status": "company_confirm",
+  "title": {
+    "kr": "복합제가 당뇨병 약물 순응도를 높인다 — 최신 내러티브 리뷰",
+    "en": "Fixed-Dose Combinations Improve Medication Adherence in Type 2 Diabetes — A New Narrative Review",
+    "zh_cn": "复方制剂可提高2型糖尿病患者的用药依从性 — 最新叙述性综述",
+    "jp": "配合剤が2型糖尿病の服薬アドヒアランスを高める — 最新のナラティブレビュー"
+  },
+  "dek": {
+    "kr": "알약 개수를 줄이는 것 자체가 치료 성과를 바꾸는 변수임을 재확인한 리뷰",
+    "en": "A review reaffirming that pill burden itself is a lever for treatment outcomes",
+    "zh_cn": "该综述再次证实,减少药片数量本身就是影响治疗结果的关键变量",
+    "jp": "服薬錠数を減らすこと自体が治療成果を左右する変数であると再確認したレビュー"
+  },
+  "relevance": "Direct",
+  "body": {
+    "kr": "Highton, Funnell, Khunti가 Diabetes Therapy에 발표한 이 내러티브 리뷰는 제2형 당뇨병 환자에서 복합제(FDC, 두 개 이상의 약물을 하나의 정제로 결합한 제형)가 개별 병용요법(free-equivalent combination) 대비 순응도를 일관되게 높인다는 관찰연구 결과들을 정리했다. 체계적 문헌고찰·메타분석에서도 단일요법에서 병용요법으로 전환하는 시점에 순응도가 떨어지는 현상을 복합제가 완화시키는 것으로 나타났다. 치료 만족도 향상과 잠재적 비용효과성도 부가적 이점으로 제시됐다. 다만 저자들은 복합제의 용량 조절 유연성이 제한적이라는 점, 장기 순응도 데이터가 아직 부족하다는 점을 한계로 지적하며 추가 RCT의 필요성을 강조했다.",
+    "en": "This narrative review by Highton, Funnell, and Khunti, published in Diabetes Therapy, synthesizes observational evidence that fixed-dose combination (FDC) therapy — two or more drugs combined into a single tablet — consistently improves adherence in people with type 2 diabetes compared with free-equivalent combination regimens taken as separate pills. Systematic reviews and meta-analyses cited in the paper also show FDCs blunt the adherence decline that typically occurs when patients transition from monotherapy to combination therapy. Higher treatment satisfaction and potential cost-effectiveness were noted as additional benefits. The authors flag limited dosing flexibility and a lack of long-term adherence data as open limitations, and call for further randomized controlled trials to confirm the effect.",
+    "zh_cn": "Highton、Funnell与Khunti在《Diabetes Therapy》发表的这篇叙述性综述,系统整理了观察性研究证据:相较于以独立药片形式服用的等效联合用药方案,复方制剂(FDC,将两种以上药物合并为单一片剂)能够持续提高2型糖尿病患者的用药依从性。文中引用的系统综述与荟萃分析也显示,复方制剂可缓解患者从单药治疗转为联合治疗时通常出现的依从性下降。治疗满意度提升与潜在的成本效益也被列为附加获益。作者同时指出复方制剂在剂量调整灵活性方面存在局限,长期依从性数据仍然不足,并呼吁开展更多随机对照试验加以验证。",
+    "jp": "Highton、Funnell、Khuntiによる本ナラティブレビュー(Diabetes Therapy誌掲載)は、2型糖尿病患者において配合剤(FDC、2種類以上の薬剤を1錠にまとめた剤形)が、個別に服用する同等併用療法と比較して一貫してアドヒアランスを高めるという観察研究のエビデンスを整理した。論文が引用するシステマティックレビュー・メタ分析でも、単剤療法から併用療法へ移行する際に通常生じるアドヒアランス低下を配合剤が緩和することが示されている。治療満足度の向上や潜在的な費用対効果も付加的な利点として挙げられた。一方で著者らは、配合剤は用量調整の柔軟性が限られる点、長期のアドヒアランスデータがまだ不足している点を限界として指摘し、さらなるRCTの必要性を強調した。"
+  },
+  "thpharmView": {
+    "kr": "THP-001(Dapatelmi™)이 SGLT2 억제제와 ARB를 하나의 정제로 묶은 이유가 바로 이 지점이다 — 당뇨와 고혈압을 함께 관리해야 하는 환자에게 알약 개수를 줄이는 것 자체가 실제 치료 성과로 이어진다는, 임상적으로 반복 검증된 근거를 그대로 따른다.",
+    "en": "This is precisely the rationale behind THP-001 (Dapatelmi™) combining an SGLT2 inhibitor and an ARB into a single tablet: for patients managing diabetes and hypertension together, reducing pill count is a clinically repeated, evidence-backed lever for real-world treatment outcomes — not just a convenience feature.",
+    "zh_cn": "这正是THP-001(Dapatelmi™)将SGLT2抑制剂与ARB合并为单一片剂的理由所在——对于需要同时管理糖尿病与高血压的患者而言,减少药片数量本身就是被临床反复验证、能够转化为实际治疗成果的关键因素,而不仅仅是便利性设计。",
+    "jp": "THP-001(Dapatelmi™)がSGLT2阻害薬とARBを1錠にまとめた理由はまさにここにある——糖尿病と高血圧を同時に管理する必要がある患者にとって、服薬錠数を減らすこと自体が、臨床的に繰り返し検証されてきた、実際の治療成果につながる要因である。"
+  },
+  "whatToWatch": {
+    "kr": "장기(1년 이상) 순응도 추적 데이터 / 복합제 vs 개별처방 RCT 결과 / 용량 조절이 필요한 환자군에서의 복합제 한계 / THP-001 임상 3상에서의 순응도 지표 반영 여부",
+    "en": "Long-term (1yr+) adherence follow-up data / head-to-head RCTs of FDC vs. free-equivalent regimens / how FDC limitations play out in patients who need dose titration / whether adherence endpoints get built into THP-001's Phase 3 design",
+    "zh_cn": "长期(1年以上)依从性随访数据 / 复方制剂与独立处方的头对头RCT结果 / 复方制剂在需要剂量调整患者群体中的局限性 / THP-001三期临床是否纳入依从性指标",
+    "jp": "長期(1年以上)のアドヒアランス追跡データ / 配合剤と個別処方を比較するRCTの結果 / 用量調整が必要な患者群における配合剤の限界 / THP-001の第3相試験でアドヒアランス指標が組み込まれるか"
+  },
+  "keyPoints": [],
+  "relatedLinks": [],
+  "tags": [
+    { "label": "FDC" },
+    { "label": "Type 2 Diabetes" },
+    { "label": "Adherence" },
+    { "label": "Diabetes Therapy", "url": "https://doi.org/10.1007/s13300-026-01863-7" }
+  ],
+  "sourceMeta": {
+    "source_type": "Journal",
+    "source_title": "Diabetes Therapy 2026;17(5):627-640",
+    "publisher": "Diabetes Therapy (Springer/Adis)",
+    "published_at": "2026-04-10",
+    "source_url": "https://link.springer.com/article/10.1007/s13300-026-01863-7",
+    "doi": "10.1007/s13300-026-01863-7",
+    "last_verified": "2026-08-13",
+    "peer_review_status": "peer-reviewed"
+  },
+  "publishedAt": "2026-08-13"
+}
