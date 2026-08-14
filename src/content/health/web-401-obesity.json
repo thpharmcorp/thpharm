@@ -9,10 +9,10 @@
     "jp": "肥満症"
   },
   "oneMinuteSummary": {
-    "kr": "비만은 단순히 체중이 많이 나가는 상태가 아니라, 체지방이 과도하게 축적되어 여러 신체 기능에 영향을 주는 만성 대사질환입니다. 당뇨, 고혈압, MASH 등 다른 대사질환과 밀접하게 연결되어 있습니다.",
-    "en": "Obesity is not simply a matter of high body weight — it is a chronic metabolic disease in which excess body fat affects multiple body functions. It is closely connected to other metabolic conditions such as diabetes, hypertension, and MASH.",
-    "zh_cn": "肥胖症并非单纯体重过重,而是一种由于体脂过度堆积而影响多种身体机能的慢性代谢性疾病。它与糖尿病、高血压、MASH等其他代谢性疾病密切相关。",
-    "jp": "肥満症は単に体重が多いという状態ではなく、過剰な体脂肪の蓄積がさまざまな身体機能に影響を与える慢性代謝性疾患です。糖尿病、高血圧、MASHなど他の代謝性疾患と密接に関連しています。"
+    "kr": "비만은 체중의 문제가 아니라 대사 전체에 영향을 미치는 만성질환입니다. 지난 몇 년간 GLP-1 계열 주사제가 치료의 표준을 새로 썼고, 최근에는 식이·복용시간 제약이 없는 경구형 옵션까지 등장하며 치료 접근성이 빠르게 넓어지고 있습니다. 티에치팜은 이 흐름 속에서 GLP-1 다음 세대의 대사질환 전략(THP-004)을 준비하고 있습니다.",
+    "en": "Obesity is not a matter of body weight but a chronic disease that affects metabolism as a whole. Over the past few years, injectable GLP-1 therapies rewrote the standard of care, and oral options with no food or timing restrictions have now begun to widen access further. THPHARM is developing THP-004, a next-generation metabolic strategy for the era after GLP-1.",
+    "zh_cn": "肥胖症并非单纯的体重问题,而是影响整体代谢的慢性疾病。过去几年间,注射型GLP-1疗法重新定义了治疗标准,如今不受进食与用药时间限制的口服选项也开始出现,治疗可及性正在快速扩大。THPHARM正在这一趋势中推进GLP-1之后新一代的代谢性疾病策略(THP-004)。",
+    "jp": "肥満は体重の問題ではなく、代謝全体に影響を及ぼす慢性疾患です。この数年でGLP-1系注射薬が治療の標準を塗り替え、近年は食事・服用時間の制約がない経口オプションも登場し、治療へのアクセスが急速に広がっています。THPHARMはこの流れの中で、GLP-1の次世代にあたる代謝性疾患戦略(THP-004)を進めています。"
   },
   "whatHappensInBody": {
     "kr": "에너지 섭취와 소비의 불균형이 오래 지속되면 지방조직이 과도하게 커지고, 이 과정에서 만성 염증과 인슐린 저항성이 함께 나타날 수 있습니다. 이런 변화가 반복되면서 비만은 체중의 문제를 넘어 대사 전반에 영향을 주는 질환으로 진행합니다.",

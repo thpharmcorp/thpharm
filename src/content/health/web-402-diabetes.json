@@ -9,10 +9,10 @@
     "jp": "糖尿病"
   },
   "oneMinuteSummary": {
-    "kr": "당뇨병은 혈액 속 포도당(혈당) 수치가 만성적으로 높은 상태가 지속되는 대사질환입니다. 인슐린 분비나 작용에 문제가 생기면서 발생하며, 비만·고혈압·MASH 등 다른 대사질환과 같은 뿌리를 공유하는 경우가 많습니다.",
-    "en": "Diabetes is a metabolic disease marked by chronically elevated blood glucose levels, caused by problems with insulin secretion or insulin action. It often shares underlying biological roots with other metabolic conditions such as obesity, hypertension, and MASH.",
-    "zh_cn": "糖尿病是一种以血糖长期偏高为特征的代谢性疾病,由胰岛素分泌或作用异常引起。它常与肥胖症、高血压、MASH等其他代谢性疾病共享相同的生物学根源。",
-    "jp": "糖尿病は血液中のブドウ糖(血糖)値が慢性的に高い状態が続く代謝性疾患です。インスリンの分泌や作用に問題が生じることで発生し、肥満・高血圧・MASHなど他の代謝性疾患と根本を共有することが多くあります。"
+    "kr": "당뇨병은 단독으로 오지 않는 경우가 많습니다. 인슐린 저항성이라는 같은 뿌리에서 비만·고혈압·MASH와 함께 나타나는 경우가 흔해, 최근 치료 전략도 혈당 하나만이 아니라 체중·심혈관 위험까지 함께 관리하는 방향으로 옮겨가고 있습니다. 티에치팜이 대사질환을 하나씩 따로 보지 않고 연결된 하나의 문제로 접근하는 이유이기도 합니다.",
+    "en": "Diabetes rarely arrives alone. It shares a common root — insulin resistance — with obesity, hypertension, and MASH, and treatment strategy has shifted from managing blood glucose alone toward managing weight and cardiovascular risk together. It's part of why THPHARM approaches metabolic disease as one connected problem rather than treating each condition in isolation.",
+    "zh_cn": "糖尿病很少单独出现。它与肥胖症、高血压、MASH共享胰岛素抵抗这一相同根源,如今的治疗策略也从单纯控制血糖,转向同时管理体重与心血管风险。这也是THPHARM不将代谢性疾病割裂看待,而是作为一个相互关联的整体来应对的原因之一。",
+    "jp": "糖尿病は単独で現れないことが少なくありません。インスリン抵抗性という共通の根本原因から、肥満・高血圧・MASHとともに現れることが多く、治療戦略も血糖のみならず体重・心血管リスクまで併せて管理する方向へと移りつつあります。THPHARMが代謝性疾患を個別にではなく、つながった一つの問題として捉える理由でもあります。"
   },
   "whatHappensInBody": {
     "kr": "췌장에서 분비되는 인슐린은 혈액 속 포도당을 세포로 흡수시켜 에너지로 쓰게 하는 역할을 합니다. 인슐린 분비가 부족하거나(제1형) 세포가 인슐린에 정상적으로 반응하지 못하면(제2형 인슐린 저항성) 혈당이 조절되지 않고 높은 상태로 유지됩니다.",

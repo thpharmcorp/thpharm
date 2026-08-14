@@ -15,8 +15,14 @@ const pageRest = segments.slice(1).join('/');
 // 현재 대메뉴 활성 표시: /kr/pipeline/thp-001 -> "pipeline". 루트(/kr)는 COMPANY(path: '')로 매칭.
 const currentTopSegment = segments[1] ?? '';
 
+// COMPANY(path: '')는 /kr 루트가 아니라 /kr/about, /kr/vision 등 평평한(flat) URL로 흩어진
+// 하위 페이지를 갖고 있다(다른 대메뉴처럼 /kr/science/... 형태로 묶여있지 않음, CompanySubnav 참고).
+// 이 페이지들에서 상단 COMPANY 메뉴가 활성 표시되지 않던 버그(2026-08-13)를 여기서 명시적으로 고정한다.
+// 새 COMPANY 하위 페이지를 flat 경로로 추가하면 이 목록에도 반드시 추가할 것.
+const companyFlatSegments = new Set(['about', 'vision', 'people', 'evolution', 'contact']);
+
 function isActive(itemPath: string) {
-  if (itemPath === '') return currentTopSegment === '';
+  if (itemPath === '') return currentTopSegment === '' || companyFlatSegments.has(currentTopSegment);
   return currentTopSegment === itemPath;
 }
 ---

@@ -121,7 +121,7 @@ const sourceHref = d.sourceMeta?.source_url ?? (d.sourceMeta?.doi ? `https://doi
 
       {
         d.sourceMeta && (
-          <p class="mt-10 max-w-2xl border-t border-thp-line pt-6 text-xs text-thp-ink/40">
+          <p class="mt-10 max-w-2xl border-t border-thp-line pt-6 text-[12px] text-thp-ink/35">
             {strings.source}: {d.sourceMeta.source_title}
             {d.sourceMeta.publisher && ` (${d.sourceMeta.publisher})`}
             {d.sourceMeta.doi && ` · DOI: ${d.sourceMeta.doi}`}

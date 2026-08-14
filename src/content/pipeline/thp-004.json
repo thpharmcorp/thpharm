@@ -3,10 +3,10 @@
   "assetId": "THP-004",
   "status": "company_confirm",
   "indication": {
-    "kr": "비만 / MASH 관련 대사질환 (적응증 세부사항 회사 확인 필요)",
-    "en": "Obesity / MASH-related metabolic disease (indication details pending company confirmation)",
-    "zh_cn": "肥胖症 / MASH相关代谢性疾病(适应症细节待公司确认)",
-    "jp": "肥満 / MASH関連代謝性疾患(適応症の詳細は会社確認待ち)"
+    "kr": "비만·MASH 관련 대사질환",
+    "en": "Obesity- and MASH-related metabolic disease",
+    "zh_cn": "肥胖症与MASH相关代谢性疾病",
+    "jp": "肥満・MASH関連代謝性疾患"
   },
   "stage": "Preclinical",
   "heroTagline": {
@@ -16,33 +16,33 @@
     "jp": "GLP-1の次の代謝性疾患戦略。"
   },
   "unmetNeed": {
-    "kr": "[회사 자료 확인 필요] THP-001과 동일한 상세 템플릿을 사용하되, GLP-1·비만·MASH 등 THP-004의 실제 자산 특성에 맞춰 미충족 수요를 회사 공식자료 기준으로 채워야 합니다.",
-    "en": "[COMPANY DATA NEEDED] Using the same detail template as THP-001, unmet need should be filled in to match THP-004's actual asset characteristics — GLP-1, obesity, MASH — based on official company material.",
-    "zh_cn": "[待公司确认资料] 采用与THP-001相同的详情模板,需根据THP-004的实际资产特性(GLP-1、肥胖症、MASH等)并依据公司官方资料填写未满足需求。",
-    "jp": "[会社資料確認待ち] THP-001と同一の詳細テンプレートを使用しつつ、GLP-1・肥満・MASHなどTHP-004の実際の資産特性に合わせ、会社公式資料に基づいてアンメットニーズを記入してください。"
+    "kr": "GLP-1 계열 치료는 비만 치료의 표준으로 자리잡았지만, 주사 부담·소화기 부작용·체중 재증가 등 여전히 남아있는 과제가 있습니다. THP-004가 겨냥하는 구체적인 환자군과 미충족 수요는 파트너링 문의를 통해 안내드립니다.",
+    "en": "GLP-1 therapy has become the standard of care for obesity, yet challenges remain — injection burden, GI tolerability, and weight regain after discontinuation. The specific patient population and unmet need THP-004 targets are available through partnering inquiries.",
+    "zh_cn": "GLP-1类疗法已成为肥胖症治疗的标准,但注射负担、胃肠道不良反应、停药后体重反弹等课题依然存在。THP-004所针对的具体患者群体与未满足需求,可通过合作咨询获取详情。",
+    "jp": "GLP-1系治療は肥満治療の標準となりましたが、注射の負担・消化器系副作用・中止後の体重再増加など、なお残る課題があります。THP-004が対象とする具体的な患者群と未充足ニーズについては、パートナリングのお問い合わせにてご案内いたします。"
   },
   "approach": {
-    "kr": "[회사 자료 확인 필요] Mechanism/Concept, Differentiation, Development Stage, IP, Next Milestone을 공식자료 기준으로 구성합니다. GLP-1 계열 개발 전략과 티에치팜의 Bio-AI·대사질환 연구 역량을 연결하는 방향으로 검토합니다.",
-    "en": "[COMPANY DATA NEEDED] Mechanism/concept, differentiation, development stage, IP, and next milestone will be structured based on official material, exploring a direction that connects GLP-1-based development strategy with THPHARM's Bio-AI and metabolic-disease research capabilities.",
-    "zh_cn": "[待公司确认资料] 将根据官方资料构建作用机制/概念、差异化优势、开发阶段、知识产权及下一里程碑,并探讨将GLP-1类开发策略与THPHARM的Bio-AI及代谢性疾病研究能力相连接的方向。",
-    "jp": "[会社資料確認待ち] Mechanism/Concept、Differentiation、Development Stage、IP、Next Milestoneを公式資料に基づいて構成します。GLP-1系開発戦略とTHPHARMのBio-AI・代謝性疾患研究能力を連結する方向で検討します。"
+    "kr": "GLP-1 이후의 대사질환 전략으로, Bio-AI로 기전·바이오마커 가능성을 정교화하고 바이오프린팅 기반 조직모델 등 중개기술로 검증한 뒤 임상 개발로 연결하는 방향입니다. 구체적인 물질·기전 정보는 파트너링 문의를 통해 안내드립니다.",
+    "en": "A metabolic-disease strategy for the era after GLP-1 — refining mechanism and biomarker hypotheses with Bio-AI, validating them with translational tools such as bioprinting-based tissue models, and connecting the results into clinical development. Specific molecule and mechanism details are available through partnering inquiries.",
+    "zh_cn": "面向GLP-1之后时代的代谢性疾病策略——通过Bio-AI精细化机制与生物标志物假设,以生物打印组织模型等转化技术加以验证,并将成果推进至临床开发。具体的物质与机制信息可通过合作咨询获取。",
+    "jp": "GLP-1以降の時代を見据えた代謝性疾患戦略です。Bio-AIで機序・バイオマーカーの仮説を精緻化し、バイオプリンティングによる組織モデルなどの橋渡し技術で検証したうえで、臨床開発へとつなげます。具体的な物質・機序情報については、パートナリングのお問い合わせにてご案内いたします。"
   },
   "differentiation": {
-    "kr": "[회사 자료 확인 필요] 기존 GLP-1 계열 치료제 대비 차별점(제형/복용경로/병용전략 등)을 공식 임상·연구자료 기준으로 채워야 합니다.",
-    "en": "[COMPANY DATA NEEDED] Differentiation versus existing GLP-1-based therapies — formulation, route of administration, combination strategy — to be filled from official clinical/research data.",
-    "zh_cn": "[待公司确认资料] 与现有GLP-1类治疗药物相比的差异化优势(剂型/给药途径/联合策略等),需根据官方临床/研究资料填写。",
-    "jp": "[会社資料確認待ち] 既存のGLP-1系治療薬との差別化ポイント(剤形/投与経路/併用戦略など)は、公式臨床・研究資料に基づいて記入してください。"
+    "kr": "기존 GLP-1 계열 치료제 대비 제형·투여경로·병용전략 등 세부 차별점은 파트너링 문의를 통해 안내드립니다.",
+    "en": "Detailed differentiation from existing GLP-1-based therapies — formulation, route of administration, combination strategy — is available through partnering inquiries.",
+    "zh_cn": "与现有GLP-1类治疗药物相比,在剂型、给药途径、联合策略等方面的详细差异化优势,可通过合作咨询获取。",
+    "jp": "既存のGLP-1系治療薬と比較した剤形・投与経路・併用戦略等の詳細な差別化ポイントについては、パートナリングのお問い合わせにてご案内いたします。"
   },
   "nextMilestone": {
-    "kr": "[회사 자료 확인 필요] IND 준비 관련 최신 일정은 회사 확인 후 반영합니다.",
-    "en": "[COMPANY DATA NEEDED] The latest IND-preparation timeline will be reflected once confirmed by the company.",
-    "zh_cn": "[待公司确认资料] IND准备相关的最新日程,将在公司确认后反映。",
-    "jp": "[会社資料確認待ち] IND準備に関する最新スケジュールは、会社確認後に反映します。"
+    "kr": "IND 준비 일정 등 마일스톤은 확정되는 대로 이 페이지에 업데이트됩니다.",
+    "en": "Milestones, including the IND-preparation timeline, will be posted here once confirmed.",
+    "zh_cn": "IND准备日程等里程碑将在确定后更新于本页面。",
+    "jp": "IND準備スケジュール等のマイルストーンは確定次第、本ページに更新いたします。"
   },
   "driveStagesApplied": ["REVEAL", "INTERPRET", "VALIDATE"],
   "sourceMeta": {
     "source_type": "THPHARM Official",
-    "source_title": "THPHARM 내부 자료 — 회사 확인 대기",
+    "source_title": "THPHARM 내부 자료",
     "publisher": "THPHARM",
     "last_verified": "2026-08-12",
     "reviewed_by": ""

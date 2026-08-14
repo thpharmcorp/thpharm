@@ -2,7 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import HeroDark from '../../../components/HeroDark.astro';
-import { locales, localeToFieldKey, ui, type Locale } from '../../../i18n/ui';
+import { locales, localeToFieldKey, type Locale } from '../../../i18n/ui';
 
 export function getStaticPaths() {
   return locales.map((locale) => ({ params: { locale } }));
@@ -10,7 +10,6 @@ export function getStaticPaths() {
 
 const { locale } = Astro.params as { locale: Locale };
 const fk = localeToFieldKey[locale];
-const strings = ui[locale];
 
 const assets = await getCollection('pipeline');
 
@@ -69,7 +68,6 @@ const overview = overviewCopy[locale];
                   <p class="mt-1 text-sm text-thp-ink/60">{a.data.indication[fk]}</p>
                   <div class="mt-2 flex items-center gap-2">
                     <span class="rounded-full bg-thp-teal/10 px-3 py-1 text-xs font-bold text-thp-tealDeep">{a.data.stage}</span>
-                    <span class="text-xs text-thp-ink/40">{strings.lastUpdated}: {a.data.lastUpdated}</span>
                   </div>
                 </div>
                 <div class="relative hidden h-4 md:block">

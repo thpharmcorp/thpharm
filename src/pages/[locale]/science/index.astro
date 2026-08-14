@@ -2,7 +2,7 @@
 import { getEntry } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import SciSubnav from '../../../components/SciSubnav.astro';
-import { locales, localeToFieldKey, ui, type Locale } from '../../../i18n/ui';
+import { locales, localeToFieldKey, ui, driveFramework, type Locale } from '../../../i18n/ui';
 
 export function getStaticPaths() {
   return locales.map((locale) => ({ params: { locale } }));
@@ -18,60 +18,64 @@ if (!entry) {
 }
 const d = entry.data;
 
-const stages = d.driveStages.map((s) => ({
-  letter: s.letter,
-  stage: s.stage,
-  meaning: s.meaning[fk],
-  linkedPage: s.linkedPage,
-}));
-
+// DRIVE 소개 문구 — 2026-08-13 재작성: 기존에는 "다시 설계하고, AI로 발견하고, 질환을 이해하고..."처럼
+// 홈페이지 HOW WE WORK 문단과 사실상 같은 말을 동사만 바꿔 반복했다. DRIVE는 단순 슬로건이 아니라
+// 티에치팜이 가진 다섯 가지 실제 역량(개량신약 재설계·Bio-AI·대사질환 과학·중개기술·임상 실행)을
+// 개발 흐름 순서로 엮은 것이라는 점을 설명하는 문구로 교체했다 — SciSubnav의 역량명과 이 페이지의
+// 단계 동사가 서로 다른 이름처럼 보이던 문제(2026-08-13 사용자 피드백)를 여기서 명시적으로 연결한다.
 const driveIntro: Record<Locale, string> = {
-  kr: 'DRIVE는 티에치팜이 하나의 약을 만들어가는 5단계입니다. 다시 설계하고, AI로 발견하고, 질환을 이해하고, 정교한 모델로 검증하고, 실제 임상으로 실행합니다.',
-  en: 'DRIVE is the five-step process THPHARM follows to develop a medicine: redesign, discover with AI, understand the disease, validate with sophisticated models, and execute through clinical development.',
-  'zh-cn': 'DRIVE是THPHARM开发一款药物所经历的五个阶段:重新设计、以AI发现、理解疾病、以精细模型验证、并通过临床开发付诸实践。',
-  jp: 'DRIVEはTHPHARMが一つの薬を作り上げる5つの段階です。再設計し、AIで発見し、疾患を理解し、精緻なモデルで検証し、実際の臨床で実行します。',
+  kr: 'DRIVE의 다섯 글자는 각각 슬로건이 아니라 티에치팜이 실제로 보유한 역량입니다 — 개량신약 재설계(D), Bio-AI(R), 대사질환 과학(I), 중개기술(V), 임상 실행(E). 이 다섯 역량을 신약 하나가 만들어지는 순서로 이어붙인 것이 DRIVE입니다.',
+  en: "Each letter in DRIVE names a capability THPHARM actually holds, not a slogan — drug re-engineering (D), Bio-AI (R), metabolic science (I), translational technology (V), and clinical execution (E). DRIVE is these five capabilities arranged in the order a medicine actually gets built.",
+  'zh-cn': 'DRIVE的五个字母并非口号,而是THPHARM实际拥有的能力——改良新药再设计(D)、Bio-AI(R)、代谢性疾病科学(I)、转化技术(V)、临床执行(E)。DRIVE正是将这五项能力按一款药物诞生的实际顺序串联而成。',
+  jp: 'DRIVEの5文字はスローガンではなく、THPHARMが実際に持つ能力を示します——改良新薬の再設計(D)、Bio-AI(R)、代謝性疾患科学(I)、橋渡し技術(V)、臨床実行(E)。この5つの能力を、一つの薬が生まれる実際の順序でつないだものがDRIVEです。',
 };
 
-const slugMap: Record<string, string> = {
-  WEB201: 'design',
-  WEB202: 'reveal',
-  WEB203: 'interpret',
-  WEB204: 'validate',
-  WEB205: 'execute',
+const sectionLabel: Record<Locale, string> = {
+  kr: '왜 다섯 단계인가',
+  en: 'Why five stages',
+  'zh-cn': '为什么是五个阶段',
+  jp: 'なぜ5段階なのか',
 };
 ---
 
 <BaseLayout locale={locale} title={d.heroTitle[fk]} description={d.heroBody[fk]}>
   <SciSubnav locale={locale} current="landing" />
   <section class="relative overflow-hidden bg-thp-navy text-white">
-    <div class="relative mx-auto max-w-content px-4 py-20 md:px-6 md:py-24">
+    <div class="relative mx-auto max-w-content px-4 py-16 md:px-6 md:py-20">
       <p class="mb-5 text-xs font-bold tracking-[0.2em] text-thp-teal">SCIENCE</p>
       <h1 class="max-w-2xl text-[3rem] font-black leading-[1.15] tracking-tight md:text-4xl">
         {d.heroTitle[fk]}
       </h1>
       <p class="mt-6 max-w-xl text-base leading-relaxed text-white/70">{d.heroBody[fk]}</p>
+    </div>
+  </section>
 
-      <p class="mt-14 text-[16px] font-bold tracking-widest text-white/40">THPHARM SCIENCE STRATEGY — DRIVE</p>
-      <p class="mt-2 max-w-2xl text-sm leading-relaxed text-white/60">{driveIntro[locale]}</p>
+  <section class="bg-thp-mist">
+    <div class="mx-auto max-w-content px-4 py-16 md:px-6 md:py-20">
+      <p class="text-xs font-bold tracking-widest text-thp-teal">{sectionLabel[locale]} — DRIVE</p>
+      <p class="mt-3 max-w-2xl text-sm leading-relaxed text-thp-ink/70">{driveIntro[locale]}</p>
 
-      <div class="mt-6 grid gap-3 sm:grid-cols-5">
+      <div class="mt-8 grid gap-3 sm:grid-cols-5">
         {
-          stages.map((s, i) => (
+          driveFramework.map((s, i) => (
             <a
-              href={`/${locale}/science/${slugMap[s.linkedPage.replace('-', '')] ?? ''}`}
-              class="group relative rounded-2xl border border-white/15 bg-white/5 p-5 transition-colors hover:border-thp-teal hover:bg-white/10"
+              href={`/${locale}/science/${s.slug}`}
+              class="group relative flex flex-col rounded-2xl border border-thp-line bg-white p-5 transition-all hover:-translate-y-1 hover:border-thp-teal hover:shadow-lg"
             >
-              {i < stages.length - 1 && (
-                <span class="absolute -right-2.5 top-1/2 hidden -translate-y-1/2 text-white/20 sm:block">→</span>
+              {i < driveFramework.length - 1 && (
+                <span class="absolute -right-2.5 top-1/2 hidden -translate-y-1/2 text-thp-ink/15 sm:block">→</span>
               )}
               <div class="flex items-center gap-2.5">
-                <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-thp-teal/15 text-sm font-black text-thp-teal">
+                <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-thp-teal/10 text-sm font-black text-thp-tealDeep">
                   {s.letter}
                 </span>
-                <p class="text-xs font-bold tracking-widest text-white">{s.stage}</p>
+                <div>
+                  <p class="text-xs font-black tracking-widest text-thp-navy2">{s.stage}</p>
+                  <p class="text-[11px] font-bold tracking-wide text-thp-ink/40">{s.capability}</p>
+                </div>
               </div>
-              <p class="mt-3 text-xs leading-relaxed text-white/60">{s.meaning}</p>
-              <p class="mt-3 text-[16px] font-semibold text-thp-teal opacity-0 transition-opacity group-hover:opacity-100">
+              <p class="mt-3 text-xs leading-relaxed text-thp-ink/60">{s.meaning[locale]}</p>
+              <p class="mt-3 text-[16px] font-semibold text-thp-tealDeep opacity-0 transition-opacity group-hover:opacity-100">
                 {strings.readMore} →
               </p>
             </a>
@@ -86,7 +90,7 @@ const slugMap: Record<string, string> = {
       <a href={`/${locale}/science/evidence`} class="text-sm font-bold text-thp-tealDeep hover:underline">
         EVIDENCE & IP →
       </a>
-      <p class="mt-6 text-xs text-thp-ink/40">{strings.lastUpdated}: {d.lastUpdated}</p>
+      <p class="mt-6 text-[12px] text-thp-ink/35">{strings.lastUpdated}: {d.lastUpdated}</p>
     </div>
   </section>
 </BaseLayout>

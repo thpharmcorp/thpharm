@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import { locales, localeToFieldKey, ui, type Locale } from '../../../i18n/ui';
+import { locales, localeToFieldKey, ui, driveFramework, type Locale } from '../../../i18n/ui';
 
 export async function getStaticPaths() {
   const assets = await getCollection('pipeline');
@@ -16,11 +16,18 @@ const fk = localeToFieldKey[locale];
 const strings = ui[locale];
 const d = entry.data;
 
+// 2026-08-13: 배지가 "REVEAL"/"INTERPRET"처럼 단계 동사만 덜렁 보여줘서 방문자가 뜻을 알 수
+// 없던 문제 — driveFramework에서 역량명을 함께 찾아와 "REVEAL · Bio-AI"처럼 짝지어 보여주고,
+// 각 배지를 해당 사이언스 하위 페이지로 링크한다.
+const appliedStages = d.driveStagesApplied
+  .map((s) => driveFramework.find((f) => f.stage === s))
+  .filter((f): f is NonNullable<typeof f> => f !== undefined);
+
 const driveCaption: Record<Locale, string> = {
-  kr: '이 자산에 적용된 DRIVE 단계',
-  en: 'DRIVE stages applied to this asset',
-  'zh-cn': '本资产所应用的DRIVE阶段',
-  jp: 'この資産に適用されているDRIVE段階',
+  kr: '이 자산 개발에 적용된 DRIVE 단계 — 클릭하면 해당 역량 소개로 이동합니다',
+  en: 'DRIVE stages applied to this asset — click to see the underlying capability',
+  'zh-cn': '本资产开发中所应用的DRIVE阶段 — 点击可查看相应能力介绍',
+  jp: 'この資産の開発に適用されているDRIVE段階 — クリックすると該当する能力の紹介に移動します',
 };
 ---
 
@@ -34,11 +41,16 @@ const driveCaption: Record<Locale, string> = {
         <span class="rounded-full bg-thp-teal px-4 py-1.5 text-xs font-bold text-white">{d.stage}</span>
       </div>
       <div class="mt-4">
-        <p class="text-[16px] font-semibold text-white/40">{driveCaption[locale]}</p>
+        <p class="text-[13px] font-semibold text-white/40">{driveCaption[locale]}</p>
         <div class="mt-2 flex flex-wrap gap-2">
           {
-            d.driveStagesApplied.map((s) => (
-              <span class="rounded-full border border-white/25 px-3 py-1 text-xs font-bold text-white/80">{s}</span>
+            appliedStages.map((s) => (
+              <a
+                href={`/${locale}/science/${s!.slug}`}
+                class="rounded-full border border-white/25 px-3 py-1.5 text-xs font-bold text-white/80 transition-colors hover:border-thp-teal hover:text-thp-teal"
+              >
+                {s!.stage} <span class="font-semibold text-white/50">· {s!.capability}</span>
+              </a>
             ))
           }
         </div>
@@ -68,7 +80,7 @@ const driveCaption: Record<Locale, string> = {
   </section>
 
   <section class="border-t border-thp-line bg-thp-mist">
-    <div class="mx-auto max-w-content px-4 py-8 text-xs text-thp-ink/50 md:px-6">
+    <div class="mx-auto max-w-content px-4 py-6 text-[12px] text-thp-ink/40 md:px-6">
       <p>
         {strings.source}: {d.sourceMeta?.source_title} · {strings.lastUpdated}: {d.lastUpdated}
       </p>
