@@ -13,21 +13,45 @@ const fk = localeToFieldKey[locale];
 
 const assets = await getCollection('pipeline');
 
+// 2026-08-14 재작성: 기존 카피("아이디어를 실제 치료제로 만들어갑니다" + "개량신약과 복합제
+// 개발 경험에서 출발해 ... 확장되고 있습니다")는 동어반복이라는 피드백 — 파이프라인 페이지가
+// 왜 존재하는지(무엇에 공을 들이는지)를 구체적으로 보여주도록 다시 썼다. WEB-503 논문 카드에서
+// 다룬 "복합제가 순응도를 높인다"는 실제 최신 근거를 그대로 연결한다(Diabetes Therapy 2026).
 const heroCopy = {
-  kr: { eyebrow: 'PIPELINE', title: '아이디어를 실제 치료제로 만들어갑니다.', body: '티에치팜의 파이프라인은 개량신약과 복합제 개발 경험에서 출발해 비만·당뇨·고혈압·MASH 등 대사질환의 새로운 치료 가능성으로 확장되고 있습니다.' },
-  en: { eyebrow: 'PIPELINE', title: 'From science to medicines.', body: "THPHARM's pipeline builds on our experience in improved drugs and combination products, expanding into new treatment possibilities across obesity, diabetes, hypertension, and MASH." },
-  'zh-cn': { eyebrow: 'PIPELINE', title: '从科学到药物。', body: 'THPHARM的管线始于改良新药与复方制剂开发经验,正扩展至肥胖症、糖尿病、高血压、MASH等代谢性疾病的新治疗可能。' },
-  jp: { eyebrow: 'PIPELINE', title: 'サイエンスから治療薬へ。', body: 'THPHARMのパイプラインは改良新薬・配合剤の開発経験から出発し、肥満・糖尿病・高血圧・MASHなど代謝性疾患の新たな治療可能性へと広がっています。' },
+  kr: {
+    eyebrow: 'PIPELINE',
+    title: '알약 하나를 줄이는 것이, 치료의 시작입니다.',
+    body: '효과만큼 중요한 건 환자가 그 약을 실제로 계속 먹을 수 있는가입니다. 티에치팜은 이미 안전성이 검증된 약들을 다시 조합하고, Bio-AI로 최적의 짝을 찾아, 오래 복용할 수 있는 치료제를 만드는 데 집중합니다.',
+  },
+  en: {
+    eyebrow: 'PIPELINE',
+    title: 'Removing one pill is where treatment begins.',
+    body: 'Efficacy alone isn’t enough if patients can’t keep taking the medicine. We recombine drugs whose safety is already proven, use Bio-AI to find the best pairing, and focus on treatments people can actually stay on.',
+  },
+  'zh-cn': {
+    eyebrow: 'PIPELINE',
+    title: '减少一颗药,就是治疗的开始。',
+    body: '疗效固然重要,但患者能否真正坚持服药同样关键。THPHARM重新组合已被验证安全性的药物,借助Bio-AI寻找最佳配伍,专注于打造患者能够长期坚持服用的治疗药物。',
+  },
+  jp: {
+    eyebrow: 'PIPELINE',
+    title: '錠剤を一つ減らすことが、治療の始まりです。',
+    body: '効果と同じくらい重要なのは、患者さんが実際にその薬を飲み続けられるかどうかです。THPHARMはすでに安全性が確認された薬を組み合わせ直し、Bio-AIで最適な組み合わせを探し、長く服用し続けられる治療薬づくりに力を注いでいます。',
+  },
 } as const;
 const hero = heroCopy[locale];
 
+// 기존 tags(THP-001/THP-004/GLOBAL PHASE 3/GLP-1 · MASH)는 이 위치에서 의미 없다는 피드백 —
+// 자산 코드 나열 대신, 티에치팜의 실제 개발 방법론을 보여주는 키워드로 교체.
+const heroTags = ['DRUG REPURPOSING', 'FIXED-DOSE COMBINATION', 'BIO-AI-GUIDED'];
+
 const stageOrder = ['Discovery', 'Preclinical', 'Phase 1', 'Phase 2', 'Phase 3', 'Regulatory'];
 
-const overviewCopy: Record<Locale, { title: string; note: string }> = {
-  kr: { title: 'PIPELINE OVERVIEW', note: '각 표시는 자산의 현재 개발단계를 나타냅니다. 자산을 클릭하면 상세 정보로 이동합니다.' },
-  en: { title: 'PIPELINE OVERVIEW', note: 'Each marker shows the asset\'s current development stage. Click an asset to see full details.' },
-  'zh-cn': { title: 'PIPELINE OVERVIEW', note: '每个标记代表该资产当前所处的开发阶段。点击资产可查看详细信息。' },
-  jp: { title: 'PIPELINE OVERVIEW', note: '各マーカーは資産の現在の開発段階を示します。資産をクリックすると詳細情報に移動します。' },
+const overviewCopy: Record<Locale, { title: string }> = {
+  kr: { title: 'PIPELINE OVERVIEW' },
+  en: { title: 'PIPELINE OVERVIEW' },
+  'zh-cn': { title: 'PIPELINE OVERVIEW' },
+  jp: { title: 'PIPELINE OVERVIEW' },
 };
 const overview = overviewCopy[locale];
 ---
@@ -37,13 +61,12 @@ const overview = overviewCopy[locale];
     eyebrow={hero.eyebrow}
     title={hero.title}
     body={hero.body}
-    tags={['THP-001', 'THP-004', 'GLOBAL PHASE 3', 'GLP-1 · MASH']}
+    tags={heroTags}
   />
 
   <section class="bg-white">
     <div class="mx-auto max-w-content px-4 py-16 md:px-6 md:py-20">
-      <p class="mb-3 text-xs font-bold tracking-widest text-thp-teal">{overview.title}</p>
-      <p class="mb-8 max-w-lg text-sm text-thp-ink/50">{overview.note}</p>
+      <p class="mb-8 text-xs font-bold tracking-widest text-thp-teal">{overview.title}</p>
 
       <div
         class="mb-2 hidden gap-2 px-6 md:grid"

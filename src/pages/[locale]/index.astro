@@ -42,13 +42,15 @@ const iconKindMap: Record<string, 'obesity' | 'diabetes' | 'hypertension' | 'mas
   mash: 'mash',
 };
 
-// 2026-08-13: 기존 "Drug Re-engineering → Bio-AI & Data → ... → Global Therapeutics" 전문용어
-// 나열이 "오바하는 느낌"이라는 피드백 — 같은 내용을 편하게 읽히는 한 문장으로 재작성.
+// 2026-08-14 재작성: 기존 문장이 히어로(heroBody: "Bio-AI로 다시 읽고, 바이오프린팅으로 검증하며,
+// 임상에서 증명합니다")와 동사만 바꿔 사실상 같은 말을 반복한다는 피드백 — 히어로가 "왜"를 말한다면
+// 이 섹션은 "어떻게"를 다섯 글자(DRIVE)로 구체적으로 짚어, 처음으로 홈페이지에서 DRIVE라는 이름과
+// 그 안의 다섯 단계를 직접 소개하도록 바꿨다. SCIENCE 페이지의 DRIVE 설명과 이어지는 진입점 역할.
 const devEngineCopy: Record<Locale, string> = {
-  kr: '이미 있는 약을 다시 들여다보고, AI로 새롭게 해석하고, 사람에 가깝게 검증해 임상으로 증명합니다 — 그렇게 만든 치료제를 전 세계 환자에게 전합니다.',
-  en: "We take a fresh look at medicines that already exist, reinterpret them with AI, validate them close to the human body, and prove them in the clinic — then bring what we've built to patients around the world.",
-  'zh-cn': '我们重新审视已有的药物,用AI加以新的解读,以贴近人体的方式进行验证,并在临床中加以证明——将由此打造的治疗药物带给全世界的患者。',
-  jp: 'すでにある薬を改めて見直し、AIで新たに解釈し、人に近い方法で検証して臨床で証明します——そうして生まれた治療薬を世界中の患者さんに届けます。',
+  kr: '우리는 이 다섯 단계를 DRIVE라고 부릅니다. 약을 다시 설계하고(Design), Bio-AI로 새 가능성을 찾고(Reveal), 대사질환의 언어로 해석하고(Interpret), 사람에 가장 가까운 조건에서 검증하고(Validate), 임상에서 증명해 환자에게 전합니다(Execute).',
+  en: 'We call these five steps DRIVE: re-engineer a medicine (Design), find new possibilities with Bio-AI (Reveal), interpret them through the language of metabolic disease (Interpret), validate them under conditions closest to the human body (Validate), and prove them in the clinic before reaching patients (Execute).',
+  'zh-cn': '我们把这五个步骤称为DRIVE:重新设计药物(Design)、用Bio-AI发现新的可能性(Reveal)、以代谢性疾病的语言加以解读(Interpret)、在最贴近人体的条件下验证(Validate)、并在临床中加以证明后交付患者(Execute)。',
+  jp: '私たちはこの5つの段階をDRIVEと呼んでいます。薬を再設計し(Design)、Bio-AIで新たな可能性を見つけ(Reveal)、代謝性疾患の言葉で解釈し(Interpret)、人に最も近い条件で検証し(Validate)、臨床で証明して患者さんに届けます(Execute)。',
 };
 
 // 히어로 아래 "실제로 뭘 하고 있는 회사인지" 보여주는 최신 신호 3건 — INTELLIGENCE에서 직접 가져온다.

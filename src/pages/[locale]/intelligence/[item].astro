@@ -40,7 +40,6 @@ const sourceHref = d.sourceMeta?.source_url ?? (d.sourceMeta?.doi ? `https://doi
 
       <div class="mt-4 flex flex-wrap items-center gap-2 text-[16px] font-bold text-thp-ink/40">
         <span class="rounded-full bg-thp-teal/10 px-2 py-0.5 text-thp-tealDeep">{kindLabels[locale][d.kind]}</span>
-        {d.relevance && <span class="rounded-full bg-thp-mist px-2 py-0.5">{d.relevance}</span>}
         <span class="ml-auto">{d.publishedAt}</span>
       </div>
 

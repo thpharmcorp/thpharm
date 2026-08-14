@@ -19,26 +19,30 @@ export function getStaticPaths() {
 const { locale } = Astro.params as { locale: Locale };
 const fk = localeToFieldKey[locale];
 
+// 2026-08-14 재작성: "대사질환은 하나씩 오지 않습니다"류의 단정형 문장이 가르치는 말투로 읽히고,
+// "THPHARM HEALTH가 쉽게 설명합니다"는 표현이 건방지게 느껴진다는 피드백 — HEALTH를 환자·건강정보를
+// 찾는 사람들을 위한 커뮤니티에 가깝게 만들고 싶다는 방향에 맞춰, 독자에게 직접 말을 건네는 질문형으로
+// 바꾸고 "우리가 설명해준다"가 아니라 "그 마음을 안다"는 톤으로 다시 썼다.
 const heroCopy = {
   kr: {
-    title: '대사질환은 하나씩 오지 않습니다.',
-    body: '비만, 당뇨, 고혈압, MASH는 서로 떨어진 질환이 아닙니다. THPHARM HEALTH는 복잡하게 연결된 대사질환과 빠르게 변화하는 치료 정보를 누구나 쉽게 이해할 수 있도록 설명합니다.',
-    ctaPrimary: '연결된 질환 살펴보기',
+    title: '혼자 찾아보다, 지친 적 있으신가요?',
+    body: '비만, 당뇨, 고혈압, MASH — 검색하면 할수록 정보만 넘쳐나고 정작 내 상황엔 답이 잘 안 보이는 병들입니다. 여기 모은 이야기는 그 병들이 서로 어떻게 얽혀 있는지, 요즘 치료법은 어떻게 달라지고 있는지를 환자와 가족의 눈높이에서 정리한 것들입니다.',
+    ctaPrimary: '함께 살펴보기',
   },
   en: {
-    title: 'Metabolic diseases are connected.',
-    body: 'Obesity, diabetes, hypertension, and MASH are not separate conditions. THPHARM HEALTH explains the complex connections between metabolic diseases and fast-changing treatment information in plain language.',
-    ctaPrimary: 'Explore the connections',
+    title: "Ever felt exhausted searching for answers alone?",
+    body: "Obesity, diabetes, hypertension, MASH — the more you search, the more information piles up, and the less it feels like it applies to you. What's gathered here looks at how these conditions connect to each other and how treatment is changing, written from where patients and families actually stand.",
+    ctaPrimary: "Let's look together",
   },
   'zh-cn': {
-    title: '代谢性疾病并非孤立发生。',
-    body: '肥胖症、糖尿病、高血压与MASH并非彼此独立的疾病。THPHARM HEALTH以易懂的方式说明代谢性疾病之间复杂的联系与快速变化的治疗信息。',
-    ctaPrimary: '查看疾病关联',
+    title: '独自查资料查到累了吗?',
+    body: '肥胖症、糖尿病、高血压、MASH——越搜索,信息越多,却越难找到真正适用于自己情况的答案。这里汇集的内容,是从患者与家属的视角出发,梳理这些疾病之间的关联,以及治疗方式正在发生的变化。',
+    ctaPrimary: '一起来看看',
   },
   jp: {
-    title: '代謝性疾患は一つずつ訪れるわけではありません。',
-    body: '肥満、糖尿病、高血圧、MASHは互いに切り離された疾患ではありません。THPHARM HEALTHは複雑に絡み合う代謝性疾患と、急速に変化する治療情報を誰にでもわかりやすく説明します。',
-    ctaPrimary: '疾患のつながりを見る',
+    title: '一人で調べて、疲れたことはありませんか。',
+    body: '肥満、糖尿病、高血圧、MASH——調べれば調べるほど情報だけが増えて、自分の状況に合う答えはなかなか見つからないものです。ここに集めたのは、それらの病気がどうつながっているのか、治療法が今どう変わりつつあるのかを、患者さんとご家族の目線でまとめたものです。',
+    ctaPrimary: '一緒に見てみる',
   },
 } as const;
 const hero = heroCopy[locale];

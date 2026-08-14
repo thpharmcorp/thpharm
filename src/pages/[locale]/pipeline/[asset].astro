@@ -22,13 +22,6 @@ const d = entry.data;
 const appliedStages = d.driveStagesApplied
   .map((s) => driveFramework.find((f) => f.stage === s))
   .filter((f): f is NonNullable<typeof f> => f !== undefined);
-
-const driveCaption: Record<Locale, string> = {
-  kr: '이 자산 개발에 적용된 DRIVE 단계 — 클릭하면 해당 역량 소개로 이동합니다',
-  en: 'DRIVE stages applied to this asset — click to see the underlying capability',
-  'zh-cn': '本资产开发中所应用的DRIVE阶段 — 点击可查看相应能力介绍',
-  jp: 'この資産の開発に適用されているDRIVE段階 — クリックすると該当する能力の紹介に移動します',
-};
 ---
 
 <BaseLayout locale={locale} title={`${d.assetId} — ${d.heroTagline[fk]}`} description={d.heroTagline[fk]}>
@@ -40,9 +33,8 @@ const driveCaption: Record<Locale, string> = {
       <div class="mt-6 flex flex-wrap items-center gap-3">
         <span class="rounded-full bg-thp-teal px-4 py-1.5 text-xs font-bold text-white">{d.stage}</span>
       </div>
-      <div class="mt-4">
-        <p class="text-[13px] font-semibold text-white/40">{driveCaption[locale]}</p>
-        <div class="mt-2 flex flex-wrap gap-2">
+      <div class="mt-6">
+        <div class="flex flex-wrap gap-2">
           {
             appliedStages.map((s) => (
               <a
