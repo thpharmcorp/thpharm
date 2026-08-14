@@ -8,12 +8,12 @@ const { locale } = Astro.props;
 const strings = ui[locale];
 const year = new Date().getFullYear();
 
-const hiddenSoundCopy: Record<Locale, string> = {
-  kr: '숨겨진 THPHARM 사운드를 발견했습니다 — 공식 테마송 자산 준비 중입니다.',
-  en: "You found THPHARM's hidden sound — the official theme song asset is being prepared.",
-  'zh-cn': '您发现了THPHARM的隐藏音效 — 官方主题曲素材正在准备中。',
-  jp: 'THPHARMの隠されたサウンドを発見しました — 公式テーマソング素材を準備中です。',
-};
+// 2026-08-14: 숨겨진 테마송 이스터에그 — 대표가 제공한 실제 음원 2곡을 배치.
+// 의도적으로 화면에 설명 문구를 두지 않는다(진짜 이스터에그). 접근성을 위한 aria-label만 존재.
+const hiddenSoundTracks = [
+  { id: 'city', src: '/audio/thpharm-theme-city.mp3', label: 'THPHARM Theme — City Mix' },
+  { id: 'latin', src: '/audio/thpharm-theme-latin.mp3', label: 'THPHARM Theme — Latin Mix' },
+];
 
 // APPROVED_FACTS.md 등록 완료 (2026-08-12) — 회사 제공 스크린샷(기존 홈페이지 Footer) 기준.
 const companyInfoLabels: Record<Locale, { biz: string; addr: string; tel: string; fax: string; email: string }> = {
@@ -51,24 +51,19 @@ const email = 'admin@thpharm.co.kr';
         <a href={`/${locale}/sources`} class="hover:text-thp-navy2">{strings.footerSources}</a>
       </nav>
       <div class="flex flex-col items-start gap-3 md:items-end">
-        <div class="relative">
-          <button
-            type="button"
-            id="hidden-sound-trigger"
-            class="flex h-8 w-8 items-center justify-center rounded-full border border-thp-line text-thp-ink/40 transition-colors hover:border-thp-teal hover:text-thp-teal"
-            aria-label="THPHARM Hidden Sound"
-            aria-expanded="false"
-            aria-controls="hidden-sound-note"
-          >
-            ♪
-          </button>
-          <div
-            id="hidden-sound-note"
-            role="status"
-            class="pointer-events-none absolute bottom-11 right-0 w-56 rounded-xl border border-thp-line bg-white p-3 text-[12px] text-thp-ink/70 opacity-0 shadow-lg transition-opacity md:right-0"
-          >
-            {hiddenSoundCopy[locale]}
-          </div>
+        <div class="flex items-center gap-1.5">
+          {
+            hiddenSoundTracks.map((t) => (
+              <button
+                type="button"
+                class="hidden-sound-trigger flex h-8 w-8 items-center justify-center rounded-full border border-thp-line text-thp-ink/40 transition-colors hover:border-thp-teal hover:text-thp-teal"
+                aria-label={t.label}
+                data-track={t.id}
+              >
+                ♪
+              </button>
+            ))
+          }
         </div>
         <p class="text-[12px] text-thp-ink/50">
           {strings.footerCopyright.replace('© THPHARM', `© 2023${year > 2023 ? `–${year}` : ''} THPHARM`)}
@@ -76,16 +71,38 @@ const email = 'admin@thpharm.co.kr';
       </div>
     </div>
   </div>
+
+  {
+    hiddenSoundTracks.map((t) => (
+      <audio id={`hidden-sound-audio-${t.id}`} src={t.src} preload="none" class="hidden" />
+    ))
+  }
 </footer>
 
 <script>
-  const trigger = document.getElementById('hidden-sound-trigger');
-  const note = document.getElementById('hidden-sound-note');
-  let open = false;
-  trigger?.addEventListener('click', () => {
-    open = !open;
-    trigger.setAttribute('aria-expanded', String(open));
-    note?.classList.toggle('opacity-0', !open);
-    note?.classList.toggle('pointer-events-none', !open);
+  // 화면에는 아무 설명도 노출하지 않는 순수 이스터에그 — 음표를 누르면 재생/정지만 토글된다.
+  const triggers = Array.from(document.querySelectorAll<HTMLButtonElement>('.hidden-sound-trigger'));
+  triggers.forEach((trigger) => {
+    const trackId = trigger.dataset.track;
+    const audio = document.getElementById(`hidden-sound-audio-${trackId}`) as HTMLAudioElement | null;
+    if (!audio) return;
+    trigger.addEventListener('click', () => {
+      const isPlaying = !audio.paused;
+      // 한 번에 하나만 재생 — 다른 트랙이 재생 중이면 먼저 멈춘다.
+      triggers.forEach((other) => {
+        if (other === trigger) return;
+        const otherId = other.dataset.track;
+        const otherAudio = document.getElementById(`hidden-sound-audio-${otherId}`) as HTMLAudioElement | null;
+        otherAudio?.pause();
+        other.classList.remove('text-thp-teal', 'border-thp-teal');
+      });
+      if (isPlaying) {
+        audio.pause();
+        trigger.classList.remove('text-thp-teal', 'border-thp-teal');
+      } else {
+        audio.play().catch(() => {});
+        trigger.classList.add('text-thp-teal', 'border-thp-teal');
+      }
+    });
   });
 </script>
