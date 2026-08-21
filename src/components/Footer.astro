@@ -35,8 +35,12 @@ const email = 'admin@thpharm.co.kr';
   <div class="mx-auto max-w-content px-4 py-10 md:px-6">
     <div class="grid gap-8 md:grid-cols-3">
       <div>
-        <img src="/images/logo.png" alt={companyLegalName} class="mb-3 h-7 w-auto" />
-        <p class="text-[12px] leading-relaxed text-thp-ink/60">
+        <!-- 2026-08-21: 로고가 법적고지 텍스트와 너무 붙어 있어 튀어 보인다는 피드백 — 헤더에서는
+             같은 로고가 안 튀는데, 실제 이유는 로고 자체가 아니라 여백/고립도 차이였다(헤더는 로고
+             혼자 떨어져 있고 바로 아래 붙는 콘텐츠가 없음). 로고 색(그라데이션)이나 배경색을 바꾸는
+             대신, 헤더처럼 여백을 넓히고 구분선을 넣어 "로고 영역"과 "법적고지 영역"을 분리했다. -->
+        <img src="/images/logo.png" alt={companyLegalName} class="mb-5 h-7 w-auto" />
+        <p class="border-t border-thp-line pt-4 text-[12px] leading-relaxed text-thp-ink/60">
           {cl.biz} : {bizNo}<br />
           {cl.addr} : {address}<br />
           {cl.tel} : {tel} &nbsp;&nbsp; {cl.fax} : {fax}<br />
