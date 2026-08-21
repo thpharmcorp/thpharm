@@ -1,9 +1,8 @@
 ---
 import { getEntry, getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import HeroDark from '../../components/HeroDark.astro';
 import HealthSectionIcon from '../../components/HealthSectionIcon.astro';
-import { locales, localeToFieldKey, ui, type Locale } from '../../i18n/ui';
+import { locales, localeToFieldKey, ui, driveFramework, type Locale } from '../../i18n/ui';
 
 export function getStaticPaths() {
   return locales.map((locale) => ({ params: { locale } }));
@@ -69,15 +68,39 @@ const latestSignalsMore = { kr: 'INTELLIGENCE 전체 보기', en: 'View all in I
 ---
 
 <BaseLayout locale={locale} title={d.heroTitle[fk]} description={d.heroBody[fk]}>
-  <HeroDark
-    eyebrow={d.heroEyebrow?.[fk] ?? ''}
-    title={d.heroTitle[fk]}
-    body={`${d.heroSubtitle?.[fk] ?? ''} ${d.heroBody[fk]}`}
-    ctaPrimaryLabel={d.ctaPrimary[fk]}
-    ctaPrimaryHref={`/${locale}/about`}
-    ctaSecondaryLabel={d.ctaSecondary[fk]}
-    ctaSecondaryHref={`/${locale}/pipeline`}
-  />
+  <!-- 2026-08-14: 홈페이지 히어로만 "볼드 타이포그래피" 스타일로 재설계 (사용자 요청 참고 템플릿의
+       느낌만 차용 — 실제 화면 구성은 그대로 티에치팜 콘텐츠에 맞춤). 장식 이미지를 없애고 헤드라인
+       타이포그래피 자체를 비주얼로 삼는다. 다른 페이지의 공용 HeroDark는 건드리지 않는다(홈페이지만
+       우선 적용하기로 확정). -->
+  <section class="relative overflow-hidden bg-thp-navy text-white">
+    <div
+      class="pointer-events-none absolute -left-32 -top-32 h-[520px] w-[520px] rounded-full opacity-25 blur-[120px]"
+      style="background: radial-gradient(circle, #F5C518 0%, transparent 70%);"
+    />
+    <div class="relative mx-auto max-w-content px-4 py-24 md:px-6 md:py-32">
+      <p class="mb-6 text-xs font-bold tracking-[0.25em] text-[#F5C518]">{d.heroEyebrow?.[fk] ?? ''}</p>
+      <h1 class="max-w-5xl text-[2.8rem] font-black leading-[0.98] tracking-tight md:text-[4.6rem] lg:text-[5.6rem]">
+        {d.heroTitle[fk]}
+      </h1>
+      <p class="mt-8 max-w-xl text-base leading-relaxed text-white/70 md:text-lg">
+        {d.heroSubtitle?.[fk] ?? ''} {d.heroBody[fk]}
+      </p>
+      <div class="mt-10 flex flex-wrap gap-3">
+        <a
+          href={`/${locale}/about`}
+          class="rounded-full bg-[#F5C518] px-6 py-3 text-sm font-bold text-thp-navy transition-colors hover:bg-[#D4A70F]"
+        >
+          {d.ctaPrimary[fk]}
+        </a>
+        <a
+          href={`/${locale}/pipeline`}
+          class="rounded-full border border-white/30 px-6 py-3 text-sm font-bold text-white transition-colors hover:border-white/60"
+        >
+          {d.ctaSecondary[fk]}
+        </a>
+      </div>
+    </div>
+  </section>
 
   {
     latestSignals.length > 0 && (
@@ -108,7 +131,7 @@ const latestSignalsMore = { kr: 'INTELLIGENCE 전체 보기', en: 'View all in I
   <section class="border-b border-thp-line bg-white">
     <div class="mx-auto max-w-content px-4 py-16 md:px-6 md:py-20">
       <p class="mb-3 text-xs font-bold tracking-widest text-thp-teal">{keyFocus.eyebrow}</p>
-      <h2 class="mb-10 max-w-2xl whitespace-nowrap text-base font-extrabold tracking-tight text-thp-navy2 md:text-2xl">
+      <h2 class="mb-10 max-w-3xl text-3xl font-black leading-tight tracking-tight text-thp-navy2 md:text-5xl">
         {keyFocus.title}
       </h2>
       <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -140,10 +163,26 @@ const latestSignalsMore = { kr: 'INTELLIGENCE 전체 보기', en: 'View all in I
     </div>
   </section>
 
+  <!-- 2026-08-14: "HOW WE WORK"을 문단 하나로 설명하던 것을, DRIVE 다섯 글자를 큼직한 타이포그래피로
+       보여주는 방식으로 재구성 — 글자 자체가 비주얼이 되도록. 각 글자는 SCIENCE 하위 페이지로 링크. -->
   <section class="bg-thp-navy2 text-white">
-    <div class="mx-auto max-w-content px-4 py-14 md:px-6 md:py-16">
-      <p class="mb-4 text-[16px] font-bold tracking-widest text-white/50">HOW WE WORK</p>
-      <p class="max-w-2xl text-base leading-relaxed md:text-lg">{devEngineCopy[locale]}</p>
+    <div class="mx-auto max-w-content px-4 py-16 md:px-6 md:py-20">
+      <p class="mb-3 text-xs font-bold tracking-widest text-white/50">HOW WE WORK</p>
+      <p class="mb-10 max-w-2xl text-sm leading-relaxed text-white/60">{devEngineCopy[locale]}</p>
+
+      <div class="grid grid-cols-2 gap-6 sm:grid-cols-5">
+        {
+          driveFramework.map((s) => (
+            <a href={`/${locale}/science/${s.slug}`} class="group block">
+              <p class="text-[3.5rem] font-black leading-none text-white transition-colors group-hover:text-[#F5C518] md:text-[4.5rem]">
+                {s.letter}
+              </p>
+              <p class="mt-3 text-xs font-bold tracking-widest text-[#F5C518]">{s.stage}</p>
+              <p class="mt-2 text-[13px] leading-relaxed text-white/55">{s.meaning[locale]}</p>
+            </a>
+          ))
+        }
+      </div>
     </div>
   </section>
 </BaseLayout>
