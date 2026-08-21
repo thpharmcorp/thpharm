@@ -44,6 +44,12 @@
       "en": "Priority indications: heart failure, fatty liver disease, obesity — AI-derived candidates will be further verified through cell and animal studies",
       "zh_cn": "优先审视适应症:心力衰竭、脂肪肝疾病、肥胖症——AI推导候选物质将通过细胞与动物实验进一步验证",
       "jp": "優先検討適応症:心不全・脂肪肝疾患・肥満症 — AI導出候補は細胞・動物実験でさらに検証予定"
+    },
+    {
+      "kr": "인실리코 메디슨 공식 발표(2026-08-12)로도 같은 내용이 확인됨 — Alex Zhavoronkov 인실리코 대표: \"AI를 통해 기존 생물학적 데이터로부터 그 이전보다 훨씬 더 많은 가치를 추출할 수 있습니다.\" 한태희 티에치팜 대표: \"단일 자산으로부터 여러 파이프라인을 창출하는 자본 효율적 약물개발 모델을 구축하겠습니다.\"",
+      "en": "Also confirmed by Insilico Medicine's own official announcement (2026-08-12) — Insilico CEO Alex Zhavoronkov: \"AI allows us to extract far more value from existing biological data than before.\" THPHARM CEO Tae Hee Han: \"We aim to build a capital-efficient drug development model that generates multiple pipelines from a single asset.\"",
+      "zh_cn": "英矽智能官方发布(2026-08-12)也证实了同一内容——英矽智能CEO Alex Zhavoronkov:\"通过AI,我们能从现有生物学数据中提取比以往更多的价值。\"THPHARM代表韩泰熙:\"我们将打造从单一资产创造多条管线的资本高效药物开发模式。\"",
+      "jp": "Insilico Medicineの公式発表(2026-08-12)でも同じ内容が確認された — Insilico CEO Alex Zhavoronkov氏:「AIによって、既存の生物学的データからこれまで以上に多くの価値を引き出すことができます」。THPHARM代表 韓泰熙氏:「単一の資産から複数のパイプラインを生み出す資本効率の高い医薬品開発モデルを構築します」。"
     }
   ],
   "thpharmView": {
@@ -56,7 +62,7 @@
   "region": "KR",
   "year": 2026,
   "tags": [
-    { "label": "Insilico Medicine", "url": "https://insilico.com" },
+    { "label": "Insilico Medicine 공식발표", "url": "https://insilico.com/news/h9zeln8cc1-insilico-medicines-pandaomics-enables-ai" },
     { "label": "PandaOmics", "url": "https://insilico.com/pandaomics" },
     { "label": "Reverse Engineering" },
     { "label": "Bio-AI" },
@@ -66,7 +72,7 @@
     { "label": "한국경제", "url": "https://www.hankyung.com/article/202608126841O" }
   ],
   "relatedLinks": [
-    { "label": "PIPELINE", "href": "/pipeline" },
+    { "label": "PIPELINE — THP-001", "href": "/pipeline/thp-001" },
     { "label": "SCIENCE — REVEAL", "href": "/science/reveal" },
     { "label": "INTELLIGENCE — AI Partner-ready", "href": "/intelligence/ai-partner-ready" }
   ],
@@ -77,7 +83,7 @@
     "published_at": "2026-08-13",
     "source_url": "https://www.hankyung.com/article/202608126841O",
     "accessed_at": "2026-08-13",
-    "last_verified": "2026-08-13"
+    "last_verified": "2026-08-21"
   },
   "publishedAt": "2026-08-13"
 }
