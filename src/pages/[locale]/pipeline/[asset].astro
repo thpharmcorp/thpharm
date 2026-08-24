@@ -20,7 +20,7 @@ const d = entry.data;
 // (수동 큐레이션 — CLAUDE.md 원칙대로 자동 태그 매칭이 아니라 대표 확인 후 직접 지정).
 // 예: THP-001(Phase 3)에 적용된 AI 역설계(Reverse Engineering) 전략 보도.
 const relatedIntelligenceByAsset: Record<string, string[]> = {
-  'THP-001': ['news-insilico-reverse-engineering'],
+  'THP-001': ['news-insilico-reverse-engineering', 'web-503-fdc-adherence'],
 };
 const relatedIntelligenceLabel = { kr: '관련 INTELLIGENCE', en: 'Related Intelligence', 'zh-cn': '相关 Intelligence', jp: '関連 Intelligence' }[locale];
 const relatedIntelligence = (

@@ -1,7 +1,7 @@
 {
   "code": "WEB-503",
   "kind": "paper",
-  "status": "company_confirm",
+  "status": "published",
   "title": {
     "kr": "복합제가 당뇨병 약물 순응도를 높인다 — 최신 내러티브 리뷰",
     "en": "Fixed-Dose Combinations Improve Medication Adherence in Type 2 Diabetes — A New Narrative Review",
@@ -34,7 +34,9 @@
     "jp": "長期(1年以上)のアドヒアランス追跡データ / 配合剤と個別処方を比較するRCTの結果 / 用量調整が必要な患者群における配合剤の限界 / THP-001の第3相試験でアドヒアランス指標が組み込まれるか"
   },
   "keyPoints": [],
-  "relatedLinks": [],
+  "relatedLinks": [
+    { "label": "PIPELINE — THP-001", "href": "/pipeline/thp-001" }
+  ],
   "tags": [
     { "label": "FDC" },
     { "label": "Type 2 Diabetes" },
