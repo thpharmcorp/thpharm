@@ -108,7 +108,11 @@ const kindLabels: Record<Locale, Record<string, string>> = {
 };
 const kl = kindLabels[locale];
 const allLabel = { kr: '전체', en: 'ALL', 'zh-cn': '全部', jp: 'すべて' }[locale];
-const kindsPresent = Array.from(new Set(feedItems.map((it) => it.data.kind)));
+// 2026-08-24: "THPHARM 관점" 필터 탭이 어색하다는 피드백으로 필터 메뉴에서만 제외한다.
+// thpharm_view 콘텐츠 자체는 계속 feedItems에 남아있어 "전체" 탭과 카드 목록에는 그대로 노출되고,
+// 개별 카드 배지(kl[item.data.kind])도 그대로 "THPHARM 관점"이라고 표시된다 — 없어지는 건 이 필터
+// 버튼 하나뿐이다.
+const kindsPresent = Array.from(new Set(feedItems.map((it) => it.data.kind))).filter((k) => k !== 'thpharm_view');
 ---
 
 <BaseLayout locale={locale} title={hero.title} description={hero.body}>
