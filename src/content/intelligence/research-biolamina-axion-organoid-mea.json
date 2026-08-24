@@ -1,0 +1,81 @@
+{
+  "code": "WEB-507",
+  "kind": "research_radar",
+  "status": "published",
+  "title": {
+    "kr": "오가노이드 경쟁의 다음 단계, '더 닮게'가 아니라 '더 정확하게 측정하기'",
+    "en": "The next stage of organoid competition isn't looking more real — it's measuring more precisely",
+    "zh_cn": "类器官竞争的下一阶段,不是\"更像\",而是\"更精准地测量\"",
+    "jp": "オルガノイド競争の次の段階は「もっと似せる」ではなく「もっと正確に測る」"
+  },
+  "dek": {
+    "kr": "BioLamina와 Axion BioSystems가 라미닌 기반 배양환경과 MEA 기능측정 기술을 결합해 신경·심장 오가노이드의 재현 가능한 기능 분석을 추진한다",
+    "en": "BioLamina and Axion BioSystems combine laminin-based culture substrates with MEA functional measurement to enable reproducible analysis of neural and cardiac organoids",
+    "zh_cn": "BioLamina与Axion BioSystems结合基于层粘连蛋白的培养基质与MEA功能测量技术,推进神经与心脏类器官的可重复功能分析",
+    "jp": "BioLaminaとAxion BioSystemsが、ラミニン基盤の培養環境とMEA機能測定技術を組み合わせ、神経・心臓オルガノイドの再現性ある機能解析を推進"
+  },
+  "relevance": "Watch",
+  "body": {
+    "kr": "BioLamina와 Axion BioSystems는 오가노이드 연구를 위해 협력을 발표했습니다. Axion은 BioLamina의 인간 재조합 라미닌 'Biolaminin 332 LN'을 자사의 MEA(multielectrode array) 플레이트(3DMap)에 통합한 신제품을 개발합니다. 이 라미닌은 신경·심장 오가노이드가 장기간 실험 중에도 MEA 플레이트에 안정적으로 부착되도록 돕고, Axion의 분석기술은 오가노이드의 실제 전기적 기능을 정량적으로 측정합니다. 두 회사가 강조하는 키워드는 'reproducible, scalable organoid workflows'와 'functional analysis'입니다.",
+    "en": "BioLamina and Axion BioSystems have announced a partnership on organoid research. Axion will integrate BioLamina's human recombinant laminin, Biolaminin 332 LN, into a new product built on its multielectrode array (MEA) plates (3DMap). The laminin helps neural and cardiac organoids stay reliably attached to the MEA plate through long-term experiments, while Axion's analysis technology quantitatively measures the organoids' actual electrical function. The two companies frame the collaboration around 'reproducible, scalable organoid workflows' and 'functional analysis.'",
+    "zh_cn": "BioLamina与Axion BioSystems宣布在类器官研究领域展开合作。Axion将把BioLamina的人重组层粘连蛋白\"Biolaminin 332 LN\"整合进基于其多电极阵列(MEA)板(3DMap)打造的新产品中。该层粘连蛋白有助于神经与心脏类器官在长期实验中稳定附着于MEA板上,而Axion的分析技术则可对类器官的实际电生理功能进行定量测量。两家公司将此次合作的关键词定为\"可重复、可扩展的类器官工作流程\"与\"功能分析\"。",
+    "jp": "BioLaminaとAxion BioSystemsは、オルガノイド研究における協業を発表しました。Axionは、BioLaminaのヒト組換えラミニン「Biolaminin 332 LN」を、自社のマルチエレクトロードアレイ(MEA)プレート「3DMap」に統合した新製品を開発します。このラミニンは、神経・心臓オルガノイドが長期実験中もMEAプレートに安定的に接着し続けるのを助け、Axionの解析技術はオルガノイドの実際の電気的機能を定量的に測定します。両社はこの協業を「reproducible, scalable organoid workflows(再現性・拡張性のあるオルガノイドワークフロー)」と「functional analysis(機能分析)」というキーワードで説明しています。"
+  },
+  "thpharmView": {
+    "kr": "오가노이드의 산업적 가치는 형태가 실제 장기를 닮았다는 데서 끝나지 않습니다. 신약개발 플랫폼이 되려면 동일하게 만들 수 있는가, 반복 측정할 수 있는가, 숫자로 비교할 수 있는가, 대량으로 처리할 수 있는가가 함께 갖춰져야 합니다. THPHARM의 바이오프린팅·오가노이드 콘텐츠도 3D 조직 제작 자체보다, 생리적 환경-기능측정-약물반응까지 이어지는 흐름으로 보여주는 방향이 더 설득력이 있습니다.",
+    "en": "The industrial value of organoids doesn't end at looking like a real organ. To become a real drug-development platform, they need reproducibility, repeatable measurement, quantitative comparability, and throughput, all at once. THPHARM's own bioprinting and organoid content is more convincing when it shows the full chain — from physiological environment, through functional measurement, to drug response — rather than stopping at 3D tissue fabrication alone.",
+    "zh_cn": "类器官的产业价值,并不止于\"外形与真实器官相似\"。要成为真正的新药开发平台,还需要同时具备可重复制造、可重复测量、可量化比较以及可规模化处理的能力。THPHARM在生物打印与类器官方面的内容,若能展示从生理环境到功能测量、再到药物反应的完整链条,而不仅停留在3D组织制造本身,说服力会更强。",
+    "jp": "オルガノイドの産業的価値は、実際の臓器に似ているという点だけでは終わりません。真の創薬プラットフォームとなるためには、同一に作れるか、繰り返し測定できるか、数値で比較できるか、大量に処理できるかが同時に求められます。THPHARMのバイオプリンティング・オルガノイド関連コンテンツも、3D組織の作製そのものにとどまらず、生理的環境から機能測定、薬物応答へとつながる一連の流れとして示す方が説得力があります。"
+  },
+  "whatToWatch": {
+    "kr": "MEA뿐 아니라 imaging·omics·AI image analysis가 어떻게 결합되는지, FDA의 NAM(New Approach Methodologies) 정책과 이런 플랫폼이 어느 정도 연결되는지, 제약회사들이 실제 후보물질 선별 단계에서 오가노이드 데이터를 얼마나 활용하는지를 지켜봐야 합니다.",
+    "en": "Watch how MEA measurement combines with imaging, omics, and AI image analysis; how closely such platforms connect to the FDA's New Approach Methodologies (NAM) policy; and how much pharmaceutical companies actually rely on organoid data at the candidate-selection stage.",
+    "zh_cn": "需要关注MEA之外,成像、组学与AI图像分析将如何结合;此类平台与FDA的新方法学(NAM,New Approach Methodologies)政策的关联程度;以及制药公司在候选药物筛选阶段实际使用类器官数据的程度。",
+    "jp": "MEAだけでなく、imaging・omics・AI image analysisがどのように組み合わさるか、FDAのNAM(New Approach Methodologies)政策とこうしたプラットフォームがどの程度結びつくか、製薬企業が実際の候補物質選定段階でオルガノイドデータをどの程度活用するかを注視する必要があります。"
+  },
+  "keyPoints": [
+    {
+      "kr": "Axion이 BioLamina의 Biolaminin 332 LN을 자사 MEA 플레이트(3DMap)에 통합",
+      "en": "Axion is integrating BioLamina's Biolaminin 332 LN into its own MEA plate (3DMap)",
+      "zh_cn": "Axion正将BioLamina的Biolaminin 332 LN整合进自家MEA板(3DMap)",
+      "jp": "AxionがBioLaminaのBiolaminin 332 LNを自社MEAプレート(3DMap)に統合"
+    },
+    {
+      "kr": "신경·심장 오가노이드의 장기 부착 안정성 개선",
+      "en": "Improves long-term attachment stability for neural and cardiac organoids",
+      "zh_cn": "改善神经与心脏类器官的长期附着稳定性",
+      "jp": "神経・心臓オルガノイドの長期接着安定性を改善"
+    },
+    {
+      "kr": "MEA 기반으로 오가노이드의 실제 전기적 기능을 정량 측정",
+      "en": "MEA-based quantitative measurement of the organoids' actual electrical function",
+      "zh_cn": "基于MEA对类器官的实际电生理功能进行定量测量",
+      "jp": "MEAベースでオルガノイドの実際の電気的機能を定量測定"
+    },
+    {
+      "kr": "핵심 키워드: reproducible / scalable / functional analysis",
+      "en": "Key words: reproducible / scalable / functional analysis",
+      "zh_cn": "核心关键词:可重复 / 可扩展 / 功能分析",
+      "jp": "キーワード:reproducible(再現性) / scalable(拡張性) / functional analysis(機能分析)"
+    }
+  ],
+  "relatedLinks": [
+    { "label": "SCIENCE — VALIDATE", "href": "/science/validate" }
+  ],
+  "tags": [
+    { "label": "BioLamina", "url": "https://biolamina.com/newsroom/biolamina-and-axion-biosystems-partner-to-advance-organoid-research-for-disease-modeling-and-therapeutic-discovery/" },
+    { "label": "Axion BioSystems" },
+    { "label": "MEA" },
+    { "label": "Organoid" }
+  ],
+  "sourceMeta": {
+    "source_type": "Official",
+    "source_title": "BioLamina and Axion BioSystems partner to advance organoid research for disease modeling and therapeutic discovery",
+    "publisher": "BioLamina",
+    "published_at": "2026-08-19",
+    "source_url": "https://biolamina.com/newsroom/biolamina-and-axion-biosystems-partner-to-advance-organoid-research-for-disease-modeling-and-therapeutic-discovery/",
+    "accessed_at": "2026-08-24",
+    "last_verified": "2026-08-24"
+  },
+  "publishedAt": "2026-08-19"
+}

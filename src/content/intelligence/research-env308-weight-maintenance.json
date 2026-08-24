@@ -1,0 +1,84 @@
+{
+  "code": "WEB-504",
+  "kind": "research_radar",
+  "status": "published",
+  "title": {
+    "kr": "살 빼는 약 다음은, 다시 찌지 않게 하는 약 — Enveda ENV-308 Phase 1",
+    "en": "After the weight-loss drug comes the weight-maintenance drug — Enveda's ENV-308 Phase 1",
+    "zh_cn": "减肥药之后,是防止体重反弹的药——Enveda ENV-308 1期临床",
+    "jp": "痩せる薬の次は、リバウンドさせない薬 — EnvedaのENV-308フェーズ1"
+  },
+  "dek": {
+    "kr": "운동 대사물질 Lac-Phe를 모방한 경구 후보물질이 Phase 1에서 우수한 안전성을 확인했다. 다음 목표는 GLP-1 중단 후 체중 유지.",
+    "en": "An oral candidate designed to mimic the exercise metabolite Lac-Phe shows a strong safety profile in Phase 1 — next target: weight maintenance after stopping GLP-1.",
+    "zh_cn": "模拟运动代谢物Lac-Phe的口服候选药物在1期临床中显示出良好的安全性——下一个目标是GLP-1停药后的体重维持。",
+    "jp": "運動代謝物Lac-Pheを模倣した経口候補物質がフェーズ1で高い安全性を確認 — 次の目標はGLP-1中止後の体重維持。"
+  },
+  "relevance": "Related",
+  "body": {
+    "kr": "ENV-308은 고강도 운동이나 식사 후 체내에서 분비되는 호르몬 Lac-Phe의 작용을 모방하도록 설계된 경구용 소분자 후보물질입니다. Enveda는 88명의 건강한 성인을 대상으로 한 Phase 1에서 뛰어난 안전성과 위장관 내약성을 확인했고, 순환 렙틴 수치 감소도 관찰됐습니다. 이 후보는 Enveda의 AI 기반 천연물·대사체 탐색 플랫폼 PRISM을 통해 발굴됐습니다. 회사는 GLP-1 치료를 중단한 사람들을 대상으로 체중 재증가 및 기타 대사적 이점을 유지하는 능력을 시험하는 Phase 2를 계획하고 있다고 밝혔습니다. 다만 현재 결과는 초기 안전성 시험이며, 체중유지 효과 자체는 아직 사람에서 입증되지 않았습니다.",
+    "en": "ENV-308 is an oral small-molecule candidate designed to mimic Lac-Phe, a hormone released during intense exercise and after meals. In a Phase 1 trial of 88 healthy adults, Enveda reported an exceptional safety profile with strong gastrointestinal tolerability, along with a reduction in circulating leptin. The candidate was discovered through Enveda's proprietary AI platform, PRISM, which searches for naturally occurring, biologically active molecules. The company plans a Phase 2 trial testing ENV-308's ability to maintain weight loss and other metabolic benefits in people who have stopped GLP-1 therapy. These are still early safety results, however — weight-maintenance efficacy has not yet been demonstrated in humans.",
+    "zh_cn": "ENV-308是一款口服小分子候选药物,旨在模拟高强度运动及餐后体内释放的激素Lac-Phe的作用。在一项纳入88名健康成年人的1期临床中,Enveda报告了极佳的安全性及良好的胃肠道耐受性,同时观察到循环瘦素水平下降。该候选药物由Enveda专有的AI平台PRISM发现,该平台用于搜寻天然存在且具有生物活性的分子。公司计划开展2期临床,测试ENV-308在GLP-1停药人群中维持体重减轻及其他代谢获益的能力。不过,目前仅为早期安全性数据,体重维持疗效尚未在人体中得到证实。",
+    "jp": "ENV-308は、高強度の運動時や食後に体内で放出されるホルモンLac-Pheの作用を模倣するよう設計された経口低分子候補物質です。88名の健康な成人を対象としたフェーズ1試験で、Envedaは優れた安全性と消化器系の高い忍容性を確認し、循環レプチン値の低下も観察されました。この候補物質は、天然由来の生理活性分子を探索するEnveda独自のAIプラットフォーム「PRISM」によって発見されました。同社はGLP-1治療を中止した人を対象に、体重減少やその他の代謝的な利点を維持する能力を検証するフェーズ2試験を計画していると発表しています。ただし現時点の結果はあくまで初期の安全性試験であり、体重維持効果そのものはヒトでまだ実証されていません。"
+  },
+  "thpharmView": {
+    "kr": "GLP-1 시장의 다음 경쟁은 '더 많이 빼는 약'이 아니라 '중단 이후를 책임지는 약'일 수 있습니다. 모든 후보가 GLP-1과 정면 경쟁할 필요는 없고, GLP-1 전·중·후에 병용되거나 그 약점을 보완하는 약물도 큰 시장이 될 수 있습니다. THPHARM이 복합제·후속 대사질환 파이프라인을 설계할 때 참고할 만한 방향입니다.",
+    "en": "The next competition in the GLP-1 market may not be about losing more weight, but about what happens after treatment stops. Not every candidate needs to compete head-on with GLP-1 — drugs used alongside GLP-1, before or after it, or that address its weaknesses, could represent a large market of their own. This is a useful reference point as THPHARM considers combination therapies and follow-on metabolic-disease candidates.",
+    "zh_cn": "GLP-1市场的下一轮竞争,或许不在于\"减得更多\",而在于\"停药之后由谁来负责\"。并非所有候选药物都需要与GLP-1正面竞争——在GLP-1治疗前、中、后配合使用,或弥补其不足的药物,同样可能形成巨大的市场。这对THPHARM在设计复方制剂与后续代谢性疾病管线时具有参考价值。",
+    "jp": "GLP-1市場の次の競争は、「より多く痩せる薬」ではなく「中止後を引き受ける薬」になるかもしれません。すべての候補がGLP-1と正面から競合する必要はなく、GLP-1の前後や併用で使われる薬、その弱点を補う薬も大きな市場になり得ます。THPHARMが複合剤や後続の代謝性疾患パイプラインを検討する上で参考になる方向性です。"
+  },
+  "whatToWatch": {
+    "kr": "ENV-308의 Phase 2에서 실제 체중 재증가 억제 효과가 확인되는지, 근육량(lean mass) 보존 효과가 사람에서도 나타나는지, GLP-1과의 병용 또는 순차치료가 어떤 방식으로 설계되는지를 지켜봐야 합니다.",
+    "en": "Watch whether ENV-308's Phase 2 confirms actual prevention of weight regain, whether lean-mass preservation holds up in humans, and how combination or sequential dosing with GLP-1 therapies ends up being designed.",
+    "zh_cn": "需要关注ENV-308在2期临床中是否真正证实能抑制体重反弹、瘦体重(lean mass)保留效果能否在人体中体现,以及与GLP-1的联合或序贯治疗方案将如何设计。",
+    "jp": "ENV-308のフェーズ2で実際に体重再増加の抑制効果が確認されるか、除脂肪量(lean mass)の保持効果がヒトでも示されるか、GLP-1との併用または逐次治療がどのように設計されるかを注視する必要があります。"
+  },
+  "keyPoints": [
+    {
+      "kr": "Lac-Phe(운동 대사물질) 작용을 모방하도록 설계 — Enveda의 AI 천연물 탐색 플랫폼 PRISM으로 발굴",
+      "en": "Designed to mimic Lac-Phe, an exercise metabolite — discovered via Enveda's AI natural-product platform PRISM",
+      "zh_cn": "设计用于模拟运动代谢物Lac-Phe的作用——通过Enveda的AI天然产物发现平台PRISM发现",
+      "jp": "運動代謝物Lac-Pheの作用を模倣するよう設計 — EnvedaのAI天然物探索プラットフォームPRISMで発見"
+    },
+    {
+      "kr": "88명 대상 Phase 1 — 뛰어난 안전성·위장관 내약성, 순환 렙틴 감소 관찰",
+      "en": "Phase 1 in 88 participants — exceptional safety and GI tolerability, with observed reduction in circulating leptin",
+      "zh_cn": "88人1期临床——安全性与胃肠道耐受性俱佳,并观察到循环瘦素水平下降",
+      "jp": "88名対象のフェーズ1 — 優れた安全性・消化器忍容性、循環レプチン値の低下を観察"
+    },
+    {
+      "kr": "GLP-1 중단자 대상 체중유지·대사이점 유지 여부를 시험하는 Phase 2 계획",
+      "en": "Phase 2 planned to test weight-maintenance and metabolic benefits in people who stopped GLP-1 therapy",
+      "zh_cn": "计划开展2期临床,测试GLP-1停药人群中的体重维持与代谢获益情况",
+      "jp": "GLP-1中止者を対象に体重維持・代謝benefitの持続を検証するフェーズ2を計画"
+    },
+    {
+      "kr": "현재는 초기 안전성 시험 단계 — 체중유지 효과 자체는 사람에서 아직 미입증",
+      "en": "Still an early safety trial — weight-maintenance efficacy itself is not yet proven in humans",
+      "zh_cn": "目前仍处于早期安全性试验阶段——体重维持疗效本身尚未在人体中得到证实",
+      "jp": "現時点ではあくまで初期の安全性試験段階 — 体重維持効果そのものはヒトでまだ実証されていません"
+    }
+  ],
+  "relatedLinks": [
+    { "label": "PIPELINE", "href": "/pipeline" },
+    { "label": "SCIENCE — REVEAL", "href": "/science/reveal" }
+  ],
+  "tags": [
+    { "label": "Enveda", "url": "https://enveda.com/news/308-phase1/" },
+    { "label": "ENV-308" },
+    { "label": "PRISM" },
+    { "label": "Lac-Phe" },
+    { "label": "GLP-1" },
+    { "label": "Weight Maintenance" }
+  ],
+  "sourceMeta": {
+    "source_type": "Official",
+    "source_title": "Enveda Reports Positive Phase 1 Results for ENV-308, the First Pill Designed From the Chemistry of Exercise",
+    "publisher": "Enveda Biosciences",
+    "published_at": "2026-08-18",
+    "source_url": "https://enveda.com/news/308-phase1/",
+    "accessed_at": "2026-08-24",
+    "last_verified": "2026-08-24"
+  },
+  "publishedAt": "2026-08-18"
+}

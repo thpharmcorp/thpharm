@@ -66,6 +66,112 @@ const latestSignals = (
 const latestSignalsLabel = { kr: '최신 동향', en: 'Latest Signals', 'zh-cn': '最新动态', jp: '最新アップデート' }[locale];
 const latestSignalsMore = { kr: 'INTELLIGENCE 전체 보기', en: 'View all in Intelligence', 'zh-cn': '查看全部 Intelligence', jp: 'INTELLIGENCEをすべて見る' }[locale];
 
+// 2026-08-24: "이번 주 테마"(BEYOND WEIGHT LOSS) — 기획자가 지정한 주간 편집 큐레이션.
+// CLAUDE.md 원칙대로 자동 배치가 아니라 3개 항목과 티어(Featured/Science Pick/Technology
+// Watch)를 직접 지정한다. weeklyThemeActive를 false로 바꾸면 아래의 자동 latestSignals
+// 그리드로 되돌아간다 — 다음 주 새 테마가 없으면 이 스위치만 끄면 됨.
+const weeklyThemeActive = true;
+const weeklyThemeCopy: Record<Locale, { eyebrow: string; label: string; subLabel: string; lead: string }> = {
+  kr: {
+    eyebrow: 'THIS WEEK — INTELLIGENCE',
+    label: 'BEYOND WEIGHT LOSS',
+    subLabel: '감량 이후의 신약개발',
+    lead: '체중감량은 치료의 끝이 아닐 수 있습니다.\n유지, 조직 회복, 그리고 더 정밀한 검증이 다음 경쟁이 되고 있습니다.',
+  },
+  en: {
+    eyebrow: 'THIS WEEK — INTELLIGENCE',
+    label: 'BEYOND WEIGHT LOSS',
+    subLabel: 'Drug development after the weight is gone',
+    lead: 'Losing weight may not be where treatment ends.\nMaintenance, tissue recovery, and more precise verification are becoming the next competition.',
+  },
+  'zh-cn': {
+    eyebrow: 'THIS WEEK — INTELLIGENCE',
+    label: 'BEYOND WEIGHT LOSS',
+    subLabel: '减重之后的新药开发',
+    lead: '体重减轻或许并非治疗的终点。\n体重维持、组织修复与更精准的验证,正在成为下一轮竞争。',
+  },
+  jp: {
+    eyebrow: 'THIS WEEK — INTELLIGENCE',
+    label: 'BEYOND WEIGHT LOSS',
+    subLabel: '減量後の創薬',
+    lead: '体重減少は治療の終わりではないかもしれません。\n維持、組織回復、そしてより精密な検証が次の競争になりつつあります。',
+  },
+};
+
+const weeklyThemeItemDefs: Array<{ tier: Record<Locale, string>; id: string }> = [
+  {
+    tier: { kr: 'FEATURED', en: 'FEATURED', 'zh-cn': 'FEATURED', jp: 'FEATURED' },
+    id: 'research-env308-weight-maintenance',
+  },
+  {
+    tier: { kr: 'SCIENCE PICK', en: 'SCIENCE PICK', 'zh-cn': 'SCIENCE PICK', jp: 'SCIENCE PICK' },
+    id: 'paper-obesity-regression-proteomic-atlas',
+  },
+  {
+    tier: { kr: 'TECHNOLOGY WATCH', en: 'TECHNOLOGY WATCH', 'zh-cn': 'TECHNOLOGY WATCH', jp: 'TECHNOLOGY WATCH' },
+    id: 'research-biolamina-axion-organoid-mea',
+  },
+];
+const weeklyThemeItemsRaw = weeklyThemeActive
+  ? await Promise.all(
+      weeklyThemeItemDefs.map(async (def) => {
+        const e = await getEntry('intelligence', def.id);
+        return e ? { ...def, entry: e } : null;
+      })
+    )
+  : [];
+const weeklyThemeItems = weeklyThemeItemsRaw.filter((x): x is NonNullable<typeof x> => x !== null);
+
+// FEATURED 카드에 넣을 "GLP-1 시작 → 중단 → ?" 플로우 라벨 — 원문 기획안의 인포그래픽 제안을
+// 정적 HTML/CSS 흐름도로 구현(사진/애니메이션 없이 타이포그래피 중심, 사이트 톤과 일치).
+const glp1FlowLabels = {
+  start: { kr: 'GLP-1 시작', en: 'GLP-1 START', 'zh-cn': 'GLP-1 开始', jp: 'GLP-1 開始' }[locale],
+  loss: { kr: '체중 감량', en: 'WEIGHT LOSS', 'zh-cn': '体重减轻', jp: '体重減少' }[locale],
+  stop: { kr: 'GLP-1 중단', en: 'GLP-1 STOP', 'zh-cn': 'GLP-1 停药', jp: 'GLP-1 中止' }[locale],
+  regain: { kr: '체중 재증가', en: 'REGAIN', 'zh-cn': '体重反弹', jp: 'リバウンド' }[locale],
+  maintenance: {
+    kr: '체중 유지 — ENV-308이 노리는 지점',
+    en: 'MAINTENANCE — where ENV-308 is aiming',
+    'zh-cn': '体重维持——ENV-308的目标',
+    jp: '体重維持 — ENV-308が狙う領域',
+  }[locale],
+};
+
+// SCIENCE PICK 카드에 넣을 장기별 회복 상태 — Nature Metabolism 논문에서 실제로 확인된
+// 조직만 표시(백색지방=염증 지속, 뇌·신장·뼈·흉선·비장=회복 지연). 확인 안 된 장기는 넣지 않음.
+const organRecoveryLabel = {
+  kr: 'WEIGHT RECOVERY ≠ SYSTEM RECOVERY',
+  en: 'WEIGHT RECOVERY ≠ SYSTEM RECOVERY',
+  'zh-cn': '体重恢复 ≠ 全身恢复',
+  jp: '体重回復 ≠ 全身回復',
+}[locale];
+const delayedLabel = { kr: '회복 지연', en: 'Delayed', 'zh-cn': '延迟恢复', jp: '回復遅延' }[locale];
+const persistentLabel = { kr: '염증 지속', en: 'Persistent', 'zh-cn': '持续存在', jp: '持続' }[locale];
+const organItems: Array<{ organ: string; status: string; top: string; left: string; state: 'delayed' | 'persistent' }> = [
+  { organ: { kr: '뇌', en: 'Brain', 'zh-cn': '脑', jp: '脳' }[locale], status: delayedLabel, top: '8%', left: '50%', state: 'delayed' },
+  { organ: { kr: '흉선', en: 'Thymus', 'zh-cn': '胸腺', jp: '胸腺' }[locale], status: delayedLabel, top: '32%', left: '38%', state: 'delayed' },
+  { organ: { kr: '비장', en: 'Spleen', 'zh-cn': '脾脏', jp: '脾臓' }[locale], status: delayedLabel, top: '44%', left: '64%', state: 'delayed' },
+  { organ: { kr: '백색지방', en: 'White Adipose', 'zh-cn': '白色脂肪', jp: '白色脂肪' }[locale], status: persistentLabel, top: '58%', left: '50%', state: 'persistent' },
+  { organ: { kr: '신장', en: 'Kidney', 'zh-cn': '肾', jp: '腎臓' }[locale], status: delayedLabel, top: '60%', left: '30%', state: 'delayed' },
+  { organ: { kr: '뼈', en: 'Bone', 'zh-cn': '骨', jp: '骨' }[locale], status: delayedLabel, top: '86%', left: '50%', state: 'delayed' },
+];
+const organRestNote = {
+  kr: '위 조직 외 대부분은 체중감량 후 정상(lean) 수준에 가깝게 회복',
+  en: 'Most tissues besides these returned to near-normal (lean) levels after weight loss',
+  'zh-cn': '除上述组织外,大多数组织在体重减轻后恢复至接近正常(瘦体)水平',
+  jp: '上記以外の大半の組織は、体重減少後にほぼ正常(lean)レベルへ回復',
+}[locale];
+
+// TECHNOLOGY WATCH 카드에 넣을 오가노이드 5단계 — 애니메이션은 다음 단계 과제로 남기고,
+// 이번엔 정적 플로우로 구현(HeroDark/DRIVE와 같은 "타이포그래피 플로우" 톤 유지).
+const organoidSteps = [
+  { kr: '3D 오가노이드', en: '3D ORGANOID', 'zh-cn': '3D类器官', jp: '3Dオルガノイド' },
+  { kr: '기능 센서(MEA)', en: 'FUNCTION SENSOR', 'zh-cn': '功能传感器', jp: '機能センサー' },
+  { kr: '데이터', en: 'DATA', 'zh-cn': '数据', jp: 'データ' },
+  { kr: 'AI 분석', en: 'AI ANALYSIS', 'zh-cn': 'AI分析', jp: 'AI解析' },
+  { kr: '신약 의사결정', en: 'DRUG DECISION', 'zh-cn': '新药决策', jp: '創薬判断' },
+].map((s) => s[locale]);
+
 // 2026-08-21: 히어로 배경에 "워드클라우드" 텍스처를 새로 추가 — 사용자가 참고로 보낸 이미지(당뇨 관련
 // 붉은 스톡 워드클라우드)는 그대로 쓰지 않고(라이선스 불명 스톡 이미지), 같은 "느낌"만 티에치팜이
 // 실제로 다루는 4대 대사질환 + 실제 접근법 키워드로 새로 만들어 브랜드 톤(다크브라운 + 오렌지/옐로우)에
@@ -143,28 +249,132 @@ const heroWordCloud: Array<{ text: string; top: string; left: string; size: stri
   </section>
 
   {
-    latestSignals.length > 0 && (
+    weeklyThemeActive && weeklyThemeItems.length === 3 ? (
       <section class="border-b border-thp-line bg-thp-mist">
-        <div class="mx-auto max-w-content px-4 py-10 md:px-6">
-          <div class="mb-5 flex items-center justify-between">
-            <p class="text-xs font-bold tracking-widest text-thp-teal">{latestSignalsLabel}</p>
+        <div class="mx-auto max-w-content px-4 py-14 md:px-6 md:py-16">
+          <div class="mb-2 flex flex-wrap items-center justify-between gap-3">
+            <p class="text-xs font-bold tracking-widest text-thp-teal">{weeklyThemeCopy[locale].eyebrow}</p>
             <a href={`/${locale}/intelligence`} class="text-xs font-bold text-thp-ink/40 hover:text-thp-tealDeep">
               {latestSignalsMore} →
             </a>
           </div>
-          <div class="grid gap-3 sm:grid-cols-3">
-            {latestSignals.map((item) => (
-              <a
-                href={`/${locale}/intelligence/${item.id}`}
-                class="flex flex-col rounded-xl border border-thp-line bg-white p-4 transition-colors hover:border-thp-teal"
-              >
-                <span class="text-[15px] font-bold tracking-wider text-thp-tealDeep">{item.data.publishedAt}</span>
-                <p class="mt-2 text-sm font-bold leading-snug text-thp-navy2 line-clamp-2">{item.data.title[fk]}</p>
-              </a>
-            ))}
+          <h2 class="mt-1 text-3xl font-black tracking-tight text-thp-navy2 md:text-4xl">{weeklyThemeCopy[locale].label}</h2>
+          <p class="mt-1 text-sm font-bold text-thp-ink/40">{weeklyThemeCopy[locale].subLabel}</p>
+          <p class="mt-4 max-w-2xl whitespace-pre-line text-base leading-relaxed text-thp-ink/70">{weeklyThemeCopy[locale].lead}</p>
+
+          <!-- FEATURED -->
+          <a
+            href={`/${locale}/intelligence/${weeklyThemeItems[0].entry.id}`}
+            class="mt-8 block rounded-2xl border border-thp-line bg-white p-6 transition-colors hover:border-thp-teal md:p-8"
+          >
+            <span class="rounded-full bg-thp-teal/10 px-2.5 py-1 text-[11px] font-bold tracking-widest text-thp-tealDeep">
+              {weeklyThemeItems[0].tier[locale]}
+            </span>
+            <p class="mt-4 text-xl font-black leading-snug text-thp-navy2 md:text-2xl">{weeklyThemeItems[0].entry.data.title[fk]}</p>
+            <p class="mt-2 max-w-2xl text-sm leading-relaxed text-thp-ink/60">{weeklyThemeItems[0].entry.data.dek[fk]}</p>
+
+            <!-- GLP-1 START → WEIGHT LOSS → GLP-1 STOP → REGAIN/MAINTENANCE 플로우 -->
+            <div class="mt-6 flex flex-wrap items-center gap-2 rounded-xl border border-thp-line bg-thp-mist p-4 text-[11px] font-bold">
+              <span class="rounded-full bg-white px-3 py-1.5 text-thp-navy2 shadow-sm">{glp1FlowLabels.start}</span>
+              <span class="text-thp-ink/30">→</span>
+              <span class="rounded-full bg-white px-3 py-1.5 text-thp-navy2 shadow-sm">{glp1FlowLabels.loss}</span>
+              <span class="text-thp-ink/30">→</span>
+              <span class="rounded-full bg-white px-3 py-1.5 text-thp-navy2 shadow-sm">{glp1FlowLabels.stop}</span>
+              <span class="text-thp-ink/30">→</span>
+              <span class="flex flex-col gap-1.5">
+                <span class="rounded-full border border-thp-ink/15 bg-white px-3 py-1 text-thp-ink/40">{glp1FlowLabels.regain}</span>
+                <span class="rounded-full bg-thp-teal px-3 py-1 text-white">{glp1FlowLabels.maintenance}</span>
+              </span>
+            </div>
+          </a>
+
+          <div class="mt-6 grid gap-6 lg:grid-cols-2">
+            <!-- SCIENCE PICK -->
+            <a
+              href={`/${locale}/intelligence/${weeklyThemeItems[1].entry.id}`}
+              class="block rounded-2xl border border-thp-line bg-white p-6 transition-colors hover:border-thp-teal"
+            >
+              <span class="rounded-full bg-thp-teal/10 px-2.5 py-1 text-[11px] font-bold tracking-widest text-thp-tealDeep">
+                {weeklyThemeItems[1].tier[locale]}
+              </span>
+              <p class="mt-3 text-base font-extrabold leading-snug text-thp-navy2">{weeklyThemeItems[1].entry.data.title[fk]}</p>
+              <p class="mt-2 text-sm leading-relaxed text-thp-ink/60">{weeklyThemeItems[1].entry.data.dek[fk]}</p>
+
+              <!-- 장기별 회복상태 다이어그램: 추상적 인체 실루엣(사진 아님) + 확인된 조직만 표시 -->
+              <div class="relative mx-auto mt-6 h-[220px] w-[140px]">
+                <svg viewBox="0 0 140 220" class="absolute inset-0 h-full w-full" aria-hidden="true">
+                  <circle cx="70" cy="26" r="20" fill="none" stroke="#CBD5E1" stroke-width="2" />
+                  <rect x="38" y="48" width="64" height="100" rx="28" fill="none" stroke="#CBD5E1" stroke-width="2" />
+                  <line x1="38" y1="150" x2="20" y2="210" stroke="#CBD5E1" stroke-width="2" />
+                  <line x1="102" y1="150" x2="120" y2="210" stroke="#CBD5E1" stroke-width="2" />
+                </svg>
+                {
+                  organItems.map((o) => (
+                    <span
+                      class:list={['absolute -translate-x-1/2 -translate-y-1/2 rounded-full', o.state === 'persistent' ? 'bg-thp-teal' : 'bg-[#DC2626]']}
+                      style={`top:${o.top}; left:${o.left}; width:8px; height:8px;`}
+                      title={`${o.organ}: ${o.status}`}
+                    />
+                  ))
+                }
+              </div>
+              <p class="mt-3 text-center text-[11px] font-bold tracking-wide text-thp-ink/50">{organRecoveryLabel}</p>
+              <div class="mt-3 flex flex-wrap justify-center gap-x-3 gap-y-1 text-[11px] text-thp-ink/50">
+                {organItems.map((o) => <span>{o.organ} · {o.status}</span>)}
+              </div>
+              <p class="mt-2 text-center text-[11px] leading-relaxed text-thp-ink/40">{organRestNote}</p>
+            </a>
+
+            <!-- TECHNOLOGY WATCH -->
+            <a
+              href={`/${locale}/intelligence/${weeklyThemeItems[2].entry.id}`}
+              class="block rounded-2xl border border-thp-line bg-white p-6 transition-colors hover:border-thp-teal"
+            >
+              <span class="rounded-full bg-thp-teal/10 px-2.5 py-1 text-[11px] font-bold tracking-widest text-thp-tealDeep">
+                {weeklyThemeItems[2].tier[locale]}
+              </span>
+              <p class="mt-3 text-base font-extrabold leading-snug text-thp-navy2">{weeklyThemeItems[2].entry.data.title[fk]}</p>
+              <p class="mt-2 text-sm leading-relaxed text-thp-ink/60">{weeklyThemeItems[2].entry.data.dek[fk]}</p>
+
+              <!-- 3D ORGANOID → FUNCTION SENSOR → DATA → AI ANALYSIS → DRUG DECISION (정적 플로우) -->
+              <div class="mt-6 flex flex-wrap items-center gap-1.5 text-[10px] font-bold">
+                {
+                  organoidSteps.map((s, i) => (
+                    <>
+                      <span class="rounded-lg border border-thp-line bg-thp-mist px-2.5 py-2 text-center text-thp-navy2">{s}</span>
+                      {i < organoidSteps.length - 1 && <span class="text-thp-ink/30">→</span>}
+                    </>
+                  ))
+                }
+              </div>
+            </a>
           </div>
         </div>
       </section>
+    ) : (
+      latestSignals.length > 0 && (
+        <section class="border-b border-thp-line bg-thp-mist">
+          <div class="mx-auto max-w-content px-4 py-10 md:px-6">
+            <div class="mb-5 flex items-center justify-between">
+              <p class="text-xs font-bold tracking-widest text-thp-teal">{latestSignalsLabel}</p>
+              <a href={`/${locale}/intelligence`} class="text-xs font-bold text-thp-ink/40 hover:text-thp-tealDeep">
+                {latestSignalsMore} →
+              </a>
+            </div>
+            <div class="grid gap-3 sm:grid-cols-3">
+              {latestSignals.map((item) => (
+                <a
+                  href={`/${locale}/intelligence/${item.id}`}
+                  class="flex flex-col rounded-xl border border-thp-line bg-white p-4 transition-colors hover:border-thp-teal"
+                >
+                  <span class="text-[15px] font-bold tracking-wider text-thp-tealDeep">{item.data.publishedAt}</span>
+                  <p class="mt-2 text-sm font-bold leading-snug text-thp-navy2 line-clamp-2">{item.data.title[fk]}</p>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+      )
     )
   }
 

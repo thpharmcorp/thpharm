@@ -1,0 +1,84 @@
+{
+  "code": "WEB-506",
+  "kind": "paper",
+  "status": "published",
+  "title": {
+    "kr": "체중은 돌아와도, 몸 전체가 원상복귀되는 건 아니다",
+    "en": "Weight returns to normal — the body doesn't always follow",
+    "zh_cn": "体重恢复正常,身体却未必完全复原",
+    "jp": "体重は戻っても、体全体が元通りになるわけではない"
+  },
+  "dek": {
+    "kr": "15개 장기·12,936개 단백질을 분석한 다장기 단백질체 지도, 비만 회복 후에도 지방·뇌·신장 등 일부 조직엔 변화가 남는다",
+    "en": "A multi-organ proteomic atlas spanning 15 organs and 12,936 proteins finds lasting changes in fat, brain, and kidney tissue even after weight normalizes",
+    "zh_cn": "覆盖15个器官、12,936种蛋白质的多器官蛋白质组图谱显示,即使体重恢复正常,脂肪、大脑、肾脏等组织仍留有变化",
+    "jp": "15臓器・12,936種類のタンパク質を解析した多臓器プロテオームアトラス、体重が正常化しても脂肪・脳・腎臓などの組織には変化が残る"
+  },
+  "relevance": "Related",
+  "body": {
+    "kr": "Boel 등 연구팀(교신저자 Susanne Mandrup, Blagoy Blagoev)이 Nature Metabolism에 발표한 이 연구는 비만·체중감량 마우스 모델에서 15개 장기, 4개 시점에 걸쳐 12,936개 단백질을 분석해 전신 단백질 변화를 지도화했습니다. 대부분의 조직은 체중감량 후 정상(lean) 상태에 가까운 수준으로 돌아갔지만, 백색지방 조직에서는 식균작용·염증 관련 반응이 지속됐고, 뇌·신장·뼈·흉선·비장 등에서도 비만으로 인한 변화가 지연되어 남아 있는 것으로 관찰됐습니다. 연구팀은 데이터와 interactive web tool을 함께 공개했습니다.",
+    "en": "This study, published in Nature Metabolism by Boel and colleagues (corresponding authors Susanne Mandrup and Blagoy Blagoev), mapped whole-body protein changes in a mouse model of obesity and weight loss — analyzing 12,936 proteins across 15 organs at 4 time points. Most tissues returned to near-lean levels after weight loss, but white adipose tissue retained ongoing phagocytic and inflammatory activity, and several organs — including brain, kidney, bone, thymus, and spleen — showed delayed recovery from obesity-induced changes. The team also released the underlying data and an interactive web tool.",
+    "zh_cn": "该研究由Boel等人发表于《Nature Metabolism》(通讯作者Susanne Mandrup、Blagoy Blagoev),在肥胖及体重减轻的小鼠模型中,于4个时间点分析了15个器官共12,936种蛋白质,绘制出全身蛋白质变化图谱。大多数组织在体重减轻后恢复至接近瘦体水平,但白色脂肪组织仍持续存在吞噬作用与炎症相关反应,脑、肾、骨、胸腺、脾脏等器官也表现出因肥胖引起的变化恢复延迟。研究团队同时公开了数据与交互式网页工具。",
+    "jp": "Boelらの研究チーム(責任著者:Susanne Mandrup、Blagoy Blagoev)がNature Metabolism誌に発表したこの研究は、肥満・体重減少マウスモデルにおいて15臓器・4時点にわたり12,936種類のタンパク質を解析し、全身のタンパク質変化を地図化しました。大半の組織は体重減少後にほぼ正常(lean)状態に近いレベルへ戻りましたが、白色脂肪組織では貪食・炎症関連の反応が持続し、脳・腎臓・骨・胸腺・脾臓などでも肥満による変化の回復が遅れて残っていることが観察されました。研究チームはデータとinteractive web toolも公開しています。"
+  },
+  "thpharmView": {
+    "kr": "대사질환 치료의 성공을 체중 하나로 판단하기는 점점 어려워지고 있습니다. 같은 체중감량이라도 어떤 조직과 대사기능이 얼마나 회복되는지가 차세대 치료제의 차별화 포인트가 될 수 있습니다. THPHARM의 대사질환 전략도 체중 감소 자체보다 지방조직·염증·근육·간·심혈관 대사지표를 함께 보는 방향으로 넓어질 필요가 있으며, 이런 multi-organ 데이터는 Bio-AI 관점에서 표적발굴·바이오마커 탐색·적응증 확장에 좋은 자원이 될 수 있습니다.",
+    "en": "Judging metabolic-disease treatment success by weight alone is becoming harder to justify. Even with identical weight loss, which tissues and metabolic functions actually recover — and how much — could become a key point of differentiation for next-generation therapies. THPHARM's own metabolic-disease strategy may need to widen beyond weight loss itself, to track adipose tissue, inflammation, muscle, liver, and cardiovascular metabolic markers together. From a Bio-AI standpoint, multi-organ proteomic data like this is also a valuable resource for target discovery, biomarker exploration, and indication expansion.",
+    "zh_cn": "仅凭体重来判断代谢性疾病治疗是否成功正变得越来越困难。即便体重减轻幅度相同,不同组织和代谢功能的实际恢复程度也可能成为下一代治疗药物的关键差异化因素。THPHARM的代谢性疾病策略也有必要从单纯的体重下降,拓展到同时关注脂肪组织、炎症、肌肉、肝脏与心血管代谢指标。从Bio-AI的角度看,这类多器官蛋白质组数据也是靶点发现、生物标志物探索与适应症拓展的宝贵资源。",
+    "jp": "代謝性疾患治療の成功を体重だけで判断することは、次第に難しくなっています。同じ体重減少であっても、どの組織・代謝機能がどの程度回復するかが、次世代治療薬の差別化ポイントになり得ます。THPHARMの代謝性疾患戦略も、体重減少そのものだけでなく、脂肪組織・炎症・筋肉・肝臓・心血管代謝指標を併せて見る方向へ広げる必要があり、こうしたmulti-organデータはBio-AIの観点から標的探索・バイオマーカー探索・適応症拡大の良い資源になり得ます。"
+  },
+  "whatToWatch": {
+    "kr": "사람에서도 유사한 metabolic memory가 확인되는지, 지방조직 염증과 체중 재증가가 실제로 연결되는지, GLP-1·GIP·amylin 등 서로 다른 기전의 약물이 동일한 체중감량에도 서로 다른 조직 회복 패턴을 만드는지를 지켜봐야 합니다.",
+    "en": "Watch whether a similar metabolic memory shows up in humans, whether adipose-tissue inflammation actually links to weight regain, and whether drugs with different mechanisms — GLP-1, GIP, amylin — produce different tissue-recovery patterns even at the same degree of weight loss.",
+    "zh_cn": "需要关注人体中是否也存在类似的代谢记忆(metabolic memory)、脂肪组织炎症是否与体重反弹真正相关,以及GLP-1、GIP、胰淀素(amylin)等不同机制的药物,在相同体重减轻幅度下是否会产生不同的组织恢复模式。",
+    "jp": "ヒトでも同様のmetabolic memoryが確認されるか、脂肪組織の炎症と体重再増加が実際に関連しているか、GLP-1・GIP・アミリンなど作用機序の異なる薬剤が、同じ体重減少幅でも異なる組織回復パターンを生むのかを注視する必要があります。"
+  },
+  "keyPoints": [
+    {
+      "kr": "마우스 모델에서 15개 장기·4개 시점·12,936개 단백질 분석",
+      "en": "Analyzed 12,936 proteins across 15 organs at 4 time points in a mouse model",
+      "zh_cn": "在小鼠模型中,于4个时间点分析了15个器官共12,936种蛋白质",
+      "jp": "マウスモデルで15臓器・4時点にわたり12,936種類のタンパク質を解析"
+    },
+    {
+      "kr": "대부분 조직은 체중감량 후 lean 수준에 가깝게 회복",
+      "en": "Most tissues recovered to near-lean levels after weight loss",
+      "zh_cn": "大多数组织在体重减轻后恢复至接近瘦体水平",
+      "jp": "大半の組織は体重減少後にlean状態に近いレベルへ回復"
+    },
+    {
+      "kr": "백색지방(염증·식균작용 지속), 뇌·신장·뼈·흉선·비장은 회복 지연",
+      "en": "White adipose tissue (persistent inflammation/phagocytosis) and brain, kidney, bone, thymus, spleen showed delayed recovery",
+      "zh_cn": "白色脂肪组织(炎症与吞噬作用持续)以及脑、肾、骨、胸腺、脾脏恢复延迟",
+      "jp": "白色脂肪組織(炎症・貪食作用が持続)、脳・腎臓・骨・胸腺・脾臓は回復が遅延"
+    },
+    {
+      "kr": "데이터 및 interactive web tool 공개(연구팀 제공)",
+      "en": "Underlying data and an interactive web tool released by the research team",
+      "zh_cn": "研究团队公开了原始数据与交互式网页工具",
+      "jp": "研究チームがデータとinteractive web toolを公開"
+    }
+  ],
+  "relatedLinks": [
+    { "label": "SCIENCE — REVEAL", "href": "/science/reveal" },
+    { "label": "HEALTH — 비만", "href": "/health/obesity" }
+  ],
+  "tags": [
+    { "label": "Nature Metabolism", "url": "https://www.nature.com/articles/s42255-026-01599-5" },
+    { "label": "Multi-Organ Proteomics" },
+    { "label": "Obesity" },
+    { "label": "Metabolic Memory" }
+  ],
+  "sourceMeta": {
+    "source_type": "Journal",
+    "source_title": "Multi-organ proteomic atlas of obesity regression in male mice",
+    "publisher": "Nature Metabolism",
+    "published_at": "2026-08-21",
+    "source_url": "https://www.nature.com/articles/s42255-026-01599-5",
+    "doi": "10.1038/s42255-026-01599-5",
+    "accessed_at": "2026-08-24",
+    "last_verified": "2026-08-24",
+    "peer_review_status": "peer-reviewed"
+  },
+  "publishedAt": "2026-08-21"
+}
