@@ -1,0 +1,67 @@
+{
+  "code": "WEB-601",
+  "kind": "news",
+  "status": "published",
+  "title": {
+    "kr": "고혈압·당뇨 복합제 개발 경쟁 — THP-001은 '다파글리플로진+텔미사르탄' 조합",
+    "en": "The hypertension-diabetes combination race — THP-001 pairs dapagliflozin with telmisartan",
+    "zh_cn": "高血压·糖尿病复方药物开发竞争——THP-001采用\"达格列净+替米沙坦\"组合",
+    "jp": "高血圧・糖尿病配合剤開発競争 — THP-001は「ダパグリフロジン+テルミサルタン」の組み合わせ"
+  },
+  "dek": {
+    "kr": "SGLT2 억제제+ARB 조합의 국내 개발 경쟁에서 THP-001의 정확한 성분과 다른 제약사들의 진행 단계를 확인했다",
+    "en": "In Korea's SGLT2-inhibitor-plus-ARB race, this confirms THP-001's exact composition and where competing companies stand",
+    "zh_cn": "在SGLT2抑制剂+ARB组合的国内开发竞争中,确认了THP-001的确切成分与其他药企的进展阶段",
+    "jp": "SGLT2阻害薬+ARB配合の国内開発競争において、THP-001の正確な成分と他社の進捗段階を確認した"
+  },
+  "body": {
+    "kr": "메디팜스투데이 보도(2023년 8월 23일)에 따르면, 국내 제약사들의 고혈압·당뇨 복합제 개발이 늘면서 성분 조합이 다양화되고 있습니다. 티에치팜의 THP-001은 당뇨병 치료제 성분인 다파글리플로진(포시가 성분)과 고혈압 치료 성분인 텔미사르탄을 조합한 제품으로, 국전약품과 공동 개발해 식약처로부터 임상 1상 승인을 받았습니다. 같은 SGLT2 억제제(다파글리플로진) 계열 조합을 개발 중인 곳으로는 오토텔릭바이오(ATB-101, 다파글리플로진+올메사르탄, 임상 3상), 보령(R1019, 다파글리플로진+피마사르탄, 임상 3상 시험계획서 신청), GC녹십자(GC2121, 다파글리플로진+칸데사르탄, 2021년 임상 1상 승인), 한림제약(HL1113, 다파글리플로진+칸데사르탄, 임상 1상 완료)이 있습니다.",
+    "en": "According to PharmsToday (August 23, 2023), a growing number of Korean pharmaceutical companies are developing hypertension-diabetes combination drugs, diversifying the ingredient pairings used. THPHARM's THP-001 combines dapagliflozin (the diabetes ingredient in Forxiga) with telmisartan (a hypertension treatment), co-developed with Kookjeon Pharm and approved for Phase 1 by Korea's Ministry of Food and Drug Safety (MFDS). Other companies developing dapagliflozin-based SGLT2-inhibitor combinations include Autotelic Bio (ATB-101, dapagliflozin+olmesartan, Phase 3), Boryung (R1019, dapagliflozin+fimasartan, filed for a Phase 3 protocol), GC Green Cross (GC2121, dapagliflozin+candesartan, Phase 1 approved in 2021), and Hanlim Pharm (HL1113, dapagliflozin+candesartan, Phase 1 completed).",
+    "zh_cn": "据Pharmstoday报道(2023年8月23日),随着韩国国内药企纷纷开发高血压·糖尿病复方药物,成分组合日趋多样化。THPHARM的THP-001采用糖尿病治疗成分达格列净(福适佳成分)与高血压治疗成分替米沙坦的组合,由THPHARM与国全药品共同开发,已获得韩国食品药品安全处(MFDS)1期临床批准。同样开发达格列净类SGLT2抑制剂组合的还有:Autotelic Bio(ATB-101,达格列净+奥美沙坦,3期临床)、Boryung(R1019,达格列净+非马沙坦,已申请3期临床方案)、GC绿十字(GC2121,达格列净+坎地沙坦,2021年获批1期临床)、韩林制药(HL1113,达格列净+坎地沙坦,已完成1期临床)。",
+    "jp": "メディファームストゥデイの報道(2023年8月23日)によると、韓国国内の製薬会社による高血圧・糖尿病配合剤開発が増加し、成分の組み合わせが多様化しています。THPHARMのTHP-001は、糖尿病治療成分であるダパグリフロジン(フォシーガ成分)と高血圧治療成分テルミサルタンを組み合わせた製品で、国全薬品と共同開発し、韓国食品医薬品安全処(MFDS)からフェーズ1承認を取得しました。同じダパグリフロジン系SGLT2阻害薬の組み合わせを開発中の企業には、オートテリックバイオ(ATB-101、ダパグリフロジン+オルメサルタン、フェーズIII)、ボリョン(R1019、ダパグリフロジン+フィマサルタン、フェーズIII試験計画申請)、GC녹십자(GC2121、ダパグリフロジン+カンデサルタン、2021年フェーズ1承認)、ハンリム製薬(HL1113、ダパグリフロジン+カンデサルタン、フェーズ1完了)があります。"
+  },
+  "keyPoints": [
+    {
+      "kr": "THP-001의 정확한 조합: 다파글리플로진(SGLT2 억제제) + 텔미사르탄(ARB)",
+      "en": "THP-001's exact combination: dapagliflozin (SGLT2 inhibitor) + telmisartan (ARB)",
+      "zh_cn": "THP-001的确切组合:达格列净(SGLT2抑制剂)+替米沙坦(ARB)",
+      "jp": "THP-001の正確な組み合わせ:ダパグリフロジン(SGLT2阻害薬)+テルミサルタン(ARB)"
+    },
+    {
+      "kr": "경쟁사: 오토텔릭바이오(3상)·보령(3상 신청)이 THP-001보다 앞선 단계, GC녹십자·한림제약은 1상 단계",
+      "en": "Competitors: Autotelic Bio (Phase 3) and Boryung (Phase 3 filing) are ahead of THP-001; GC Green Cross and Hanlim Pharm are at Phase 1",
+      "zh_cn": "竞争对手:Autotelic Bio(3期)与Boryung(3期申请)进度领先于THP-001;GC绿十字与韩林制药处于1期阶段",
+      "jp": "競合:オートテリックバイオ(フェーズIII)とボリョン(フェーズIII申請)はTHP-001より先行、GC녹십자とハンリム製薬はフェーズ1段階"
+    }
+  ],
+  "thpharmView": {
+    "kr": "이 조합(다파글리플로진+텔미사르탄)이 시장에 처음 나오는 것은 아니며, THP-001은 이미 여러 경쟁사가 뛰어든 SGLT2 억제제+ARB 복합제 시장의 후발 주자 중 하나입니다. 오토텔릭바이오·보령이 임상 단계에서 앞서 있다는 점은, THP-001의 차별화가 '최초'가 아니라 순응도·제형·임상 데이터의 질에서 나와야 한다는 걸 시사합니다.",
+    "en": "This combination (dapagliflozin+telmisartan) isn't a first-in-market pairing — THP-001 is one of several later entrants into an SGLT2-inhibitor-plus-ARB combination market that already has multiple competitors. With Autotelic Bio and Boryung ahead in clinical stage, THP-001's differentiation will need to come from adherence, formulation, or the quality of its clinical data rather than being first to market.",
+    "zh_cn": "这一组合(达格列净+替米沙坦)并非市场首创,THP-001是已有多家竞争者布局的SGLT2抑制剂+ARB复方药物市场中的后来者之一。Autotelic Bio与Boryung在临床阶段领先,意味着THP-001的差异化优势需要来自依从性、剂型或临床数据质量,而非\"首创\"本身。",
+    "jp": "この組み合わせ(ダパグリフロジン+テルミサルタン)は市場初ではなく、THP-001はすでに複数の競合が参入しているSGLT2阻害薬+ARB配合剤市場における後発組の一つです。オートテリックバイオとボリョンが臨床段階で先行していることは、THP-001の差別化が「最初」ではなく、アドヒアランス・剤形・臨床データの質から生まれる必要があることを示唆しています。"
+  },
+  "newsType": "Industry",
+  "region": "KR",
+  "year": 2023,
+  "tags": [
+    { "label": "THP-001" },
+    { "label": "SGLT2 억제제" },
+    { "label": "다파글리플로진" },
+    { "label": "텔미사르탄" },
+    { "label": "메디팜스투데이", "url": "http://www.apsk.co.kr/news/articleView.html?idxno=324918" }
+  ],
+  "relatedLinks": [
+    { "label": "PIPELINE — THP-001", "href": "/pipeline/thp-001" },
+    { "label": "HEALTH — 고혈압", "href": "/health/hypertension" }
+  ],
+  "sourceMeta": {
+    "source_type": "Media",
+    "source_title": "고혈압·당뇨 복합제 개발 증가…새 성분 조합 다양화",
+    "publisher": "메디팜스투데이 (PharmsToday)",
+    "published_at": "2023-08-23",
+    "source_url": "http://www.apsk.co.kr/news/articleView.html?idxno=324918",
+    "accessed_at": "2026-08-25",
+    "last_verified": "2026-08-25"
+  },
+  "publishedAt": "2023-08-23"
+}

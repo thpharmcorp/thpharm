@@ -1,0 +1,71 @@
+{
+  "code": "WEB-601",
+  "kind": "news",
+  "status": "published",
+  "title": {
+    "kr": "티에치팜, THP-004 비만 복합제로 중소벤처기업부 TIPS 과제 선정",
+    "en": "THPHARM's obesity combination candidate THP-004 selected for Korea's TIPS program",
+    "zh_cn": "THPHARM的肥胖症复方候选药物THP-004入选中小风险企业部TIPS项目",
+    "jp": "THPHARM、肥満症配合剤THP-004で中小ベンチャー企業部TIPS課題に選定"
+  },
+  "dek": {
+    "kr": "2023년 7월, 비만 치료 후보물질 THP-004가 정부 TIPS 과제에 선정돼 제제 연구와 비임상 시험을 진행하게 됐다",
+    "en": "In July 2023, obesity candidate THP-004 was selected for the government's TIPS program, moving into formulation research and nonclinical testing",
+    "zh_cn": "2023年7月,肥胖症候选药物THP-004入选政府TIPS项目,进入制剂研究与非临床试验阶段",
+    "jp": "2023年7月、肥満症候補物質THP-004が政府TIPS課題に選定され、製剤研究と非臨床試験を進めることになった"
+  },
+  "body": {
+    "kr": "바이오타임즈 보도에 따르면, THP-001 임상 1상 관련 소식과 함께 티에치팜의 또 다른 파이프라인인 THP-004(비만 복합제)가 2023년 7월 중소벤처기업부 팁스(TIPS) 과제에 선정된 사실이 확인됐습니다. 이 선정을 통해 THP-004는 제제 연구와 비임상 시험을 진행하게 됐습니다. 이는 이후(2026년 7월) THP-004가 Bio-AI 기반 MASH 적응증 확장을 목표로 한 '딥테크 TIPS'에 다시 선정되기 이전 단계의, 첫 번째 TIPS 선정 이력입니다.",
+    "en": "According to BioTimes, alongside news of THP-001's Phase 1 trial, it was confirmed that THPHARM's other pipeline candidate, THP-004 (an obesity combination), was selected in July 2023 for the Ministry of SMEs and Startups' TIPS program. The selection moved THP-004 into formulation research and nonclinical testing. This was THPHARM's first TIPS selection — a step ahead of THP-004's later (July 2026) selection for the 'Deep Tech TIPS' track aimed at expanding into a Bio-AI-driven MASH indication.",
+    "zh_cn": "据Biotimes报道,在THP-001临床1期消息的同时,THPHARM另一条管线THP-004(肥胖症复方药物)已于2023年7月入选中小风险企业部TIPS项目。此次入选使THP-004进入制剂研究与非临床试验阶段。这是THPHARM首次入选TIPS——早于其后(2026年7月)THP-004以拓展基于Bio-AI的MASH适应症为目标再次入选\"Deep Tech TIPS\"项目。",
+    "jp": "バイオタイムズの報道によると、THP-001のフェーズ1試験に関する報道と併せて、THPHARMのもう一つのパイプラインであるTHP-004(肥満症配合剤)が2023年7月、中小ベンチャー企業部のTIPS課題に選定されたことが確認されました。この選定により、THP-004は製剤研究と非臨床試験を進めることになりました。これは、後に(2026年7月)Bio-AI活用のMASH適応症拡大を目指す「ディープテックTIPS」に再選定される以前の、THPHARMにとって最初のTIPS選定です。"
+  },
+  "keyPoints": [
+    {
+      "kr": "2023년 7월, THP-004(비만 복합제) 중소벤처기업부 TIPS 과제 선정",
+      "en": "THP-004 (obesity combination) selected for the Ministry of SMEs and Startups' TIPS program in July 2023",
+      "zh_cn": "2023年7月,THP-004(肥胖症复方药物)入选中小风险企业部TIPS项目",
+      "jp": "2023年7月、THP-004(肥満症配合剤)が中小ベンチャー企業部TIPS課題に選定"
+    },
+    {
+      "kr": "선정 이후 제제 연구·비임상 시험 진행",
+      "en": "Following selection, the project moved into formulation research and nonclinical testing",
+      "zh_cn": "入选后进入制剂研究与非临床试验阶段",
+      "jp": "選定後、製剤研究・非臨床試験を推進"
+    },
+    {
+      "kr": "이후 2026년 7월 '딥테크 TIPS'(MASH 적응증 확장) 선정으로 이어짐",
+      "en": "Later led to the July 2026 'Deep Tech TIPS' selection for MASH indication expansion",
+      "zh_cn": "此后于2026年7月入选\"Deep Tech TIPS\"(拓展MASH适应症)",
+      "jp": "その後、2026年7月の「ディープテックTIPS」(MASH適応症拡大)選定につながった"
+    }
+  ],
+  "thpharmView": {
+    "kr": "2023년 일반 TIPS로 시작해 2026년 딥테크 TIPS로 이어진 흐름은, THP-004가 단발성 정부지원이 아니라 단계적으로 심화된 정부 R&D 트랙 안에서 성장해온 파이프라인임을 보여줍니다.",
+    "en": "Starting with the general TIPS track in 2023 and progressing to Deep Tech TIPS in 2026 shows that THP-004 isn't a one-off grant recipient — it's a pipeline that has grown through progressively deeper government R&D tracks.",
+    "zh_cn": "从2023年的普通TIPS起步,发展到2026年的Deep Tech TIPS,表明THP-004并非一次性获得政府支持,而是在逐步深化的政府研发轨道中持续成长的管线。",
+    "jp": "2023年の一般TIPSから始まり、2026年のディープテックTIPSへとつながった流れは、THP-004が単発の政府支援ではなく、段階的に深化する政府R&Dトラックの中で成長してきたパイプラインであることを示しています。"
+  },
+  "newsType": "Company",
+  "region": "KR",
+  "year": 2023,
+  "tags": [
+    { "label": "THP-004" },
+    { "label": "TIPS" },
+    { "label": "중소벤처기업부" },
+    { "label": "바이오타임즈", "url": "https://www.biotimes.co.kr/news/articleView.html?idxno=12449" }
+  ],
+  "relatedLinks": [
+    { "label": "PIPELINE — THP-004", "href": "/pipeline/thp-004" }
+  ],
+  "sourceMeta": {
+    "source_type": "Media",
+    "source_title": "티에치팜, 당뇨+고혈압 복합제 'THP-001' 국내 임상 1상 약물상호작용 평가 투약 완료",
+    "publisher": "바이오타임즈 (BioTimes)",
+    "published_at": "2023-10-19",
+    "source_url": "https://www.biotimes.co.kr/news/articleView.html?idxno=12449",
+    "accessed_at": "2026-08-25",
+    "last_verified": "2026-08-25"
+  },
+  "publishedAt": "2023-10-19"
+}

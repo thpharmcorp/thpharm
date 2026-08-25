@@ -22,9 +22,22 @@ const d = entry.data;
 // 2026-08-25: 대표가 검토·승인한 논문 100선 순위매김 중 2·3위 항목 반영 — 2위(Aleniglipron 경구
 // GLP-1 Phase 2b)는 같은 경구 GLP-1RA 계열인 THP-004에, 3위(약물 병용이 재창출 역가 한계를
 // 극복한다는 리뷰)는 SGLT2i+ARB 재조합 전략인 THP-001에 연결한다.
+// 2026-08-25: 언론 조사로 확인한 THPHARM 자체 연혁 뉴스 5건도 각 자산에 연결 — THP-001은
+// 국전약품 MOU·임상1상 투약완료·경쟁사 구도, THP-004는 TIPS 선정·Dt&CRO MOU.
 const relatedIntelligenceByAsset: Record<string, string[]> = {
-  'THP-001': ['news-insilico-reverse-engineering', 'web-503-fdc-adherence', 'paper-drug-repositioning-combination-therapy'],
-  'THP-004': ['paper-aleniglipron-oral-glp1-phase2b'],
+  'THP-001': [
+    'news-insilico-reverse-engineering',
+    'web-503-fdc-adherence',
+    'paper-drug-repositioning-combination-therapy',
+    'news-kookjeon-mou-thp001',
+    'news-thp001-phase1-dosing-complete',
+    'news-fdc-competitive-landscape',
+  ],
+  'THP-004': [
+    'paper-aleniglipron-oral-glp1-phase2b',
+    'news-thp004-tips-selected',
+    'news-dtncro-oral-glp1-mou',
+  ],
 };
 const relatedIntelligenceLabel = { kr: '관련 INTELLIGENCE', en: 'Related Intelligence', 'zh-cn': '相关 Intelligence', jp: '関連 Intelligence' }[locale];
 const relatedIntelligence = (

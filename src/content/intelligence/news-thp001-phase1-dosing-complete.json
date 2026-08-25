@@ -1,0 +1,65 @@
+{
+  "code": "WEB-601",
+  "kind": "news",
+  "status": "published",
+  "title": {
+    "kr": "티에치팜, THP-001 임상 1상 약물상호작용 평가 투약 완료",
+    "en": "THPHARM completes dosing for THP-001's Phase 1 drug-interaction study",
+    "zh_cn": "THPHARM完成THP-001 1期临床药物相互作用评价给药",
+    "jp": "THPHARM、THP-001フェーズ1薬物相互作用評価の投薬を完了"
+  },
+  "dek": {
+    "kr": "건강한 성인 50명 대상 교차설계 시험 투약이 끝났고, 결과 확인 후 2024년 상반기 임상 3상 진입을 목표로 했다",
+    "en": "Dosing wrapped for a crossover-design trial in 50 healthy adults, with Phase 3 entry targeted for the first half of 2024 pending results",
+    "zh_cn": "针对50名健康成年人的交叉设计试验给药已完成,计划在结果确认后于2024年上半年进入3期临床",
+    "jp": "健康な成人50名を対象としたクロスオーバー試験の投薬が完了し、結果確認後の2024年上半期のフェーズIII入りを目指した"
+  },
+  "body": {
+    "kr": "중부매일과 바이오타임즈 보도에 따르면, 티에치팜은 2023년 10월 17일 THP-001(당뇨+고혈압 복합 개량신약)의 국내 임상 1상 — 안전성 및 약동학 상호작용을 평가하는 교차설계 2군 2기 시험 — 투약을 완료했습니다. 시험은 양지병원에서 건강한 성인 50명을 대상으로 진행됐습니다. 회사는 같은 해 12월 임상 결과를 확인한 뒤 2024년 상반기 임상 3상 추진을 계획한다고 밝혔습니다.",
+    "en": "According to Jungbu Maeil and BioTimes, THPHARM completed dosing on October 17, 2023 for THP-001's domestic Phase 1 trial — a crossover, two-sequence, two-period study evaluating safety and pharmacokinetic drug interactions. The trial, conducted at Yangji Hospital, enrolled 50 healthy adults. The company said it planned to review clinical results that December and pursue Phase 3 entry in the first half of 2024.",
+    "zh_cn": "据《中部每日》与Biotimes报道,THPHARM于2023年10月17日完成了THP-001(糖尿病+高血压复方改良新药)国内1期临床——评估安全性与药代动力学相互作用的交叉设计双序列双周期试验——的给药。该试验在杨志医院对50名健康成年人进行。公司表示将于当年12月确认临床结果后,计划于2024年上半年推进3期临床。",
+    "jp": "中部毎日とバイオタイムズの報道によると、THPHARMは2023年10月17日、THP-001(糖尿病+高血圧配合改良新薬)の国内フェーズ1試験 — 安全性と薬物動態学的相互作用を評価するクロスオーバー・2群2期試験 — の投薬を完了しました。試験はヤンジ病院で健康な成人50名を対象に実施されました。同社は同年12月に臨床結果を確認した後、2024年上半期のフェーズIII推進を計画していると明らかにしました。"
+  },
+  "keyPoints": [
+    {
+      "kr": "2023년 10월 17일, 건강한 성인 50명 대상 THP-001 임상 1상(약동학 상호작용 평가) 투약 완료",
+      "en": "Dosing completed October 17, 2023 for THP-001's Phase 1 pharmacokinetic-interaction study in 50 healthy adults",
+      "zh_cn": "2023年10月17日,针对50名健康成年人的THP-001 1期临床(药代动力学相互作用评价)给药完成",
+      "jp": "2023年10月17日、健康な成人50名を対象としたTHP-001フェーズ1(薬物動態学的相互作用評価)の投薬完了"
+    },
+    {
+      "kr": "2024년 상반기 임상 3상 진입을 목표로 발표(실제 진입 여부는 별도 확인 필요)",
+      "en": "Company targeted Phase 3 entry for H1 2024 (actual entry status needs separate confirmation)",
+      "zh_cn": "公司曾以2024年上半年进入3期临床为目标(实际进入情况需另行确认)",
+      "jp": "2024年上半期のフェーズIII入りを目標として発表(実際の進入状況は別途確認が必要)"
+    }
+  ],
+  "thpharmView": {
+    "kr": "2023년 10월 시점의 목표는 '2024년 상반기 3상'이었습니다. 이 사이트의 PIPELINE 페이지에는 THP-001이 이미 3상 단계로 표기돼 있는데, 정확히 언제 3상에 진입했는지는 이 기사만으로는 확인되지 않아 별도 확인이 필요합니다.",
+    "en": "As of October 2023, the stated target was 'Phase 3 in the first half of 2024.' This site's PIPELINE page already lists THP-001 as being in Phase 3, but exactly when that transition happened isn't confirmed by this article alone and needs separate verification.",
+    "zh_cn": "截至2023年10月,公司提出的目标是\"2024年上半年进入3期\"。本站PIPELINE页面已将THP-001标注为处于3期阶段,但具体何时进入3期,仅凭本文无法确认,需另行核实。",
+    "jp": "2023年10月時点の目標は「2024年上半期にフェーズIII」でした。本サイトのPIPELINEページではTHP-001はすでにフェーズIIIの段階と記載されていますが、正確にいつフェーズIIIに入ったかはこの記事だけでは確認できず、別途確認が必要です。"
+  },
+  "newsType": "Clinical",
+  "region": "KR",
+  "year": 2023,
+  "tags": [
+    { "label": "THP-001" },
+    { "label": "임상 1상" },
+    { "label": "중부매일", "url": "https://www.jbnews.com/news/articleView.html?idxno=1411043" },
+    { "label": "바이오타임즈", "url": "https://www.biotimes.co.kr/news/articleView.html?idxno=12449" }
+  ],
+  "relatedLinks": [
+    { "label": "PIPELINE — THP-001", "href": "/pipeline/thp-001" }
+  ],
+  "sourceMeta": {
+    "source_type": "Media",
+    "source_title": "오송 티에치팜, 당뇨·고혈압 복합제 개발 '첫 발'",
+    "publisher": "중부매일",
+    "published_at": "2023-10-19",
+    "source_url": "https://www.jbnews.com/news/articleView.html?idxno=1411043",
+    "accessed_at": "2026-08-25",
+    "last_verified": "2026-08-25"
+  },
+  "publishedAt": "2023-10-19"
+}

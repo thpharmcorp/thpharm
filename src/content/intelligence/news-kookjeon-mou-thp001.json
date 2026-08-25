@@ -1,0 +1,65 @@
+{
+  "code": "WEB-601",
+  "kind": "news",
+  "status": "published",
+  "title": {
+    "kr": "티에치팜, 국전약품과 THP-001 공동연구개발 업무협약 체결",
+    "en": "THPHARM signs joint R&D agreement with Kookjeon Pharm for THP-001",
+    "zh_cn": "THPHARM与国全药品就THP-001签署联合研发合作协议",
+    "jp": "THPHARM、国全薬品とTHP-001の共同研究開発に関する業務協約を締結"
+  },
+  "dek": {
+    "kr": "당뇨+고혈압 복합제 THP-001의 국내 임상 1상을 함께 추진하기 위한 협약 — 티에치팜은 제제·특허·임상, 국전약품은 임상 투자·원료공급을 맡는다",
+    "en": "An agreement to jointly pursue THP-001's domestic Phase 1 trial — THPHARM handles formulation, patents, and clinical development, while Kookjeon Pharm covers clinical investment and raw-material supply",
+    "zh_cn": "为共同推进THP-001（糖尿病+高血压复方制剂）国内1期临床而签署的协议——THPHARM负责制剂、专利与临床开发,国全药品负责临床投资与原料供应",
+    "jp": "糖尿病+高血圧配合剤THP-001の国内フェーズ1試験を共同で進めるための協約 — THPHARMが製剤・特許・臨床を、国全薬品が臨床投資・原料供給を担う"
+  },
+  "body": {
+    "kr": "팜뉴스에 따르면 국전약품과 티에치팜이 2023년 1월 12일 THP-001 당뇨+고혈압 복합 개량신약의 성공적인 국내 임상 1상 추진을 위한 업무협약(MOU)을 체결했습니다. 협약에 따라 티에치팜은 해당 복합제의 제제·특허·임상 연구를, 국전약품은 임상 1상 투자와 원료의약품 공급을 담당합니다. 국전약품 입장에서는 기존 원료의약품 제조 사업에서 복합제 개량신약 개발로 사업 영역을 확장하는 전략의 일환입니다.",
+    "en": "According to PharmNews, Kookjeon Pharm and THPHARM signed a memorandum of understanding on January 12, 2023 to jointly pursue THP-001's domestic Phase 1 trial — an improved-drug combining a diabetes treatment and a hypertension treatment. Under the agreement, THPHARM is responsible for the combination product's formulation, patents, and clinical research, while Kookjeon Pharm covers Phase 1 investment and active pharmaceutical ingredient supply. For Kookjeon Pharm, it's part of a strategy to expand from its existing API manufacturing business into fixed-dose combination drug development.",
+    "zh_cn": "据Pharmnews报道,国全药品与THPHARM于2023年1月12日签署了业务协约(MOU),旨在共同推进THP-001(糖尿病合并高血压复方改良新药)的国内1期临床试验。根据协议,THPHARM负责该复方制剂的制剂、专利与临床研究,国全药品负责1期临床投资及原料药供应。对国全药品而言,这是其从现有原料药制造业务向复方改良新药开发拓展战略的一部分。",
+    "jp": "パムニュースによると、国全薬品とTHPHARMは2023年1月12日、THP-001(糖尿病+高血圧の配合改良新薬)の国内フェーズ1試験を共同で推進するための業務協約(MOU)を締結しました。協約により、THPHARMは同配合剤の製剤・特許・臨床研究を、国全薬品はフェーズ1投資と原薬供給を担当します。国全薬品にとっては、既存の原薬製造事業から配合改良新薬開発へと事業領域を広げる戦略の一環です。"
+  },
+  "keyPoints": [
+    {
+      "kr": "2023년 1월 12일 국전약품-티에치팜 THP-001 공동연구개발 MOU 체결",
+      "en": "Kookjeon Pharm and THPHARM signed a joint R&D MOU for THP-001 on January 12, 2023",
+      "zh_cn": "国全药品与THPHARM于2023年1月12日签署THP-001联合研发MOU",
+      "jp": "2023年1月12日、国全薬品とTHPHARMがTHP-001の共同研究開発MOUを締結"
+    },
+    {
+      "kr": "역할 분담: 티에치팜(제제·특허·임상) / 국전약품(임상1상 투자·원료공급)",
+      "en": "Division of roles: THPHARM (formulation, patents, clinical) / Kookjeon Pharm (Phase 1 investment, raw-material supply)",
+      "zh_cn": "分工:THPHARM(制剂、专利、临床)/国全药品(1期临床投资、原料供应)",
+      "jp": "役割分担:THPHARM(製剤・特許・臨床)/国全薬品(フェーズ1投資・原料供給)"
+    }
+  ],
+  "thpharmView": {
+    "kr": "THP-001은 티에치팜 단독이 아니라 원료의약품 공급사와의 역할 분담 파트너십으로 임상을 추진하는 구조입니다. 자체 자본만으로 임상을 끌고 가는 대신, 각자의 강점(제제·특허 vs 원료·투자)을 나눈 협업 모델이라는 점이 파이프라인의 실행 리스크를 이해하는 데 참고가 됩니다.",
+      "en": "THP-001's clinical program isn't run by THPHARM alone — it's structured as a role-split partnership with its API supplier. Rather than funding the trial entirely on its own capital, THPHARM shares the work along each partner's strength (formulation/patents vs. raw materials/investment), which is useful context for understanding execution risk in the pipeline.",
+    "zh_cn": "THP-001并非由THPHARM单独推进临床,而是与原料药供应商按角色分工的合作模式。这种并非完全依靠自有资金推进临床、而是按各自优势(制剂/专利 vs. 原料/投资)分工协作的结构,有助于理解该管线的执行风险。",
+    "jp": "THP-001はTHPHARM単独ではなく、原薬供給企業との役割分担型パートナーシップとして臨床が進められています。自社資本のみで臨床を進める代わりに、それぞれの強み(製剤・特許 vs 原料・投資)を分担する協業モデルである点は、パイプラインの実行リスクを理解する上で参考になります。"
+  },
+  "newsType": "Company",
+  "region": "KR",
+  "year": 2023,
+  "tags": [
+    { "label": "THP-001" },
+    { "label": "국전약품" },
+    { "label": "MOU" },
+    { "label": "팜뉴스", "url": "https://www.pharmnews.com/news/articleView.html?idxno=217034" }
+  ],
+  "relatedLinks": [
+    { "label": "PIPELINE — THP-001", "href": "/pipeline/thp-001" }
+  ],
+  "sourceMeta": {
+    "source_type": "Media",
+    "source_title": "국전약품, 티에치팜과 업무협약…복합제 개량신약 개발",
+    "publisher": "팜뉴스 (PharmNews)",
+    "published_at": "2023-01-12",
+    "source_url": "https://www.pharmnews.com/news/articleView.html?idxno=217034",
+    "accessed_at": "2026-08-25",
+    "last_verified": "2026-08-25"
+  },
+  "publishedAt": "2023-01-12"
+}

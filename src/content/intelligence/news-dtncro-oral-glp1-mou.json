@@ -1,0 +1,73 @@
+{
+  "code": "WEB-601",
+  "kind": "news",
+  "status": "published",
+  "title": {
+    "kr": "티에치팜, 디티앤씨알오와 먹는 GLP-1 비만치료제 개발 협약",
+    "en": "THPHARM partners with Dt&CRO on an oral GLP-1 obesity treatment",
+    "zh_cn": "THPHARM与Dt&CRO签署口服GLP-1肥胖症治疗药物开发协议",
+    "jp": "THPHARM、Dt&CROと経口GLP-1肥満症治療薬の開発で協約"
+  },
+  "dek": {
+    "kr": "주사제 중심이던 GLP-1 비만치료제 시장에서 경구형 제형을 목표로, CRO 디티앤씨알오와 복약순응도·유효성 개선을 위한 MOU를 체결했다",
+    "en": "Targeting an oral formulation in a GLP-1 obesity market still dominated by injectables, THPHARM signed an MOU with CRO Dt&CRO to improve adherence and efficacy",
+    "zh_cn": "在仍以注射剂为主的GLP-1肥胖症治疗市场中,THPHARM以口服剂型为目标,与CRO机构Dt&CRO签署MOU,致力于提升依从性与疗效",
+    "jp": "注射剤が中心のGLP-1肥満症治療市場において経口製剤を目指し、CROのDt&CROと服薬アドヒアランス・有効性向上のためのMOUを締結した"
+  },
+  "body": {
+    "kr": "히트뉴스 보도에 따르면, 티에치팜(대표 한태희)과 CRO(임상시험수탁기관) 디티앤씨알오(대표 박채규)는 2024년 7월 18일 먹는 GLP-1 비만치료제 개발을 위한 업무협약(MOU)을 체결했습니다. 디티앤씨알오는 자사의 제형 연구 기술을 활용해 복약순응도 개선과 유효성 극대화를 추진할 예정입니다. 개발 중인 제품은 삭센다·위고비·젭바운드 등 기존 주사제와 달리 경구용 제형이 특징입니다. 박채규 대표는 비만치료제 시장이 2030년까지 약 104조 원 규모로 성장할 것으로 전망했습니다.",
+    "en": "According to HitNews, THPHARM (CEO Han Tae-hee) and CRO Dt&CRO (CEO Park Chae-gyu) signed an MOU on July 18, 2024 to develop an oral GLP-1 obesity treatment. Dt&CRO will apply its formulation-research technology to improve adherence and maximize efficacy. Unlike existing injectable GLP-1 treatments such as Saxenda, Wegovy, and Zepbound, the candidate under development is an oral formulation. Park Chae-gyu noted the obesity treatment market is projected to reach roughly KRW 104 trillion by 2030.",
+    "zh_cn": "据Hitnews报道,THPHARM(代表韩泰熙)与CRO(临床试验受托机构)Dt&CRO(代表朴彩圭)于2024年7月18日签署了开发口服GLP-1肥胖症治疗药物的业务协约(MOU)。Dt&CRO将运用自身的制剂研究技术,致力于提升依从性并使疗效最大化。与Saxenda、Wegovy、Zepbound等现有注射剂不同,该在研产品的特点是口服剂型。朴彩圭代表表示,肥胖症治疗市场规模预计到2030年将达到约104万亿韩元。",
+    "jp": "ヒットニュースの報道によると、THPHARM(代表:ハン・テヒ)とCRO(臨床試験受託機関)のDt&CRO(代表:パク・チェギュ)は2024年7月18日、経口GLP-1肥満症治療薬の開発に関する業務協約(MOU)を締結しました。Dt&CROは自社の製剤研究技術を活用し、服薬アドヒアランスの改善と有効性の最大化を推進する予定です。開発中の製品は、サクセンダ・ウゴービ・ゼップバウンドなど既存の注射剤とは異なり、経口製剤である点が特徴です。パク・チェギュ代表は、肥満治療薬市場が2030年までに約104兆ウォン規模に成長すると見通しました。"
+  },
+  "keyPoints": [
+    {
+      "kr": "2024년 7월 18일, 티에치팜-디티앤씨알오 경구형 GLP-1 비만치료제 개발 MOU 체결",
+      "en": "THPHARM and Dt&CRO signed an oral GLP-1 obesity-drug development MOU on July 18, 2024",
+      "zh_cn": "2024年7月18日,THPHARM与Dt&CRO签署口服GLP-1肥胖症治疗药物开发MOU",
+      "jp": "2024年7月18日、THPHARMとDt&CROが経口GLP-1肥満症治療薬開発MOUを締結"
+    },
+    {
+      "kr": "디티앤씨알오의 제형 연구 기술로 복약순응도 개선·유효성 극대화 목표",
+      "en": "Aims to improve adherence and maximize efficacy using Dt&CRO's formulation-research technology",
+      "zh_cn": "目标是借助Dt&CRO的制剂研究技术提升依从性并使疗效最大化",
+      "jp": "Dt&CROの製剤研究技術で服薬アドヒアランス改善・有効性最大化を目指す"
+    },
+    {
+      "kr": "기존 주사제(삭센다·위고비·젭바운드)와 달리 경구형 제형 개발",
+      "en": "Developing an oral formulation, unlike existing injectables (Saxenda, Wegovy, Zepbound)",
+      "zh_cn": "区别于现有注射剂(Saxenda、Wegovy、Zepbound),开发口服剂型",
+      "jp": "既存の注射剤(サクセンダ・ウゴービ・ゼップバウンド)と異なり経口製剤を開発"
+    }
+  ],
+  "thpharmView": {
+    "kr": "이 MOU는 THP-004(경구 GLP-1RA 기반 복합제)의 제형 최적화 파트너십으로 보입니다. 다만 이 기사만으로는 '경구형 GLP-1 비만치료제'가 정확히 THP-004를 가리키는지, 별도 후보물질인지는 명확하지 않아 확인이 필요합니다.",
+    "en": "This MOU appears to be a formulation-optimization partnership tied to THP-004 (an oral GLP-1RA-based combination). However, this article alone doesn't make clear whether the 'oral GLP-1 obesity treatment' refers specifically to THP-004 or a separate candidate — that needs confirmation.",
+    "zh_cn": "该MOU看起来是围绕THP-004(基于口服GLP-1RA的复方药物)展开的制剂优化合作。但仅凭本文无法明确\"口服GLP-1肥胖症治疗药物\"是否确指THP-004,还是另一候选药物,需另行确认。",
+    "jp": "このMOUは、THP-004(経口GLP-1RAベースの配合剤)の製剤最適化パートナーシップと見られます。ただし、この記事だけでは「経口GLP-1肥満症治療薬」がTHP-004を正確に指しているのか、別の候補物質なのかは明確でなく、確認が必要です。"
+  },
+  "newsType": "Company",
+  "region": "KR",
+  "year": 2024,
+  "tags": [
+    { "label": "THP-004" },
+    { "label": "Dt&CRO" },
+    { "label": "GLP-1" },
+    { "label": "MOU" },
+    { "label": "히트뉴스", "url": "http://www.hitnews.co.kr/news/articleView.html?idxno=56283" }
+  ],
+  "relatedLinks": [
+    { "label": "PIPELINE — THP-004", "href": "/pipeline/thp-004" },
+    { "label": "HEALTH — 비만", "href": "/health/obesity" }
+  ],
+  "sourceMeta": {
+    "source_type": "Media",
+    "source_title": "디티앤씨알오-티에치팜, 먹는 GLP-1 비만치료제 개발 협약",
+    "publisher": "히트뉴스",
+    "published_at": "2024-07-22",
+    "source_url": "http://www.hitnews.co.kr/news/articleView.html?idxno=56283",
+    "accessed_at": "2026-08-25",
+    "last_verified": "2026-08-25"
+  },
+  "publishedAt": "2024-07-22"
+}
