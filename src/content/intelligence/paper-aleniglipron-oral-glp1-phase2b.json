@@ -1,0 +1,84 @@
+{
+  "code": "WEB-508",
+  "kind": "paper",
+  "status": "published",
+  "title": {
+    "kr": "경구용 GLP-1도 임상적으로 유의미한 감량이 가능하다는 걸 보여준 연구 — Aleniglipron Phase 2b",
+    "en": "An oral GLP-1 can deliver clinically meaningful weight loss too — Aleniglipron's Phase 2b results",
+    "zh_cn": "该研究证明口服GLP-1也能实现具有临床意义的减重——Aleniglipron 2b期结果",
+    "jp": "経口GLP-1でも臨床的に意味のある減量が可能であることを示した研究 — AleniglipronのフェーズIIb結果"
+  },
+  "dek": {
+    "kr": "230명 대상 무작위·이중맹검·위약대조 2b상에서 120mg 용량군이 36주 시점 위약 대비 11.3% 체중감소를 기록했다",
+    "en": "In a randomized, double-blind, placebo-controlled Phase 2b trial of 230 participants, the 120mg dose achieved 11.3% placebo-adjusted weight loss at 36 weeks",
+    "zh_cn": "在一项纳入230名受试者的随机双盲安慰剂对照2b期试验中,120mg剂量组在第36周较安慰剂组体重降低11.3%",
+    "jp": "230名を対象とした無作為化二重盲検プラセボ対照フェーズIIb試験で、120mg群は36週時点でプラセボ対比11.3%の体重減少を記録した"
+  },
+  "relevance": "Related",
+  "body": {
+    "kr": "Rosenstock 등 연구팀이 Nature Medicine에 발표한 이 논문은 Structure Therapeutics의 경구 소분자 GLP-1 수용체 작동제 aleniglipron(GSBR-1290)의 Phase 2b ACCESS 프로그램 결과를 담고 있다. 과체중·비만 성인 230명(평균 BMI 39.5)을 45mg/90mg/120mg 용량군과 위약군으로 무작위 배정한 이중맹검 시험에서, 36주 시점 위약 대비 체중감소는 각각 8.2%/9.8%/11.3%였다(모든 용량에서 P<0.0001). 개방형 연장 단계에서는 최대 16.2%까지 감량이 관찰됐다. 위장관계 이상반응은 대체로 경증~중등도였고 시간이 지나며 빈도가 줄었으며, 이중맹검 기간 치료 중단율은 10.4%로 낮은 수준이었다. 회사는 2026년 3분기 Phase 3 개시를 계획하고 있다고 밝혔다.",
+    "en": "This paper by Rosenstock and colleagues, published in Nature Medicine, reports Phase 2b ACCESS program results for Structure Therapeutics' oral small-molecule GLP-1 receptor agonist aleniglipron (GSBR-1290). In a double-blind trial randomizing 230 adults with overweight or obesity (mean BMI 39.5) to 45mg, 90mg, 120mg, or placebo, placebo-adjusted weight loss at 36 weeks was 8.2%, 9.8%, and 11.3% respectively (all doses P<0.0001). In the open-label extension, weight loss reached up to 16.2%. Gastrointestinal adverse events were generally mild to moderate and decreased in frequency over time, with a low 10.4% discontinuation rate during the double-blind period. The company has stated it plans to begin Phase 3 in Q3 2026.",
+    "zh_cn": "该论文由Rosenstock及研究团队发表于《Nature Medicine》,报告了Structure Therapeutics口服小分子GLP-1受体激动剂aleniglipron(GSBR-1290)2b期ACCESS项目的结果。在这项双盲试验中,230名超重或肥胖成人(平均BMI 39.5)被随机分配至45mg、90mg、120mg或安慰剂组,第36周时相较安慰剂组的体重降低幅度分别为8.2%、9.8%和11.3%(所有剂量组P<0.0001)。在开放标签延长阶段,体重降低幅度最高达16.2%。胃肠道不良反应总体为轻度至中度,且随时间推移发生率下降,双盲期治疗中断率较低,为10.4%。公司表示计划于2026年第三季度启动3期临床。",
+    "jp": "RosenstockらのチームがNature Medicine誌に発表したこの論文は、Structure Therapeuticsの経口低分子GLP-1受容体作動薬aleniglipron(GSBR-1290)のフェーズIIb ACCESSプログラムの結果を報告している。過体重・肥満の成人230名(平均BMI 39.5)を45mg・90mg・120mg群とプラセボ群に無作為割り付けした二重盲検試験で、36週時点のプラセボ対比体重減少率はそれぞれ8.2%・9.8%・11.3%だった(全用量でP<0.0001)。非盲検延長期では最大16.2%の減量が観察された。消化器系の有害事象は概ね軽度から中等度で時間とともに頻度が低下し、二重盲検期の治療中止率は10.4%と低水準だった。同社は2026年第3四半期にフェーズIII試験を開始する計画を明らかにしている。"
+  },
+  "thpharmView": {
+    "kr": "경구형 GLP-1 계열의 임상적 유효성이 이 정도 수준까지 재현되고 있다는 건, THPHARM의 THP-004(경구 GLP-1RA 기반 복합제, 전임상)를 포함해 이 계열에 도전하는 모든 후속 주자에게 중요한 벤치마크가 된다. 다만 이 결과는 THPHARM의 자체 임상 데이터가 아니라 경쟁·참고 동향이라는 점을 분명히 해둔다.",
+    "en": "The fact that oral GLP-1 candidates are now reproducing efficacy at this level is an important benchmark for every follow-on program in this class, including THPHARM's own THP-004 (an oral GLP-1RA-based combination, currently preclinical). To be clear, these are third-party competitive/reference results, not THPHARM's own clinical data.",
+    "zh_cn": "口服GLP-1类候选药物已能重现如此水平的临床有效性,这对包括THPHARM自身的THP-004(基于口服GLP-1RA的复方制剂,目前处于临床前阶段)在内的所有后续开发者而言,都是重要的参照基准。需要明确的是,这是第三方的竞争/参考动态,并非THPHARM自身的临床数据。",
+    "jp": "経口GLP-1系候補薬がここまでの有効性を再現できるようになったことは、THPHARM自身のTHP-004(経口GLP-1RAベースの配合剤、現在前臨床段階)を含め、この分野に挑む後続プログラムすべてにとって重要なベンチマークとなる。ただし、これはTHPHARM自身の臨床データではなく、第三者の競合・参考動向であることを明記しておく。"
+  },
+  "whatToWatch": {
+    "kr": "2026년 3분기 예정된 Phase 3 설계(용량·대상군), 장기 데이터에서 감량 효과의 지속성, 위장관 이상반응 프로파일이 다른 경구 GLP-1 후보들과 비교해 실제로 우위인지 여부를 지켜봐야 한다.",
+    "en": "Watch the Phase 3 design (doses, population) expected in Q3 2026, whether weight-loss effects hold up in longer-term data, and whether the GI adverse-event profile actually compares favorably against other oral GLP-1 candidates.",
+    "zh_cn": "需要关注预计于2026年第三季度启动的3期临床设计(剂量、目标人群)、长期数据中减重效果的持续性,以及其胃肠道不良反应特征是否真正优于其他口服GLP-1候选药物。",
+    "jp": "2026年第3四半期に予定されるフェーズIII試験の設計(用量・対象群)、長期データにおける減量効果の持続性、そして消化器系有害事象プロファイルが他の経口GLP-1候補と比べて実際に優れているかどうかを注視する必要がある。"
+  },
+  "keyPoints": [
+    {
+      "kr": "경구 소분자 GLP-1RA aleniglipron(GSBR-1290), 1일 1회 투여",
+      "en": "Oral small-molecule GLP-1RA aleniglipron (GSBR-1290), once-daily dosing",
+      "zh_cn": "口服小分子GLP-1RA aleniglipron(GSBR-1290),每日一次给药",
+      "jp": "経口低分子GLP-1RA aleniglipron(GSBR-1290)、1日1回投与"
+    },
+    {
+      "kr": "230명 대상 Phase 2b, 36주 시점 위약 대비 최대 11.3%(120mg) 체중감소, 개방연장에서 최대 16.2%",
+      "en": "Phase 2b in 230 participants — up to 11.3% (120mg) placebo-adjusted weight loss at 36 weeks, up to 16.2% in open-label extension",
+      "zh_cn": "230人2b期临床——第36周较安慰剂组最高降低11.3%(120mg),开放标签延长期最高达16.2%",
+      "jp": "230名対象のフェーズIIb — 36週時点でプラセボ対比最大11.3%(120mg)の体重減少、非盲検延長期で最大16.2%"
+    },
+    {
+      "kr": "위장관 이상반응 경증~중등도, 치료중단율 10.4%로 낮은 수준",
+      "en": "GI adverse events mild-to-moderate; low 10.4% discontinuation rate",
+      "zh_cn": "胃肠道不良反应为轻度至中度,治疗中断率较低,为10.4%",
+      "jp": "消化器系有害事象は軽度~中等度、治療中止率は10.4%と低水準"
+    },
+    {
+      "kr": "2026년 3분기 Phase 3 개시 예정(2.5mg 저용량부터 시작)",
+      "en": "Phase 3 planned for Q3 2026, starting from a 2.5mg low dose",
+      "zh_cn": "计划于2026年第三季度启动3期临床(从2.5mg低剂量起始)",
+      "jp": "2026年第3四半期にフェーズIII開始予定(2.5mgの低用量から開始)"
+    }
+  ],
+  "relatedLinks": [
+    { "label": "PIPELINE — THP-004", "href": "/pipeline/thp-004" },
+    { "label": "HEALTH — 비만", "href": "/health/obesity" }
+  ],
+  "tags": [
+    { "label": "Structure Therapeutics", "url": "https://ir.structuretx.com/news-releases/news-release-details/structure-therapeutics-announces-publication-nature-medicine" },
+    { "label": "Aleniglipron" },
+    { "label": "GSBR-1290" },
+    { "label": "Oral GLP-1" },
+    { "label": "Phase 2b" }
+  ],
+  "sourceMeta": {
+    "source_type": "Journal",
+    "source_title": "Oral small molecule GLP-1 receptor agonist aleniglipron in people with overweight or obesity: a randomized, double-blind, placebo-controlled phase 2b trial",
+    "publisher": "Nature Medicine",
+    "published_at": "2026-06-05",
+    "source_url": "https://www.nature.com/articles/s41591-026-04476-6",
+    "accessed_at": "2026-08-25",
+    "last_verified": "2026-08-25",
+    "peer_review_status": "peer-reviewed"
+  },
+  "publishedAt": "2026-06-05"
+}

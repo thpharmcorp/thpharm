@@ -1,0 +1,77 @@
+{
+  "code": "WEB-509",
+  "kind": "paper",
+  "status": "published",
+  "title": {
+    "kr": "재창출 신약의 약효 한계, 병용이 답이 될 수 있다",
+    "en": "When a repurposed drug isn't potent enough on its own, combination may be the answer",
+    "zh_cn": "当再利用药物单独疗效不足时,联合用药或是答案",
+    "jp": "再創出薬の効力が単剤では不十分なとき、併用が解決策になり得る"
+  },
+  "dek": {
+    "kr": "재창출된 화합물 다수가 낮은 역가로 임상 적용에 한계를 보이는 가운데, 서로 다른 기전의 약물 병용을 극복 전략으로 제시한 2016년 리뷰",
+    "en": "A 2016 review proposing combinations of drugs with different mechanisms as a way past the low potency that limits many repositioned compounds",
+    "zh_cn": "一篇2016年综述提出,联合使用作用机制不同的药物,可作为克服许多再利用化合物低效价局限的策略",
+    "jp": "再創出化合物の多くが低い効力ゆえに臨床応用に限界を抱える中、作用機序の異なる薬剤の併用をその克服策として提示した2016年のレビュー"
+  },
+  "relevance": "Related",
+  "body": {
+    "kr": "Sun, Sanderson, Zheng이 Drug Discovery Today에 발표한 이 논문은, 최근 5년간 급증한 약물 재창출(drug repositioning) 스크리닝에서 새로 발굴된 화합물 다수가 역가(potency)가 낮아 임상 적용에 한계가 있다는 문제를 짚는다 — 알려진 내약 가능한 혈중 농도가 필요한 치료 농도에 못 미치는 경우가 많기 때문이다. 저자들은 서로 다른 작용기전을 가진 두 개 이상의 약물을 병용하는 것이 이런 역가 한계를 극복하고 재창출 성공률을 높이는 대안적 접근이 될 수 있다고 제안한다.",
+    "en": "This paper by Sun, Sanderson, and Zheng, published in Drug Discovery Today, addresses a recurring problem in drug repositioning: repurposing screens have increased sharply over the past five years, but many newly identified compounds show low potency that limits their clinical use, because tolerated plasma concentrations often fall short of the concentrations needed for therapeutic effect. The authors propose that combining two or more drugs with different mechanisms of action is an alternative approach that can overcome this potency limitation and increase the success rate of drug repositioning.",
+    "zh_cn": "Sun、Sanderson与Zheng发表于《Drug Discovery Today》的这篇论文,指出了药物再利用(drug repositioning)领域反复出现的一个问题:尽管近五年再利用筛选数量大幅增加,但许多新发现的化合物效价较低,限制了其临床应用——因为可耐受的血药浓度往往低于产生疗效所需的浓度。作者提出,联合使用两种或以上作用机制不同的药物,是克服这一效价局限、提高药物再利用成功率的替代策略。",
+    "jp": "Sun、Sanderson、Zhengの3氏がDrug Discovery Today誌に発表したこの論文は、薬物再創出(ドラッグリポジショニング)分野で繰り返し指摘される問題を取り上げている——過去5年間で再創出スクリーニングは急増したが、新たに見出された化合物の多くは効力(potency)が低く、臨床応用に限界がある。忍容可能な血中濃度が、必要な治療濃度に届かないことが多いためだ。著者らは、作用機序の異なる2種類以上の薬剤を併用することが、この効力の限界を克服し、薬物再創出の成功率を高める代替アプローチになり得ると提案している。"
+  },
+  "thpharmView": {
+    "kr": "THPHARM의 파이프라인 다수가 신규 물질 발굴이 아니라 이미 검증된 약물을 재창출·재조합하는 전략(THP-001의 SGLT2 억제제+ARB 조합 등)을 기반으로 한다. 이 리뷰가 짚은 \"병용이 역가 한계를 보완한다\"는 원리는, 새 화합물을 처음부터 개발하는 것보다 이미 안전성이 확인된 약물들을 조합하는 접근이 왜 합리적인 전략이 될 수 있는지에 대한 학술적 근거로 참고할 만하다.",
+    "en": "Much of THPHARM's pipeline is built on repositioning and recombining already-validated drugs — such as THP-001's SGLT2 inhibitor + ARB combination — rather than discovering entirely new compounds. The principle this review highlights, that combination can compensate for a single compound's potency limits, is a useful piece of academic grounding for why combining drugs with established safety profiles can be a rational strategy compared with developing a new molecule from scratch.",
+    "zh_cn": "THPHARM的多数管线并非基于发现全新化合物,而是建立在对已验证药物进行再利用与再组合的策略之上——例如THP-001的SGLT2抑制剂+ARB组合。该综述所强调的\"联合用药可弥补单一化合物效价局限\"这一原理,为\"结合已具备明确安全性的药物,相较于从零开发新分子而言为何是合理策略\"提供了值得参考的学术依据。",
+    "jp": "THPHARMのパイプラインの多くは、全く新しい化合物を発見するのではなく、すでに検証された薬剤を再創出・再結合する戦略(THP-001のSGLT2阻害薬+ARB併用など)に基づいている。このレビューが指摘する「併用が単一化合物の効力限界を補う」という原理は、新規分子をゼロから開発するよりも、安全性が確立された薬剤を組み合わせる方が合理的な戦略となり得る理由について、参考になる学術的根拠と言える。"
+  },
+  "whatToWatch": {
+    "kr": "이 논문은 2016년 발표된 개념적 리뷰로, 이후 실제 임상에서 병용전략이 재창출 성공률을 얼마나 끌어올렸는지에 대한 후속 데이터, 그리고 THP-001처럼 병용 자체가 순응도·효능 개선을 동시에 노리는 사례가 이 원리와 어떻게 이어지는지를 함께 지켜봐야 한다.",
+    "en": "This is a conceptual review from 2016 — worth watching for follow-up data on how much combination strategies have actually improved repositioning success rates in the clinic since then, and for how cases like THP-001 (where combination targets both adherence and efficacy at once) connect to this principle.",
+    "zh_cn": "这是一篇发表于2016年的概念性综述——后续需要关注联合策略在临床中实际提升再利用成功率的跟进数据,以及像THP-001这样以联合用药同时兼顾依从性与疗效改善的案例,与这一原理之间的关联。",
+    "jp": "これは2016年に発表された概念的レビューである——今後、併用戦略が臨床で再創出の成功率を実際にどれだけ高めたかという後続データ、そしてTHP-001のように併用そのものがアドヒアランスと有効性の両方の改善を狙う事例が、この原理とどうつながるかを注視する必要がある。"
+  },
+  "keyPoints": [
+    {
+      "kr": "최근 5년간 약물 재창출 스크리닝 급증, 다수 화합물이 낮은 역가로 임상 적용 한계",
+      "en": "Repurposing screens have surged over the past five years, but many compounds show low potency limiting clinical use",
+      "zh_cn": "近五年药物再利用筛选大幅增加,但许多化合物效价较低,限制了临床应用",
+      "jp": "過去5年間で再創出スクリーニングが急増したが、多くの化合物は効力が低く臨床応用に限界"
+    },
+    {
+      "kr": "서로 다른 기전의 약물 병용이 역가 한계를 극복하는 대안적 접근으로 제시됨",
+      "en": "Combining drugs with different mechanisms is proposed as an alternative way past the potency limitation",
+      "zh_cn": "联合使用作用机制不同的药物被提出作为克服效价局限的替代策略",
+      "jp": "作用機序の異なる薬剤の併用が、効力の限界を克服する代替アプローチとして提示された"
+    },
+    {
+      "kr": "2016년 Drug Discovery Today 발표, Sun·Sanderson·Zheng 저자",
+      "en": "Published in Drug Discovery Today, 2016, authored by Sun, Sanderson, and Zheng",
+      "zh_cn": "2016年发表于《Drug Discovery Today》,作者为Sun、Sanderson与Zheng",
+      "jp": "2016年Drug Discovery Today誌掲載、著者はSun・Sanderson・Zheng"
+    }
+  ],
+  "relatedLinks": [
+    { "label": "PIPELINE — THP-001", "href": "/pipeline/thp-001" },
+    { "label": "SCIENCE — DESIGN", "href": "/science/design" }
+  ],
+  "tags": [
+    { "label": "Drug Repositioning" },
+    { "label": "Combination Therapy" },
+    { "label": "Drug Discovery Today", "url": "https://doi.org/10.1016/j.drudis.2016.05.015" }
+  ],
+  "sourceMeta": {
+    "source_type": "Journal",
+    "source_title": "Drug combination therapy increases successful drug repositioning",
+    "publisher": "Drug Discovery Today",
+    "published_at": "2016-05-27",
+    "source_url": "https://doi.org/10.1016/j.drudis.2016.05.015",
+    "doi": "10.1016/j.drudis.2016.05.015",
+    "accessed_at": "2026-08-25",
+    "last_verified": "2026-08-25",
+    "peer_review_status": "peer-reviewed"
+  },
+  "publishedAt": "2016-05-27"
+}
