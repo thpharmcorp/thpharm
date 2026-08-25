@@ -1,0 +1,51 @@
+{
+  "code": "WEB-408",
+  "slug": "pattern-hair-loss",
+  "status": "published",
+  "category": "hair",
+  "tier": "general",
+  "title": {
+    "kr": "탈모 (남성형·여성형)",
+    "en": "Pattern Hair Loss (Male & Female)",
+    "zh_cn": "脱发(男性型·女性型)",
+    "jp": "脱毛症(男性型・女性型)"
+  },
+  "oneMinuteSummary": {
+    "kr": "탈모증은 정상적으로 모발이 있어야 할 곳에 모발이 없는 상태입니다. 남성형 탈모는 유전과 안드로겐(남성호르몬)이 함께 작용해 모낭이 점차 가늘어지는 질환으로, 국내 유병률은 20대 2.3%에서 70대 이상 46.9%까지 나이가 들수록 크게 높아집니다. 여성형 탈모는 대체로 더 늦게 시작되고 정수리 쪽 위주로, 남성보다 약하게 나타납니다.",
+    "en": "Hair loss (alopecia) means hair is missing where it should normally grow. Male-pattern hair loss results from genetics and androgens (male hormones) gradually miniaturizing hair follicles; in Korea, prevalence rises sharply with age, from 2.3% in the 20s to 46.9% in those 70 and older. Female-pattern hair loss typically starts later, centers on the crown, and is milder than the male pattern.",
+    "zh_cn": "脱发是指本应生长毛发的部位没有毛发的状态。男性型脱发是遗传与雄激素(男性荷尔蒙)共同作用使毛囊逐渐变细所致,韩国患病率随年龄增长显著上升,从20多岁的2.3%升至70岁以上的46.9%。女性型脱发通常发病较晚,主要集中在头顶部位,程度比男性型更轻。",
+    "jp": "脱毛症とは、本来毛髪があるべき場所に毛髪がない状態を指します。男性型脱毛症は遺伝とアンドロゲン(男性ホルモン)が共に作用して毛包が徐々に細くなる疾患で、韓国での有病率は20代の2.3%から70代以上の46.9%まで、加齢とともに大きく上昇します。女性型脱毛症は概して発症が遅く、頭頂部を中心に、男性より軽度に現れます。"
+  },
+  "cause": {
+    "kr": "남성형 탈모는 테스토스테론이 5-알파환원효소에 의해 DHT(디하이드로테스토스테론)로 전환되면서 모낭을 점차 미세화시키는 것이 핵심 기전이며, 유전적 소인이 크게 작용합니다. 이마 라인과 정수리에서 시작해 옆머리 쪽으로 넓어지는 경우가 많습니다. 이 외에도 잦은 파마·염색·탈색 등 모발 손상, 스트레스·피로·수면부족, 급격한 체중 감소, 갑상선 질환 등이 탈모를 악화시킬 수 있습니다.",
+    "en": "In male-pattern hair loss, testosterone is converted to DHT (dihydrotestosterone) by the enzyme 5-alpha reductase, gradually miniaturizing hair follicles — a process with a strong genetic component. It typically starts at the hairline and crown and spreads toward the temples. Hair damage from frequent perms, dyeing, or bleaching, stress, fatigue, sleep deprivation, rapid weight loss, and thyroid disorders can also worsen shedding.",
+    "zh_cn": "男性型脱发的核心机制是睾酮在5α还原酶作用下转化为DHT(双氢睾酮),使毛囊逐渐微小化,遗传因素起主要作用。通常从发际线与头顶开始,逐渐扩展至两侧太阳穴。此外,频繁烫发、染发、漂发等造成的毛发损伤,压力、疲劳、睡眠不足,体重骤减,甲状腺疾病等也可能加重脱发。",
+    "jp": "男性型脱毛症は、テストステロンが5α還元酵素によってDHT(ジヒドロテストステロン)に変換され、毛包を徐々に小型化させることが核心的なメカニズムであり、遺伝的素因が大きく作用します。生え際と頭頂部から始まり、側頭部へと広がることが多いです。このほか、頻繁なパーマ・染色・脱色による毛髪の損傷、ストレス・疲労・睡眠不足、急激な体重減少、甲状腺疾患なども脱毛を悪化させることがあります。"
+  },
+  "symptoms": {
+    "kr": "두피 모발은 하루 약 50~60개 정도 빠지는 것이 정상이며, 하루 100개 이상 빠진다면 탈모를 의심해볼 수 있습니다. 남성형은 이마 헤어라인이 뒤로 밀리고 정수리가 넓어지는 양상이 특징이며, 여성형은 정수리 부분 모발이 전반적으로 가늘어지고 숱이 줄어드는 양상으로 나타나는 경우가 많습니다.",
+    "en": "Losing about 50–60 scalp hairs a day is considered normal; shedding more than 100 hairs a day may indicate hair loss. Male-pattern loss is characterized by a receding hairline and widening crown, while female-pattern loss more often appears as diffuse thinning and reduced density concentrated at the crown.",
+    "zh_cn": "头皮毛发每日脱落约50~60根属于正常范围,若每日脱落超过100根则可能提示脱发。男性型的特征是发际线后移、头顶范围扩大;女性型则多表现为头顶部毛发整体变细、密度降低。",
+    "jp": "頭皮の毛髪は1日約50〜60本抜けるのが正常であり、1日100本以上抜ける場合は脱毛症を疑うことができます。男性型は生え際が後退し頭頂部が広がるのが特徴で、女性型は頭頂部の毛髪が全体的に細くなり、量が減る形で現れることが多いです。"
+  },
+  "selfCareAndWhenToSeeDoctor": {
+    "kr": "젖은 머리를 거칠게 다루지 않고, 잦은 화학적 시술(파마·염색·탈색)을 줄이며, 두피를 청결하게 유지하는 것이 도움이 됩니다. 특정 탈모 방지 식품은 없으며 균형 잡힌 식사가 권장되고, 과도한 두피 마사지는 오히려 탈모를 악화시킬 수 있어 주의가 필요합니다. 자가진단으로는 모발 8~10가닥을 가볍게 당겼을 때 4가닥 이상 빠지면 탈모를 의심할 수 있습니다. 탈모가 빠르게 진행되거나 원형으로 빠지는 등 이상 양상이 보이면 피부과 진료를 받아보는 것이 좋습니다.",
+    "en": "Avoid rough handling of wet hair, reduce frequent chemical treatments (perms, dyeing, bleaching), and keep the scalp clean. There's no specific hair-loss-prevention food — a balanced diet is recommended — and excessive scalp massage can actually worsen shedding, so caution is advised. As a self-check, gently pulling 8–10 hairs and having 4 or more come out may suggest hair loss. See a dermatologist if hair loss progresses rapidly or appears in unusual patterns, such as round patches.",
+    "zh_cn": "避免粗暴对待湿发,减少频繁的化学处理(烫发、染发、漂发),保持头皮清洁有帮助。并无特定的防脱食物,建议均衡饮食,过度的头皮按摩反而可能加重脱发,需加以注意。自我检测方法为轻轻拉扯8~10根头发,若4根以上脱落则可能提示脱发。若脱发进展迅速或呈圆形等异常形态,建议就诊皮肤科。",
+    "jp": "濡れた髪を乱暴に扱わず、頻繁な化学処理(パーマ・染色・脱色)を減らし、頭皮を清潔に保つことが助けになります。特定の脱毛予防食品はなく、バランスの取れた食事が勧められ、過度な頭皮マッサージはかえって脱毛を悪化させることがあるため注意が必要です。自己診断としては、毛髪8〜10本を軽く引っ張って4本以上抜ければ脱毛症を疑うことができます。脱毛が急速に進行したり、円形に抜けるなど異常な様相が見られる場合は皮膚科の受診が望ましいです。"
+  },
+  "currentTreatment": {
+    "kr": "의학적으로 효과가 검증된 치료는 크게 세 가지입니다 — 경구용 피나스테리드(프로페시아) 복용, 외용 미녹시딜 도포, 모발이식 수술. 그 외 검증되지 않은 민간요법은 신중하게 접근할 필요가 있습니다.",
+    "en": "There are three medically proven treatments: oral finasteride (Propecia), topical minoxidil, and hair transplant surgery. Unproven folk remedies should be approached with caution.",
+    "zh_cn": "医学上已获证实有效的治疗主要有三种——口服非那雄胺(保法止)、外用米诺地尔,以及植发手术。其他未经验证的民间疗法需谨慎对待。",
+    "jp": "医学的に効果が実証されている治療は大きく3つです — 経口フィナステリド(プロペシア)の服用、外用ミノキシジルの塗布、毛髪移植手術。それ以外の検証されていない民間療法には慎重に対応する必要があります。"
+  },
+  "mythVsFact": [],
+  "sources": [
+    {
+      "label": "서울아산병원 질환백과 — 탈모증(Alopecia)",
+      "url": "https://www.amc.seoul.kr/asan/healthinfo/disease/diseaseDetail.do?contentId=32465"
+    }
+  ],
+  "lastVerified": "2026-08-25"
+}

@@ -1,0 +1,51 @@
+{
+  "code": "WEB-409",
+  "slug": "alopecia-areata",
+  "status": "published",
+  "category": "hair",
+  "tier": "general",
+  "title": {
+    "kr": "원형탈모",
+    "en": "Alopecia Areata",
+    "zh_cn": "斑秃",
+    "jp": "円形脱毛症"
+  },
+  "oneMinuteSummary": {
+    "kr": "원형탈모는 통증 없이 동그랗거나 타원 모양으로 갑자기 모발이 빠지는 질환으로, 눈썹·속눈썹·수염 등에도 나타날 수 있습니다. 정확한 원인은 밝혀지지 않았지만 자가면역·스트레스·내분비 이상이 관여하는 것으로 추정되며, 하나의 반점은 4~12개월 내 다시 자라는 경우가 많지만 재발이 흔합니다.",
+    "en": "Alopecia areata causes sudden, painless hair loss in round or oval patches, and can also affect the eyebrows, eyelashes, or beard. The exact cause is unknown, but autoimmunity, stress, and endocrine disorders are suspected contributors; a single patch often regrows within 4–12 months, though recurrence is common.",
+    "zh_cn": "斑秃是一种无痛性、突然出现圆形或椭圆形脱发的疾病,也可累及眉毛、睫毛、胡须等部位。确切病因尚不明确,但推测与自身免疫、压力及内分泌异常有关;单一斑块通常在4~12个月内重新长出毛发,但复发较为常见。",
+    "jp": "円形脱毛症は、痛みを伴わずに丸形または楕円形に突然毛髪が抜ける疾患で、眉毛・まつ毛・ひげなどにも現れることがあります。正確な原因は明らかになっていませんが、自己免疫・ストレス・内分泌異常が関与していると推測されており、単一の脱毛斑は4〜12か月以内に再び生えてくることが多いものの、再発はよく見られます。"
+  },
+  "cause": {
+    "kr": "원인은 아직 명확히 밝혀지지 않았으나, 모낭을 스스로의 면역체계가 공격하는 자가면역 반응, 심리적 스트레스, 갑상선 등 내분비 질환이 관여할 것으로 추정됩니다. 발병 시기가 이르거나 빠지는 범위가 넓을수록 예후가 좋지 않은 경향이 있습니다.",
+    "en": "The cause remains unclear, but an autoimmune reaction in which the immune system attacks hair follicles, psychological stress, and endocrine disorders such as thyroid disease are all suspected contributors. Earlier onset or a larger affected area tends to be associated with a less favorable prognosis.",
+    "zh_cn": "病因尚未明确,但推测与自身免疫反应(免疫系统攻击毛囊)、心理压力及甲状腺等内分泌疾病有关。发病年龄越早或脱发范围越广,预后往往越差。",
+    "jp": "原因はまだ明確に解明されていませんが、免疫システムが毛包を攻撃する自己免疫反応、心理的ストレス、甲状腺などの内分泌疾患が関与していると推測されています。発症時期が早いほど、または脱毛範囲が広いほど予後が良くない傾向があります。"
+  },
+  "symptoms": {
+    "kr": "통증이나 가려움 없이 동그랗거나 타원형으로 모발이 갑자기 빠지는 것이 특징입니다. 두피뿐 아니라 눈썹·속눈썹·수염 등 다른 부위의 체모에도 나타날 수 있으며, 심한 경우 두피 전체 모발이 빠지는 전두탈모증이나 전신의 체모가 모두 빠지는 범발성 탈모증으로 진행되기도 합니다.",
+    "en": "The hallmark is sudden, painless hair loss in round or oval patches. It can affect not only the scalp but also eyebrows, eyelashes, and beard hair, and in severe cases can progress to complete scalp hair loss (alopecia totalis) or loss of all body hair (alopecia universalis).",
+    "zh_cn": "特征为无痛、无痒,突然出现圆形或椭圆形脱发。不仅限于头皮,眉毛、睫毛、胡须等部位的体毛也可能受累,严重时可发展为头皮全秃(全秃症)或全身体毛脱落(普秃症)。",
+    "jp": "痛みやかゆみを伴わず、丸形または楕円形に突然毛髪が抜けるのが特徴です。頭皮だけでなく眉毛・まつ毛・ひげなど他の体毛にも現れることがあり、重症の場合は頭皮全体の毛髪が抜ける全頭脱毛症や、全身の体毛がすべて抜ける汎発性脱毛症に進行することもあります。"
+  },
+  "selfCareAndWhenToSeeDoctor": {
+    "kr": "스트레스를 줄이고 충분한 수면과 휴식을 취하는 것이 도움이 될 수 있습니다. 원형탈모는 자연 재생되는 경우도 많지만, 범위가 넓어지거나 눈썹·속눈썹 등으로 번지거나 빠르게 진행되는 경우, 또는 반점이 반복적으로 재발하는 경우에는 조기에 피부과 진료를 받는 것이 좋습니다.",
+    "en": "Reducing stress and getting adequate sleep and rest may help. While alopecia areata often regrows naturally, early dermatology consultation is advisable if the affected area widens, spreads to the eyebrows or eyelashes, progresses rapidly, or patches recur repeatedly.",
+    "zh_cn": "减少压力、保证充分的睡眠与休息可能有帮助。斑秃常可自然再生,但若脱发范围扩大、蔓延至眉毛或睫毛、进展迅速,或斑块反复复发,建议尽早就诊皮肤科。",
+    "jp": "ストレスを減らし、十分な睡眠と休息を取ることが助けになる場合があります。円形脱毛症は自然に再生することも多いですが、範囲が広がったり、眉毛・まつ毛に広がったり、急速に進行したり、脱毛斑が繰り返し再発する場合は早めに皮膚科を受診することが望ましいです。"
+  },
+  "currentTreatment": {
+    "kr": "국소 스테로이드 도포나 병변 내 스테로이드 주사, 미녹시딜 용액이 주로 쓰이며, 빠르게 진행되는 경우에는 경구 스테로이드를 사용하기도 합니다. 비듬·건선·지루피부염 같은 두피 질환이 함께 있으면 탈모를 악화시킬 수 있어 이런 동반 질환의 관리도 함께 이뤄집니다.",
+    "en": "Treatment mainly uses topical or intralesional steroid injections and minoxidil solution, with oral steroids sometimes used for rapidly progressive cases. Scalp conditions such as dandruff, psoriasis, or seborrheic dermatitis can worsen hair loss, so managing these coexisting conditions is also part of care.",
+    "zh_cn": "主要治疗方法为外用类固醇或病灶内类固醇注射、米诺地尔溶液,进展迅速者有时也会使用口服类固醇。头皮屑、银屑病、脂溢性皮炎等头皮疾病可能加重脱发,因此也需一并管理这些并发疾病。",
+    "jp": "外用ステロイドの塗布や病変内ステロイド注射、ミノキシジル溶液が主に用いられ、急速に進行する場合は経口ステロイドを使用することもあります。フケ・乾癬・脂漏性皮膚炎などの頭皮疾患を併発していると脱毛が悪化することがあるため、こうした併存疾患の管理も併せて行われます。"
+  },
+  "mythVsFact": [],
+  "sources": [
+    {
+      "label": "서울아산병원 질환백과 — 탈모증(Alopecia), 원형탈모 항목",
+      "url": "https://www.amc.seoul.kr/asan/healthinfo/disease/diseaseDetail.do?contentId=32465"
+    }
+  ],
+  "lastVerified": "2026-08-25"
+}

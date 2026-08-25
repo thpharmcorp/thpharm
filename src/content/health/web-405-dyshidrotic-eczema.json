@@ -1,0 +1,51 @@
+{
+  "code": "WEB-405",
+  "slug": "dyshidrotic-eczema",
+  "status": "published",
+  "category": "skin",
+  "tier": "general",
+  "title": {
+    "kr": "한포진 (물집습진)",
+    "en": "Dyshidrotic Eczema (Pompholyx)",
+    "zh_cn": "汗疱疹",
+    "jp": "汗疱状湿疹(異汗性湿疹)"
+  },
+  "oneMinuteSummary": {
+    "kr": "한포진은 손과 발, 특히 손가락 옆면과 손톱 주변에 투명하고 작은 물집이 무리지어 생기는 비염증성 수포성 질환입니다. 가려움증으로 시작해 2~3주 후 저절로 가라앉는 경우가 많지만 재발이 잦은 것이 특징입니다.",
+    "en": "Dyshidrotic eczema causes clusters of small, clear blisters on the hands and feet, especially the sides of the fingers and around the nails. It often starts with itching and tends to resolve on its own within 2–3 weeks, but recurs frequently.",
+    "zh_cn": "汗疱疹是一种非炎症性水疱性疾病,表现为手部和足部,尤其是手指侧面及指甲周围出现成簇的透明小水疱。通常从瘙痒开始,2~3周后可自行消退,但容易反复发作。",
+    "jp": "汗疱状湿疹は、手や足、特に指の側面や爪の周りに透明で小さな水疱が群がって生じる非炎症性の水疱性疾患です。かゆみから始まり2〜3週間で自然に治まることが多いですが、再発しやすいのが特徴です。"
+  },
+  "cause": {
+    "kr": "정확한 원인은 명확하지 않지만 심리적 스트레스와 다한증(땀을 많이 흘리는 상태)이 관련된 것으로 추정됩니다. 세제·고무장갑·화학약품·기름, 니켈·크롬·코발트 같은 금속에 대한 접촉이 유발 요인으로 꼽히며, 경구피임약 복용·아스피린 복용·흡연도 위험요인으로 알려져 있습니다.",
+    "en": "The exact cause isn't clear, but psychological stress and hyperhidrosis (excessive sweating) are suspected contributors. Contact with detergents, rubber gloves, chemicals, oils, and metals such as nickel, chromium, and cobalt are known triggers, along with oral contraceptive use, aspirin, and smoking.",
+    "zh_cn": "确切病因尚不明确,但推测与心理压力及多汗症(出汗过多)有关。接触洗涤剂、橡胶手套、化学药品、油类以及镍、铬、钴等金属被认为是诱发因素,口服避孕药、服用阿司匹林及吸烟也被列为风险因素。",
+    "jp": "正確な原因は明らかではありませんが、心理的ストレスと多汗症(汗を多くかく状態)が関与していると推測されています。洗剤・ゴム手袋・化学薬品・油、ニッケル・クロム・コバルトなどの金属への接触が誘発要因として挙げられ、経口避妊薬の服用・アスピリン服用・喫煙もリスク要因として知られています。"
+  },
+  "symptoms": {
+    "kr": "손발이 가려운 증상이 먼저 나타나고, 이어서 잘 터지지 않는 1~2mm 크기의 투명한 물집이 생깁니다. 화끈거리는 느낌이 동반되기도 하며, 물집끼리 합쳐져 커지기도 합니다. 대부분 2~3주가 지나면 표피가 벗겨지면서 저절로 사라지지만 재발 경향이 높습니다.",
+    "en": "Itching on the hands and feet appears first, followed by small (1–2mm), clear blisters that resist rupturing. A burning sensation may accompany them, and blisters can merge into larger lesions. Symptoms typically resolve within 2–3 weeks as the skin peels, but recurrence is common.",
+    "zh_cn": "通常先出现手脚瘙痒,随后出现1~2mm大小、不易破裂的透明小水疱。有时伴有灼热感,水疱之间也可能融合变大。大多数患者在2~3周后随表皮脱落而自行消退,但复发倾向较高。",
+    "jp": "手足のかゆみが先に現れ、続いて破れにくい1〜2mm程度の透明な水疱ができます。灼熱感を伴うこともあり、水疱同士が合わさって大きくなることもあります。大部分は2〜3週間ほどで表皮の脱落とともに自然に消えますが、再発しやすい傾向があります。"
+  },
+  "selfCareAndWhenToSeeDoctor": {
+    "kr": "세제·금속·화학약품 등 자극 물질과의 접촉을 피하고, 손 씻는 시간을 줄이고 씻은 뒤에는 충분히 건조시키는 것이 도움이 됩니다. 스트레스 관리와 충분한 휴식도 권장됩니다. 물집이 반복적으로 재발하거나 범위가 넓어지고 통증이 심해지면 피부과 진료를 받아보는 것이 좋습니다.",
+    "en": "Avoiding contact with irritants like detergents, metals, and chemicals helps, as does limiting handwashing time and thoroughly drying hands afterward. Stress management and adequate rest are also recommended. See a dermatologist if blisters recur repeatedly, spread, or become increasingly painful.",
+    "zh_cn": "避免接触洗涤剂、金属、化学药品等刺激物有帮助,同时应缩短洗手时间并在洗后充分擦干。建议进行压力管理并保证充分休息。若水疱反复复发、范围扩大或疼痛加重,建议就诊皮肤科。",
+    "jp": "洗剤・金属・化学薬品などの刺激物との接触を避け、手洗いの時間を短くし、洗った後はしっかり乾かすことが助けになります。ストレス管理と十分な休息も勧められます。水疱が繰り返し再発したり範囲が広がったり、痛みが強くなる場合は皮膚科を受診することが望ましいです。"
+  },
+  "currentTreatment": {
+    "kr": "병변 부위에 국소 스테로이드 연고를 바르는 것이 기본 치료이며, 습포 요법이나 광선치료(광화학요법)를 함께 쓰기도 합니다. 전신 스테로이드는 일시적으로 증상을 완화할 수 있지만 부작용 위험이 있어 신중하게 사용합니다.",
+    "en": "Topical steroid ointment on the affected areas is the standard treatment, sometimes combined with wet compresses or phototherapy. Systemic steroids can relieve symptoms temporarily but carry side-effect risks and are used cautiously.",
+    "zh_cn": "在患处涂抹外用类固醇软膏是基本治疗方法,有时也会配合湿敷疗法或光疗(光化学疗法)。全身性类固醇可暂时缓解症状,但存在副作用风险,需谨慎使用。",
+    "jp": "病変部に外用ステロイド軟膏を塗布するのが基本治療で、湿布療法や光線療法(光化学療法)を併用することもあります。全身性ステロイドは一時的に症状を和らげることができますが、副作用のリスクがあるため慎重に使用します。"
+  },
+  "mythVsFact": [],
+  "sources": [
+    {
+      "label": "서울아산병원 질환백과 — 한포진(Acute vesiculobullous hand eczema)",
+      "url": "https://www.amc.seoul.kr/asan/healthinfo/disease/diseaseDetail.do?contentId=33874"
+    }
+  ],
+  "lastVerified": "2026-08-25"
+}

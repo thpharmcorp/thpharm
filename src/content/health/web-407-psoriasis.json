@@ -1,0 +1,51 @@
+{
+  "code": "WEB-407",
+  "slug": "psoriasis",
+  "status": "published",
+  "category": "skin",
+  "tier": "general",
+  "title": {
+    "kr": "건선",
+    "en": "Psoriasis",
+    "zh_cn": "银屑病",
+    "jp": "乾癬"
+  },
+  "oneMinuteSummary": {
+    "kr": "건선은 경계가 뚜렷하고 은백색 비늘로 덮인 붉은 발진(구진·판)이 생기는 만성 염증성 피부질환으로, 악화와 호전을 반복합니다. 정확한 원인은 밝혀지지 않았지만 유전·환경·면역학적 요인이 함께 작용하는 것으로 봅니다.",
+    "en": "Psoriasis is a chronic inflammatory skin condition marked by well-demarcated red patches covered with silvery-white scale, following a relapsing-remitting course. The exact cause is unknown, but genetic, environmental, and immunological factors are thought to act together.",
+    "zh_cn": "银屑病是一种慢性炎症性皮肤病,表现为边界清晰、覆盖银白色鳞屑的红色皮疹(丘疹、斑块),病程反复发作与缓解交替。确切病因尚不明确,但被认为是遗传、环境与免疫因素共同作用的结果。",
+    "jp": "乾癬は境界が明瞭で銀白色の鱗屑に覆われた紅斑性の発疹(丘疹・局面)が生じる慢性炎症性皮膚疾患で、悪化と軽快を繰り返します。正確な原因は明らかになっていませんが、遺伝的・環境的・免疫学的要因が共に作用すると考えられています。"
+  },
+  "cause": {
+    "kr": "유전적 소인, 환경적 악화 요인(피부 외상, 감염, 추운 날씨, 건조함), 면역학적 요인 세 가지가 함께 작용합니다. 스트레스와 특정 약물도 악화 요인으로 작용할 수 있습니다.",
+    "en": "Three factors act together: genetic predisposition, environmental aggravating factors (skin trauma, infection, cold weather, dryness), and immunological factors. Stress and certain medications can also worsen the condition.",
+    "zh_cn": "遗传易感性、环境恶化因素(皮肤外伤、感染、寒冷天气、干燥)以及免疫因素三者共同作用。压力及某些药物也可能成为恶化因素。",
+    "jp": "遺伝的素因、環境的悪化要因(皮膚外傷、感染、寒い気候、乾燥)、免疫学的要因の3つが共に作用します。ストレスや特定の薬物も悪化要因として作用することがあります。"
+  },
+  "symptoms": {
+    "kr": "초기에는 붉은색의 작은 좁쌀 같은 발진(구진)이 나타나 점차 커지고, 그 위로 하얀 비늘 같은 인설이 겹겹이 쌓입니다. 인설을 떼어내면 점상 출혈이 나타나는 것이 특징입니다. 환자의 30~50%에서 손발톱 병변이 함께 나타납니다.",
+    "en": "It starts as small red papules that gradually enlarge, developing layers of silvery-white scale on top. A characteristic sign is pinpoint bleeding when the scale is scraped off. Nail changes occur in 30–50% of patients.",
+    "zh_cn": "初期出现红色粟粒样小丘疹,逐渐扩大,并在其上覆盖层层白色鳞屑。剥去鳞屑后出现点状出血是其特征表现。30%~50%的患者会同时出现指甲病变。",
+    "jp": "初期には赤くて小さな粟粒状の発疹(丘疹)が現れ、次第に拡大し、その上に白い鱗屑が幾層にも重なって積もります。鱗屑を剥がすと点状出血が現れるのが特徴です。患者の30〜50%で爪の病変も併発します。"
+  },
+  "selfCareAndWhenToSeeDoctor": {
+    "kr": "피부 손상과 과도한 마찰, 연쇄상구균 감염(인후염·편도선염), 정신적 스트레스, 건선을 악화시킬 수 있는 약물을 피하는 것이 중요합니다. 특히 겨울철에 악화되기 쉬우므로 이 시기에 더 신경 써서 관리해야 합니다. 병변이 넓게 번지거나 관절통 등 새로운 증상이 동반되면 피부과 진료가 필요합니다.",
+    "en": "Avoid skin trauma and excessive friction, streptococcal infections (sore throat, tonsillitis), psychological stress, and medications known to worsen psoriasis. The condition tends to flare in winter, so extra care is needed during that season. See a dermatologist if lesions spread widely or if new symptoms such as joint pain appear.",
+    "zh_cn": "应避免皮肤损伤及过度摩擦、链球菌感染(咽炎、扁桃体炎)、精神压力,以及可能加重银屑病的药物。由于冬季更易恶化,该季节需格外注意管理。若皮损大范围扩散或出现关节疼痛等新症状,应及时就诊皮肤科。",
+    "jp": "皮膚の損傷や過度な摩擦、溶連菌感染(咽頭炎・扁桃炎)、精神的ストレス、乾癬を悪化させうる薬物を避けることが重要です。特に冬季に悪化しやすいため、この時期はより注意して管理する必要があります。病変が広範囲に広がったり、関節痛など新たな症状を伴う場合は皮膚科の受診が必要です。"
+  },
+  "currentTreatment": {
+    "kr": "국소치료(부신피질호르몬제·비타민D 유도체 도포), 중증 환자 대상 전신치료(면역억제제), 자외선을 이용한 광선치료(PUVA·단파장 UVB·엑시머 레이저) 세 가지가 주요 접근법입니다. 진단은 피부와 손톱의 특징적 변화를 관찰하고, 필요시 피부 조직검사로 확진합니다.",
+    "en": "The three main approaches are topical treatment (corticosteroids, vitamin D analogs), systemic treatment for severe cases (immunosuppressants), and phototherapy using UV light (PUVA, narrowband UVB, excimer laser). Diagnosis is based on characteristic skin and nail findings, confirmed with a skin biopsy if needed.",
+    "zh_cn": "主要治疗方式包括外用治疗(涂抹皮质类固醇、维生素D类似物)、针对重症患者的全身治疗(免疫抑制剂),以及利用紫外线的光疗(PUVA、窄谱UVB、准分子激光)三种。诊断通过观察皮肤及指甲的特征性变化进行,必要时以皮肤组织活检确诊。",
+    "jp": "外用治療(副腎皮質ホルモン剤・ビタミンD誘導体の塗布)、重症患者向けの全身治療(免疫抑制剤)、紫外線を用いた光線療法(PUVA・ナローバンドUVB・エキシマレーザー)の3つが主なアプローチです。診断は皮膚と爪の特徴的な変化を観察し、必要に応じて皮膚組織検査で確定します。"
+  },
+  "mythVsFact": [],
+  "sources": [
+    {
+      "label": "서울아산병원 질환백과 — 건선(Psoriasis)",
+      "url": "https://www.amc.seoul.kr/asan/healthinfo/disease/diseaseDetail.do?contentId=31548"
+    }
+  ],
+  "lastVerified": "2026-08-25"
+}

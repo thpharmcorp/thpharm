@@ -20,20 +20,30 @@ const d = entry.data;
 
 // 질환별 accent 컬러 — brand teal(비만)을 기준으로 당뇨/고혈압/MASH를 구분되는 색으로 배정.
 // 실제 브랜드 컬러 가이드 확정 전까지의 근사값 (APPROVED_FACTS.md 참고).
+// 2026-08-25: HEALTH 확장(Tier 2 종합 건강정보) — accentMap에 없는(=Tier 1 4개가 아닌) 항목은
+// 회사 사업과 무관한 순수 정보 콘텐츠임을 시각적으로 구분하기 위해 중립 톤(slate)을 기본값으로 사용.
+// (HEALTH_메뉴_확장_계획안_2026-08-25.md §1 "Tier 2는 다른 톤" 반영)
 const accentMap: Record<string, string> = {
   obesity: '#EE7F1A',
   diabetes: '#2563EB',
   hypertension: '#DC2626',
   mash: '#7C3AED',
 };
-const accent = accentMap[d.slug] ?? '#EE7F1A';
+const accent = accentMap[d.slug] ?? (d.tier === 'general' ? '#64748B' : '#EE7F1A');
 
-const sections = [
-  { key: 'body', label: { kr: '몸에서는 무슨 일이 일어날까?', en: "What's happening in the body?", 'zh-cn': '身体里发生了什么?', jp: '体の中で何が起きているのか?' }, text: d.whatHappensInBody[fk], withDiagram: true },
-  { key: 'risk', label: { kr: '위험요인과 검사', en: 'Risk factors & screening', 'zh-cn': '风险因素与检查', jp: '危険因子と検査' }, text: d.riskAndScreening[fk], withDiagram: false },
+// 2026-08-25: 'focus'(Tier 1) 항목은 기존 4필드 그대로, 'general'(Tier 2) 항목은 경량
+// 필드셋(cause/symptoms/selfCareAndWhenToSeeDoctor + currentTreatment)을 쓴다. 값이 없는
+// 필드는 섹션 자체를 렌더링하지 않도록 필터링 — 기존 4개 항목은 전부 값이 있어 화면이 그대로 유지된다.
+const allSections = [
+  { key: 'body', label: { kr: '몸에서는 무슨 일이 일어날까?', en: "What's happening in the body?", 'zh-cn': '身体里发生了什么?', jp: '体の中で何が起きているのか?' }, text: d.whatHappensInBody?.[fk], withDiagram: true },
+  { key: 'cause', label: { kr: '원인', en: 'Causes', 'zh-cn': '病因', jp: '原因' }, text: d.cause?.[fk], withDiagram: false },
+  { key: 'symptoms', label: { kr: '증상', en: 'Symptoms', 'zh-cn': '症状', jp: '症状' }, text: d.symptoms?.[fk], withDiagram: false },
+  { key: 'risk', label: { kr: '위험요인과 검사', en: 'Risk factors & screening', 'zh-cn': '风险因素与检查', jp: '危険因子と検査' }, text: d.riskAndScreening?.[fk], withDiagram: false },
   { key: 'treatment', label: { kr: '치료의 현재', en: 'Treatment today', 'zh-cn': '当前的治疗', jp: '治療の現在' }, text: d.currentTreatment[fk], withDiagram: false },
-  { key: 'trend', label: { kr: '치료의 변화', en: 'How treatment is changing', 'zh-cn': '治疗的变化', jp: '治療の変化' }, text: d.treatmentChanges[fk], withDiagram: false },
+  { key: 'selfcare', label: { kr: '자가관리 · 병원에 가야 할 때', en: 'Self-care & when to see a doctor', 'zh-cn': '自我护理与何时就医', jp: 'セルフケア・受診の目安' }, text: d.selfCareAndWhenToSeeDoctor?.[fk], withDiagram: false },
+  { key: 'trend', label: { kr: '치료의 변화', en: 'How treatment is changing', 'zh-cn': '治疗的变化', jp: '治療の変化' }, text: d.treatmentChanges?.[fk], withDiagram: false },
 ] as const;
+const sections = allSections.filter((s) => !!s.text);
 ---
 
 <BaseLayout locale={locale} title={d.title[fk]} description={d.oneMinuteSummary[fk]}>
@@ -122,18 +132,65 @@ const sections = [
         )
       }
 
-      <div class="mt-12 flex flex-wrap gap-x-6 gap-y-2 border-t border-thp-line pt-6 text-sm font-bold text-thp-tealDeep">
-        <a href={`/${locale}/health/treatment-trends`} class="hover:underline">
-          {locale === 'kr' ? '치료의 변화 더 보기' : 'Treatment Trends'} →
-        </a>
-        <a href={`/${locale}/health/faq`} class="hover:underline">FAQ →</a>
-        <a href={`/${locale}/intelligence`} class="hover:underline">
-          {locale === 'kr' ? '관련 논문·산업 분석 보기 (INTELLIGENCE)' : 'Related research & industry analysis (INTELLIGENCE)'} →
-        </a>
-      </div>
+      {
+        // 2026-08-25: Tier 2('general') 항목은 THPHARM 사업과 직접 연관이 없는 순수 건강정보라
+        // INTELLIGENCE(회사 파이프라인·산업분석) 링크 대신, 참고한 출처를 명시한다.
+        d.tier === 'general' ? (
+          <div class="mt-12 flex flex-wrap gap-x-6 gap-y-2 border-t border-thp-line pt-6 text-sm font-bold text-thp-tealDeep">
+            <a href={`/${locale}/health`} class="hover:underline">
+              {locale === 'kr' ? 'HEALTH 다른 질환 보기' : 'More HEALTH topics'} →
+            </a>
+            <a href={`/${locale}/health/faq`} class="hover:underline">FAQ →</a>
+          </div>
+        ) : (
+          <div class="mt-12 flex flex-wrap gap-x-6 gap-y-2 border-t border-thp-line pt-6 text-sm font-bold text-thp-tealDeep">
+            <a href={`/${locale}/health/treatment-trends`} class="hover:underline">
+              {locale === 'kr' ? '치료의 변화 더 보기' : 'Treatment Trends'} →
+            </a>
+            <a href={`/${locale}/health/faq`} class="hover:underline">FAQ →</a>
+            <a href={`/${locale}/intelligence`} class="hover:underline">
+              {locale === 'kr' ? '관련 논문·산업 분석 보기 (INTELLIGENCE)' : 'Related research & industry analysis (INTELLIGENCE)'} →
+            </a>
+          </div>
+        )
+      }
 
-      <p class="mt-6 text-[12px] text-thp-ink/35">
-        본 콘텐츠는 일반 정보 제공 목적이며 진단·처방을 대체하지 않습니다. {strings.lastUpdated}: {d.lastVerified}
+      {
+        d.sources.length > 0 && (
+          <p class="mt-6 text-[12px] text-thp-ink/35">
+            {locale === 'kr' ? '참고 자료' : 'Sources'}:{' '}
+            {d.sources.map((s, i) => (
+              <>
+                {i > 0 && ' · '}
+                {s.url ? (
+                  <a href={s.url} target="_blank" rel="noopener noreferrer" class="underline hover:text-thp-tealDeep">
+                    {s.label}
+                  </a>
+                ) : (
+                  s.label
+                )}
+              </>
+            ))}
+          </p>
+        )
+      }
+
+      <p class="mt-2 text-[12px] text-thp-ink/35">
+        본 콘텐츠는 일반 정보 제공 목적이며 진단·처방을 대체하지 않습니다
+        {d.tier === 'general' &&
+          (locale === 'kr'
+            ? ' — 증상이 있으면 반드시 의료진과 상담하세요'
+            : locale === 'en'
+              ? ' — if you have symptoms, please consult a medical professional'
+              : locale === 'zh-cn'
+                ? ' — 如有症状,请务必咨询医疗人员'
+                : ' — 症状がある場合は必ず医療機関にご相談ください')}
+        . {strings.lastUpdated}: {d.lastVerified}
+        {d.tier === 'general' && !d.medicalReviewer && (
+          <span class="ml-1">
+            ({locale === 'kr' ? '의료진 감수 전' : locale === 'en' ? 'pending clinical review' : locale === 'zh-cn' ? '尚未经医学审核' : '医療監修前'})
+          </span>
+        )}
       </p>
     </div>
   </section>

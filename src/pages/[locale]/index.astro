@@ -32,7 +32,11 @@ const keyFocusCopy: Record<Locale, { eyebrow: string; title: string }> = {
   jp: { eyebrow: 'KEY FOCUS', title: 'THPHARMが注力する4大代謝性疾患' },
 };
 const keyFocus = keyFocusCopy[locale];
-const healthTopics = await getCollection('health');
+// 2026-08-25: HEALTH 메뉴 확장으로 health 컬렉션에 Tier 2(피부/모발 등 종합 건강정보) 항목이
+// 추가됨 — 이 섹션은 제목 그대로 "우리가 집중하는 4대 대사질환"이므로 Tier 1('focus')만 남긴다.
+// 필터링 없이 그대로 두면 새 Tier 2 항목까지 KEY FOCUS에 섞여 나와 계획안 §1의 취지(THPHARM
+// 포커스와 종합 건강정보를 시각적으로 분리)에 어긋난다.
+const healthTopics = (await getCollection('health')).filter((t) => t.data.tier === 'focus');
 
 const iconKindMap: Record<string, 'obesity' | 'diabetes' | 'hypertension' | 'mash'> = {
   obesity: 'obesity',

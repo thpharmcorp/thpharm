@@ -159,18 +159,46 @@ const pipeline = defineCollection({
 
 // ---- WEB-400 HEALTH --------------------------------------------------------
 
+// 2026-08-25: HEALTH 메뉴 확장 계획안(HEALTH_메뉴_확장_계획안_2026-08-25.md) 1단계 반영.
+// - category: Tier 1(기존 4개, 'metabolic-chronic')과 Tier 2(신규 카테고리)를 구분해 인덱스
+//   페이지 필터에 사용. 계획안 §2 로드맵에 나온 카테고리를 미리 enum에 넣어 향후 확장 시
+//   스키마를 다시 건드리지 않아도 되게 함.
+// - tier: 'focus'(THPHARM 포커스 질환, 기존 6필드 전부 유지) / 'general'(종합 건강정보,
+//   경량 필드셋). 기존 4개 항목은 하위호환을 위해 그대로 두되 category/tier만 채워 넣었음.
+// - whatHappensInBody/riskAndScreening/treatmentChanges를 optional로 전환 — 'general' 항목은
+//   이 깊은 필드들 없이 cause/symptoms/selfCareAndWhenToSeeDoctor + currentTreatment(치료 개요)
+//   경량 필드셋만 채운다. 'focus' 항목은 지금처럼 전부 채워서 기존 콘텐츠·페이지에는 영향 없음.
 const health = defineCollection({
   type: 'data',
   schema: z.object({
     code: z.string(), // WEB-401 등
     slug: z.string(), // obesity
     status: contentStatus,
+    category: z
+      .enum([
+        'metabolic-chronic', // Tier 1 — 기존 4개(비만/당뇨/고혈압/MASH)
+        'skin',
+        'hair',
+        'cardiovascular',
+        'digestive',
+        'musculoskeletal',
+        'womens-health',
+        'infectious',
+        'sleep-stress',
+      ])
+      .default('metabolic-chronic'),
+    tier: z.enum(['focus', 'general']).default('focus'),
     title: localized,
     oneMinuteSummary: localized,
-    whatHappensInBody: localized,
-    riskAndScreening: localized,
+    // 'focus' 필수, 'general'은 보통 생략(대신 cause/symptoms/selfCareAndWhenToSeeDoctor 사용)
+    whatHappensInBody: localizedOptional,
+    riskAndScreening: localizedOptional,
     currentTreatment: localized,
-    treatmentChanges: localized,
+    treatmentChanges: localizedOptional,
+    // 'general' 전용 경량 필드 — 'focus' 항목에는 쓰지 않음
+    cause: localizedOptional,
+    symptoms: localizedOptional,
+    selfCareAndWhenToSeeDoctor: localizedOptional,
     doctorsNote: z
       .object({
         question: localized,
@@ -187,6 +215,10 @@ const health = defineCollection({
         })
       )
       .default([]),
+    // 2026-08-25: 'general' 항목은 sourceMeta 없이 각 항목이 참고한 공신력 있는 의료정보
+    // 출처(질병관리청 국가건강정보포털/서울아산병원 질환백과 등)를 최소한이나마 남기기 위해
+    // 추가 — linkedTag를 재사용(라벨+URL). 기존 'focus' 4개 항목은 소급 적용하지 않음(빈 배열).
+    sources: z.array(linkedTag).default([]),
     medicalReviewer: z.string().optional(),
     lastVerified: z.string(),
   }),

@@ -2,6 +2,8 @@
   "code": "WEB-402",
   "slug": "diabetes",
   "status": "draft",
+  "category": "metabolic-chronic",
+  "tier": "focus",
   "title": {
     "kr": "당뇨병 (Diabetes)",
     "en": "Diabetes",

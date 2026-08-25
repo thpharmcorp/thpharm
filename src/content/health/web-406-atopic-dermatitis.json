@@ -1,0 +1,51 @@
+{
+  "code": "WEB-406",
+  "slug": "atopic-dermatitis",
+  "status": "published",
+  "category": "skin",
+  "tier": "general",
+  "title": {
+    "kr": "아토피피부염",
+    "en": "Atopic Dermatitis",
+    "zh_cn": "特应性皮炎",
+    "jp": "アトピー性皮膚炎"
+  },
+  "oneMinuteSummary": {
+    "kr": "아토피피부염은 심한 가려움증을 동반하며 만성적으로 재발하는 습진성 피부질환으로, 천식·알레르기비염과 함께 3대 알레르기 질환으로 꼽힙니다. 영아기 태열에서 시작해 소아부터 성인까지 호전과 악화를 반복하는 경과를 보입니다.",
+    "en": "Atopic dermatitis is a chronic, relapsing eczematous skin condition marked by intense itching, and is one of the three major allergic diseases alongside asthma and allergic rhinitis. It can begin as infantile eczema and follows a course of flares and remissions from childhood into adulthood.",
+    "zh_cn": "特应性皮炎是一种伴有剧烈瘙痒、慢性反复发作的湿疹性皮肤病,与哮喘、过敏性鼻炎并列为三大过敏性疾病。可能始于婴儿期胎热,并在儿童期至成年期反复出现好转与恶化。",
+    "jp": "アトピー性皮膚炎は激しいかゆみを伴い、慢性的に再発する湿疹性皮膚疾患で、喘息・アレルギー性鼻炎とともに三大アレルギー疾患に数えられます。乳児期の胎熱から始まり、小児期から成人期まで軽快と悪化を繰り返す経過をたどります。"
+  },
+  "cause": {
+    "kr": "유전적 소인, 환경 요인, 면역학적 이상이 복합적으로 작용해 발생합니다. 환자의 70~80%가 가족력이 있으며, 부모 한쪽이 아토피피부염이 있으면 자녀의 절반 정도에서 발현될 수 있습니다. 도시화·산업화로 인한 환경 변화와 알레르기 유발 물질 증가도 영향을 미치는 것으로 알려져 있습니다.",
+    "en": "It arises from a combination of genetic predisposition, environmental factors, and immune dysregulation. About 70–80% of patients have a family history, and if one parent has atopic dermatitis, roughly half of their children may develop it. Urbanization, industrialization, and rising exposure to allergens are also thought to play a role.",
+    "zh_cn": "由遗传易感性、环境因素及免疫异常共同作用所致。约70~80%的患者有家族史,若父母一方患有特应性皮炎,子女中约半数可能发病。城市化、工业化带来的环境变化及过敏原增加也被认为具有影响。",
+    "jp": "遺伝的素因、環境要因、免疫学的異常が複合的に作用して発生します。患者の70〜80%に家族歴があり、両親のどちらかがアトピー性皮膚炎を持つ場合、子どもの約半数に発症することがあります。都市化・産業化による環境変化やアレルゲンの増加も影響すると考えられています。"
+  },
+  "symptoms": {
+    "kr": "가장 큰 특징은 심한 가려움증과 외부 자극·알레르기 유발 물질에 대한 매우 민감한 반응입니다. 가려움증은 저녁에 심해지는 경향이 있고, 긁으면 습진성 변화가 생기고 이것이 다시 가려움을 악화시키는 악순환이 반복됩니다. 나이에 따라 주로 나타나는 부위가 다릅니다(영유아는 얼굴·팔다리 바깥쪽, 소아·성인은 팔다리 접히는 부위 등).",
+    "en": "The defining feature is intense itching combined with heightened sensitivity to external irritants and allergens. Itching tends to worsen in the evening, and scratching triggers eczematous changes that in turn worsen the itch — a self-reinforcing cycle. The typical affected areas shift with age (face and outer limbs in infants; the flexural creases of the arms and legs in children and adults).",
+    "zh_cn": "最主要的特征是剧烈瘙痒以及对外界刺激与过敏原的高度敏感反应。瘙痒往往在傍晚加重,搔抓会引发湿疹样改变,而这又会进一步加重瘙痒,形成恶性循环。随年龄不同,主要受累部位也不同(婴幼儿多见于面部及四肢外侧,儿童及成人则多见于四肢屈侧等部位)。",
+    "jp": "最大の特徴は激しいかゆみと、外部刺激やアレルゲンに対する非常に敏感な反応です。かゆみは夕方に強くなる傾向があり、掻くことで湿疹性変化が生じ、それがさらにかゆみを悪化させる悪循環が繰り返されます。年齢によって主な発症部位が異なります(乳幼児は顔・四肢の外側、小児・成人は四肢の屈曲部など)。"
+  },
+  "selfCareAndWhenToSeeDoctor": {
+    "kr": "자극 요인과 알레르기 유발 물질을 파악해 피하는 것이 중요하며, 적절한 목욕과 보습제 사용으로 피부를 청결하고 촉촉하게 유지하는 것이 기본 관리입니다. 가려움증이 심해 수면·일상생활에 지장이 있거나, 피부 병변이 넓게 번지거나 진물·감염 징후가 보이면 피부과 진료가 필요합니다.",
+    "en": "Identifying and avoiding personal triggers and allergens is important, and keeping skin clean and moisturized through proper bathing and moisturizer use is the foundation of care. See a dermatologist if itching is severe enough to disrupt sleep or daily life, if lesions spread widely, or if there are signs of oozing or infection.",
+    "zh_cn": "了解并避免个人的刺激因素与过敏原十分重要,通过适当沐浴与使用保湿剂保持皮肤清洁湿润是基本护理方法。若瘙痒严重影响睡眠或日常生活、皮损大范围扩散,或出现渗液、感染迹象,应及时就诊皮肤科。",
+    "jp": "刺激要因やアレルゲンを把握して避けることが重要で、適切な入浴と保湿剤の使用により皮膚を清潔かつ潤った状態に保つことが基本的なケアです。かゆみが強く睡眠や日常生活に支障がある場合、皮膚病変が広範囲に広がる場合、または滲出液や感染の兆候が見られる場合は皮膚科の受診が必要です。"
+  },
+  "currentTreatment": {
+    "kr": "원인 물질 제거와 목욕·보습을 통한 피부 장벽 관리가 치료의 기본이며, 필요에 따라 국소 스테로이드제·항히스타민제·광선치료를 사용합니다. 진단은 특정 검사 하나로 확정하기보다 특징적 증상을 종합해 판단하며, 필요시 혈액검사(면역글로불린 E 수치)·피부단자검사·음식물 알레르기 검사를 참고합니다. 중증인 경우 면역억제제나 정맥주사 치료를 고려합니다.",
+    "en": "Managing the skin barrier through trigger avoidance, bathing, and moisturizing forms the basis of treatment, with topical steroids, antihistamines, and phototherapy used as needed. Diagnosis relies on characteristic symptoms rather than a single definitive test, sometimes supported by blood tests (IgE levels), skin prick tests, or food allergy testing. Severe cases may require immunosuppressants or intravenous therapy.",
+    "zh_cn": "去除诱因并通过沐浴、保湿维护皮肤屏障是治疗的基础,必要时使用外用类固醇、抗组胺药及光疗。诊断并非依靠单一检查确定,而是综合特征性症状判断,必要时可参考血液检查(IgE水平)、皮肤点刺试验及食物过敏检测。重症患者可考虑使用免疫抑制剂或静脉注射治疗。",
+    "jp": "原因物質の除去と入浴・保湿による皮膚バリアの管理が治療の基本であり、必要に応じて外用ステロイド薬・抗ヒスタミン薬・光線療法を用います。診断は単一の検査で確定するのではなく特徴的な症状を総合して判断し、必要時には血液検査(IgE値)・皮膚プリックテスト・食物アレルギー検査を参考にします。重症の場合は免疫抑制剤や静脈注射治療を検討します。"
+  },
+  "mythVsFact": [],
+  "sources": [
+    {
+      "label": "서울아산병원 질환백과 — 아토피성 피부염(Atopic dermatitis)",
+      "url": "https://www.amc.seoul.kr/asan/healthinfo/disease/diseaseDetail.do?contentId=31519"
+    }
+  ],
+  "lastVerified": "2026-08-25"
+}
