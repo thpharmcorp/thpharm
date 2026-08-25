@@ -1,0 +1,73 @@
+{
+  "code": "WEB-510",
+  "kind": "paper",
+  "status": "published",
+  "title": {
+    "kr": "GLP-1 계열 약물, 제2형 당뇨병 환자의 심혈관·신장 예후를 얼마나 개선하나 — 8만3천명 메타분석",
+    "en": "How much do GLP-1 drugs improve cardiovascular and renal outcomes in type 2 diabetes — an 83,000-patient meta-analysis",
+    "zh_cn": "GLP-1类药物在多大程度上改善2型糖尿病患者的心血管与肾脏预后——8.3万人荟萃分析",
+    "jp": "GLP-1系薬剤は2型糖尿病患者の心血管・腎予後をどこまで改善するか — 8万3千人メタ解析"
+  },
+  "dek": {
+    "kr": "무작위 대조 시험 20건·83,004명을 종합한 메타분석에서 GLP-1RA는 주요 심혈관 사건을 13% 낮췄다",
+    "en": "A meta-analysis pooling 20 randomized trials and 83,004 patients found GLP-1RAs lowered major cardiovascular events by 13%",
+    "zh_cn": "一项汇总20项随机对照试验、共83,004名患者的荟萃分析显示,GLP-1RA可将主要心血管事件降低13%",
+    "jp": "20件のランダム化比較試験・83,004人を統合したメタ解析で、GLP-1RAは主要心血管イベントを13%低下させた"
+  },
+  "relevance": "Related",
+  "body": {
+    "kr": "Ahmed 등 연구팀이 European Heart Journal - Quality of Care and Clinical Outcomes에 발표한 이 체계적 문헌고찰·메타분석은 제2형 당뇨병 환자를 대상으로 한 무작위 대조 시험 20건, 총 83,004명의 데이터를 종합했다. GLP-1 수용체 작동제(GLP-1RA)는 주요 심혈관 사건(MACE) 위험을 13% 낮췄고(RR 0.87, 95% CI 0.83–0.92), 전체 사망(RR 0.89)·심혈관 사망(RR 0.88)·심근경색(RR 0.87)·뇌졸중(RR 0.88)도 유의하게 감소시켰다. 복합 신장 예후 역시 20% 낮아졌다(RR 0.80, 95% CI 0.73–0.88). 저자들은 이 결과가 근거 확실성이 높은 수준이며, GLP-1RA를 제2형 당뇨병의 기반 치료로 권고하는 현행 가이드라인을 뒷받침한다고 결론지었다.",
+    "en": "This systematic review and meta-analysis by Ahmed and colleagues, published in the European Heart Journal - Quality of Care and Clinical Outcomes, pooled 20 randomized controlled trials totaling 83,004 patients with type 2 diabetes. GLP-1 receptor agonists (GLP-1RAs) reduced the risk of major adverse cardiovascular events (MACE) by 13% (RR 0.87, 95% CI 0.83–0.92), with significant reductions also in all-cause death (RR 0.89), cardiovascular death (RR 0.88), myocardial infarction (RR 0.87), and stroke (RR 0.88). The composite renal outcome was reduced by 20% (RR 0.80, 95% CI 0.73–0.88). The authors concluded that this high-certainty evidence supports current guideline recommendations for GLP-1RAs as foundational therapy in type 2 diabetes.",
+    "zh_cn": "该系统综述与荟萃分析由Ahmed及研究团队发表于《European Heart Journal - Quality of Care and Clinical Outcomes》,汇总了20项随机对照试验、共计83,004名2型糖尿病患者的数据。GLP-1受体激动剂(GLP-1RA)使主要不良心血管事件(MACE)风险降低13%(RR 0.87,95% CI 0.83–0.92),全因死亡(RR 0.89)、心血管死亡(RR 0.88)、心肌梗死(RR 0.87)及卒中(RR 0.88)也均显著降低。复合肾脏结局风险降低20%(RR 0.80,95% CI 0.73–0.88)。作者认为这是高确定性证据,支持现行指南将GLP-1RA作为2型糖尿病基础治疗的推荐。",
+    "jp": "AhmedらのチームがEuropean Heart Journal - Quality of Care and Clinical Outcomes誌に発表したこの系統的レビュー・メタ解析は、2型糖尿病患者を対象としたランダム化比較試験20件、合計83,004人のデータを統合した。GLP-1受容体作動薬(GLP-1RA)は主要心血管イベント(MACE)のリスクを13%低下させ(RR 0.87、95% CI 0.83–0.92)、全死亡(RR 0.89)・心血管死亡(RR 0.88)・心筋梗塞(RR 0.87)・脳卒中(RR 0.88)も有意に減少させた。複合腎予後も20%低下した(RR 0.80、95% CI 0.73–0.88)。著者らはこれを確実性の高いエビデンスとし、GLP-1RAを2型糖尿病の基盤治療とする現行ガイドライン勧告を支持すると結論づけた。"
+  },
+  "thpharmView": {
+    "kr": "이 메타분석은 THPHARM의 자체 임상 데이터가 아니라, GLP-1 계열 약물 전반의 심혈관·신장 예후에 대한 근거 수준을 보여주는 참고 자료다. THP-004(경구 GLP-1RA 기반 복합제)가 속한 약물군 전체의 안전성·유효성 벤치마크로서 의미가 있다.",
+    "en": "This meta-analysis is not THPHARM's own clinical data — it's a reference point showing the strength of evidence behind cardiovascular and renal outcomes for GLP-1 class drugs generally. It serves as a safety and efficacy benchmark for the broader drug class that THP-004 (an oral GLP-1RA-based combination) belongs to.",
+    "zh_cn": "该荟萃分析并非THPHARM自身的临床数据,而是展示GLP-1类药物整体在心血管与肾脏预后方面证据强度的参考资料。它为THP-004(基于口服GLP-1RA的复方制剂)所属的整个药物类别提供了安全性与有效性的参考基准。",
+    "jp": "このメタ解析はTHPHARM自身の臨床データではなく、GLP-1系薬剤全般の心血管・腎予後に関するエビデンスの強さを示す参考資料である。THP-004(経口GLP-1RAベースの配合剤)が属する薬剤クラス全体の安全性・有効性のベンチマークとして意味を持つ。"
+  },
+  "keyPoints": [
+    {
+      "kr": "무작위 대조 시험 20건·83,004명 메타분석 (제2형 당뇨병)",
+      "en": "Meta-analysis of 20 randomized trials, 83,004 patients (type 2 diabetes)",
+      "zh_cn": "20项随机对照试验、83,004名患者的荟萃分析(2型糖尿病)",
+      "jp": "ランダム化比較試験20件・83,004人のメタ解析(2型糖尿病)"
+    },
+    {
+      "kr": "주요 심혈관 사건(MACE) 13% 감소(RR 0.87), 복합 신장 예후 20% 감소(RR 0.80)",
+      "en": "13% reduction in major cardiovascular events (RR 0.87), 20% reduction in composite renal outcome (RR 0.80)",
+      "zh_cn": "主要心血管事件降低13%(RR 0.87),复合肾脏结局降低20%(RR 0.80)",
+      "jp": "主要心血管イベント13%減少(RR 0.87)、複合腎予後20%減少(RR 0.80)"
+    },
+    {
+      "kr": "근거 확실성 '높음' — 현행 가이드라인의 GLP-1RA 기반치료 권고를 뒷받침",
+      "en": "High-certainty evidence — supports current guideline recommendations for GLP-1RA as foundational therapy",
+      "zh_cn": "证据确定性为\"高\"——支持现行指南将GLP-1RA作为基础治疗的推荐",
+      "jp": "エビデンスの確実性は「高」— GLP-1RAを基盤治療とする現行ガイドライン勧告を支持"
+    }
+  ],
+  "relatedLinks": [
+    { "label": "PIPELINE — THP-004", "href": "/pipeline/thp-004" },
+    { "label": "HEALTH — 당뇨", "href": "/health/diabetes" }
+  ],
+  "tags": [
+    { "label": "GLP-1RA" },
+    { "label": "MACE" },
+    { "label": "Renal Outcomes" },
+    { "label": "Type 2 Diabetes" },
+    { "label": "Meta-Analysis" }
+  ],
+  "sourceMeta": {
+    "source_type": "Journal",
+    "source_title": "Cardiovascular and renal outcomes of GLP-1 receptor agonists in type 2 diabetes mellitus: a systematic review and meta-analysis",
+    "publisher": "European Heart Journal - Quality of Care and Clinical Outcomes",
+    "published_at": "2026-05-16",
+    "source_url": "https://academic.oup.com/ehjqcco/advance-article/doi/10.1093/ehjqcco/qcag079/8679361",
+    "doi": "10.1093/ehjqcco/qcag079",
+    "accessed_at": "2026-08-25",
+    "last_verified": "2026-08-25",
+    "peer_review_status": "peer-reviewed"
+  },
+  "publishedAt": "2026-05-16"
+}

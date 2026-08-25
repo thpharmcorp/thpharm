@@ -24,6 +24,10 @@ const d = entry.data;
 // 극복한다는 리뷰)는 SGLT2i+ARB 재조합 전략인 THP-001에 연결한다.
 // 2026-08-25: 언론 조사로 확인한 THPHARM 자체 연혁 뉴스 5건도 각 자산에 연결 — THP-001은
 // 국전약품 MOU·임상1상 투약완료·경쟁사 구도, THP-004는 TIPS 선정·Dt&CRO MOU.
+// 2026-08-25: 논문 100선 순위 4~8위 중 THP-001/THP-004와 직접 연관된 항목(고혈압 FDC 패러다임,
+// GLP-1×MASH 메타분석)을 각 자산에 연결. 나머지(GLP-1 CV/신장 예후 일반 메타분석 2건)는 특정
+// 자산이 아닌 GLP-1 계열 전반의 참고자료라 파이프라인 페이지에는 연결하지 않음(INTELLIGENCE
+// 피드에서는 확인 가능).
 const relatedIntelligenceByAsset: Record<string, string[]> = {
   'THP-001': [
     'news-insilico-reverse-engineering',
@@ -32,11 +36,13 @@ const relatedIntelligenceByAsset: Record<string, string[]> = {
     'news-kookjeon-mou-thp001',
     'news-thp001-phase1-dosing-complete',
     'news-fdc-competitive-landscape',
+    'paper-hypertension-fdc-paradigm',
   ],
   'THP-004': [
     'paper-aleniglipron-oral-glp1-phase2b',
     'news-thp004-tips-selected',
     'news-dtncro-oral-glp1-mou',
+    'paper-glp1-mash-fibrosis-metaanalysis',
   ],
 };
 const relatedIntelligenceLabel = { kr: '관련 INTELLIGENCE', en: 'Related Intelligence', 'zh-cn': '相关 Intelligence', jp: '関連 Intelligence' }[locale];

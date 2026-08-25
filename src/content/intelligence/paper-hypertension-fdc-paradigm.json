@@ -1,0 +1,71 @@
+{
+  "code": "WEB-514",
+  "kind": "paper",
+  "status": "published",
+  "title": {
+    "kr": "고혈압 치료의 새 패러다임 — 왜 단일정 복합제(FDC)가 여전히 저평가되어 있는가",
+    "en": "The new paradigm in hypertension care — why fixed-dose single-pill combinations remain underused",
+    "zh_cn": "高血压治疗的新范式——为何单片固定剂量复方制剂(FDC)仍被低估",
+    "jp": "高血圧治療の新しいパラダイム — なぜ単剤配合剤(FDC)は今なお過小評価されているのか"
+  },
+  "dek": {
+    "kr": "복합제가 복약순응도와 혈압조절률을 높인다는 근거에도, 미국에서 다제 복용 고혈압 환자 중 39%만 복합제를 쓰고 있다는 편집논평",
+    "en": "An editorial noting that despite evidence combination pills improve adherence and BP control, only 39% of US patients on multiple BP drugs actually use one",
+    "zh_cn": "一篇社论指出,尽管有证据表明复方制剂能提高依从性与血压控制率,美国仅有39%服用多种降压药的患者实际使用复方制剂",
+    "jp": "配合剤が服薬アドヒアランスと血圧コントロール率を高めるという根拠があるにもかかわらず、米国で複数の降圧薬を服用する患者のうち実際に配合剤を使っているのはわずか39%だとする論評"
+  },
+  "relevance": "Direct",
+  "body": {
+    "kr": "George Thomas가 Cleveland Clinic Journal of Medicine에 기고한 이 편집논평은 고혈압 치료 패러다임의 변화를 다룬다. 단일정 복합제(FDC) 치료는 복약순응도 개선·혈압조절 향상·치료 지연 감소로 이어진다는 근거가 쌓여 있음에도, 실제 처방은 제한적이다. 저자는 여러 혈압약을 복용하는 미국 환자 중 복합제를 실제로 쓰는 비율이 39%에 불과하고, 2016~2020년 초치료 처방 중 복합제 비중은 9.4%에 그쳤다고 지적한다. 향후 기회로는 저용량 3제 복합제 GMRx2(2024년 미국 FDA 승인) 등 저용량 복합요법과, 이중 엔도텔린 수용체 길항제·알도스테론 합성효소 억제제·RNA 간섭 기반 안지오텐시노겐 억제제 같은 신규 기전, 신장 신경차단술 같은 기기 기반 치료를 소개한다. 저자는 신기술도 중요하지만 정확한 혈압 측정·생활습관 개선·의료 접근성 확대에도 계속 집중해야 한다고 결론짓는다.",
+    "en": "This editorial by George Thomas, published in the Cleveland Clinic Journal of Medicine, discusses the shift in how hypertension is managed. Despite mounting evidence that fixed-dose single-pill combination (FDC) therapy improves adherence, enhances blood pressure control, and reduces treatment delays, real-world prescribing remains limited. Thomas notes that only 39% of US patients taking multiple blood pressure medications actually use a combination pill, and that combination prescriptions made up just 9.4% of initial treatments between 2016 and 2020. He highlights upcoming opportunities including low-dose combination therapy such as GMRx2 (a triple low-dose combination approved by the US FDA in 2024), and newer mechanisms such as dual endothelin receptor antagonists, aldosterone synthase inhibitors, RNA interference-based angiotensinogen suppressors, and device-based interventions like renal denervation. He concludes that while innovation matters, clinicians must keep prioritizing accurate blood pressure measurement, lifestyle modification, and equitable access to care.",
+    "zh_cn": "George Thomas为《Cleveland Clinic Journal of Medicine》撰写的这篇社论探讨了高血压管理方式的转变。尽管越来越多证据表明单片固定剂量复方制剂(FDC)疗法能提高依从性、改善血压控制并减少治疗延误,实际处方使用率仍然有限。Thomas指出,美国服用多种降压药的患者中,实际使用复方制剂的比例仅为39%,而2016至2020年间复方制剂处方仅占初始治疗处方的9.4%。他介绍了未来的机会,包括GMRx2(2024年美国FDA批准的三联低剂量复方制剂)等低剂量复方疗法,以及双重内皮素受体拮抗剂、醛固酮合成酶抑制剂、基于RNA干扰的血管紧张素原抑制剂等新机制,还有肾脏去神经术等器械疗法。他总结认为,创新固然重要,但临床医生仍须持续关注准确的血压测量、生活方式改善以及医疗可及性的公平保障。",
+    "jp": "George ThomasがCleveland Clinic Journal of Medicine誌に寄稿したこの論評は、高血圧治療パラダイムの変化を扱う。単剤配合剤(FDC)療法が服薬アドヒアランス改善・血圧コントロール向上・治療遅延の減少につながるという根拠が蓄積しているにもかかわらず、実際の処方は限定的である。著者は、複数の降圧薬を服用する米国患者のうち実際に配合剤を使用している割合はわずか39%であり、2016〜2020年の初回治療処方に占める配合剤の割合は9.4%にとどまると指摘する。今後の機会として、低用量3剤配合薬GMRx2(2024年に米FDA承認)などの低用量配合療法、二重エンドセリン受容体拮抗薬・アルドステロン合成酵素阻害薬・RNA干渉ベースのアンジオテンシノーゲン抑制薬といった新機序、腎除神経術のような機器ベースの治療を紹介する。著者は、新技術も重要だが、正確な血圧測定・生活習慣改善・医療アクセスの公平性にも引き続き注力すべきだと結論づけている。"
+  },
+  "thpharmView": {
+    "kr": "이 편집논평은 THPHARM의 THP-001(다파글리플로진+텔미사르탄 복합제)이 다루는 문제 — 다제 복용 부담과 낮은 복약순응도 — 가 국내에 국한된 현상이 아니라 미국에서도 동일하게 지적되는 구조적 과제임을 보여준다. THP-001의 차별화 논거인 '복약순응도 개선'이 학계·임상현장에서 널리 공유되는 방향이라는 근거로 참고한다.",
+    "en": "This editorial shows that the problem THP-001 (a dapagliflozin+telmisartan combination) addresses — pill burden and low adherence with multi-drug regimens — isn't a Korea-specific issue but a structural challenge documented in the US as well. We reference it as evidence that THP-001's adherence-focused differentiation argument aligns with a direction widely shared across academia and clinical practice.",
+    "zh_cn": "这篇社论表明,THP-001(达格列净+替米沙坦复方制剂)所要解决的问题——多重用药负担与依从性低——并非韩国特有现象,而是美国同样被指出的结构性课题。我们将其作为参考依据,说明THP-001以\"提升依从性\"为差异化论点的方向,与学界及临床实践广泛认同的方向一致。",
+    "jp": "この論評は、THP-001(ダパグリフロジン+テルミサルタン配合剤)が取り組む課題 — 多剤併用の負担と低いアドヒアランス — が韓国に限った現象ではなく、米国でも同様に指摘される構造的課題であることを示している。THP-001の差別化論拠である「服薬アドヒアランス改善」が、学界・臨床現場で広く共有される方向性であることの根拠として参照する。"
+  },
+  "keyPoints": [
+    {
+      "kr": "미국 다제 복용 고혈압 환자 중 39%만 실제 복합제 사용, 2016~2020년 초치료 처방 중 복합제 비중 9.4%",
+      "en": "Only 39% of US multi-drug hypertension patients actually use a combination pill; combination prescriptions were 9.4% of initial treatments 2016–2020",
+      "zh_cn": "美国多重用药高血压患者中仅39%实际使用复方制剂,2016至2020年初始治疗处方中复方制剂占比9.4%",
+      "jp": "米国の多剤併用高血圧患者のうち実際に配合剤を使用しているのは39%のみ、2016〜2020年の初回治療処方における配合剤比率は9.4%"
+    },
+    {
+      "kr": "저용량 3제 복합제 GMRx2(2024 FDA 승인) 등 저용량 복합요법이 새로운 기회로 부상",
+      "en": "Low-dose combination therapy such as GMRx2 (a triple low-dose combo, FDA-approved 2024) emerging as a new opportunity",
+      "zh_cn": "GMRx2(三联低剂量复方制剂,2024年FDA批准)等低剂量复方疗法成为新机遇",
+      "jp": "GMRx2(3剤低用量配合薬、2024年FDA承認)などの低用量配合療法が新たな機会として浮上"
+    },
+    {
+      "kr": "이중 엔도텔린 수용체 길항제·알도스테론 합성효소 억제제·RNA 간섭 기반 신약, 신장 신경차단술 등 신규 기전도 소개",
+      "en": "Also covers newer mechanisms: dual endothelin receptor antagonists, aldosterone synthase inhibitors, RNA interference-based drugs, and renal denervation",
+      "zh_cn": "同时介绍双重内皮素受体拮抗剂、醛固酮合成酶抑制剂、基于RNA干扰的新药及肾脏去神经术等新机制",
+      "jp": "二重エンドセリン受容体拮抗薬・アルドステロン合成酵素阻害薬・RNA干渉ベースの新薬、腎除神経術などの新機序も紹介"
+    }
+  ],
+  "relatedLinks": [
+    { "label": "PIPELINE — THP-001", "href": "/pipeline/thp-001" },
+    { "label": "HEALTH — 고혈압", "href": "/health/hypertension" }
+  ],
+  "tags": [
+    { "label": "Fixed-Dose Combination" },
+    { "label": "Hypertension" },
+    { "label": "Adherence" }
+  ],
+  "sourceMeta": {
+    "source_type": "Journal",
+    "source_title": "Evolving paradigms in hypertension management: Fixed-dose single-pill combinations and future therapies",
+    "publisher": "Cleveland Clinic Journal of Medicine",
+    "published_at": "2025-08-01",
+    "source_url": "https://www.ccjm.org/content/92/8/471",
+    "doi": "10.3949/ccjm.92a.25034",
+    "accessed_at": "2026-08-25",
+    "last_verified": "2026-08-25",
+    "peer_review_status": "peer-reviewed"
+  },
+  "publishedAt": "2025-08-01"
+}

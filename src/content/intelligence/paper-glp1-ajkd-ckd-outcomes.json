@@ -1,0 +1,70 @@
+{
+  "code": "WEB-513",
+  "kind": "paper",
+  "status": "published",
+  "title": {
+    "kr": "American Journal of Kidney Diseases, CKD 환자의 GLP-1RA 신장·심혈관 예후 메타분석 발표",
+    "en": "American Journal of Kidney Diseases publishes meta-analysis on GLP-1RA kidney/cardiovascular outcomes in CKD patients",
+    "zh_cn": "《美国肾脏病杂志》发表CKD患者GLP-1RA肾脏与心血管预后荟萃分析",
+    "jp": "American Journal of Kidney Diseases、CKD患者のGLP-1RA腎・心血管予後メタ解析を発表"
+  },
+  "dek": {
+    "kr": "기저 사구체여과율 60 미만인 17,996명 데이터에서 GLP-1RA가 복합 신장 예후 위험을 유의하게 낮췄다는 무작위 시험 메타분석",
+    "en": "A meta-analysis of randomized trials in 17,996 patients with baseline eGFR under 60 found GLP-1RAs significantly lowered the risk of the composite kidney outcome",
+    "zh_cn": "一项针对基线eGFR低于60的17,996名患者的随机试验荟萃分析显示,GLP-1RA显著降低了复合肾脏结局风险",
+    "jp": "ベースラインeGFR60未満の17,996人を対象とした無作為化試験メタ解析で、GLP-1RAが複合腎予後リスクを有意に低下させた"
+  },
+  "relevance": "Watch",
+  "body": {
+    "kr": "Chen 등 연구팀이 American Journal of Kidney Diseases에 발표한 이 체계적 문헌고찰·메타분석은 만성신질환(CKD) 환자를 대상으로 한 무작위 대조 시험들을 종합해, 기저 사구체여과율(eGFR) 60 mL/min/1.73㎡ 미만인 17,996명의 데이터를 분석했다. GLP-1 수용체 작동제(GLP-1RA)는 복합 신장 예후 위험을 유의하게 낮췄고, 생존율과 심혈관 예후도 함께 개선된 것으로 나타났다. 다만 이 페이지는 원문 전체가 접근 제한(구독)되어 있어, 구체적인 위험비(RR)·신뢰구간 등 세부 수치는 Semantic Scholar에 등재된 초록 요약을 바탕으로 작성했으며, 정확한 수치는 저널 원문 확인이 필요하다.",
+    "en": "This systematic review and meta-analysis by Chen and colleagues, published in the American Journal of Kidney Diseases, pooled randomized controlled trials in chronic kidney disease (CKD) patients, analyzing data from 17,996 participants with baseline eGFR under 60 mL/min/1.73m². GLP-1 receptor agonists (GLP-1RAs) were associated with a significantly lower risk of the composite kidney outcome, along with improved survival and cardiovascular outcomes. Note: the full text of this paper is behind a subscription paywall, so this summary is based on the abstract indexed in Semantic Scholar rather than the full article — specific risk ratios and confidence intervals should be confirmed against the journal's original text.",
+    "zh_cn": "该系统综述与荟萃分析由Chen及研究团队发表于《American Journal of Kidney Diseases》,汇总了慢性肾病(CKD)患者的随机对照试验,分析了17,996名基线eGFR低于60 mL/min/1.73㎡患者的数据。GLP-1受体激动剂(GLP-1RA)与复合肾脏结局风险显著降低相关,同时生存率与心血管预后也有所改善。需说明的是,本文全文需订阅方可获取,本摘要基于Semantic Scholar收录的摘要撰写,具体风险比(RR)及置信区间等数值需以期刊原文为准确认。",
+    "jp": "ChenらのチームがAmerican Journal of Kidney Diseases誌に発表したこの系統的レビュー・メタ解析は、慢性腎臓病(CKD)患者を対象としたランダム化比較試験を統合し、ベースラインeGFR 60 mL/min/1.73㎡未満の17,996人のデータを分析した。GLP-1受容体作動薬(GLP-1RA)は複合腎予後リスクの有意な低下と関連し、生存率や心血管予後も併せて改善したことが示された。ただし本文全文は購読制限があるため、本要約はSemantic Scholarに登録された抄録を基に作成しており、具体的なリスク比(RR)・信頼区間などの詳細数値はジャーナル原文での確認が必要である。"
+  },
+  "thpharmView": {
+    "kr": "이 논문 역시 THPHARM의 자체 데이터가 아니라 CKD 환자군에서의 GLP-1RA 근거를 보여주는 참고 자료다. 앞서 소개한 Diabetology & Metabolic Syndrome 메타분석과 유사한 결론(CKD 환자에서도 신장·심혈관 보호 효과 유지)을 독립적으로 뒷받침한다는 점에서 함께 게시한다.",
+    "en": "Like the other entries here, this isn't THPHARM's own data — it's reference evidence on GLP-1RAs in CKD patients. We include it because it independently corroborates the similar conclusion (renal and cardiovascular protection preserved even in CKD) reached by the Diabetology & Metabolic Syndrome meta-analysis noted above.",
+    "zh_cn": "与本页其他条目一样,这并非THPHARM自身的数据,而是关于GLP-1RA在CKD患者中证据的参考资料。之所以一并收录,是因为它独立印证了前述《Diabetology & Metabolic Syndrome》荟萃分析得出的相似结论(CKD患者的肾脏与心血管保护作用依然存在)。",
+    "jp": "他の項目と同様、これもTHPHARM自身のデータではなく、CKD患者におけるGLP-1RAのエビデンスを示す参考資料である。前述のDiabetology & Metabolic Syndromeのメタ解析と類似の結論(CKD患者でも腎・心血管保護効果が維持される)を独立して裏付けている点から、併せて掲載する。"
+  },
+  "keyPoints": [
+    {
+      "kr": "기저 eGFR 60 미만 CKD 환자 17,996명 대상 무작위 시험 메타분석",
+      "en": "Meta-analysis of randomized trials in 17,996 CKD patients with baseline eGFR under 60",
+      "zh_cn": "针对基线eGFR低于60的17,996名CKD患者的随机试验荟萃分析",
+      "jp": "ベースラインeGFR60未満のCKD患者17,996人を対象とした無作為化試験メタ解析"
+    },
+    {
+      "kr": "GLP-1RA, 복합 신장 예후 위험 유의하게 감소 + 생존율·심혈관 예후 동반 개선",
+      "en": "GLP-1RAs significantly lowered composite kidney outcome risk, with concurrent survival and cardiovascular improvement",
+      "zh_cn": "GLP-1RA显著降低复合肾脏结局风险,同时改善生存率与心血管预后",
+      "jp": "GLP-1RAは複合腎予後リスクを有意に低下、生存率・心血管予後も同時に改善"
+    },
+    {
+      "kr": "원문 구독 제한으로 세부 수치는 저널 원문 확인 필요 (초록 기반 요약)",
+      "en": "Full text behind a paywall — specific figures need confirmation against the journal's original text (summary based on abstract)",
+      "zh_cn": "全文有订阅限制——具体数值需以期刊原文确认(基于摘要撰写)",
+      "jp": "原文は購読制限のため、詳細数値はジャーナル原文での確認が必要(抄録に基づく要約)"
+    }
+  ],
+  "relatedLinks": [
+    { "label": "HEALTH — 당뇨", "href": "/health/diabetes" }
+  ],
+  "tags": [
+    { "label": "GLP-1RA" },
+    { "label": "Chronic Kidney Disease" },
+    { "label": "Meta-Analysis" }
+  ],
+  "sourceMeta": {
+    "source_type": "Journal",
+    "source_title": "Kidney and Cardiovascular Outcomes Among Patients With CKD Receiving GLP-1 Receptor Agonists: A Systematic Review and Meta-Analysis of Randomized Trials",
+    "publisher": "American Journal of Kidney Diseases",
+    "published_at": "2025-01-01",
+    "source_url": "https://www.ajkd.org/article/S0272-6386(25)00042-3/fulltext",
+    "doi": "10.1053/j.ajkd.2024.11.013",
+    "accessed_at": "2026-08-25",
+    "last_verified": "2026-08-25",
+    "peer_review_status": "peer-reviewed"
+  },
+  "publishedAt": "2025-01-01"
+}

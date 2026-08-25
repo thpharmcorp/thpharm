@@ -1,0 +1,72 @@
+{
+  "code": "WEB-511",
+  "kind": "paper",
+  "status": "published",
+  "title": {
+    "kr": "GLP-1 계열 약물, 섬유화 동반 MASH 환자의 간 조직을 실제로 되돌릴 수 있을까 — 7건 RCT 메타분석",
+    "en": "Can GLP-1 drugs actually reverse liver damage in MASH patients with fibrosis — a meta-analysis of 7 RCTs",
+    "zh_cn": "GLP-1类药物能否真正逆转伴纤维化MASH患者的肝脏损伤——7项RCT荟萃分析",
+    "jp": "GLP-1系薬剤は線維化を伴うMASH患者の肝組織を実際に改善できるのか — RCT7件のメタ解析"
+  },
+  "dek": {
+    "kr": "생검으로 확인된 섬유화 동반 MASH 환자 1,800명 데이터에서, GLP-1RA는 섬유화 악화 없는 MASH 관해율을 위약 대비 3배 가까이 높였다",
+    "en": "In 1,800 biopsy-confirmed MASH-with-fibrosis patients, GLP-1RAs nearly tripled the rate of MASH resolution without fibrosis worsening versus placebo",
+    "zh_cn": "在1,800名经活检确诊的伴纤维化MASH患者数据中,GLP-1RA使无纤维化恶化的MASH缓解率较安慰剂组提高近3倍",
+    "jp": "生検で確認された線維化を伴うMASH患者1,800人のデータで、GLP-1RAは線維化悪化のないMASH寛解率をプラセボ対比約3倍に高めた"
+  },
+  "relevance": "Direct",
+  "body": {
+    "kr": "Dos Santos Borges 등 연구팀이 JHEP Reports에 발표한 이 체계적 문헌고찰·메타분석은 생검으로 섬유화가 확인된 MASH(대사이상관련 지방간염) 환자 1,800명을 대상으로 한 무작위 대조 시험 7건(평균 추적 136.8주)을 종합했다. F2–F3 단계 섬유화 환자에서 GLP-1RA는 섬유화 악화 없는 MASH 관해율을 위약 대비 약 3배(RR 2.96, 95% CI 1.70–5.15, P<0.001) 높였고, MASH 악화 없는 섬유화 개선율도 1.6배(RR 1.59, 95% CI 1.32–1.90, P<0.001) 높였다. 간효소 수치·간 지방량·당화혈색소·지질프로필·혈압·체성분 등 대사 지표도 함께 개선됐다. 위장관계 이상반응은 위약보다 많았지만 중대 이상반응 발생률에는 유의한 차이가 없었다.",
+    "en": "This systematic review and meta-analysis by Dos Santos Borges and colleagues, published in JHEP Reports, pooled 7 randomized controlled trials (mean follow-up 136.8 weeks) covering 1,800 patients with biopsy-confirmed MASH (metabolic dysfunction-associated steatohepatitis) and fibrosis. In patients with F2–F3 stage fibrosis, GLP-1RAs nearly tripled the rate of MASH resolution without fibrosis worsening versus placebo (RR 2.96, 95% CI 1.70–5.15, P<0.001), and improved fibrosis without MASH worsening by 1.6-fold (RR 1.59, 95% CI 1.32–1.90, P<0.001). Metabolic markers including aminotransferases, hepatic fat fraction, HbA1c, lipid profiles, blood pressure, and anthropometric parameters also improved. Gastrointestinal adverse events were more frequent than placebo, but there was no significant difference in serious adverse events.",
+    "zh_cn": "该系统综述与荟萃分析由Dos Santos Borges及研究团队发表于《JHEP Reports》,汇总了7项随机对照试验(平均随访136.8周),涵盖1,800名经活检确诊伴纤维化MASH(代谢功能障碍相关脂肪性肝炎)的患者。在F2–F3期纤维化患者中,GLP-1RA使无纤维化恶化的MASH缓解率较安慰剂组提高近3倍(RR 2.96,95% CI 1.70–5.15,P<0.001),无MASH恶化的纤维化改善率提高1.6倍(RR 1.59,95% CI 1.32–1.90,P<0.001)。转氨酶、肝脏脂肪含量、糖化血红蛋白、血脂谱、血压及体成分等代谢指标也同步改善。胃肠道不良反应较安慰剂组更常见,但严重不良反应发生率无显著差异。",
+    "jp": "Dos Santos BorgesらのチームがJHEP Reports誌に発表したこの系統的レビュー・メタ解析は、生検で線維化が確認されたMASH(代謝機能障害関連脂肪肝炎)患者1,800人を対象としたランダム化比較試験7件(平均追跡136.8週)を統合した。F2–F3期線維化患者において、GLP-1RAは線維化悪化のないMASH寛解率をプラセボ対比約3倍(RR 2.96、95% CI 1.70–5.15、P<0.001)に高め、MASH悪化のない線維化改善率も1.6倍(RR 1.59、95% CI 1.32–1.90、P<0.001)高めた。肝酵素値・肝脂肪量・HbA1c・脂質プロファイル・血圧・体組成などの代謝指標も併せて改善した。消化器系有害事象はプラセボより多かったが、重篤な有害事象の発生率に有意差はなかった。"
+  },
+  "thpharmView": {
+    "kr": "이 결과는 THPHARM의 자체 데이터가 아니라, GLP-1 계열이 MASH 섬유화 개선에 실제로 작용한다는 학계 근거다. THP-004는 비만 적응증에서 시작해 Bio-AI 기반 재해석(딥테크 TIPS 과제)을 통해 MASH 적응증 확장을 추진 중인데, 이 메타분석은 그 방향이 학계에서도 근거를 얻고 있는 영역임을 보여준다.",
+    "en": "This isn't THPHARM's own data — it's academic evidence that GLP-1 class drugs can meaningfully improve MASH fibrosis. THP-004 started in the obesity indication and, through Bio-AI-driven reanalysis (its Deep Tech TIPS project), is now pursuing expansion into a MASH indication; this meta-analysis shows that direction is gaining academic support.",
+    "zh_cn": "这并非THPHARM自身的数据,而是学界证明GLP-1类药物确实能改善MASH纤维化的证据。THP-004从肥胖症适应症起步,正通过基于Bio-AI的再解读(其Deep Tech TIPS课题)推进MASH适应症拓展,该荟萃分析表明这一方向正获得学界证据支持。",
+    "jp": "これはTHPHARM自身のデータではなく、GLP-1系薬剤がMASHの線維化改善に実際に作用するという学術的根拠である。THP-004は肥満症適応症から出発し、Bio-AIを活用した再解析(ディープテックTIPS課題)を通じてMASH適応症拡大を推進中だが、このメタ解析はその方向性が学界でも根拠を得つつある領域であることを示している。"
+  },
+  "keyPoints": [
+    {
+      "kr": "생검 확인 MASH+섬유화 환자 1,800명, RCT 7건 메타분석 (평균 추적 136.8주)",
+      "en": "Meta-analysis of 7 RCTs, 1,800 biopsy-confirmed MASH-with-fibrosis patients (mean follow-up 136.8 weeks)",
+      "zh_cn": "7项RCT荟萃分析,1,800名经活检确诊的MASH合并纤维化患者(平均随访136.8周)",
+      "jp": "生検確認MASH+線維化患者1,800人、RCT7件のメタ解析(平均追跡136.8週)"
+    },
+    {
+      "kr": "섬유화 악화 없는 MASH 관해율 위약 대비 약 3배(RR 2.96), 섬유화 개선율 1.6배(RR 1.59)",
+      "en": "MASH resolution without fibrosis worsening ~3x placebo (RR 2.96); fibrosis improvement 1.6x (RR 1.59)",
+      "zh_cn": "无纤维化恶化的MASH缓解率约为安慰剂组3倍(RR 2.96),纤维化改善率提高1.6倍(RR 1.59)",
+      "jp": "線維化悪化のないMASH寛解率はプラセボ対比約3倍(RR 2.96)、線維化改善率は1.6倍(RR 1.59)"
+    },
+    {
+      "kr": "간효소·간지방량·당화혈색소·지질·혈압·체성분 등 대사지표 동반 개선",
+      "en": "Concurrent improvement in aminotransferases, hepatic fat, HbA1c, lipids, blood pressure, and body composition",
+      "zh_cn": "转氨酶、肝脂肪、糖化血红蛋白、血脂、血压及体成分同步改善",
+      "jp": "肝酵素・肝脂肪量・HbA1c・脂質・血圧・体組成などの代謝指標が同時に改善"
+    }
+  ],
+  "relatedLinks": [
+    { "label": "PIPELINE — THP-004", "href": "/pipeline/thp-004" },
+    { "label": "HEALTH — MASH", "href": "/health/mash" }
+  ],
+  "tags": [
+    { "label": "GLP-1RA" },
+    { "label": "MASH" },
+    { "label": "Fibrosis" },
+    { "label": "Meta-Analysis" }
+  ],
+  "sourceMeta": {
+    "source_type": "Journal",
+    "source_title": "Efficacy and safety of GLP-1 receptor agonists in MASH with fibrosis: a systematic review and meta-analysis",
+    "publisher": "JHEP Reports",
+    "published_at": "2025-12-11",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12969438/",
+    "doi": "10.1016/j.jhepr.2025.101708",
+    "accessed_at": "2026-08-25",
+    "last_verified": "2026-08-25",
+    "peer_review_status": "peer-reviewed"
+  },
+  "publishedAt": "2025-12-11"
+}

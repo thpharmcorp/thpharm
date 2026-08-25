@@ -1,0 +1,70 @@
+{
+  "code": "WEB-512",
+  "kind": "paper",
+  "status": "published",
+  "title": {
+    "kr": "만성신질환 동반 환자에서도 GLP-1 계열 약물의 심혈관·신장 보호 효과는 유지된다",
+    "en": "GLP-1 drugs' cardiovascular and renal protection holds up even in patients with chronic kidney disease",
+    "zh_cn": "在合并慢性肾病的患者中,GLP-1类药物的心血管与肾脏保护作用依然存在",
+    "jp": "慢性腎臓病を併発した患者でもGLP-1系薬剤の心血管・腎保護効果は維持される"
+  },
+  "dek": {
+    "kr": "75,088명(이 중 CKD 환자 17,568명) 데이터를 종합한 메타분석에서, CKD 동반 환자군의 주요 심혈관 사건 위험도 유의하게 낮아졌다",
+    "en": "A meta-analysis of 75,088 patients (17,568 with CKD) found major cardiovascular event risk was significantly lower even in the CKD subgroup",
+    "zh_cn": "一项汇总75,088名患者(其中CKD患者17,568人)数据的荟萃分析显示,合并CKD的患者亚组主要心血管事件风险同样显著降低",
+    "jp": "75,088人(うちCKD患者17,568人)のデータを統合したメタ解析で、CKD併発群でも主要心血管イベントリスクが有意に低下した"
+  },
+  "relevance": "Watch",
+  "body": {
+    "kr": "Siniukovich 등 연구팀이 Diabetology & Metabolic Syndrome에 발표한 이 메타분석은 무작위 대조 시험 9건, 총 75,088명(이 중 추정 사구체여과율 60 mL/min/1.73㎡ 미만인 만성신질환(CKD) 환자 17,568명 포함)의 데이터를 종합했다. CKD 동반 환자군에서 GLP-1 수용체 작동제 기반 치료는 주요 심혈관 사건(MACE) 발생률을 유의하게 낮췄고(RR 0.84, 95% CI 0.74–0.95, P=0.006), 이는 비CKD군(RR 0.85, 95% CI 0.80–0.91)과 비슷한 수준이었다. 복합 신장 예후 역시 CKD군에서 유의하게 감소했다(RR 0.85, 95% CI 0.77–0.94, P=0.002). 저자들은 신기능이 저하된 환자에서도 GLP-1RA의 심혈관·신장 보호 효과가 실질적으로 유지된다고 결론지었다.",
+    "en": "This meta-analysis by Siniukovich and colleagues, published in Diabetology & Metabolic Syndrome, pooled 9 randomized controlled trials totaling 75,088 patients, including 17,568 with chronic kidney disease (CKD, eGFR <60 mL/min/1.73m²). In the CKD subgroup, GLP-1 receptor agonist-based therapy significantly lowered major cardiovascular event (MACE) incidence (RR 0.84, 95% CI 0.74–0.95, P=0.006), a level comparable to the non-CKD group (RR 0.85, 95% CI 0.80–0.91). The composite renal outcome was also significantly reduced in the CKD group (RR 0.85, 95% CI 0.77–0.94, P=0.002). The authors concluded that GLP-1RAs' cardiovascular and renal protection is substantially preserved even as kidney function declines.",
+    "zh_cn": "该荟萃分析由Siniukovich及研究团队发表于《Diabetology & Metabolic Syndrome》,汇总了9项随机对照试验、共75,088名患者的数据,其中包括17,568名慢性肾病(CKD,eGFR<60 mL/min/1.73㎡)患者。在CKD亚组中,基于GLP-1受体激动剂的治疗显著降低了主要心血管事件(MACE)发生率(RR 0.84,95% CI 0.74–0.95,P=0.006),与非CKD组(RR 0.85,95% CI 0.80–0.91)水平相近。复合肾脏结局在CKD组中也显著降低(RR 0.85,95% CI 0.77–0.94,P=0.002)。作者认为,即便在肾功能下降的患者中,GLP-1RA的心血管与肾脏保护作用依然基本保留。",
+    "jp": "SiniukovichらのチームがDiabetology & Metabolic Syndrome誌に発表したこのメタ解析は、ランダム化比較試験9件、合計75,088人(うち推定糸球体濾過量60 mL/min/1.73㎡未満の慢性腎臓病(CKD)患者17,568人を含む)のデータを統合した。CKD併発群において、GLP-1受容体作動薬をベースとした治療は主要心血管イベント(MACE)発生率を有意に低下させ(RR 0.84、95% CI 0.74–0.95、P=0.006)、これは非CKD群(RR 0.85、95% CI 0.80–0.91)と同程度の水準だった。複合腎予後もCKD群で有意に減少した(RR 0.85、95% CI 0.77–0.94、P=0.002)。著者らは、腎機能が低下した患者においてもGLP-1RAの心血管・腎保護効果は実質的に維持されると結論づけた。"
+  },
+  "thpharmView": {
+    "kr": "이 메타분석은 GLP-1 계열 약물의 신기능 저하 환자에서의 안전성·유효성 근거를 보여주는 제3자 자료다. THPHARM의 파이프라인과 직접적 연관은 없지만, GLP-1RA 계열 전반의 임상적 신뢰도를 이해하는 참고 자료로 게시한다.",
+    "en": "This meta-analysis is third-party evidence on the safety and efficacy of GLP-1 class drugs in patients with reduced kidney function. It isn't directly tied to a THPHARM pipeline asset, but we include it as background on the clinical track record of the GLP-1RA class as a whole.",
+    "zh_cn": "该荟萃分析是关于GLP-1类药物在肾功能下降患者中安全性与有效性的第三方证据。虽然与THPHARM管线没有直接关联,但作为了解GLP-1RA类药物整体临床可信度的参考资料予以收录。",
+    "jp": "このメタ解析は、腎機能が低下した患者におけるGLP-1系薬剤の安全性・有効性を示す第三者データである。THPHARMのパイプラインと直接的な関連はないが、GLP-1RA系薬剤全体の臨床的信頼性を理解する参考資料として掲載する。"
+  },
+  "keyPoints": [
+    {
+      "kr": "RCT 9건·75,088명 메타분석 (이 중 CKD 환자 17,568명)",
+      "en": "Meta-analysis of 9 RCTs, 75,088 patients (17,568 with CKD)",
+      "zh_cn": "9项RCT荟萃分析、75,088名患者(其中CKD患者17,568人)",
+      "jp": "RCT9件・75,088人のメタ解析(うちCKD患者17,568人)"
+    },
+    {
+      "kr": "CKD군 MACE 위험 16% 감소(RR 0.84) — 비CKD군과 유사한 수준",
+      "en": "16% lower MACE risk in the CKD group (RR 0.84) — comparable to the non-CKD group",
+      "zh_cn": "CKD组MACE风险降低16%(RR 0.84)——与非CKD组水平相近",
+      "jp": "CKD群のMACEリスク16%減少(RR 0.84) — 非CKD群と同程度の水準"
+    },
+    {
+      "kr": "CKD군 복합 신장 예후 15% 감소(RR 0.85)",
+      "en": "15% lower composite renal outcome risk in the CKD group (RR 0.85)",
+      "zh_cn": "CKD组复合肾脏结局风险降低15%(RR 0.85)",
+      "jp": "CKD群の複合腎予後15%減少(RR 0.85)"
+    }
+  ],
+  "relatedLinks": [
+    { "label": "HEALTH — 당뇨", "href": "/health/diabetes" }
+  ],
+  "tags": [
+    { "label": "GLP-1RA" },
+    { "label": "Chronic Kidney Disease" },
+    { "label": "Meta-Analysis" }
+  ],
+  "sourceMeta": {
+    "source_type": "Journal",
+    "source_title": "Impact of GLP-1 receptor agonist-based therapies on cardiovascular and renal outcomes in diabetic and non-diabetic patients with CKD",
+    "publisher": "Diabetology & Metabolic Syndrome",
+    "published_at": "2025-07-02",
+    "source_url": "https://link.springer.com/article/10.1186/s13098-025-01831-4",
+    "doi": "10.1186/s13098-025-01831-4",
+    "accessed_at": "2026-08-25",
+    "last_verified": "2026-08-25",
+    "peer_review_status": "peer-reviewed"
+  },
+  "publishedAt": "2025-07-02"
+}
